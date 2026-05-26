@@ -2,13 +2,9 @@ name: Deploy MkDocs site
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
-    inputs:
-      reason:
-        description: "Reason for manual run"
-        required: false
-        default: "manual deploy"
 
 permissions:
   contents: read
@@ -23,10 +19,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Setup Python
         uses: actions/setup-python@v5
