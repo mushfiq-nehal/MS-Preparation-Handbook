@@ -1,6 +1,10 @@
 site_name: MSc CSE Admission Prep
 site_description: A modern, exam-focused handbook for MSc CSE admission preparation
 site_author: Nehal
+site_url: https://mushfiq-nehal.github.io/MS-Preparation-Handbook/
+repo_url: https://github.com/mushfiq-nehal/MS-Preparation-Handbook
+repo_name: mushfiq-nehal/MS-Preparation-Handbook
+edit_uri: edit/main/docs/
 docs_dir: docs
 
 # ─────────────────────────────────────────────────────────────────

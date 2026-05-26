@@ -1,0 +1,13 @@
+# Build artifacts
+site/
+
+# Python virtualenv
+.venv/
+__pycache__/
+*.pyc
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
