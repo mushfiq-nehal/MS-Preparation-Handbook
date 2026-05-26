@@ -1,0 +1,300 @@
+﻿TIER S — ABSOLUTE MUST MASTER
+
+1. Data Structures & Algorithms
+Core Data Structures
+* Linked list
+   * insertion/deletion
+   * sorted insertion
+   * reversal
+* Stack and queue
+   * implementation
+   * applications
+* Trees
+   * binary tree traversals
+   * BST insertion/search/deletion
+   * delete leaf/terminal nodes
+* Hashing
+   * collision resolution
+   * chaining vs open addressing
+Algorithms
+* Binary search
+   * step-by-step trace
+* Sorting
+   * merge sort
+   * quick sort
+   * heap sort
+   * complexity comparison
+* Dynamic programming
+   * Fibonacci
+   * knapsack
+   * LCS
+* Greedy algorithms
+   * activity selection
+   * Huffman coding
+* Graph algorithms
+   * BFS
+   * DFS
+   * Dijkstra
+   * Prim’s
+   * Kruskal’s
+* Complexity analysis
+   * Big-O
+   * best/worst/average case
+   * recurrence relations
+   * Master theorem basics
+
+
+2. Operating System
+Process & Scheduling
+* Process states + diagram
+* FCFS
+* SJF
+* Round Robin
+* Gantt chart
+* waiting/turnaround/response time
+Synchronization
+* Critical section problem
+* Race condition
+* Semaphores
+* Mutex
+* Peterson’s solution
+* Producer-consumer
+* Readers-writers
+* Dining philosophers
+Memory Management
+* Paging
+* FIFO/LRU/Optimal
+* page fault calculation
+* virtual memory
+Deadlock
+* necessary conditions
+* prevention vs avoidance
+* banker’s algorithm
+File System
+* FAT
+* inode
+* directory structure
+
+
+3. Computer Networks + Data Communication
+Core Networking
+* TCP vs UDP
+* OSI model
+* TCP/IP model
+* HTTP/1.1 vs HTTP/2
+* HOL blocking
+Transport Layer
+* Three-way handshake
+* Flow control
+* Congestion control
+* Sliding window
+* Stop-and-wait
+* Go-Back-N
+Network Layer
+* IP addressing
+* subnetting
+* CIDR
+* routing basics
+* RIP vs OSPF
+Application Layer
+* DNS
+* DHCP
+* HTTP
+* SMTP basics
+Data Communication
+* CRC
+* parity
+* checksum
+* multiplexing
+* transmission media
+
+
+4. Compiler Design & Automata
+Automata
+* DFA vs NFA
+* regex to NFA
+* DFA minimization basics
+* regular expressions
+CFG & Parsing
+* CFG derivation
+* parse tree
+* syntax tree
+* FIRST and FOLLOW
+* left recursion elimination
+* left factoring
+Compiler Basics
+* phases of compiler
+* lexical analysis
+* parsing
+* code generation
+
+
+5. Digital Logic Design
+Boolean Algebra
+* SOP/POS
+* Boolean simplification
+* K-map
+   * 2-variable
+   * 3-variable
+   * 4-variable
+Logic Circuits
+* Half adder
+* Full adder
+* Multiplexer/demultiplexer
+* encoder/decoder
+Sequential Logic
+* Flip-flops
+* counters
+* registers
+
+
+6. Software Engineering
+Design Concepts
+* Cohesion
+* Coupling
+* modularity
+Testing
+* unit testing
+* integration testing
+* system testing
+* end-to-end testing
+SDLC
+* waterfall
+* agile
+* spiral
+Requirements
+* functional vs non-functional
+* SRS basics
+UML
+* use case
+* class diagram
+* sequence diagram
+Design Patterns
+* singleton
+* factory
+* observer
+
+
+TIER A — VERY IMPORTANT
+
+
+7. Database Management System
+SQL
+* joins
+* GROUP BY
+* HAVING
+* subqueries
+* nested query
+Database Design
+* ER diagram
+* cardinality
+* normalization
+   * 1NF
+   * 2NF
+   * 3NF
+   * BCNF
+Transactions
+* ACID
+* concurrency control
+* indexing
+* B-tree
+
+
+8. Artificial Intelligence & Machine Learning
+ML Basics
+* supervised vs unsupervised
+* overfitting vs underfitting
+* decision trees
+* random forest
+Evaluation Metrics
+* confusion matrix
+* precision
+* recall
+* F1 score
+* accuracy paradox
+AI Ethics
+* deepfakes
+* LLM bias
+* misinformation
+* hallucination
+* privacy concerns
+
+
+9. Object Oriented Programming
+* encapsulation
+* inheritance
+* polymorphism
+* abstraction
+* overloading vs overriding
+* abstract class vs interface
+* exception handling
+10. Programming Fundamentals
+* pseudocode writing
+* loops
+* conditionals
+* arrays
+* functions
+* coordinate movement problems
+* pattern/problem-solving algorithms
+
+
+TIER B — MODERATELY IMPORTANT
+
+
+11. Discrete Mathematics
+* set theory
+* propositional logic
+* truth tables
+* graph theory
+* recurrence relations
+* permutations/combinations
+* mathematical induction
+12. Computer Architecture
+* pipelining
+* hazards
+* cache mapping
+* instruction cycle
+* RISC vs CISC
+13. Numerical Analysis
+* Newton-Raphson
+* bisection method
+* interpolation
+* numerical integration
+* error analysis
+
+
+TIER C — LOW PRIORITY BUT POSSIBLE
+These should be revised lightly only after core preparation.
+14. Embedded Systems & Microprocessor
+* 8086 basics
+* interrupts
+* embedded system concepts
+15. Computer Security & Cryptography
+* CIA triad
+* SQL injection
+* XSS
+* AES vs RSA
+* hashing basics
+* digital signatures
+16. Data Mining & Warehousing
+* Apriori
+* K-means
+* OLAP vs OLTP
+* warehouse schema
+
+
+17. IoT
+* IoT architecture
+* I2C/SPI basics
+18. Graphics & Multimedia
+* transformations
+* Bresenham
+* DDA
+19. DSP & Image Processing
+* sampling theorem
+* histogram equalization
+* filtering basics
+20. Simulation & Modeling
+* Monte Carlo
+* discrete event simulation
+* random number generation
