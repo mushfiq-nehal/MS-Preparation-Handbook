@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pip install -r requirements.txt && mkdocs build",
+  "buildCommand": "python3 -m venv .venv-build && .venv-build/bin/pip install -r requirements.txt && .venv-build/bin/mkdocs build",
   "outputDirectory": "site",
   "installCommand": "echo skip",
   "framework": null,
