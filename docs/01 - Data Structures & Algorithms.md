@@ -431,8 +431,8 @@ graph TD
     B --> E((40)):::leaf
     C --> F((60)):::leaf
     C --> G((80)):::leaf
-    classDef root fill:#4f46e5,stroke:#312e81,color:#fff
-    classDef leaf fill:#ddd6fe,stroke:#7c3aed,color:#1e1b4b
+    classDef root fill:#4f46e5,stroke:#a78bfa,stroke-width:2px,color:#ffffff
+    classDef leaf fill:#7c3aed,stroke:#c4b5fd,stroke-width:2px,color:#ffffff
 ```
 
 > **Root** = `50` (level 0) · **Internal** = `30, 70` (level 1) · **Leaves** = `20, 40, 60, 80` (level 2)
@@ -564,10 +564,10 @@ graph TD
     B --> D((20))
     B --> E((40))
     C --> G((80))
-    classDef moved fill:#fef3c7,stroke:#d97706,color:#78350f
+    classDef moved fill:#d97706,stroke:#fbbf24,stroke-width:2px,color:#ffffff
 ```
 
-> 💡 The yellow node (`60`) replaced the original root via inorder successor.
+> 💡 The orange node (`60`) replaced the original root via inorder successor.
 
 ### Delete Leaf/Terminal Nodes
 
@@ -1067,7 +1067,7 @@ graph TD
     A --> C((3))
     B --> D((4))
     B --> E((1))
-    classDef root fill:#4f46e5,stroke:#312e81,color:#fff
+    classDef root fill:#4f46e5,stroke:#a78bfa,stroke-width:2px,color:#ffffff
 ```
 
 ### Algorithm

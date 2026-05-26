@@ -473,9 +473,9 @@ graph TD
     B -->|Normal| F[Yes]:::yes
     D -->|Strong| G[No]:::no
     D -->|Weak| H[Yes]:::yes
-    classDef decision fill:#ddd6fe,stroke:#7c3aed,color:#1e1b4b
-    classDef yes fill:#bbf7d0,stroke:#16a34a,color:#14532d
-    classDef no fill:#fecaca,stroke:#dc2626,color:#7f1d1d
+    classDef decision fill:#7c3aed,stroke:#c4b5fd,stroke-width:2px,color:#ffffff
+    classDef yes fill:#059669,stroke:#6ee7b7,stroke-width:2px,color:#ffffff
+    classDef no fill:#dc2626,stroke:#fca5a5,stroke-width:2px,color:#ffffff
 ```
 
 ---

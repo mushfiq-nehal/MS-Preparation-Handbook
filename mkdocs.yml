@@ -1,4 +1,4 @@
-site_name: MSc CSE Admission Prep
+site_name: MSc CSE Prep
 site_description: A modern, exam-focused handbook for MSc CSE admission preparation
 site_author: Nehal
 repo_url: https://github.com/mushfiq-nehal/MS-Preparation-Handbook
@@ -13,15 +13,14 @@ theme:
   name: material
   language: en
   icon:
-    logo: material/school
+    logo: material/atom-variant
     repo: fontawesome/brands/github
-    edit: material/pencil
-    view: material/eye
-    annotation: material/arrow-right-circle
+    edit: material/pencil-outline
+    view: material/eye-outline
     admonition:
-      note: material/note-edit
-      tip: material/lightbulb-on
-      warning: material/alert
+      note: material/lightbulb-outline
+      tip: material/star-four-points-outline
+      warning: material/alert-circle-outline
       example: material/test-tube
       quote: material/format-quote-close
   favicon: assets/favicon.svg
@@ -31,27 +30,27 @@ theme:
     code: JetBrains Mono
 
   palette:
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: deep purple
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    # Dark mode
+    # Default: dark first (modern docs sites lean dark)
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: deep purple
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
 
   features:
     # Navigation
     - navigation.instant
     - navigation.instant.progress
+    - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -65,18 +64,21 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    # Header
+    - header.autohide
     # Content
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
     - content.tooltips
+    - content.action.edit
+    - content.action.view
     - announce.dismiss
 
 # ─────────────────────────────────────────────────────────────────
 # Markdown Extensions
 # ─────────────────────────────────────────────────────────────────
 markdown_extensions:
-  # Standard
   - abbr
   - admonition
   - attr_list
@@ -88,12 +90,10 @@ markdown_extensions:
       permalink: true
       permalink_title: Anchor link
       toc_depth: 3
-      # GitHub-compatible slugs so existing in-file TOCs (e.g. "#2-stack--queue") work
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
 
-  # PyMdown Extensions
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem
@@ -145,30 +145,33 @@ extra_javascript:
 
 extra:
   generator: false
+  status:
+    new: Recently added
+    deprecated: Deprecated
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/
-      name: GitHub
+      link: https://github.com/mushfiq-nehal/MS-Preparation-Handbook
+      name: GitHub repository
 
 # ─────────────────────────────────────────────────────────────────
-# Navigation (explicit ordering for a polished sidebar)
+# Navigation
 # ─────────────────────────────────────────────────────────────────
 nav:
   - Home: index.md
-  - Tier S/A — Must Master:
-    - "01 · Data Structures & Algorithms": "01 - Data Structures & Algorithms.md"
-    - "02 · Operating Systems": "02 - Operating Systems.md"
-    - "03 · Computer Networks & Data Communication": "03 - Computer Networks & Data Communication.md"
-    - "04 · Compiler Design & Automata": "04 - Compiler Design & Automata.md"
-    - "05 · Digital Logic Design": "05 - Digital Logic Design.md"
-    - "06 · Software Engineering": "06 - Software Engineering.md"
-    - "07 · Database Management System": "07 - Database Management System.md"
-    - "08 · Artificial Intelligence & Machine Learning": "08 - Artificial Intelligence & Machine Learning.md"
-    - "09 · Object Oriented Programming": "09 - Object Oriented Programming.md"
-    - "10 · Programming Fundamentals": "10 - Programming Fundamentals.md"
-  - Tier B — Moderately Important:
-    - "11 · Discrete Mathematics": "11 - Discrete Mathematics.md"
-    - "12 · Computer Architecture": "12 - Computer Architecture.md"
-    - "13 · Numerical Analysis": "13 - Numerical Analysis.md"
-  - Tier C — Light Revision:
-    - "14–20 · Tier C Subjects": "14-20 - Tier C Subjects.md"
+  - Core (Tier S/A):
+    - "DSA": "01 - Data Structures & Algorithms.md"
+    - "Operating Systems": "02 - Operating Systems.md"
+    - "Computer Networks": "03 - Computer Networks & Data Communication.md"
+    - "Compiler & Automata": "04 - Compiler Design & Automata.md"
+    - "Digital Logic": "05 - Digital Logic Design.md"
+    - "Software Engineering": "06 - Software Engineering.md"
+    - "Database Systems": "07 - Database Management System.md"
+    - "AI & Machine Learning": "08 - Artificial Intelligence & Machine Learning.md"
+    - "OOP": "09 - Object Oriented Programming.md"
+    - "Programming Fundamentals": "10 - Programming Fundamentals.md"
+  - Foundations (Tier B):
+    - "Discrete Math": "11 - Discrete Mathematics.md"
+    - "Computer Architecture": "12 - Computer Architecture.md"
+    - "Numerical Analysis": "13 - Numerical Analysis.md"
+  - Electives (Tier C):
+    - "Subjects 14–20": "14-20 - Tier C Subjects.md"
