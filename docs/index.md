@@ -61,7 +61,7 @@ hide:
 
     [Open subject :material-arrow-right:](04 - Compiler Design & Automata.md)
 
--   :material-circuit-board: __Digital Logic Design__
+-   :material-sine-wave: __Digital Logic Design__
 
     ---
 
