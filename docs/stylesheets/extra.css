@@ -1,0 +1,341 @@
+/* ==========================================================================
+   MSc CSE Admission Prep — Custom Styles
+   Built on top of mkdocs-material for a premium reading experience.
+   ========================================================================== */
+
+/* ── Brand palette tweaks ──────────────────────────────────────────────── */
+:root {
+  --md-primary-fg-color:        #4f46e5;   /* indigo-600 */
+  --md-primary-fg-color--light: #6366f1;
+  --md-primary-fg-color--dark:  #3730a3;
+  --md-accent-fg-color:         #8b5cf6;   /* violet-500 */
+
+  /* Typography refinements */
+  --md-text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:        #0e1116;
+  --md-default-bg-color--light: #161a22;
+  --md-code-bg-color:           #1a1f29;
+  --md-default-fg-color--lightest: #2a2f3a;
+}
+
+/* ── Global typography ─────────────────────────────────────────────────── */
+.md-typeset {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}
+
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 0.5em;
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.4em;
+  margin-top: 2.4em;
+}
+
+.md-typeset h3 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin-top: 1.8em;
+}
+
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-weight: 600;
+}
+
+/* ── Paragraphs and content width ──────────────────────────────────────── */
+.md-typeset p,
+.md-typeset li {
+  color: var(--md-default-fg-color);
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-grid {
+    max-width: 68rem;
+  }
+}
+
+/* ── Inline code & code blocks ─────────────────────────────────────────── */
+.md-typeset code {
+  font-size: 0.85em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.35rem;
+  background-color: color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent);
+  color: var(--md-accent-fg-color);
+  font-weight: 500;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: color-mix(in srgb, var(--md-accent-fg-color) 22%, transparent);
+  color: #c4b5fd;
+}
+
+.md-typeset pre > code {
+  background-color: transparent;
+  color: inherit;
+  font-weight: 400;
+  padding: 0;
+}
+
+.md-typeset .highlight pre,
+.md-typeset pre {
+  border-radius: 0.6rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight pre,
+[data-md-color-scheme="slate"] .md-typeset pre {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Tables: cleaner, more readable ────────────────────────────────────── */
+.md-typeset table:not([class]) {
+  border-radius: 0.6rem;
+  overflow: hidden;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  font-size: 0.78rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--md-primary-fg-color) 10%, transparent),
+    color-mix(in srgb, var(--md-accent-fg-color) 10%, transparent)
+  );
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+}
+
+.md-typeset table:not([class]) tr:hover td {
+  background-color: color-mix(in srgb, var(--md-primary-fg-color) 5%, transparent);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover td {
+  background-color: color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent);
+}
+
+/* ── Blockquotes ───────────────────────────────────────────────────────── */
+.md-typeset blockquote {
+  border-left: 0.25rem solid var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 5%, transparent);
+  padding: 0.6em 1em;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 10%, transparent);
+}
+
+/* ── Admonitions: softer, more polished ────────────────────────────────── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.6rem;
+  border-width: 0;
+  border-left-width: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 0.78rem;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-weight: 600;
+  letter-spacing: 0.005em;
+}
+
+/* ── Links ─────────────────────────────────────────────────────────────── */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  border-bottom: 1px dashed transparent;
+}
+
+.md-typeset a:hover {
+  color: var(--md-accent-fg-color);
+  border-bottom-color: var(--md-accent-fg-color);
+}
+
+/* Don't underline buttons or card links */
+.md-typeset .md-button,
+.md-typeset .grid.cards > ul > li > a,
+.md-typeset a.md-button {
+  border-bottom: none !important;
+}
+
+/* ── Sidebar / nav refinements ─────────────────────────────────────────── */
+.md-nav__title {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.md-nav__item .md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+/* ── Header & top tabs ─────────────────────────────────────────────────── */
+.md-header {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.05), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.06);
+}
+
+.md-tabs {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+}
+
+.md-tabs__link {
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  opacity: 1;
+}
+
+/* ── Search box polish ─────────────────────────────────────────────────── */
+.md-search__form {
+  border-radius: 0.4rem;
+}
+
+/* ── Card grid (Material feature) ──────────────────────────────────────── */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border-radius: 0.7rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  background: var(--md-default-bg-color);
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid > .card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--md-primary-fg-color) 50%, transparent);
+  box-shadow:
+    0 6px 14px rgba(79, 70, 229, 0.10),
+    0 12px 28px rgba(139, 92, 246, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover,
+[data-md-color-scheme="slate"] .md-typeset .grid > .card:hover {
+  box-shadow:
+    0 6px 14px rgba(79, 70, 229, 0.20),
+    0 12px 28px rgba(139, 92, 246, 0.18);
+}
+
+/* Card icon emphasis */
+.md-typeset .grid.cards > ul > li > p:first-child {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.md-typeset .grid.cards > ul > li svg.twemoji,
+.md-typeset .grid.cards > ul > li .twemoji svg {
+  vertical-align: -0.15em;
+  margin-right: 0.35em;
+}
+
+/* ── Homepage hero ─────────────────────────────────────────────────────── */
+.md-typeset .hero {
+  text-align: center;
+  padding: 1.8rem 1rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.md-typeset .hero h3 {
+  border: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-top: 0;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .hero p {
+  max-width: 38rem;
+  margin: 0.6rem auto 1.5rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.86rem;
+}
+
+.md-typeset .hero .md-button {
+  margin: 0.25rem;
+}
+
+.md-typeset .hero .md-button--primary {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  border: none;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.md-typeset .hero .md-button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.35);
+  color: #fff;
+}
+
+/* ── Section dividers (hr) on homepage ─────────────────────────────────── */
+.md-typeset hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--md-default-fg-color--lightest),
+    transparent
+  );
+  margin: 2.4rem 0;
+}
+
+/* ── Keyboard keys ─────────────────────────────────────────────────────── */
+.md-typeset kbd {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom-width: 2px;
+  border-radius: 0.3rem;
+  padding: 0.1em 0.4em;
+  font-size: 0.85em;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* ── Smooth scrolling & focus polish ───────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+.md-typeset a:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+  border-radius: 0.2rem;
+}
+
+/* ── Print-friendly tweaks ─────────────────────────────────────────────── */
+@media print {
+  .md-typeset h1 {
+    -webkit-text-fill-color: initial;
+    background: none;
+    color: #000;
+  }
+}

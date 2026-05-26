@@ -1,0 +1,3102 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modern, exam-focused handbook for MSc CSE admission preparation">
+      
+      
+        <meta name="author" content="Nehal">
+      
+      
+      
+        <link rel="prev" href="../05%20-%20Digital%20Logic%20Design/">
+      
+      
+        <link rel="next" href="../07%20-%20Database%20Management%20System/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>06 · Software Engineering - MSc CSE Admission Prep</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M21%2010V9l-6-6H5c-1.11%200-2%20.89-2%202v14a2%202%200%200%200%202%202h6v-1.87l8.39-8.39c.44-.44%201-.68%201.61-.74m-7-5.5%205.5%205.5H14zm8.85%209.69-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72%200l1.32%201.32c.2.2.2.53%200%20.72m-3.72-.36%202.04%202.04L15.04%2022H13v-2.04z%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7%202v2h1v14a4%204%200%200%200%204%204%204%204%200%200%200%204-4V4h1V2zm4%2014c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m2-4c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m1-5h-4V4h4z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M14%2017h3l2-4V7h-6v6h3M6%2017h3l2-4V7H5v6h3z%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-msc-admission-prep--subject-06-software-engineering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MSc CSE Admission Prep" class="md-header__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSc CSE Admission Prep
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              06 · Software Engineering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier S/A — Must Master
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../11%20-%20Discrete%20Mathematics/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier B — Moderately Important
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier C — Light Revision
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MSc CSE Admission Prep" class="md-nav__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    MSc CSE Admission Prep
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier S/A — Must Master
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier S/A — Must Master
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Data Structures & Algorithms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20-%20Operating%20Systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Operating Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Computer Networks & Data Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20-%20Compiler%20Design%20%26%20Automata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Compiler Design & Automata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05%20-%20Digital%20Logic%20Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Digital Logic Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Software Engineering
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Software Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20Database%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Database Management System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08%20-%20Artificial%20Intelligence%20%26%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Artificial Intelligence & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09%20-%20Object%20Oriented%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Object Oriented Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%20-%20Programming%20Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier B — Moderately Important
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier B — Moderately Important
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11%20-%20Discrete%20Mathematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 · Discrete Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12%20-%20Computer%20Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 · Computer Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13%20-%20Numerical%20Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13 · Numerical Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier C — Light Revision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier C — Light Revision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14–20 · Tier C Subjects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tier S/A — Must Master
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="-msc-admission-prep--subject-06-software-engineering">📘 MSc Admission Prep — Subject 06: Software Engineering<a class="headerlink" href="#-msc-admission-prep--subject-06-software-engineering" title="Anchor link">&para;</a></h1>
+<h3 id="-just-style-exam-handbook--fast-revision-edition">🎯 JUST-Style Exam Handbook | Fast Revision Edition<a class="headerlink" href="#-just-style-exam-handbook--fast-revision-edition" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p><strong>Goal:</strong> Visual, exam-focused revision of SE concepts — design principles, testing, SDLC models, UML, and design patterns. Every topic includes intuition, diagrams, comparisons, and exam tips.</p>
+</blockquote>
+<hr />
+<h2 id="-table-of-contents">📋 Table of Contents<a class="headerlink" href="#-table-of-contents" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Topic</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="#1-cohesion--coupling">Cohesion &amp; Coupling</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="#2-modularity">Modularity</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="#3-software-testing">Software Testing</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="#4-sdlc-models">SDLC Models</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="#5-requirements-engineering">Requirements Engineering</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#6-uml-diagrams">UML Diagrams</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="#7-design-patterns">Design Patterns</a></td>
+<td>🔴 Must Master</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h1 id="1-cohesion--coupling">1. Cohesion &amp; Coupling<a class="headerlink" href="#1-cohesion--coupling" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first">💡 Intuition First<a class="headerlink" href="#-intuition-first" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Cohesion</strong> is about how well the things INSIDE a module belong together.
+<strong>Coupling</strong> is about how much modules DEPEND on each other.</p>
+<p>The golden rule: <strong>High cohesion, Low coupling</strong> — each module does one thing well and knows as little as possible about other modules.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong>
+- High cohesion = A specialist doctor (cardiologist does only heart work — focused)
+- Low coupling = Departments in a company that communicate only through formal memos (not tangled in each other's work)
+- Low cohesion = A "do-everything" employee who handles accounting, HR, and IT (unfocused, hard to maintain)
+- High coupling = Two departments that share the same database directly (change one → breaks the other)</p>
+<hr />
+<h2 id="-cohesion--types-worst-to-best">📐 Cohesion — Types (Worst to Best)<a class="headerlink" href="#-cohesion--types-worst-to-best" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>WORST ──────────────────────────────────────────► BEST
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Coincidental → Logical → Temporal → Procedural → Communicational → Sequential → Functional
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    1              2          3           4               5               6            7
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (Worst)</td>
+<td><strong>Coincidental</strong></td>
+<td>Random, unrelated elements grouped</td>
+<td><code>utils.py</code> with print, sort, DB connect</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Logical</strong></td>
+<td>Similar category but different purpose</td>
+<td>All I/O operations in one module</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Temporal</strong></td>
+<td>Things done at the same time</td>
+<td>Startup initialization routines</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Procedural</strong></td>
+<td>Steps in a procedure, order matters</td>
+<td>Read file → parse → validate</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Communicational</strong></td>
+<td>Work on same data</td>
+<td>Functions that all process <code>user</code> object</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Sequential</strong></td>
+<td>Output of one is input of next</td>
+<td>Encrypt → compress → transmit</td>
+</tr>
+<tr>
+<td>7 (Best)</td>
+<td><strong>Functional</strong></td>
+<td>Single, well-defined purpose</td>
+<td><code>calculateTax()</code>, <code>sendEmail()</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Memory trick:</strong> "<strong>C</strong>ats <strong>L</strong>ove <strong>T</strong>o <strong>P</strong>lay <strong>C</strong>hess <strong>S</strong>ometimes <strong>F</strong>unny" → Coincidental, Logical, Temporal, Procedural, Communicational, Sequential, Functional</p>
+</blockquote>
+<hr />
+<h2 id="-coupling--types-worst-to-best">📐 Coupling — Types (Worst to Best)<a class="headerlink" href="#-coupling--types-worst-to-best" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>WORST ──────────────────────────────────────────► BEST
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Content → Common → External → Control → Stamp → Data → Message
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   1          2         3          4        5       6       7
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (Worst)</td>
+<td><strong>Content</strong></td>
+<td>Module directly modifies another's internals</td>
+<td>Module A changes Module B's variables</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Common</strong></td>
+<td>Share global data</td>
+<td>Both modules use global <code>config</code> variable</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>External</strong></td>
+<td>Share external format/protocol</td>
+<td>Both depend on same file format</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Control</strong></td>
+<td>Pass control flags</td>
+<td><code>processData(flag=true)</code> changes behavior</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Stamp</strong></td>
+<td>Pass whole data structure when only part needed</td>
+<td>Pass entire <code>User</code> object when only <code>name</code> needed</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Data</strong></td>
+<td>Pass only needed data</td>
+<td><code>calculateTax(income, rate)</code></td>
+</tr>
+<tr>
+<td>7 (Best)</td>
+<td><strong>Message</strong></td>
+<td>Communicate via messages/interfaces</td>
+<td>Microservices via REST API</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Memory trick:</strong> "<strong>C</strong>ats <strong>C</strong>hase <strong>E</strong>very <strong>C</strong>urious <strong>S</strong>mall <strong>D</strong>og <strong>M</strong>eowing" → Content, Common, External, Control, Stamp, Data, Message</p>
+</blockquote>
+<hr />
+<h2 id="-cohesion-vs-coupling--master-comparison">⚖️ Cohesion vs Coupling — Master Comparison<a class="headerlink" href="#-cohesion-vs-coupling--master-comparison" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Cohesion</th>
+<th>Coupling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>About</td>
+<td>Elements WITHIN a module</td>
+<td>BETWEEN modules</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>HIGH cohesion</td>
+<td>LOW coupling</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>How focused a module is</td>
+<td>How dependent modules are</td>
+</tr>
+<tr>
+<td>Good sign</td>
+<td>Module has one clear purpose</td>
+<td>Modules are independent</td>
+</tr>
+<tr>
+<td>Bad sign</td>
+<td>Module does many unrelated things</td>
+<td>Change in one breaks another</td>
+</tr>
+<tr>
+<td>Analogy</td>
+<td>Specialist vs generalist</td>
+<td>Isolated vs tangled</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-why-high-cohesion--low-coupling">🔄 Why High Cohesion + Low Coupling?<a class="headerlink" href="#-why-high-cohesion--low-coupling" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Benefits:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  ✅ Easier to understand (each module has one job)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  ✅ Easier to test (test in isolation)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  ✅ Easier to maintain (change one module without breaking others)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  ✅ Easier to reuse (self-contained modules)
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  ✅ Easier to debug (problems localized)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Bad design (low cohesion + high coupling):
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  Module A ←──────────────────────────────► Module B
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  (tightly tangled, change A → must change B)
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>Good design (high cohesion + low coupling):
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  Module A ──interface──► Module B
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  (communicate through well-defined interface only)
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> "High coupling is good" — NO. Low coupling is the goal.
+🚫 <strong>Mistake 2:</strong> Confusing cohesion (internal) with coupling (external).
+🚫 <strong>Mistake 3:</strong> Functional cohesion is the BEST, not coincidental.
+🚫 <strong>Mistake 4:</strong> Data coupling is GOOD (near the best end), not bad.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Cohesion: how well elements within a module belong together → want HIGH</li>
+<li>Coupling: how much modules depend on each other → want LOW</li>
+<li>Best cohesion: Functional (single purpose)</li>
+<li>Best coupling: Data/Message (pass only needed data, use interfaces)</li>
+<li>Goal: each module = one job, modules = independent</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Explain cohesion and coupling with examples. Why is high cohesion and low coupling desirable?
+<strong>Short note:</strong> List and briefly explain the types of cohesion from worst to best.
+<strong>Compare:</strong> Content coupling vs Data coupling — which is better and why?
+<strong>Identify:</strong> Given a module description, identify its cohesion type.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="2-modularity">2. Modularity<a class="headerlink" href="#2-modularity" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_1">💡 Intuition First<a class="headerlink" href="#-intuition-first_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Modularity is the principle of <strong>dividing a system into smaller, manageable, independent pieces</strong> — like building with LEGO blocks instead of carving from one solid rock. Each block (module) can be built, tested, and replaced independently.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> A car engine — it's made of modules (fuel system, cooling system, ignition). You can replace the cooling system without rebuilding the entire engine.</p>
+<hr />
+<h2 id="-what-is-a-module">📐 What is a Module?<a class="headerlink" href="#-what-is-a-module" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>A module is a self-contained unit with:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  ✅ Well-defined interface (what it exposes)
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  ✅ Hidden implementation (how it works internally)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  ✅ Single responsibility
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  ✅ Minimal dependencies on other modules
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Examples:
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  - A function/method
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  - A class
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  - A package/library
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  - A microservice
+</span></code></pre></div>
+<hr />
+<h2 id="-principles-of-good-modular-design">📐 Principles of Good Modular Design<a class="headerlink" href="#-principles-of-good-modular-design" title="Anchor link">&para;</a></h2>
+<h3 id="1-information-hiding-encapsulation">1. Information Hiding (Encapsulation)<a class="headerlink" href="#1-information-hiding-encapsulation" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Hide internal implementation details.
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Only expose what&#39;s necessary through a public interface.
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Bad:  Other modules directly access internal data
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Good: Other modules call methods/functions (interface)
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Example:
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  Bad:  user.password = &quot;newpass&quot;  (direct access)
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  Good: user.changePassword(&quot;newpass&quot;)  (through method)
+</span></code></pre></div>
+<h3 id="2-separation-of-concerns">2. Separation of Concerns<a class="headerlink" href="#2-separation-of-concerns" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Each module handles ONE concern/responsibility.
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Bad:  UserModule handles login + email + payment + reporting
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Good: AuthModule, EmailModule, PaymentModule, ReportModule
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>      (each handles one concern)
+</span></code></pre></div>
+<h3 id="3-single-responsibility-principle-srp">3. Single Responsibility Principle (SRP)<a class="headerlink" href="#3-single-responsibility-principle-srp" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&quot;A module should have one, and only one, reason to change.&quot;
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>— Robert C. Martin (Uncle Bob)
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>If a module changes for multiple reasons → split it.
+</span></code></pre></div>
+<h3 id="4-openclosed-principle">4. Open/Closed Principle<a class="headerlink" href="#4-openclosed-principle" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&quot;Open for extension, closed for modification.&quot;
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Good design: Add new features by ADDING new modules,
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>             not by MODIFYING existing ones.
+</span></code></pre></div>
+<hr />
+<h2 id="-modular-design-metrics">📊 Modular Design Metrics<a class="headerlink" href="#-modular-design-metrics" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Fan-in:  Number of modules that CALL this module
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>         High fan-in = module is widely reused ✅
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Fan-out: Number of modules this module CALLS
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>         High fan-out = module is highly dependent ❌
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Ideal: High fan-in, Low fan-out
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>         Module A
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>        /    |    \
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>       B     C     D    ← A has fan-out = 3
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>      / \
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>     E   F              ← B has fan-out = 2, E and F have fan-in = 1
+</span></code></pre></div>
+<hr />
+<h2 id="-modular-vs-monolithic-design">⚖️ Modular vs Monolithic Design<a class="headerlink" href="#-modular-vs-monolithic-design" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Modular</th>
+<th>Monolithic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure</td>
+<td>Independent modules</td>
+<td>Single large unit</td>
+</tr>
+<tr>
+<td>Maintainability</td>
+<td>Easy</td>
+<td>Hard</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>Test in isolation</td>
+<td>Must test whole system</td>
+</tr>
+<tr>
+<td>Reusability</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Independent</td>
+<td>All-or-nothing</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Microservices</td>
+<td>Legacy enterprise apps</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_1">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Too many tiny modules = over-modularization (overhead of managing interfaces).
+🚫 <strong>Mistake 2:</strong> Modularity ≠ just splitting code into files. Modules must have clear interfaces.
+🚫 <strong>Mistake 3:</strong> High fan-out is a warning sign — the module knows too much about others.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_1">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_1" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Modularity: divide system into independent, self-contained units</li>
+<li>Information hiding: expose interface, hide implementation</li>
+<li>SRP: one module = one reason to change</li>
+<li>Fan-in (callers) = high is good | Fan-out (callees) = low is good</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_1">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Short note:</strong> What is modularity? What are its benefits in software design?
+<strong>Conceptual:</strong> Explain the principle of information hiding with an example.
+<strong>Define:</strong> What are fan-in and fan-out? What do high values of each indicate?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="3-software-testing">3. Software Testing<a class="headerlink" href="#3-software-testing" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_2">💡 Intuition First<a class="headerlink" href="#-intuition-first_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Testing is like <strong>quality control in a factory</strong> — you check the product at different stages to catch defects early. The earlier you find a bug, the cheaper it is to fix. A bug found in production costs 100x more than one found during design.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Building a house — you check the foundation (unit test), then each room (integration test), then the whole house (system test), then whether it meets the client's needs (acceptance test).</p>
+<hr />
+<h2 id="-testing-levels">📐 Testing Levels<a class="headerlink" href="#-testing-levels" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>                    ┌─────────────────────────┐
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>                    │   Acceptance Testing    │  ← Does it meet user needs?
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>                    ├─────────────────────────┤
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>                    │    System Testing       │  ← Does the whole system work?
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>                    ├─────────────────────────┤
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>                    │  Integration Testing    │  ← Do modules work together?
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>                    ├─────────────────────────┤
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>                    │     Unit Testing        │  ← Does each unit work alone?
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>                    └─────────────────────────┘
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>                    (Bottom-up: start with units)
+</span></code></pre></div>
+<hr />
+<h2 id="-unit-testing">🔬 Unit Testing<a class="headerlink" href="#-unit-testing" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Test the <strong>smallest testable unit</strong> (function, method, class) in isolation.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>What it tests:
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  - Individual functions/methods
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  - Edge cases and boundary values
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  - Error handling
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>Example:
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  Function: calculateTax(income, rate)
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  Unit tests:
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    ✅ calculateTax(50000, 0.2) == 10000
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    ✅ calculateTax(0, 0.2) == 0        (boundary: zero income)
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    ✅ calculateTax(-100, 0.2) → error  (invalid input)
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    ✅ calculateTax(50000, 0) == 0      (boundary: zero rate)
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>Tools: JUnit (Java), pytest (Python), Jest (JavaScript)
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>Key principle: Tests should be FAST, ISOLATED, REPEATABLE
+</span></code></pre></div>
+<hr />
+<h2 id="-integration-testing">🔗 Integration Testing<a class="headerlink" href="#-integration-testing" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Test how <strong>multiple modules work together</strong>. Finds interface defects between modules.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Approaches:
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>1. Big Bang Integration:
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>   All modules integrated at once → test together
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>   Problem: Hard to isolate failures
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2. Top-Down Integration:
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>   Start from top-level module, stub lower modules
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>   ┌─────────┐
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>   │  Main   │  ← test first
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>   ├────┬────┤
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>   │ A  │ B  │  ← stubs initially, then real modules
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>   └────┴────┘
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>3. Bottom-Up Integration:
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>   Start from lowest modules, use drivers for higher
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>   ┌────┬────┐
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>   │ A  │ B  │  ← test first (real modules)
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>   ├────┴────┤
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>   │  Main   │  ← driver initially, then real
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>   └─────────┘
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>4. Sandwich/Hybrid:
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>   Combine top-down and bottom-up
+</span></code></pre></div>
+<hr />
+<h2 id="-system-testing">🖥️ System Testing<a class="headerlink" href="#-system-testing" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Test the <strong>complete, integrated system</strong> against requirements. Black-box testing.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Types of system testing:
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  Functional testing:    Does it do what it should?
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  Performance testing:   Is it fast enough under load?
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  Load testing:          How does it behave under heavy load?
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  Stress testing:        What happens when pushed beyond limits?
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>  Security testing:      Is it secure against attacks?
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>  Usability testing:     Is it easy to use?
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  Compatibility testing: Works on different browsers/OS?
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>  Recovery testing:      Does it recover from failures?
+</span></code></pre></div>
+<hr />
+<h2 id="-end-to-end-e2e-testing">✅ End-to-End (E2E) Testing<a class="headerlink" href="#-end-to-end-e2e-testing" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Test <strong>complete user workflows</strong> from start to finish, simulating real user behavior.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Example E2E test for e-commerce:
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  1. User opens browser
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>  2. Navigates to product page
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>  3. Adds item to cart
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>  4. Proceeds to checkout
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>  5. Enters payment details
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>  6. Confirms order
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>  7. Receives confirmation email
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>Tests the entire stack: UI → API → Database → Email service
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>Tools: Selenium, Cypress, Playwright
+</span></code></pre></div>
+<hr />
+<h2 id="-testing-types-comparison">⚖️ Testing Types Comparison<a class="headerlink" href="#-testing-types-comparison" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Scope</th>
+<th>Who Tests</th>
+<th>When</th>
+<th>Finds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unit</strong></td>
+<td>Single function/class</td>
+<td>Developer</td>
+<td>During coding</td>
+<td>Logic errors</td>
+</tr>
+<tr>
+<td><strong>Integration</strong></td>
+<td>Module interactions</td>
+<td>Developer/QA</td>
+<td>After unit tests</td>
+<td>Interface defects</td>
+</tr>
+<tr>
+<td><strong>System</strong></td>
+<td>Whole system</td>
+<td>QA team</td>
+<td>After integration</td>
+<td>System-level bugs</td>
+</tr>
+<tr>
+<td><strong>E2E</strong></td>
+<td>User workflows</td>
+<td>QA/Automation</td>
+<td>Before release</td>
+<td>Workflow failures</td>
+</tr>
+<tr>
+<td><strong>Acceptance</strong></td>
+<td>Business requirements</td>
+<td>Client/User</td>
+<td>Before deployment</td>
+<td>Requirement gaps</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-black-box-vs-white-box-testing">📐 Black Box vs White Box Testing<a class="headerlink" href="#-black-box-vs-white-box-testing" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Black Box Testing:
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  Tester doesn&#39;t know internal code
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  Tests based on INPUT → OUTPUT behavior
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  Techniques: Equivalence partitioning, boundary value analysis
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>  Who: QA testers, clients
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>White Box Testing:
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  Tester knows internal code structure
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  Tests based on code paths, branches, conditions
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>  Techniques: Statement coverage, branch coverage, path coverage
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>  Who: Developers
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>Grey Box Testing:
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>  Partial knowledge of internals
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>  Combination of both approaches
+</span></code></pre></div>
+<hr />
+<h2 id="-test-coverage-metrics">📊 Test Coverage Metrics<a class="headerlink" href="#-test-coverage-metrics" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Statement coverage: % of statements executed by tests
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Branch coverage:    % of branches (if/else) covered
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Path coverage:      % of all possible paths covered
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Example:
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  if (x &gt; 0) {
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    y = x * 2;    // Statement A
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  } else {
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    y = -x;       // Statement B
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>  }
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>  Test with x=5:  covers Statement A, branch &quot;true&quot;
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>  Test with x=-3: covers Statement B, branch &quot;false&quot;
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>  Both tests: 100% statement + branch coverage
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_2">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Unit testing tests ONE unit in isolation — not two modules together (that's integration).
+🚫 <strong>Mistake 2:</strong> 100% code coverage ≠ bug-free software. Coverage measures what's tested, not correctness.
+🚫 <strong>Mistake 3:</strong> E2E tests are slow and brittle — don't replace unit tests with E2E tests.
+🚫 <strong>Mistake 4:</strong> System testing is black-box — testers don't need to know the code.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips">🎯 Exam Tips<a class="headerlink" href="#-exam-tips" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Testing pyramid:</strong> Many unit tests → fewer integration tests → even fewer E2E tests.
+💡 Know the difference between verification ("are we building it right?") and validation ("are we building the right thing?").
+💡 Regression testing: re-run tests after changes to ensure nothing broke.
+💡 Smoke testing: quick sanity check — does the basic functionality work?</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_2">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_2" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Unit: test one function/class in isolation</li>
+<li>Integration: test modules working together</li>
+<li>System: test complete system (black-box)</li>
+<li>E2E: test full user workflows</li>
+<li>Acceptance: test against business requirements</li>
+<li>Black-box: test behavior | White-box: test code paths</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_2">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Explain the different levels of software testing with examples.
+<strong>Short note:</strong> What is the difference between black-box and white-box testing?
+<strong>Compare:</strong> Unit testing vs Integration testing vs System testing.
+<strong>Conceptual:</strong> What is regression testing? When is it performed?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="4-sdlc-models">4. SDLC Models<a class="headerlink" href="#4-sdlc-models" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_3">💡 Intuition First<a class="headerlink" href="#-intuition-first_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>SDLC (Software Development Life Cycle) is the <strong>structured process</strong> for building software. Different models answer the question: "In what order and how do we do requirements, design, coding, and testing?"</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Building a house — you need a plan (requirements), blueprint (design), construction (coding), inspection (testing), and handover (deployment). Different models differ in how strictly sequential vs iterative this process is.</p>
+<hr />
+<h2 id="-sdlc-phases-common-to-all-models">📐 SDLC Phases (Common to All Models)<a class="headerlink" href="#-sdlc-phases-common-to-all-models" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>1. Requirements    → What should the system do?
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2. System Design   → How will it be structured?
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>3. Implementation  → Write the code
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>4. Testing         → Does it work correctly?
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>5. Deployment      → Release to users
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>6. Maintenance     → Fix bugs, add features
+</span></code></pre></div>
+<hr />
+<h2 id="-waterfall-model">🌊 Waterfall Model<a class="headerlink" href="#-waterfall-model" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Sequential, linear process. Each phase must be <strong>fully completed</strong> before the next begins. Like water flowing downhill — no going back.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Requirements
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>     │
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>     ▼
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>  Design
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>     │
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>     ▼
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>Implementation
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>     │
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>     ▼
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>  Testing
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>     │
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>     ▼
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a> Deployment
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>     │
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>     ▼
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>Maintenance
+</span></code></pre></div>
+<h3 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process</td>
+<td>Sequential, linear</td>
+</tr>
+<tr>
+<td>Flexibility</td>
+<td>Very rigid — hard to go back</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Heavy documentation at each phase</td>
+</tr>
+<tr>
+<td>Customer involvement</td>
+<td>Only at start and end</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Well-defined, stable requirements</td>
+</tr>
+<tr>
+<td>Worst for</td>
+<td>Changing requirements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advantages--disadvantages">Advantages &amp; Disadvantages<a class="headerlink" href="#advantages--disadvantages" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>✅ Simple and easy to understand
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>✅ Well-documented phases
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>✅ Easy to manage (clear milestones)
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>✅ Works well for small, well-defined projects
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>❌ No working software until late in the process
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>❌ Cannot accommodate changing requirements
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>❌ Testing happens too late — bugs found late are expensive
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>❌ Customer sees product only at the end
+</span></code></pre></div>
+<hr />
+<h2 id="-agile-model">🔄 Agile Model<a class="headerlink" href="#-agile-model" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Iterative, incremental development in short <strong>sprints</strong> (1-4 weeks). Working software delivered frequently. Embraces change.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Sprint 1 (2 weeks):
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>  Plan → Design → Code → Test → Review
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>  Deliverable: Working feature set 1
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Sprint 2 (2 weeks):
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>  Plan → Design → Code → Test → Review
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>  Deliverable: Working feature set 2
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>...repeat until product complete
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>Customer involved at EVERY sprint review!
+</span></code></pre></div>
+<h3 id="agile-principles-from-agile-manifesto">Agile Principles (from Agile Manifesto)<a class="headerlink" href="#agile-principles-from-agile-manifesto" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Individuals and interactions  &gt; Processes and tools
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Working software              &gt; Comprehensive documentation
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>Customer collaboration        &gt; Contract negotiation
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>Responding to change          &gt; Following a plan
+</span></code></pre></div>
+<h3 id="agile-frameworks">Agile Frameworks<a class="headerlink" href="#agile-frameworks" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Key Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scrum</strong></td>
+<td>Sprints, daily standups, sprint reviews</td>
+</tr>
+<tr>
+<td><strong>Kanban</strong></td>
+<td>Visual board, continuous flow</td>
+</tr>
+<tr>
+<td><strong>XP (Extreme Programming)</strong></td>
+<td>Pair programming, TDD</td>
+</tr>
+<tr>
+<td><strong>SAFe</strong></td>
+<td>Scaled agile for large organizations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scrum-roles--artifacts">Scrum Roles &amp; Artifacts<a class="headerlink" href="#scrum-roles--artifacts" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Roles:
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>  Product Owner: defines requirements (backlog)
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>  Scrum Master:  facilitates process, removes blockers
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>  Dev Team:      builds the product
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>Artifacts:
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>  Product Backlog: all features/requirements
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>  Sprint Backlog:  features for current sprint
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>  Increment:       working software after each sprint
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>Events:
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>  Sprint Planning → Daily Standup → Sprint Review → Retrospective
+</span></code></pre></div>
+<hr />
+<h2 id="-spiral-model">🌀 Spiral Model<a class="headerlink" href="#-spiral-model" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Combines <strong>iterative development</strong> with <strong>risk analysis</strong>. Each spiral loop = one phase. Risk is assessed and mitigated at each loop.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Each spiral loop has 4 quadrants:
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>  1. Planning:      Determine objectives, alternatives, constraints
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>  2. Risk Analysis: Identify and resolve risks
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>  3. Engineering:   Develop and test
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>  4. Evaluation:    Customer evaluates, plan next loop
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>         ┌──────────────────────────────┐
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>         │  Planning  │  Risk Analysis  │
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>         ├────────────┼─────────────────┤
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>         │ Evaluation │   Engineering   │
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>         └──────────────────────────────┘
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>              ↑ Each loop = one iteration
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>              (loops get larger as project grows)
+</span></code></pre></div>
+<h3 id="spiral-model-characteristics">Spiral Model Characteristics<a class="headerlink" href="#spiral-model-characteristics" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risk handling</td>
+<td>Explicit risk analysis at each loop</td>
+</tr>
+<tr>
+<td>Flexibility</td>
+<td>High — can accommodate changes</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>High (risk analysis overhead)</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Large, complex, high-risk projects</td>
+</tr>
+<tr>
+<td>Customer involvement</td>
+<td>At each loop evaluation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-waterfall-vs-agile-vs-spiral">⚖️ Waterfall vs Agile vs Spiral<a class="headerlink" href="#-waterfall-vs-agile-vs-spiral" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Waterfall</th>
+<th>Agile</th>
+<th>Spiral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process</td>
+<td>Sequential</td>
+<td>Iterative</td>
+<td>Iterative + Risk</td>
+</tr>
+<tr>
+<td>Flexibility</td>
+<td>Low</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Customer involvement</td>
+<td>Start &amp; end</td>
+<td>Every sprint</td>
+<td>Every loop</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Heavy</td>
+<td>Light</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Risk management</td>
+<td>Poor</td>
+<td>Medium</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td>End only</td>
+<td>Every sprint</td>
+<td>Each loop</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Stable requirements</td>
+<td>Changing requirements</td>
+<td>High-risk projects</td>
+</tr>
+<tr>
+<td>Team size</td>
+<td>Any</td>
+<td>Small-medium</td>
+<td>Large</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-other-sdlc-models">📐 Other SDLC Models<a class="headerlink" href="#-other-sdlc-models" title="Anchor link">&para;</a></h2>
+<h3 id="v-model-verification--validation">V-Model (Verification &amp; Validation)<a class="headerlink" href="#v-model-verification--validation" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Requirements ──────────────────────► Acceptance Testing
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>  System Design ──────────────────► System Testing
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    Architecture Design ──────────► Integration Testing
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>      Module Design ──────────────► Unit Testing
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>                    Implementation
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>                    (bottom of V)
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>Each development phase has a corresponding test phase.
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>Testing planned in parallel with development.
+</span></code></pre></div>
+<h3 id="incremental-model">Incremental Model<a class="headerlink" href="#incremental-model" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Increment 1: Core features → deliver
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>Increment 2: Additional features → deliver
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>Increment 3: More features → deliver
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>...
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>Each increment adds functionality to the previous.
+</span></code></pre></div>
+<h3 id="prototype-model">Prototype Model<a class="headerlink" href="#prototype-model" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Build quick prototype → show to customer → get feedback
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>→ refine prototype → repeat until requirements clear
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>→ build final system
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>Good for: unclear requirements, UI-heavy systems
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_3">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Agile doesn't mean "no documentation" — it means "just enough" documentation.
+🚫 <strong>Mistake 2:</strong> Waterfall is not always bad — it's appropriate for stable, well-defined projects.
+🚫 <strong>Mistake 3:</strong> Spiral model is NOT just iterative — the key differentiator is <strong>risk analysis</strong> at each loop.
+🚫 <strong>Mistake 4:</strong> Scrum is a framework, not a methodology. Agile is the methodology.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_1">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Waterfall vs Agile</strong> is the most common comparison question — know the table cold.
+💡 Spiral model's key feature = <strong>risk analysis</strong> — always mention this.
+💡 Agile Manifesto: 4 values and 12 principles — know the 4 values.
+💡 V-model: each development phase maps to a testing phase (mirror image).</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_3">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_3" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Waterfall: sequential, rigid, heavy docs, no going back</li>
+<li>Agile: iterative sprints, flexible, customer involved throughout</li>
+<li>Spiral: iterative + risk analysis at each loop, for high-risk projects</li>
+<li>V-model: development and testing phases mirror each other</li>
+<li>Scrum: sprints + product backlog + daily standups</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_3">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Compare Waterfall and Agile SDLC models. When would you choose each?
+<strong>5-mark:</strong> Explain the Spiral model. What is its key advantage over Waterfall?
+<strong>Short note:</strong> What is Scrum? Explain its roles, artifacts, and events.
+<strong>Diagram:</strong> Draw the Waterfall model and the V-model. Compare them.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="5-requirements-engineering">5. Requirements Engineering<a class="headerlink" href="#5-requirements-engineering" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_4">💡 Intuition First<a class="headerlink" href="#-intuition-first_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Requirements engineering is about <strong>understanding what the system must do</strong> before building it. Getting requirements wrong is the most expensive mistake in software development — you might build the wrong thing perfectly.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Before building a house, you ask: "How many rooms? What style? What's the budget?" These are requirements. Building without them = disaster.</p>
+<hr />
+<h2 id="-functional-vs-non-functional-requirements">📐 Functional vs Non-Functional Requirements<a class="headerlink" href="#-functional-vs-non-functional-requirements" title="Anchor link">&para;</a></h2>
+<h3 id="functional-requirements">Functional Requirements<a class="headerlink" href="#functional-requirements" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p><strong>What the system DOES</strong> — specific behaviors, features, functions.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Examples:
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>  ✅ &quot;The system shall allow users to register with email and password&quot;
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>  ✅ &quot;The system shall send a confirmation email after registration&quot;
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>  ✅ &quot;Users shall be able to search products by name or category&quot;
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>  ✅ &quot;The system shall generate monthly sales reports&quot;
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>  ✅ &quot;Admin shall be able to add/edit/delete products&quot;
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>Format: &quot;The system SHALL [do something]&quot;
+</span></code></pre></div>
+<h3 id="non-functional-requirements-quality-attributes">Non-Functional Requirements (Quality Attributes)<a class="headerlink" href="#non-functional-requirements-quality-attributes" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p><strong>How well the system does it</strong> — quality constraints, performance, security.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Categories:
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>  Performance:    &quot;System shall respond within 2 seconds for 95% of requests&quot;
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>  Scalability:    &quot;System shall support 10,000 concurrent users&quot;
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>  Security:       &quot;Passwords shall be stored using bcrypt hashing&quot;
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>  Availability:   &quot;System shall have 99.9% uptime&quot;
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>  Usability:      &quot;New users shall complete registration in under 3 minutes&quot;
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>  Maintainability:&quot;Code shall follow PEP8 style guide&quot;
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>  Portability:    &quot;System shall run on Windows, Linux, and macOS&quot;
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>  Reliability:    &quot;System shall recover from failure within 30 seconds&quot;
+</span></code></pre></div>
+<hr />
+<h2 id="-functional-vs-non-functional">⚖️ Functional vs Non-Functional<a class="headerlink" href="#-functional-vs-non-functional" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Functional</th>
+<th>Non-Functional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Describes</td>
+<td>What system does</td>
+<td>How well it does it</td>
+</tr>
+<tr>
+<td>Testable</td>
+<td>Yes (pass/fail)</td>
+<td>Yes (measurable)</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>Login, search, report</td>
+<td>Speed, security, uptime</td>
+</tr>
+<tr>
+<td>Captured in</td>
+<td>Use cases, user stories</td>
+<td>Quality attributes</td>
+</tr>
+<tr>
+<td>If missing</td>
+<td>Feature doesn't exist</td>
+<td>Feature works poorly</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-srs-software-requirements-specification">📐 SRS (Software Requirements Specification)<a class="headerlink" href="#-srs-software-requirements-specification" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>The formal document that captures all requirements. The contract between developers and stakeholders.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>SRS Structure (IEEE 830):
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>  1. Introduction
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>     1.1 Purpose
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>     1.2 Scope
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>     1.3 Definitions, Acronyms
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>     1.4 References
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>  2. Overall Description
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>     2.1 Product Perspective
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>     2.2 Product Functions
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>     2.3 User Characteristics
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>     2.4 Constraints
+</span><span id="__span-28-12"><a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>  3. Specific Requirements
+</span><span id="__span-28-13"><a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>     3.1 Functional Requirements
+</span><span id="__span-28-14"><a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>     3.2 Non-Functional Requirements
+</span><span id="__span-28-15"><a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>     3.3 External Interface Requirements
+</span><span id="__span-28-16"><a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>  4. Appendices
+</span></code></pre></div>
+<h3 id="good-requirements-properties-smart">Good Requirements Properties (SMART)<a class="headerlink" href="#good-requirements-properties-smart" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>S — Specific:    Clear and unambiguous
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>M — Measurable:  Can be tested/verified
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>A — Achievable:  Technically feasible
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>R — Relevant:    Necessary for the system
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>T — Traceable:   Can be traced to source
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>Bad requirement:  &quot;The system should be fast&quot;
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>Good requirement: &quot;The system shall load the homepage in &lt; 2 seconds
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>                   for 95% of requests under 1000 concurrent users&quot;
+</span></code></pre></div>
+<hr />
+<h2 id="-user-stories-agile-requirements">📐 User Stories (Agile Requirements)<a class="headerlink" href="#-user-stories-agile-requirements" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Format: &quot;As a [role], I want [feature], so that [benefit]&quot;
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>Examples:
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>  &quot;As a customer, I want to search products by category,
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>   so that I can find items quickly.&quot;
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>  &quot;As an admin, I want to export sales data to CSV,
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>   so that I can analyze it in Excel.&quot;
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>Acceptance criteria (Given-When-Then):
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>  Given: I am on the product search page
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>  When:  I enter &quot;laptop&quot; in the search box and click Search
+</span><span id="__span-30-13"><a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>  Then:  I see a list of laptops sorted by relevance
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_4">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> "The system should be user-friendly" is NOT a good non-functional requirement — not measurable.
+🚫 <strong>Mistake 2:</strong> Functional requirements describe WHAT, not HOW. "Use MySQL database" is a design decision, not a requirement.
+🚫 <strong>Mistake 3:</strong> Non-functional requirements are NOT optional — poor performance or security can make a system unusable.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_4">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_4" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Functional: what the system does (features, behaviors)</li>
+<li>Non-functional: how well it does it (performance, security, usability)</li>
+<li>SRS: formal document capturing all requirements</li>
+<li>Good requirements: specific, measurable, unambiguous</li>
+<li>User stories: "As a [role], I want [feature], so that [benefit]"</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_4">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Differentiate between functional and non-functional requirements with examples.
+<strong>Short note:</strong> What is an SRS? What are the properties of good requirements?
+<strong>Write:</strong> Write 3 functional and 3 non-functional requirements for an online banking system.
+<strong>Identify:</strong> Given a list of requirements, classify each as functional or non-functional.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="6-uml-diagrams">6. UML Diagrams<a class="headerlink" href="#6-uml-diagrams" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_5">💡 Intuition First<a class="headerlink" href="#-intuition-first_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>UML (Unified Modeling Language) is the <strong>standard visual language for software design</strong>. Instead of writing paragraphs to describe a system, you draw diagrams. Different diagrams show different views of the system.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Architectural blueprints — floor plan (structure), electrical diagram (behavior), plumbing diagram (flow). Each shows a different aspect of the same building.</p>
+<hr />
+<h2 id="-uml-diagram-types">📐 UML Diagram Types<a class="headerlink" href="#-uml-diagram-types" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>UML Diagrams
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>├── Structural (static view)
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>│   ├── Class Diagram          ← most important
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>│   ├── Object Diagram
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>│   ├── Component Diagram
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>│   └── Deployment Diagram
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>│
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>└── Behavioral (dynamic view)
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>    ├── Use Case Diagram        ← most important
+</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>    ├── Sequence Diagram        ← most important
+</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>    ├── Activity Diagram
+</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>    ├── State Machine Diagram
+</span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>    └── Collaboration Diagram
+</span></code></pre></div>
+<hr />
+<h2 id="-use-case-diagram">👤 Use Case Diagram<a class="headerlink" href="#-use-case-diagram" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Shows <strong>what the system does</strong> from the user's perspective. Captures functional requirements visually.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Elements:
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>  Actor:    Stick figure (user or external system)
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>  Use Case: Oval (a function/feature)
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>  System:   Rectangle boundary
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>  Relationships:
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>    Association: Actor ──── Use Case
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>    Include:     Use Case ──«include»──► Use Case (always happens)
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>    Extend:      Use Case ──«extend»──► Use Case (sometimes happens)
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>    Generalization: Child ──────────► Parent
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>Example: Online Shopping System
+</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>
+</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>┌─────────────────────────────────────────────┐
+</span><span id="__span-32-14"><a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>│              Online Shopping System          │
+</span><span id="__span-32-15"><a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a>│                                             │
+</span><span id="__span-32-16"><a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>│  (Browse Products)    (Search Products)     │
+</span><span id="__span-32-17"><a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a>│                                             │
+</span><span id="__span-32-18"><a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a>│  (Add to Cart) ──«include»──► (View Cart)   │
+</span><span id="__span-32-19"><a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a>│                                             │
+</span><span id="__span-32-20"><a id="__codelineno-32-20" name="__codelineno-32-20" href="#__codelineno-32-20"></a>│  (Checkout) ──«include»──► (Make Payment)   │
+</span><span id="__span-32-21"><a id="__codelineno-32-21" name="__codelineno-32-21" href="#__codelineno-32-21"></a>│                                             │
+</span><span id="__span-32-22"><a id="__codelineno-32-22" name="__codelineno-32-22" href="#__codelineno-32-22"></a>│  (Track Order) ──«extend»──► (Cancel Order) │
+</span><span id="__span-32-23"><a id="__codelineno-32-23" name="__codelineno-32-23" href="#__codelineno-32-23"></a>│                                             │
+</span><span id="__span-32-24"><a id="__codelineno-32-24" name="__codelineno-32-24" href="#__codelineno-32-24"></a>└─────────────────────────────────────────────┘
+</span><span id="__span-32-25"><a id="__codelineno-32-25" name="__codelineno-32-25" href="#__codelineno-32-25"></a>     │                              │
+</span><span id="__span-32-26"><a id="__codelineno-32-26" name="__codelineno-32-26" href="#__codelineno-32-26"></a>  Customer                        Admin
+</span><span id="__span-32-27"><a id="__codelineno-32-27" name="__codelineno-32-27" href="#__codelineno-32-27"></a>  (Actor)                        (Actor)
+</span></code></pre></div>
+<hr />
+<h2 id="-class-diagram">📦 Class Diagram<a class="headerlink" href="#-class-diagram" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Shows the <strong>static structure</strong> of the system — classes, attributes, methods, and relationships.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Class notation:
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>┌─────────────────┐
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>│   ClassName     │  ← Class name
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>├─────────────────┤
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>│ - attribute: type│  ← Attributes (- private, + public, # protected)
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>├─────────────────┤
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>│ + method(): type│  ← Methods
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>└─────────────────┘
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>Example:
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>┌──────────────────┐         ┌──────────────────┐
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>│     Customer     │         │      Order       │
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>├──────────────────┤         ├──────────────────┤
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>│ - id: int        │         │ - orderId: int   │
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>│ - name: String   │  1   *  │ - date: Date     │
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>│ - email: String  │─────────│ - total: double  │
+</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a>├──────────────────┤ places  ├──────────────────┤
+</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a>│ + login()        │         │ + getTotal()     │
+</span><span id="__span-33-19"><a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a>│ + register()     │         │ + addItem()      │
+</span><span id="__span-33-20"><a id="__codelineno-33-20" name="__codelineno-33-20" href="#__codelineno-33-20"></a>└──────────────────┘         └──────────────────┘
+</span><span id="__span-33-21"><a id="__codelineno-33-21" name="__codelineno-33-21" href="#__codelineno-33-21"></a>                                      │ contains
+</span><span id="__span-33-22"><a id="__codelineno-33-22" name="__codelineno-33-22" href="#__codelineno-33-22"></a>                                      │ 1..*
+</span><span id="__span-33-23"><a id="__codelineno-33-23" name="__codelineno-33-23" href="#__codelineno-33-23"></a>                              ┌───────────────────┐
+</span><span id="__span-33-24"><a id="__codelineno-33-24" name="__codelineno-33-24" href="#__codelineno-33-24"></a>                              │     OrderItem     │
+</span><span id="__span-33-25"><a id="__codelineno-33-25" name="__codelineno-33-25" href="#__codelineno-33-25"></a>                              ├───────────────────┤
+</span><span id="__span-33-26"><a id="__codelineno-33-26" name="__codelineno-33-26" href="#__codelineno-33-26"></a>                              │ - productId: int  │
+</span><span id="__span-33-27"><a id="__codelineno-33-27" name="__codelineno-33-27" href="#__codelineno-33-27"></a>                              │ - quantity: int   │
+</span><span id="__span-33-28"><a id="__codelineno-33-28" name="__codelineno-33-28" href="#__codelineno-33-28"></a>                              │ - price: double   │
+</span><span id="__span-33-29"><a id="__codelineno-33-29" name="__codelineno-33-29" href="#__codelineno-33-29"></a>                              └───────────────────┘
+</span></code></pre></div>
+<h3 id="class-relationships">Class Relationships<a class="headerlink" href="#class-relationships" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Relationship</th>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Association</strong></td>
+<td>────</td>
+<td>General relationship</td>
+<td>Customer places Order</td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td>──◇</td>
+<td>"Has-a" (weak)</td>
+<td>Department has Employees</td>
+</tr>
+<tr>
+<td><strong>Composition</strong></td>
+<td>──◆</td>
+<td>"Has-a" (strong, lifecycle)</td>
+<td>House has Rooms</td>
+</tr>
+<tr>
+<td><strong>Inheritance</strong></td>
+<td>──▷</td>
+<td>"Is-a"</td>
+<td>Dog is-a Animal</td>
+</tr>
+<tr>
+<td><strong>Realization</strong></td>
+<td>──▷ (dashed)</td>
+<td>Implements interface</td>
+<td>Dog implements Runnable</td>
+</tr>
+<tr>
+<td><strong>Dependency</strong></td>
+<td>──► (dashed)</td>
+<td>Uses temporarily</td>
+<td>Order uses TaxCalculator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="multiplicity-notation">Multiplicity Notation<a class="headerlink" href="#multiplicity-notation" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>1      → exactly one
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>0..1   → zero or one (optional)
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>*      → zero or more
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>1..*   → one or more
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>2..5   → between 2 and 5
+</span></code></pre></div>
+<hr />
+<h2 id="-sequence-diagram">🔄 Sequence Diagram<a class="headerlink" href="#-sequence-diagram" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Shows <strong>how objects interact over time</strong> — the sequence of messages exchanged.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Elements:
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>  Lifeline:    Vertical dashed line (object&#39;s life)
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>  Activation:  Rectangle on lifeline (object is active)
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>  Message:     Horizontal arrow (method call)
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>  Return:      Dashed arrow (return value)
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>Example: User Login Sequence
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>User        Browser      AuthController    Database
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a> │             │               │               │
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a> │──login()──►│               │               │
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a> │             │──POST /login─►│               │
+</span><span id="__span-35-13"><a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a> │             │               │──findUser()──►│
+</span><span id="__span-35-14"><a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a> │             │               │◄──user data───│
+</span><span id="__span-35-15"><a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a> │             │               │──verifyPwd()  │
+</span><span id="__span-35-16"><a id="__codelineno-35-16" name="__codelineno-35-16" href="#__codelineno-35-16"></a> │             │               │               │
+</span><span id="__span-35-17"><a id="__codelineno-35-17" name="__codelineno-35-17" href="#__codelineno-35-17"></a> │             │◄──200 OK──────│               │
+</span><span id="__span-35-18"><a id="__codelineno-35-18" name="__codelineno-35-18" href="#__codelineno-35-18"></a> │◄──redirect─│               │               │
+</span><span id="__span-35-19"><a id="__codelineno-35-19" name="__codelineno-35-19" href="#__codelineno-35-19"></a> │             │               │               │
+</span></code></pre></div>
+<hr />
+<h2 id="-use-case-vs-class-vs-sequence-diagram">⚖️ Use Case vs Class vs Sequence Diagram<a class="headerlink" href="#-use-case-vs-class-vs-sequence-diagram" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Diagram</th>
+<th>Shows</th>
+<th>When Used</th>
+<th>Audience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>What system does</td>
+<td>Requirements phase</td>
+<td>Client, stakeholders</td>
+</tr>
+<tr>
+<td><strong>Class</strong></td>
+<td>System structure</td>
+<td>Design phase</td>
+<td>Developers</td>
+</tr>
+<tr>
+<td><strong>Sequence</strong></td>
+<td>Object interactions</td>
+<td>Design/implementation</td>
+<td>Developers</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_5">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Use case actors can be external systems, not just humans.
+🚫 <strong>Mistake 2:</strong> <code>«include»</code> = always happens (mandatory). <code>«extend»</code> = sometimes happens (optional).
+🚫 <strong>Mistake 3:</strong> Composition (◆) = child cannot exist without parent. Aggregation (◇) = child can exist independently.
+🚫 <strong>Mistake 4:</strong> In sequence diagrams, time flows downward — earlier messages are higher.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_2">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Use case diagram:</strong> Draw actors outside the system boundary, use cases inside.
+💡 <strong>Class diagram:</strong> Show multiplicity on both ends of associations.
+💡 <strong>Sequence diagram:</strong> Show activation boxes when an object is processing.
+💡 Include vs Extend: "Login includes Validate Credentials" | "Checkout extends Apply Coupon"</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_5">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_5" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Use case: actors + use cases + system boundary (what system does)</li>
+<li>Class: classes + attributes + methods + relationships (structure)</li>
+<li>Sequence: objects + messages + time (how they interact)</li>
+<li>Include: mandatory sub-use case | Extend: optional sub-use case</li>
+<li>Composition: strong ownership | Aggregation: weak ownership</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_5">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Draw a use case diagram for an ATM system. Include at least 4 use cases and 2 actors.
+<strong>5-mark:</strong> Draw a class diagram for a library management system with at least 3 classes and their relationships.
+<strong>5-mark:</strong> Draw a sequence diagram for the "Place Order" use case in an e-commerce system.
+<strong>Short note:</strong> What is the difference between include and extend relationships in use case diagrams?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="7-design-patterns">7. Design Patterns<a class="headerlink" href="#7-design-patterns" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_6">💡 Intuition First<a class="headerlink" href="#-intuition-first_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Design patterns are <strong>proven, reusable solutions to common software design problems</strong>. They're not code — they're templates. Like architectural blueprints: "When you need a door, here's the standard way to design one."</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Recipes in a cookbook. You don't invent a new way to bake bread every time — you follow a proven recipe and adapt it to your needs.</p>
+<p><strong>Why they matter:</strong> Patterns give developers a shared vocabulary. "Use a Singleton here" communicates a complete design decision in one word.</p>
+<hr />
+<h2 id="-pattern-categories-gang-of-four">📐 Pattern Categories (Gang of Four)<a class="headerlink" href="#-pattern-categories-gang-of-four" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Design Patterns
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>├── Creational (how objects are created)
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>│   ├── Singleton
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>│   ├── Factory Method
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>│   ├── Abstract Factory
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>│   ├── Builder
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>│   └── Prototype
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>│
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>├── Structural (how objects are composed)
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>│   ├── Adapter
+</span><span id="__span-36-11"><a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>│   ├── Decorator
+</span><span id="__span-36-12"><a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a>│   ├── Facade
+</span><span id="__span-36-13"><a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>│   ├── Proxy
+</span><span id="__span-36-14"><a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a>│   └── Composite
+</span><span id="__span-36-15"><a id="__codelineno-36-15" name="__codelineno-36-15" href="#__codelineno-36-15"></a>│
+</span><span id="__span-36-16"><a id="__codelineno-36-16" name="__codelineno-36-16" href="#__codelineno-36-16"></a>└── Behavioral (how objects communicate)
+</span><span id="__span-36-17"><a id="__codelineno-36-17" name="__codelineno-36-17" href="#__codelineno-36-17"></a>    ├── Observer
+</span><span id="__span-36-18"><a id="__codelineno-36-18" name="__codelineno-36-18" href="#__codelineno-36-18"></a>    ├── Strategy
+</span><span id="__span-36-19"><a id="__codelineno-36-19" name="__codelineno-36-19" href="#__codelineno-36-19"></a>    ├── Command
+</span><span id="__span-36-20"><a id="__codelineno-36-20" name="__codelineno-36-20" href="#__codelineno-36-20"></a>    ├── Iterator
+</span><span id="__span-36-21"><a id="__codelineno-36-21" name="__codelineno-36-21" href="#__codelineno-36-21"></a>    └── Template Method
+</span></code></pre></div>
+<hr />
+<h2 id="-singleton-pattern">🔒 Singleton Pattern<a class="headerlink" href="#-singleton-pattern" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Ensure a class has only ONE instance</strong> and provide a global access point to it.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Problem: You need exactly one database connection, one config manager,
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>         one logger — creating multiple would waste resources or cause conflicts.
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>Solution: Make constructor private, provide static getInstance() method.
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>class DatabaseConnection {
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>    private static instance = null;
+</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>
+</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>    private DatabaseConnection() {
+</span><span id="__span-37-10"><a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>        // private constructor — can&#39;t call new DatabaseConnection()
+</span><span id="__span-37-11"><a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>    }
+</span><span id="__span-37-12"><a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a>
+</span><span id="__span-37-13"><a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a>    public static getInstance() {
+</span><span id="__span-37-14"><a id="__codelineno-37-14" name="__codelineno-37-14" href="#__codelineno-37-14"></a>        if (instance == null) {
+</span><span id="__span-37-15"><a id="__codelineno-37-15" name="__codelineno-37-15" href="#__codelineno-37-15"></a>            instance = new DatabaseConnection();
+</span><span id="__span-37-16"><a id="__codelineno-37-16" name="__codelineno-37-16" href="#__codelineno-37-16"></a>        }
+</span><span id="__span-37-17"><a id="__codelineno-37-17" name="__codelineno-37-17" href="#__codelineno-37-17"></a>        return instance;
+</span><span id="__span-37-18"><a id="__codelineno-37-18" name="__codelineno-37-18" href="#__codelineno-37-18"></a>    }
+</span><span id="__span-37-19"><a id="__codelineno-37-19" name="__codelineno-37-19" href="#__codelineno-37-19"></a>
+</span><span id="__span-37-20"><a id="__codelineno-37-20" name="__codelineno-37-20" href="#__codelineno-37-20"></a>    public query(sql) { ... }
+</span><span id="__span-37-21"><a id="__codelineno-37-21" name="__codelineno-37-21" href="#__codelineno-37-21"></a>}
+</span><span id="__span-37-22"><a id="__codelineno-37-22" name="__codelineno-37-22" href="#__codelineno-37-22"></a>
+</span><span id="__span-37-23"><a id="__codelineno-37-23" name="__codelineno-37-23" href="#__codelineno-37-23"></a>// Usage:
+</span><span id="__span-37-24"><a id="__codelineno-37-24" name="__codelineno-37-24" href="#__codelineno-37-24"></a>db1 = DatabaseConnection.getInstance();
+</span><span id="__span-37-25"><a id="__codelineno-37-25" name="__codelineno-37-25" href="#__codelineno-37-25"></a>db2 = DatabaseConnection.getInstance();
+</span><span id="__span-37-26"><a id="__codelineno-37-26" name="__codelineno-37-26" href="#__codelineno-37-26"></a>// db1 == db2 (same object!)
+</span></code></pre></div>
+<h3 id="singleton-structure">Singleton Structure<a class="headerlink" href="#singleton-structure" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>┌─────────────────────────────────┐
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>│         DatabaseConnection      │
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>├─────────────────────────────────┤
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>│ - instance: DatabaseConnection  │  ← static, private
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>├─────────────────────────────────┤
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>│ - DatabaseConnection()          │  ← private constructor
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>│ + getInstance(): DBConnection   │  ← static, public
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>│ + query(sql): ResultSet         │
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>└─────────────────────────────────┘
+</span></code></pre></div>
+<h3 id="when-to-use-singleton">When to Use Singleton<a class="headerlink" href="#when-to-use-singleton" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>✅ Database connection pool
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>✅ Configuration manager
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>✅ Logger
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>✅ Thread pool
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>✅ Cache
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>⚠️ Overuse is an anti-pattern — makes testing hard (global state)
+</span></code></pre></div>
+<hr />
+<h2 id="-factory-method-pattern">🏭 Factory Method Pattern<a class="headerlink" href="#-factory-method-pattern" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Define an interface for creating objects, but let subclasses decide which class to instantiate.</strong> Decouple object creation from usage.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Problem: You need to create different types of objects (Circle, Rectangle, Triangle)
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>         but the client code shouldn&#39;t know which concrete class to instantiate.
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>Solution: Define a factory method that subclasses override.
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>// Abstract creator
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>abstract class ShapeFactory {
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>    abstract createShape(): Shape;  // factory method
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>    drawShape() {
+</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>        shape = createShape();      // uses factory method
+</span><span id="__span-40-12"><a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a>        shape.draw();
+</span><span id="__span-40-13"><a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a>    }
+</span><span id="__span-40-14"><a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a>}
+</span><span id="__span-40-15"><a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a>
+</span><span id="__span-40-16"><a id="__codelineno-40-16" name="__codelineno-40-16" href="#__codelineno-40-16"></a>// Concrete creators
+</span><span id="__span-40-17"><a id="__codelineno-40-17" name="__codelineno-40-17" href="#__codelineno-40-17"></a>class CircleFactory extends ShapeFactory {
+</span><span id="__span-40-18"><a id="__codelineno-40-18" name="__codelineno-40-18" href="#__codelineno-40-18"></a>    createShape(): Shape {
+</span><span id="__span-40-19"><a id="__codelineno-40-19" name="__codelineno-40-19" href="#__codelineno-40-19"></a>        return new Circle();
+</span><span id="__span-40-20"><a id="__codelineno-40-20" name="__codelineno-40-20" href="#__codelineno-40-20"></a>    }
+</span><span id="__span-40-21"><a id="__codelineno-40-21" name="__codelineno-40-21" href="#__codelineno-40-21"></a>}
+</span><span id="__span-40-22"><a id="__codelineno-40-22" name="__codelineno-40-22" href="#__codelineno-40-22"></a>
+</span><span id="__span-40-23"><a id="__codelineno-40-23" name="__codelineno-40-23" href="#__codelineno-40-23"></a>class RectangleFactory extends ShapeFactory {
+</span><span id="__span-40-24"><a id="__codelineno-40-24" name="__codelineno-40-24" href="#__codelineno-40-24"></a>    createShape(): Shape {
+</span><span id="__span-40-25"><a id="__codelineno-40-25" name="__codelineno-40-25" href="#__codelineno-40-25"></a>        return new Rectangle();
+</span><span id="__span-40-26"><a id="__codelineno-40-26" name="__codelineno-40-26" href="#__codelineno-40-26"></a>    }
+</span><span id="__span-40-27"><a id="__codelineno-40-27" name="__codelineno-40-27" href="#__codelineno-40-27"></a>}
+</span><span id="__span-40-28"><a id="__codelineno-40-28" name="__codelineno-40-28" href="#__codelineno-40-28"></a>
+</span><span id="__span-40-29"><a id="__codelineno-40-29" name="__codelineno-40-29" href="#__codelineno-40-29"></a>// Usage:
+</span><span id="__span-40-30"><a id="__codelineno-40-30" name="__codelineno-40-30" href="#__codelineno-40-30"></a>factory = new CircleFactory();
+</span><span id="__span-40-31"><a id="__codelineno-40-31" name="__codelineno-40-31" href="#__codelineno-40-31"></a>factory.drawShape();  // draws a circle
+</span></code></pre></div>
+<h3 id="factory-pattern-structure">Factory Pattern Structure<a class="headerlink" href="#factory-pattern-structure" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>┌──────────────┐         ┌──────────────┐
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>│  ShapeFactory│         │    Shape     │
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>│  (abstract)  │         │  (interface) │
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>├──────────────┤         ├──────────────┤
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>│+createShape()│         │ + draw()     │
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>│+drawShape()  │         └──────┬───────┘
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>└──────┬───────┘                │
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>       │                   ┌────┴────┐
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>  ┌────┴────┐           Circle  Rectangle
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>  │         │
+</span><span id="__span-41-11"><a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>CircleFactory RectangleFactory
+</span></code></pre></div>
+<h3 id="simple-factory-vs-factory-method-vs-abstract-factory">Simple Factory vs Factory Method vs Abstract Factory<a class="headerlink" href="#simple-factory-vs-factory-method-vs-abstract-factory" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Creates</th>
+<th>Flexibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple Factory</td>
+<td>One factory, multiple products</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Factory Method</td>
+<td>Subclass decides product</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Abstract Factory</td>
+<td>Family of related products</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-observer-pattern">👁️ Observer Pattern<a class="headerlink" href="#-observer-pattern" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Define a one-to-many dependency</strong> so that when one object (Subject) changes state, all its dependents (Observers) are notified automatically.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Problem: Multiple parts of a system need to react when data changes.
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>         E.g., when stock price changes → update chart, alert, portfolio.
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>Solution: Subject maintains a list of observers and notifies them on change.
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>interface Observer {
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>    update(data): void;
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>}
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>class StockMarket {  // Subject
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>    private observers = [];
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>    private price;
+</span><span id="__span-42-13"><a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a>
+</span><span id="__span-42-14"><a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>    subscribe(observer) {
+</span><span id="__span-42-15"><a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a>        observers.add(observer);
+</span><span id="__span-42-16"><a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a>    }
+</span><span id="__span-42-17"><a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a>
+</span><span id="__span-42-18"><a id="__codelineno-42-18" name="__codelineno-42-18" href="#__codelineno-42-18"></a>    unsubscribe(observer) {
+</span><span id="__span-42-19"><a id="__codelineno-42-19" name="__codelineno-42-19" href="#__codelineno-42-19"></a>        observers.remove(observer);
+</span><span id="__span-42-20"><a id="__codelineno-42-20" name="__codelineno-42-20" href="#__codelineno-42-20"></a>    }
+</span><span id="__span-42-21"><a id="__codelineno-42-21" name="__codelineno-42-21" href="#__codelineno-42-21"></a>
+</span><span id="__span-42-22"><a id="__codelineno-42-22" name="__codelineno-42-22" href="#__codelineno-42-22"></a>    setPrice(newPrice) {
+</span><span id="__span-42-23"><a id="__codelineno-42-23" name="__codelineno-42-23" href="#__codelineno-42-23"></a>        price = newPrice;
+</span><span id="__span-42-24"><a id="__codelineno-42-24" name="__codelineno-42-24" href="#__codelineno-42-24"></a>        notifyAll();
+</span><span id="__span-42-25"><a id="__codelineno-42-25" name="__codelineno-42-25" href="#__codelineno-42-25"></a>    }
+</span><span id="__span-42-26"><a id="__codelineno-42-26" name="__codelineno-42-26" href="#__codelineno-42-26"></a>
+</span><span id="__span-42-27"><a id="__codelineno-42-27" name="__codelineno-42-27" href="#__codelineno-42-27"></a>    notifyAll() {
+</span><span id="__span-42-28"><a id="__codelineno-42-28" name="__codelineno-42-28" href="#__codelineno-42-28"></a>        for each observer in observers:
+</span><span id="__span-42-29"><a id="__codelineno-42-29" name="__codelineno-42-29" href="#__codelineno-42-29"></a>            observer.update(price);
+</span><span id="__span-42-30"><a id="__codelineno-42-30" name="__codelineno-42-30" href="#__codelineno-42-30"></a>    }
+</span><span id="__span-42-31"><a id="__codelineno-42-31" name="__codelineno-42-31" href="#__codelineno-42-31"></a>}
+</span><span id="__span-42-32"><a id="__codelineno-42-32" name="__codelineno-42-32" href="#__codelineno-42-32"></a>
+</span><span id="__span-42-33"><a id="__codelineno-42-33" name="__codelineno-42-33" href="#__codelineno-42-33"></a>class PriceChart implements Observer {
+</span><span id="__span-42-34"><a id="__codelineno-42-34" name="__codelineno-42-34" href="#__codelineno-42-34"></a>    update(price) { redrawChart(price); }
+</span><span id="__span-42-35"><a id="__codelineno-42-35" name="__codelineno-42-35" href="#__codelineno-42-35"></a>}
+</span><span id="__span-42-36"><a id="__codelineno-42-36" name="__codelineno-42-36" href="#__codelineno-42-36"></a>
+</span><span id="__span-42-37"><a id="__codelineno-42-37" name="__codelineno-42-37" href="#__codelineno-42-37"></a>class PriceAlert implements Observer {
+</span><span id="__span-42-38"><a id="__codelineno-42-38" name="__codelineno-42-38" href="#__codelineno-42-38"></a>    update(price) {
+</span><span id="__span-42-39"><a id="__codelineno-42-39" name="__codelineno-42-39" href="#__codelineno-42-39"></a>        if (price &gt; threshold) sendAlert();
+</span><span id="__span-42-40"><a id="__codelineno-42-40" name="__codelineno-42-40" href="#__codelineno-42-40"></a>    }
+</span><span id="__span-42-41"><a id="__codelineno-42-41" name="__codelineno-42-41" href="#__codelineno-42-41"></a>}
+</span><span id="__span-42-42"><a id="__codelineno-42-42" name="__codelineno-42-42" href="#__codelineno-42-42"></a>
+</span><span id="__span-42-43"><a id="__codelineno-42-43" name="__codelineno-42-43" href="#__codelineno-42-43"></a>// Usage:
+</span><span id="__span-42-44"><a id="__codelineno-42-44" name="__codelineno-42-44" href="#__codelineno-42-44"></a>market = new StockMarket();
+</span><span id="__span-42-45"><a id="__codelineno-42-45" name="__codelineno-42-45" href="#__codelineno-42-45"></a>market.subscribe(new PriceChart());
+</span><span id="__span-42-46"><a id="__codelineno-42-46" name="__codelineno-42-46" href="#__codelineno-42-46"></a>market.subscribe(new PriceAlert());
+</span><span id="__span-42-47"><a id="__codelineno-42-47" name="__codelineno-42-47" href="#__codelineno-42-47"></a>market.setPrice(150);  // both chart and alert updated!
+</span></code></pre></div>
+<h3 id="observer-structure">Observer Structure<a class="headerlink" href="#observer-structure" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>┌──────────────────┐         ┌──────────────┐
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>│   StockMarket    │         │   Observer   │
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>│   (Subject)      │         │  (interface) │
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>├──────────────────┤  1   *  ├──────────────┤
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>│ - observers[]    │─────────│ + update()   │
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>├──────────────────┤         └──────┬───────┘
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>│ + subscribe()    │                │
+</span><span id="__span-43-8"><a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>│ + unsubscribe()  │         ┌──────┴──────┐
+</span><span id="__span-43-9"><a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>│ + notifyAll()    │      PriceChart   PriceAlert
+</span><span id="__span-43-10"><a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>│ + setPrice()     │
+</span><span id="__span-43-11"><a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a>└──────────────────┘
+</span></code></pre></div>
+<h3 id="real-world-observer-examples">Real-World Observer Examples<a class="headerlink" href="#real-world-observer-examples" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>✅ Event listeners in JavaScript (addEventListener)
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>✅ MVC pattern (Model notifies View)
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>✅ Pub/Sub messaging systems (Kafka, RabbitMQ)
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>✅ React state management (Redux)
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>✅ Database triggers
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>✅ News subscription services
+</span></code></pre></div>
+<hr />
+<h2 id="-design-patterns-comparison">⚖️ Design Patterns Comparison<a class="headerlink" href="#-design-patterns-comparison" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Category</th>
+<th>Problem Solved</th>
+<th>Key Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Singleton</strong></td>
+<td>Creational</td>
+<td>One instance only</td>
+<td>Private constructor + static instance</td>
+</tr>
+<tr>
+<td><strong>Factory</strong></td>
+<td>Creational</td>
+<td>Decouple creation from use</td>
+<td>Factory method / subclass decides</td>
+</tr>
+<tr>
+<td><strong>Observer</strong></td>
+<td>Behavioral</td>
+<td>Notify multiple dependents</td>
+<td>Subscribe/notify mechanism</td>
+</tr>
+<tr>
+<td><strong>Strategy</strong></td>
+<td>Behavioral</td>
+<td>Swap algorithms at runtime</td>
+<td>Interface + multiple implementations</td>
+</tr>
+<tr>
+<td><strong>Decorator</strong></td>
+<td>Structural</td>
+<td>Add behavior without subclassing</td>
+<td>Wrap object with decorator</td>
+</tr>
+<tr>
+<td><strong>Adapter</strong></td>
+<td>Structural</td>
+<td>Make incompatible interfaces work</td>
+<td>Wrapper that translates calls</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_6">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Singleton is NOT always good — it creates global state, making testing hard.
+🚫 <strong>Mistake 2:</strong> Factory Method ≠ Simple Factory. Factory Method uses inheritance; Simple Factory uses a single class.
+🚫 <strong>Mistake 3:</strong> Observer pattern: Subject doesn't know what observers DO — it just calls <code>update()</code>.
+🚫 <strong>Mistake 4:</strong> Design patterns are solutions to RECURRING problems — don't force them where they don't fit.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_3">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Singleton:</strong> Know the private constructor + static getInstance() pattern cold.
+💡 <strong>Factory:</strong> "Decouple object creation from usage" — this phrase defines it.
+💡 <strong>Observer:</strong> "One-to-many dependency" — Subject notifies all Observers.
+💡 Always draw the UML class diagram when explaining a pattern.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_6">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_6" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Singleton: one instance, private constructor, static getInstance()</li>
+<li>Factory: decouple creation, subclass decides which object to create</li>
+<li>Observer: subject notifies all subscribed observers on state change</li>
+<li>Creational: how objects created | Structural: how composed | Behavioral: how communicate</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_6">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Explain the Singleton design pattern with a UML diagram and code example.
+<strong>5-mark:</strong> Explain the Observer pattern. Give a real-world example and draw the class diagram.
+<strong>Short note:</strong> What is the Factory Method pattern? How does it differ from Simple Factory?
+<strong>Compare:</strong> Singleton vs Factory vs Observer — category, problem, and solution.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="-master-quick-revision-sheet--software-engineering">🏁 Master Quick Revision Sheet — Software Engineering<a class="headerlink" href="#-master-quick-revision-sheet--software-engineering" title="Anchor link">&para;</a></h1>
+<h2 id="-cohesion--coupling-cheat-sheet">⚡ Cohesion &amp; Coupling Cheat Sheet<a class="headerlink" href="#-cohesion--coupling-cheat-sheet" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>COHESION (want HIGH):
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>Worst → Best:
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>Coincidental → Logical → Temporal → Procedural →
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>Communicational → Sequential → Functional
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>COUPLING (want LOW):
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>Worst → Best:
+</span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>Content → Common → External → Control →
+</span><span id="__span-45-9"><a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>Stamp → Data → Message
+</span></code></pre></div>
+<h2 id="-key-facts-to-remember">🔑 Key Facts to Remember<a class="headerlink" href="#-key-facts-to-remember" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fact</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best cohesion</td>
+<td>Functional (single purpose)</td>
+</tr>
+<tr>
+<td>Best coupling</td>
+<td>Data / Message</td>
+</tr>
+<tr>
+<td>Waterfall</td>
+<td>Sequential, rigid, heavy docs</td>
+</tr>
+<tr>
+<td>Agile</td>
+<td>Iterative sprints, flexible, customer involved</td>
+</tr>
+<tr>
+<td>Spiral</td>
+<td>Iterative + risk analysis at each loop</td>
+</tr>
+<tr>
+<td>V-model</td>
+<td>Dev phases mirror test phases</td>
+</tr>
+<tr>
+<td>Functional req</td>
+<td>What system does</td>
+</tr>
+<tr>
+<td>Non-functional req</td>
+<td>How well it does it</td>
+</tr>
+<tr>
+<td>Include (UML)</td>
+<td>Mandatory sub-use case</td>
+</tr>
+<tr>
+<td>Extend (UML)</td>
+<td>Optional sub-use case</td>
+</tr>
+<tr>
+<td>Composition</td>
+<td>Strong ownership (child dies with parent)</td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td>Weak ownership (child can exist alone)</td>
+</tr>
+<tr>
+<td>Singleton</td>
+<td>One instance, private constructor</td>
+</tr>
+<tr>
+<td>Factory</td>
+<td>Decouple creation from usage</td>
+</tr>
+<tr>
+<td>Observer</td>
+<td>One-to-many notification</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-memory-tricks">🧠 Memory Tricks<a class="headerlink" href="#-memory-tricks" title="Anchor link">&para;</a></h2>
+<ul>
+<li><strong>Cohesion types:</strong> "<strong>C</strong>ats <strong>L</strong>ove <strong>T</strong>o <strong>P</strong>lay <strong>C</strong>hess <strong>S</strong>ometimes <strong>F</strong>unny"</li>
+<li><strong>Coupling types:</strong> "<strong>C</strong>ats <strong>C</strong>hase <strong>E</strong>very <strong>C</strong>urious <strong>S</strong>mall <strong>D</strong>og <strong>M</strong>eowing"</li>
+<li><strong>SDLC models:</strong> "<strong>W</strong>ater <strong>A</strong>lways <strong>S</strong>pirals <strong>V</strong>ertically <strong>I</strong>n <strong>P</strong>ipes" → Waterfall, Agile, Spiral, V-model, Incremental, Prototype</li>
+<li><strong>UML diagrams:</strong> "<strong>U</strong>se <strong>C</strong>lass <strong>S</strong>equence" → the 3 most important</li>
+<li><strong>Design pattern categories:</strong> "<strong>C</strong>reate <strong>S</strong>tructure <strong>B</strong>ehavior" → Creational, Structural, Behavioral</li>
+</ul>
+<h2 id="-top-10-most-probable-exam-questions">🎯 Top 10 Most Probable Exam Questions<a class="headerlink" href="#-top-10-most-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<ol>
+<li>Explain cohesion and coupling with types and examples</li>
+<li>Compare Waterfall vs Agile SDLC models</li>
+<li>Explain the Spiral model — what makes it unique?</li>
+<li>Differentiate functional vs non-functional requirements with examples</li>
+<li>Draw a use case diagram for a given system</li>
+<li>Draw a class diagram with relationships and multiplicity</li>
+<li>Draw a sequence diagram for a given scenario</li>
+<li>Explain Singleton pattern with code and UML</li>
+<li>Explain Observer pattern with real-world example</li>
+<li>Compare unit testing, integration testing, and system testing</li>
+</ol>
+<h2 id="-sdlc-quick-reference">📊 SDLC Quick Reference<a class="headerlink" href="#-sdlc-quick-reference" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>┌──────────────┬────────────┬──────────┬──────────────┬──────────────┐
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>│ Model        │ Process    │ Flexible?│ Risk Mgmt    │ Best For     │
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>├──────────────┼────────────┼──────────┼──────────────┼──────────────┤
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>│ Waterfall    │ Sequential │ Low      │ Poor         │ Stable reqs  │
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>│ Agile/Scrum  │ Iterative  │ High     │ Medium       │ Changing reqs│
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>│ Spiral       │ Iterative  │ High     │ Excellent    │ High-risk    │
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>│ V-Model      │ Sequential │ Low      │ Good         │ Safety-crit  │
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>│ Incremental  │ Incremental│ Medium   │ Medium       │ Large systems│
+</span><span id="__span-46-9"><a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>│ Prototype    │ Iterative  │ High     │ Medium       │ Unclear reqs │
+</span><span id="__span-46-10"><a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>└──────────────┴────────────┴──────────┴──────────────┴──────────────┘
+</span></code></pre></div>
+<hr />
+<blockquote>
+<p>📌 <strong>End of Subject 06: Software Engineering</strong></p>
+<p>Next: <strong>Subject 07 — Database Management System (DBMS)</strong> →</p>
+</blockquote>
+<hr />
+<p><em>Handbook generated for MSc Admission Preparation | JUST-Style Exam Focus</em>
+<em>Version 1.0 | Software Engineering</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../05%20-%20Digital%20Logic%20Design/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 05 · Digital Logic Design">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                05 · Digital Logic Design
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../07%20-%20Database%20Management%20System/" class="md-footer__link md-footer__link--next" aria-label="Next: 07 · Database Management System">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                07 · Database Management System
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -36,21 +36,6 @@
 
 ## 📐 Process States
 
-```
-                    ┌─────────────────────────────────────────┐
-                    │                                         │
-         admitted   ▼        scheduler        I/O or event   │
-  NEW ──────────► READY ──────dispatch──────► RUNNING ───────┘
-                    ▲                            │
-                    │        I/O or event        │
-                    │◄────── completion ─────── WAITING
-                    │                            
-                    └──────────────────────────► TERMINATED
-                         exit / error
-```
-
-### Full 5-State Diagram
-
 ```mermaid
 stateDiagram-v2
     [*] --> New : Process created

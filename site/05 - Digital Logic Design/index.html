@@ -1,0 +1,3112 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modern, exam-focused handbook for MSc CSE admission preparation">
+      
+      
+        <meta name="author" content="Nehal">
+      
+      
+      
+        <link rel="prev" href="../04%20-%20Compiler%20Design%20%26%20Automata/">
+      
+      
+        <link rel="next" href="../06%20-%20Software%20Engineering/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>05 · Digital Logic Design - MSc CSE Admission Prep</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M21%2010V9l-6-6H5c-1.11%200-2%20.89-2%202v14a2%202%200%200%200%202%202h6v-1.87l8.39-8.39c.44-.44%201-.68%201.61-.74m-7-5.5%205.5%205.5H14zm8.85%209.69-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72%200l1.32%201.32c.2.2.2.53%200%20.72m-3.72-.36%202.04%202.04L15.04%2022H13v-2.04z%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7%202v2h1v14a4%204%200%200%200%204%204%204%204%200%200%200%204-4V4h1V2zm4%2014c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m2-4c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m1-5h-4V4h4z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M14%2017h3l2-4V7h-6v6h3M6%2017h3l2-4V7H5v6h3z%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-msc-admission-prep--subject-05-digital-logic-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MSc CSE Admission Prep" class="md-header__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSc CSE Admission Prep
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              05 · Digital Logic Design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier S/A — Must Master
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../11%20-%20Discrete%20Mathematics/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier B — Moderately Important
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier C — Light Revision
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MSc CSE Admission Prep" class="md-nav__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    MSc CSE Admission Prep
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier S/A — Must Master
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier S/A — Must Master
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Data Structures & Algorithms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20-%20Operating%20Systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Operating Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Computer Networks & Data Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20-%20Compiler%20Design%20%26%20Automata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Compiler Design & Automata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Digital Logic Design
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Digital Logic Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06%20-%20Software%20Engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Software Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20Database%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Database Management System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08%20-%20Artificial%20Intelligence%20%26%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Artificial Intelligence & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09%20-%20Object%20Oriented%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Object Oriented Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%20-%20Programming%20Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier B — Moderately Important
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier B — Moderately Important
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11%20-%20Discrete%20Mathematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 · Discrete Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12%20-%20Computer%20Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 · Computer Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13%20-%20Numerical%20Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13 · Numerical Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier C — Light Revision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier C — Light Revision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14–20 · Tier C Subjects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tier S/A — Must Master
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="-msc-admission-prep--subject-05-digital-logic-design">📘 MSc Admission Prep — Subject 05: Digital Logic Design<a class="headerlink" href="#-msc-admission-prep--subject-05-digital-logic-design" title="Anchor link">&para;</a></h1>
+<h3 id="-just-style-exam-handbook--fast-revision-edition">🎯 JUST-Style Exam Handbook | Fast Revision Edition<a class="headerlink" href="#-just-style-exam-handbook--fast-revision-edition" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p><strong>Goal:</strong> Visual, exam-focused revision of Boolean algebra, logic circuits, K-maps, and sequential logic. Every topic includes truth tables, circuit diagrams, and worked examples.</p>
+</blockquote>
+<hr />
+<h2 id="-table-of-contents">📋 Table of Contents<a class="headerlink" href="#-table-of-contents" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Topic</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="#1-boolean-algebra--laws">Boolean Algebra &amp; Laws</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="#2-sop--pos-forms">SOP &amp; POS Forms</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="#3-karnaugh-maps-k-map">Karnaugh Maps (K-Map)</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="#4-logic-gates">Logic Gates</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="#5-combinational-circuits--adders">Combinational Circuits — Adders</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#6-multiplexer--demultiplexer">Multiplexer &amp; Demultiplexer</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="#7-encoder--decoder">Encoder &amp; Decoder</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="#8-flip-flops">Flip-Flops</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="#9-counters">Counters</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="#10-registers">Registers</a></td>
+<td>🔴 Must Master</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h1 id="1-boolean-algebra--laws">1. Boolean Algebra &amp; Laws<a class="headerlink" href="#1-boolean-algebra--laws" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first">💡 Intuition First<a class="headerlink" href="#-intuition-first" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Boolean algebra is the math of <strong>true/false decisions</strong>. Every digital circuit — from a light switch to a CPU — is built on these rules. Instead of numbers, we work with 0 (false/off) and 1 (true/on).</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> A light turns on (1) only if switch A AND switch B are both on. That's <code>A · B</code>. A light turns on if switch A OR switch B is on. That's <code>A + B</code>.</p>
+<hr />
+<h2 id="-basic-operations">📐 Basic Operations<a class="headerlink" href="#-basic-operations" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AND</strong></td>
+<td>· or ∧</td>
+<td>Both must be 1</td>
+<td>1·1=1, 1·0=0</td>
+</tr>
+<tr>
+<td><strong>OR</strong></td>
+<td>+ or ∨</td>
+<td>At least one must be 1</td>
+<td>1+0=1, 0+0=0</td>
+</tr>
+<tr>
+<td><strong>NOT</strong></td>
+<td>¯ or ¬</td>
+<td>Invert</td>
+<td>0̄=1, 1̄=0</td>
+</tr>
+<tr>
+<td><strong>NAND</strong></td>
+<td>↑</td>
+<td>NOT AND</td>
+<td>(1·1)̄=0</td>
+</tr>
+<tr>
+<td><strong>NOR</strong></td>
+<td>↓</td>
+<td>NOT OR</td>
+<td>(1+0)̄=0</td>
+</tr>
+<tr>
+<td><strong>XOR</strong></td>
+<td>⊕</td>
+<td>Exactly one is 1</td>
+<td>1⊕0=1, 1⊕1=0</td>
+</tr>
+<tr>
+<td><strong>XNOR</strong></td>
+<td>⊙</td>
+<td>Both same</td>
+<td>1⊙1=1, 1⊙0=0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-boolean-laws--theorems">📐 Boolean Laws &amp; Theorems<a class="headerlink" href="#-boolean-laws--theorems" title="Anchor link">&para;</a></h2>
+<h3 id="identity-laws">Identity Laws<a class="headerlink" href="#identity-laws" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>A + 0 = A          A · 1 = A
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>A + 1 = 1          A · 0 = 0
+</span></code></pre></div>
+<h3 id="complement-laws">Complement Laws<a class="headerlink" href="#complement-laws" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>A + Ā = 1          A · Ā = 0
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Ā̄ = A              (double complement)
+</span></code></pre></div>
+<h3 id="idempotent-laws">Idempotent Laws<a class="headerlink" href="#idempotent-laws" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>A + A = A          A · A = A
+</span></code></pre></div>
+<h3 id="commutative-laws">Commutative Laws<a class="headerlink" href="#commutative-laws" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>A + B = B + A      A · B = B · A
+</span></code></pre></div>
+<h3 id="associative-laws">Associative Laws<a class="headerlink" href="#associative-laws" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>(A+B)+C = A+(B+C)      (A·B)·C = A·(B·C)
+</span></code></pre></div>
+<h3 id="distributive-laws">Distributive Laws<a class="headerlink" href="#distributive-laws" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>A·(B+C) = A·B + A·C    A+(B·C) = (A+B)·(A+C)
+</span></code></pre></div>
+<h3 id="absorption-laws">Absorption Laws<a class="headerlink" href="#absorption-laws" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>A + A·B = A            A·(A+B) = A
+</span></code></pre></div>
+<h3 id="de-morgans-theorems--most-important">De Morgan's Theorems ⭐ (Most Important!)<a class="headerlink" href="#de-morgans-theorems--most-important" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>(A + B)̄ = Ā · B̄        &quot;Break the bar, change the sign&quot;
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>(A · B)̄ = Ā + B̄
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Mnemonic: &quot;Break the line, change the sign&quot;
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  NOR  = AND of complements
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  NAND = OR of complements
+</span></code></pre></div>
+<hr />
+<h2 id="-boolean-simplification--worked-examples">✏️ Boolean Simplification — Worked Examples<a class="headerlink" href="#-boolean-simplification--worked-examples" title="Anchor link">&para;</a></h2>
+<h3 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Simplify: F = AB + AB̄
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>F = AB + AB̄
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  = A(B + B̄)      [Distributive]
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  = A · 1          [Complement: B + B̄ = 1]
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>  = A              [Identity]
+</span></code></pre></div>
+<h3 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Simplify: F = A + ĀB
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>F = A + ĀB
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  = (A + Ā)(A + B)    [Distributive: A+(B·C) = (A+B)·(A+C)]
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  = 1 · (A + B)        [Complement]
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>  = A + B              [Identity]
+</span></code></pre></div>
+<h3 id="example-3">Example 3<a class="headerlink" href="#example-3" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Simplify: F = ABC + ABC̄ + AB̄C
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>F = ABC + ABC̄ + AB̄C
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  = AB(C + C̄) + AB̄C    [Factor AB]
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  = AB·1 + AB̄C          [Complement]
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  = AB + AB̄C            [Identity]
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  = A(B + B̄C)           [Factor A]
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  = A(B + C)             [Absorption: B + B̄C = B + C]
+</span></code></pre></div>
+<hr />
+<h2 id="-de-morgans--application">⚖️ De Morgan's — Application<a class="headerlink" href="#-de-morgans--application" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Convert NAND to basic gates:
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  F = (AB)̄ = Ā + B̄     [De Morgan&#39;s]
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Convert NOR to basic gates:
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  F = (A+B)̄ = Ā · B̄    [De Morgan&#39;s]
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>Complement a function:
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  F = AB + C̄D
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>  F̄ = (AB + C̄D)̄
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    = (AB)̄ · (C̄D)̄       [De Morgan&#39;s on OR]
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    = (Ā+B̄) · (C+D̄)     [De Morgan&#39;s on each AND]
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> De Morgan's: <code>(A+B)̄ ≠ Ā + B̄</code> — it equals <code>Ā · B̄</code>. Change + to · when breaking the bar.
+🚫 <strong>Mistake 2:</strong> <code>A + AB ≠ AB</code> — it equals <code>A</code> (absorption law).
+🚫 <strong>Mistake 3:</strong> XOR: <code>A ⊕ A = 0</code> and <code>A ⊕ 0 = A</code> and <code>A ⊕ 1 = Ā</code>.
+🚫 <strong>Mistake 4:</strong> Boolean + is OR, not arithmetic addition. <code>1 + 1 = 1</code> (not 2).</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips">🎯 Exam Tips<a class="headerlink" href="#-exam-tips" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>De Morgan's theorem</strong> is the most tested Boolean law — know both forms cold.
+💡 Simplification steps: always show each law applied.
+💡 Absorption: <code>A + AB = A</code> and <code>A(A+B) = A</code> — very useful shortcuts.
+💡 XOR properties: <code>A⊕A=0</code>, <code>A⊕0=A</code>, <code>A⊕1=Ā</code>, <code>A⊕B=B⊕A</code>.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap" title="Anchor link">&para;</a></h2>
+<ul>
+<li>AND: both 1 → 1 | OR: any 1 → 1 | NOT: invert</li>
+<li>De Morgan's: <code>(A+B)̄ = Ā·B̄</code> and <code>(AB)̄ = Ā+B̄</code></li>
+<li>Absorption: <code>A+AB=A</code> and <code>A(A+B)=A</code></li>
+<li>Distributive: <code>A(B+C) = AB+AC</code> and <code>A+(BC) = (A+B)(A+C)</code></li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Simplify <code>F = AB̄C + ABC + AB̄C̄</code> using Boolean algebra. Show each step.
+<strong>Short note:</strong> State and prove De Morgan's theorems.
+<strong>Simplify:</strong> <code>F = (A+B)(A+B̄)</code> using Boolean algebra.
+<strong>Apply:</strong> Use De Morgan's to find the complement of <code>F = AB + C̄D</code>.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="2-sop--pos-forms">2. SOP &amp; POS Forms<a class="headerlink" href="#2-sop--pos-forms" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_1">💡 Intuition First<a class="headerlink" href="#-intuition-first_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Every Boolean function can be expressed in two standard forms:
+- <strong>SOP (Sum of Products):</strong> OR of AND terms — "the function is 1 when THIS combination OR THAT combination is true"
+- <strong>POS (Product of Sums):</strong> AND of OR terms — "the function is 1 only when ALL these conditions hold"</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong>
+- SOP = "You pass if (you score ≥ 50 AND attend ≥ 75%) OR (you score ≥ 80%)"
+- POS = "You pass only if (you score ≥ 50) AND (you attend ≥ 75%) AND (no cheating)"</p>
+<hr />
+<h2 id="-minterms-and-maxterms">📐 Minterms and Maxterms<a class="headerlink" href="#-minterms-and-maxterms" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>For n variables, there are 2ⁿ minterms and 2ⁿ maxterms.
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>For 2 variables A, B:
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Row │ A │ B │ Minterm (mᵢ)  │ Maxterm (Mᵢ)
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>────┼───┼───┼───────────────┼──────────────
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a> 0  │ 0 │ 0 │ m₀ = Ā·B̄     │ M₀ = A+B
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a> 1  │ 0 │ 1 │ m₁ = Ā·B      │ M₁ = A+B̄
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a> 2  │ 1 │ 0 │ m₂ = A·B̄     │ M₂ = Ā+B
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a> 3  │ 1 │ 1 │ m₃ = A·B      │ M₃ = Ā+B̄
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>Minterm: product term that is 1 for exactly ONE row
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>Maxterm: sum term that is 0 for exactly ONE row
+</span></code></pre></div>
+<blockquote>
+<p>🔑 <strong>Key relationship:</strong> mᵢ and Mᵢ are complements: <code>mᵢ = M̄ᵢ</code></p>
+</blockquote>
+<hr />
+<h2 id="-canonical-sop-sum-of-minterms">📐 Canonical SOP (Sum of Minterms)<a class="headerlink" href="#-canonical-sop-sum-of-minterms" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Write the function as OR of all minterms where output = 1.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Truth table for F(A,B,C):
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Row │ A │ B │ C │ F
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>────┼───┼───┼───┼───
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a> 0  │ 0 │ 0 │ 0 │ 0
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a> 1  │ 0 │ 0 │ 1 │ 1  ← minterm m₁
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a> 2  │ 0 │ 1 │ 0 │ 0
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a> 3  │ 0 │ 1 │ 1 │ 1  ← minterm m₃
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a> 4  │ 1 │ 0 │ 0 │ 1  ← minterm m₄
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a> 5  │ 1 │ 0 │ 1 │ 0
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a> 6  │ 1 │ 1 │ 0 │ 1  ← minterm m₆
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a> 7  │ 1 │ 1 │ 1 │ 0
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>Canonical SOP:
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>F = m₁ + m₃ + m₄ + m₆
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>F = Ā·B̄·C + Ā·B·C + A·B̄·C̄ + A·B·C̄
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>F = Σm(1,3,4,6)
+</span></code></pre></div>
+<hr />
+<h2 id="-canonical-pos-product-of-maxterms">📐 Canonical POS (Product of Maxterms)<a class="headerlink" href="#-canonical-pos-product-of-maxterms" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Write the function as AND of all maxterms where output = 0.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>From same truth table, F = 0 at rows 0, 2, 5, 7:
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Canonical POS:
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>F = M₀ · M₂ · M₅ · M₇
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>F = (A+B+C)(A+B̄+C)(Ā+B+C̄)(Ā+B̄+C̄)
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>F = ΠM(0,2,5,7)
+</span></code></pre></div>
+<blockquote>
+<p>🔑 <strong>Shortcut:</strong> SOP uses rows where F=1 | POS uses rows where F=0</p>
+</blockquote>
+<hr />
+<h2 id="-sop-vs-pos">⚖️ SOP vs POS<a class="headerlink" href="#-sop-vs-pos" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>SOP</th>
+<th>POS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Form</td>
+<td>OR of AND terms</td>
+<td>AND of OR terms</td>
+</tr>
+<tr>
+<td>Based on</td>
+<td>Minterms (F=1 rows)</td>
+<td>Maxterms (F=0 rows)</td>
+</tr>
+<tr>
+<td>Notation</td>
+<td>Σm(...)</td>
+<td>ΠM(...)</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>AND gates → OR gate</td>
+<td>OR gates → AND gate</td>
+</tr>
+<tr>
+<td>Simpler when</td>
+<td>More 1s than 0s</td>
+<td>More 0s than 1s</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-converting-between-forms">✏️ Converting Between Forms<a class="headerlink" href="#-converting-between-forms" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>F = Σm(1,3,4,6)  [3 variables, so rows 0-7]
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>F̄ = Σm(0,2,5,7)  [complement = remaining minterms]
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>F = ΠM(0,2,5,7)  [POS uses same indices as F̄&#39;s minterms]
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_1">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> In SOP minterms, variables with value 0 are complemented. In POS maxterms, variables with value 1 are complemented.
+🚫 <strong>Mistake 2:</strong> Canonical SOP ≠ minimal SOP. Canonical is the full form; K-map gives the minimal form.
+🚫 <strong>Mistake 3:</strong> <code>Σm(1,3)</code> for 2 variables vs 3 variables gives different expressions — always specify number of variables.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_1">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_1" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Minterm: product term = 1 for one row | Maxterm: sum term = 0 for one row</li>
+<li>SOP = OR of minterms where F=1 | POS = AND of maxterms where F=0</li>
+<li>Canonical = full form | Minimal = simplified (via K-map)</li>
+<li>F = Σm(1,3,4,6) ↔ F = ΠM(0,2,5,7) for 3 variables</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_1">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Given truth table, write canonical SOP and POS expressions.
+<strong>Short note:</strong> What is the difference between a minterm and a maxterm?
+<strong>Convert:</strong> Express <code>F = Σm(0,2,5,7)</code> in canonical POS form.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="3-karnaugh-maps-k-map">3. Karnaugh Maps (K-Map)<a class="headerlink" href="#3-karnaugh-maps-k-map" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_2">💡 Intuition First<a class="headerlink" href="#-intuition-first_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A K-map is a <strong>visual tool for simplifying Boolean expressions</strong>. Instead of applying algebra rules blindly, you group adjacent 1s on a grid — each group eliminates one variable. Bigger groups = simpler expression.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Like finding patterns in a crossword puzzle — adjacent filled squares form groups that simplify to a single term.</p>
+<hr />
+<h2 id="-k-map-layout-rules">📐 K-Map Layout Rules<a class="headerlink" href="#-k-map-layout-rules" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>CRITICAL: Adjacent cells differ by EXACTLY ONE variable (Gray code order)
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Gray code: 00, 01, 11, 10  (NOT 00, 01, 10, 11)
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>The map WRAPS AROUND — top/bottom and left/right edges are adjacent!
+</span></code></pre></div>
+<hr />
+<h2 id="-2-variable-k-map">📐 2-Variable K-Map<a class="headerlink" href="#-2-variable-k-map" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>        B=0    B=1
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>A=0  │  m₀  │  m₁  │
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>A=1  │  m₂  │  m₃  │
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Example: F = Σm(1,2,3)
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        B=0    B=1
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>A=0  │   0  │   1  │
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>A=1  │   1  │   1  │
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>Groups:
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>  Group 1: m₁, m₃ (column B=1) → B  (A eliminated)
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>  Group 2: m₂, m₃ (row A=1)   → A  (B eliminated)
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>F = A + B
+</span></code></pre></div>
+<hr />
+<h2 id="-3-variable-k-map">📐 3-Variable K-Map<a class="headerlink" href="#-3-variable-k-map" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Layout (AB on rows, C on columns):
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>         C=0    C=1
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>AB=00 │  m₀  │  m₁  │
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>AB=01 │  m₂  │  m₃  │
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>AB=11 │  m₆  │  m₇  │
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>AB=10 │  m₄  │  m₅  │
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>Note: AB order is 00,01,11,10 (Gray code — NOT 00,01,10,11!)
+</span></code></pre></div>
+<h3 id="worked-example--3-variable">Worked Example — 3-Variable<a class="headerlink" href="#worked-example--3-variable" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>F(A,B,C) = Σm(0,1,2,3,4,5)
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>         C=0    C=1
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>AB=00 │   1  │   1  │  m₀  m₁
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>AB=01 │   1  │   1  │  m₂  m₃
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>AB=11 │   0  │   0  │  m₆  m₇
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>AB=10 │   1  │   1  │  m₄  m₅
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>Groups:
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>  Group 1: m₀,m₁,m₂,m₃ (top two rows) → Ā  (B,C eliminated)
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>  Group 2: m₀,m₁,m₄,m₅ (columns C=0,C=1 with AB=00,10)
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>           → B̄  (A,C eliminated)
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>Wait — let&#39;s re-examine:
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>  m₀,m₁,m₂,m₃ → A=0 for all → term = Ā
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>  m₀,m₁,m₄,m₅ → B=0 for all → term = B̄
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>F = Ā + B̄
+</span></code></pre></div>
+<hr />
+<h2 id="-4-variable-k-map">📐 4-Variable K-Map<a class="headerlink" href="#-4-variable-k-map" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Layout (AB on rows, CD on columns):
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>         CD=00  CD=01  CD=11  CD=10
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>AB=00 │   m₀  │  m₁  │  m₃  │  m₂  │
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>AB=01 │   m₄  │  m₅  │  m₇  │  m₆  │
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>AB=11 │  m₁₂  │ m₁₃  │ m₁₅  │ m₁₄  │
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>AB=10 │   m₈  │  m₉  │ m₁₁  │ m₁₀  │
+</span></code></pre></div>
+<h3 id="worked-example--4-variable">Worked Example — 4-Variable<a class="headerlink" href="#worked-example--4-variable" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>F(A,B,C,D) = Σm(0,1,2,3,4,5,6,7,8,9,10,11)
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>         CD=00  CD=01  CD=11  CD=10
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>AB=00 │   1  │   1  │   1  │   1  │
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>AB=01 │   1  │   1  │   1  │   1  │
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>AB=11 │   0  │   0  │   0  │   0  │
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>AB=10 │   1  │   1  │   1  │   1  │
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>Group: All 12 ones — rows AB=00,01,10 (not AB=11)
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>  AB=11 means A=1,B=1 → these are 0
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>  Remaining: when NOT (A=1 AND B=1) → B̄ + Ā
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>Actually: rows 00,01,10 have B=0 OR A=0
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>  Group top 8 (AB=00,01): Ā (A=0 for all)
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>  Group left 8 (AB=00,10 + CD=00,01): B̄ (B=0 for all)
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>F = Ā + B̄
+</span></code></pre></div>
+<h3 id="worked-example--4-variable-with-dont-cares">Worked Example — 4-Variable with Don't Cares<a class="headerlink" href="#worked-example--4-variable-with-dont-cares" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>F(A,B,C,D) = Σm(1,3,7,11,15) + d(0,2,5)
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>(d = don&#39;t care — can be 0 or 1, use to make bigger groups)
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>         CD=00  CD=01  CD=11  CD=10
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>AB=00 │   d  │   1  │   1  │   d  │
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>AB=01 │   0  │   d  │   1  │   0  │
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>AB=11 │   0  │   0  │   1  │   0  │
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>AB=10 │   0  │   0  │   1  │   0  │
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>Groups (use don&#39;t cares to enlarge):
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>  Group 1: m₁,m₃,d₀,d₂ (top row) → Ā  (B,C,D eliminated)
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>  Group 2: m₃,m₇,m₁₁,m₁₅ (CD=11 column) → CD  (A,B eliminated)
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>F = Ā + CD
+</span></code></pre></div>
+<hr />
+<h2 id="-k-map-grouping-rules">📏 K-Map Grouping Rules<a class="headerlink" href="#-k-map-grouping-rules" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>✅ Groups must be powers of 2: 1, 2, 4, 8, 16
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>✅ Groups must be rectangular (including wrap-around)
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>✅ Each group should be as LARGE as possible
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>✅ Every 1 must be covered by at least one group
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>✅ Use don&#39;t cares (X) to enlarge groups if helpful
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>✅ Minimize number of groups (each group = one product term)
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>Group size → variables eliminated:
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>  Group of 1  → 0 variables eliminated (all 4 appear)
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>  Group of 2  → 1 variable eliminated
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>  Group of 4  → 2 variables eliminated
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>  Group of 8  → 3 variables eliminated
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>  Group of 16 → 4 variables eliminated (F = 1)
+</span></code></pre></div>
+<hr />
+<h2 id="-reading-a-group">✏️ Reading a Group<a class="headerlink" href="#-reading-a-group" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>To find the term for a group:
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>  Look at which variables are CONSTANT across all cells in the group
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>  If variable = 1 throughout → include it uncomplemented
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>  If variable = 0 throughout → include it complemented
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>  If variable changes → eliminate it (it&#39;s been simplified away)
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>Example: Group covers m₄,m₅,m₆,m₇
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>  m₄ = 0100, m₅ = 0101, m₆ = 0110, m₇ = 0111
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>  A: always 0 → Ā
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>  B: always 1 → B
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>  C: changes (0,0,1,1) → eliminated
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>  D: changes (0,1,0,1) → eliminated
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>  Term = ĀB
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_2">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> K-map column/row order is Gray code (00,01,<strong>11</strong>,10) — NOT binary order (00,01,10,11).
+🚫 <strong>Mistake 2:</strong> Forgetting wrap-around — top row is adjacent to bottom row, left column to right column.
+🚫 <strong>Mistake 3:</strong> Groups must be rectangular — L-shapes and T-shapes are NOT valid.
+🚫 <strong>Mistake 4:</strong> Don't cares can be included in groups but don't HAVE to be covered.
+🚫 <strong>Mistake 5:</strong> Always use the LARGEST possible groups — don't use small groups when larger ones exist.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_1">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Always draw the K-map grid first</strong>, fill in 1s and 0s, then identify groups.
+💡 Start with the largest possible groups (8s, then 4s, then 2s, then 1s).
+💡 A cell can belong to multiple groups — use it in the largest group possible.
+💡 For 4-variable K-map: corner cells (m₀,m₂,m₈,m₁₀) form a valid group of 4!</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_2">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_2" title="Anchor link">&para;</a></h2>
+<ul>
+<li>K-map: visual simplification tool, group adjacent 1s</li>
+<li>Groups: powers of 2, rectangular, wrap-around allowed</li>
+<li>Larger group = fewer variables in term = simpler expression</li>
+<li>Gray code order: 00, 01, 11, 10 (NOT binary order)</li>
+<li>Don't cares: use to enlarge groups for simpler result</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_2">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Minimize <code>F(A,B,C,D) = Σm(0,1,2,4,5,6,8,9,12,13,14)</code> using a 4-variable K-map.
+<strong>5-mark:</strong> Simplify <code>F(A,B,C) = Σm(0,2,4,6)</code> using a 3-variable K-map.
+<strong>Short note:</strong> What are don't care conditions in K-maps? How are they used?
+<strong>Draw:</strong> Draw the 4-variable K-map layout showing all minterm positions.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="4-logic-gates">4. Logic Gates<a class="headerlink" href="#4-logic-gates" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_3">💡 Intuition First<a class="headerlink" href="#-intuition-first_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Logic gates are the <strong>building blocks of all digital circuits</strong> — like LEGO bricks for electronics. Each gate performs one Boolean operation. Combine them to build anything from a calculator to a CPU.</p>
+</blockquote>
+<hr />
+<h2 id="-basic-gates--truth-tables--symbols">📐 Basic Gates — Truth Tables &amp; Symbols<a class="headerlink" href="#-basic-gates--truth-tables--symbols" title="Anchor link">&para;</a></h2>
+<h3 id="and-gate">AND Gate<a class="headerlink" href="#and-gate" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Symbol:  A ──┐
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>             ├D──── F = A·B
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>         B ──┘
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>Truth Table:
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>A │ B │ F=A·B
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>──┼───┼──────
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>0 │ 0 │  0
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>0 │ 1 │  0
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>1 │ 0 │  0
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>1 │ 1 │  1    ← only 1 when BOTH inputs are 1
+</span></code></pre></div>
+<h3 id="or-gate">OR Gate<a class="headerlink" href="#or-gate" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Symbol:  A ──┐
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>             ├≥1─── F = A+B
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>         B ──┘
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>Truth Table:
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>A │ B │ F=A+B
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>──┼───┼──────
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>0 │ 0 │  0
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>0 │ 1 │  1
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>1 │ 0 │  1
+</span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>1 │ 1 │  1    ← 0 only when BOTH inputs are 0
+</span></code></pre></div>
+<h3 id="not-gate-inverter">NOT Gate (Inverter)<a class="headerlink" href="#not-gate-inverter" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Symbol:  A ──▷○──── F = Ā
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Truth Table:
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>A │ F=Ā
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>──┼────
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>0 │  1
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>1 │  0
+</span></code></pre></div>
+<h3 id="nand-gate-universal-gate">NAND Gate (Universal Gate)<a class="headerlink" href="#nand-gate-universal-gate" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Symbol:  A ──┐
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>             ├D○─── F = (A·B)̄ = Ā+B̄
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>         B ──┘
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>Truth Table:
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>A │ B │ F=(AB)̄
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>──┼───┼────────
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>0 │ 0 │   1
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>0 │ 1 │   1
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>1 │ 0 │   1
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>1 │ 1 │   0    ← only 0 when BOTH inputs are 1
+</span></code></pre></div>
+<h3 id="nor-gate-universal-gate">NOR Gate (Universal Gate)<a class="headerlink" href="#nor-gate-universal-gate" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Symbol:  A ──┐
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>             ├≥1○── F = (A+B)̄ = Ā·B̄
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>         B ──┘
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>Truth Table:
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>A │ B │ F=(A+B)̄
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>──┼───┼─────────
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>0 │ 0 │    1    ← only 1 when BOTH inputs are 0
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>0 │ 1 │    0
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>1 │ 0 │    0
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>1 │ 1 │    0
+</span></code></pre></div>
+<h3 id="xor-gate">XOR Gate<a class="headerlink" href="#xor-gate" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Symbol:  A ──┐
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>             ├=1─── F = A⊕B = ĀB + AB̄
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>         B ──┘
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>Truth Table:
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>A │ B │ F=A⊕B
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>──┼───┼───────
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>0 │ 0 │   0
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>0 │ 1 │   1
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>1 │ 0 │   1
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>1 │ 1 │   0    ← 1 when inputs are DIFFERENT
+</span></code></pre></div>
+<h3 id="xnor-gate">XNOR Gate<a class="headerlink" href="#xnor-gate" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>F = A⊙B = AB + ĀB̄
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>Truth Table:
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>A │ B │ F=A⊙B
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>──┼───┼───────
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>0 │ 0 │   1
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>0 │ 1 │   0
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>1 │ 0 │   0
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>1 │ 1 │   1    ← 1 when inputs are SAME
+</span></code></pre></div>
+<hr />
+<h2 id="-universal-gates">🔑 Universal Gates<a class="headerlink" href="#-universal-gates" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>NAND and NOR are universal</strong> — any Boolean function can be implemented using only NAND gates (or only NOR gates).</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Implementing basic gates using only NAND:
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>NOT using NAND:
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>  A ──┬── NAND ──── Ā
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>      └──┘
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>  (connect both inputs together)
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>AND using NAND:
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>  A ──┐
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>      ├── NAND ──┬── NAND ──── AB
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>  B ──┘          └──┘
+</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>  (NAND followed by NOT)
+</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>
+</span><span id="__span-32-14"><a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>OR using NAND:
+</span><span id="__span-32-15"><a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a>  A ──┬── NAND ──┐
+</span><span id="__span-32-16"><a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>      └──┘        ├── NAND ──── A+B
+</span><span id="__span-32-17"><a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a>  B ──┬── NAND ──┘
+</span><span id="__span-32-18"><a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a>      └──┘
+</span><span id="__span-32-19"><a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a>  (NOT each input, then NAND)
+</span></code></pre></div>
+<hr />
+<h2 id="-gate-comparison">⚖️ Gate Comparison<a class="headerlink" href="#-gate-comparison" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Symbol</th>
+<th>Output=1 when</th>
+<th>Universal?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND</td>
+<td>·</td>
+<td>All inputs = 1</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>OR</td>
+<td>+</td>
+<td>Any input = 1</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>¯</td>
+<td>Input = 0</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>NAND</td>
+<td>(·)̄</td>
+<td>NOT all inputs = 1</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>NOR</td>
+<td>(+)̄</td>
+<td>All inputs = 0</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>XOR</td>
+<td>⊕</td>
+<td>Odd number of 1s</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>XNOR</td>
+<td>⊙</td>
+<td>Even number of 1s</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_3">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> NAND output is 0 only when ALL inputs are 1 (not just one).
+🚫 <strong>Mistake 2:</strong> XOR with more than 2 inputs: output = 1 when ODD number of inputs are 1.
+🚫 <strong>Mistake 3:</strong> XNOR is the complement of XOR: <code>A⊙B = (A⊕B)̄</code>.
+🚫 <strong>Mistake 4:</strong> AND and OR are NOT universal — you can't make a NOT gate from AND/OR alone.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_3">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_3" title="Anchor link">&para;</a></h2>
+<ul>
+<li>AND: all 1s → 1 | OR: any 1 → 1 | NOT: invert</li>
+<li>NAND = NOT AND (universal) | NOR = NOT OR (universal)</li>
+<li>XOR: different inputs → 1 | XNOR: same inputs → 1</li>
+<li>NAND/NOR are universal — can build any circuit from them alone</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_3">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Short note:</strong> Why are NAND and NOR called universal gates?
+<strong>Draw:</strong> Implement an AND gate using only NAND gates.
+<strong>Truth table:</strong> Write the truth table for a 3-input XOR gate.
+<strong>Implement:</strong> Realize <code>F = AB + C̄</code> using only NAND gates.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="5-combinational-circuits--adders">5. Combinational Circuits — Adders<a class="headerlink" href="#5-combinational-circuits--adders" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_4">💡 Intuition First<a class="headerlink" href="#-intuition-first_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>An adder is the heart of the ALU (Arithmetic Logic Unit). It adds binary numbers just like you add decimal numbers — digit by digit, carrying over when the sum exceeds the base.</p>
+</blockquote>
+<hr />
+<h2 id="-half-adder">📐 Half Adder<a class="headerlink" href="#-half-adder" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Adds two <strong>single bits</strong>. No carry input. Produces Sum and Carry out.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Inputs:  A, B
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>Outputs: Sum (S), Carry (C)
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>Truth Table:
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>A │ B │ S │ C
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>──┼───┼───┼───
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>0 │ 0 │ 0 │ 0
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>0 │ 1 │ 1 │ 0
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>1 │ 0 │ 1 │ 0
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>1 │ 1 │ 0 │ 1   ← 1+1 = 10 in binary (sum=0, carry=1)
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>Boolean expressions:
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>  S = A ⊕ B    (XOR)
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>  C = A · B    (AND)
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>Circuit:
+</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a>  A ──┬── XOR ──── S
+</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a>      │
+</span><span id="__span-33-19"><a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a>  B ──┤
+</span><span id="__span-33-20"><a id="__codelineno-33-20" name="__codelineno-33-20" href="#__codelineno-33-20"></a>      └── AND ──── C
+</span></code></pre></div>
+<hr />
+<h2 id="-full-adder">📐 Full Adder<a class="headerlink" href="#-full-adder" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Adds two bits <strong>plus a carry-in</strong>. Used to chain multiple adders for multi-bit addition.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Inputs:  A, B, Cin (carry in)
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Outputs: Sum (S), Cout (carry out)
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>Truth Table:
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>A │ B │Cin│ S │Cout
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>──┼───┼───┼───┼────
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>0 │ 0 │ 0 │ 0 │ 0
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>0 │ 0 │ 1 │ 1 │ 0
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>0 │ 1 │ 0 │ 1 │ 0
+</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>0 │ 1 │ 1 │ 0 │ 1
+</span><span id="__span-34-11"><a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>1 │ 0 │ 0 │ 1 │ 0
+</span><span id="__span-34-12"><a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>1 │ 0 │ 1 │ 0 │ 1
+</span><span id="__span-34-13"><a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a>1 │ 1 │ 0 │ 0 │ 1
+</span><span id="__span-34-14"><a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a>1 │ 1 │ 1 │ 1 │ 1
+</span><span id="__span-34-15"><a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a>
+</span><span id="__span-34-16"><a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a>Boolean expressions:
+</span><span id="__span-34-17"><a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a>  S    = A ⊕ B ⊕ Cin
+</span><span id="__span-34-18"><a id="__codelineno-34-18" name="__codelineno-34-18" href="#__codelineno-34-18"></a>  Cout = A·B + B·Cin + A·Cin
+</span><span id="__span-34-19"><a id="__codelineno-34-19" name="__codelineno-34-19" href="#__codelineno-34-19"></a>       = A·B + Cin·(A⊕B)
+</span><span id="__span-34-20"><a id="__codelineno-34-20" name="__codelineno-34-20" href="#__codelineno-34-20"></a>
+</span><span id="__span-34-21"><a id="__codelineno-34-21" name="__codelineno-34-21" href="#__codelineno-34-21"></a>Circuit (using two Half Adders):
+</span><span id="__span-34-22"><a id="__codelineno-34-22" name="__codelineno-34-22" href="#__codelineno-34-22"></a>  A ──┐
+</span><span id="__span-34-23"><a id="__codelineno-34-23" name="__codelineno-34-23" href="#__codelineno-34-23"></a>      ├── HA₁ ──S₁──┐
+</span><span id="__span-34-24"><a id="__codelineno-34-24" name="__codelineno-34-24" href="#__codelineno-34-24"></a>  B ──┘       C₁    ├── HA₂ ──── S (final sum)
+</span><span id="__span-34-25"><a id="__codelineno-34-25" name="__codelineno-34-25" href="#__codelineno-34-25"></a>                    │       C₂──┐
+</span><span id="__span-34-26"><a id="__codelineno-34-26" name="__codelineno-34-26" href="#__codelineno-34-26"></a>              Cin ──┘            ├── OR ──── Cout
+</span><span id="__span-34-27"><a id="__codelineno-34-27" name="__codelineno-34-27" href="#__codelineno-34-27"></a>                            C₁──┘
+</span></code></pre></div>
+<hr />
+<h2 id="-4-bit-ripple-carry-adder">🔗 4-Bit Ripple Carry Adder<a class="headerlink" href="#-4-bit-ripple-carry-adder" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Add A₃A₂A₁A₀ + B₃B₂B₁B₀
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>  A₀B₀     A₁B₁     A₂B₂     A₃B₃
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>   │ │       │ │       │ │       │ │
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>  [FA]──C₁─►[FA]──C₂─►[FA]──C₃─►[FA]──► Cout
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>   │         │         │         │
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>   S₀        S₁        S₂        S₃
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>Cin₀ = 0 (no initial carry)
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>Result: Cout S₃ S₂ S₁ S₀
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a>
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a>Problem: Carry must &quot;ripple&quot; through all stages → slow for large n
+</span><span id="__span-35-13"><a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a>Solution: Carry Lookahead Adder (CLA) — computes carries in parallel
+</span></code></pre></div>
+<hr />
+<h2 id="-half-adder-vs-full-adder">⚖️ Half Adder vs Full Adder<a class="headerlink" href="#-half-adder-vs-full-adder" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Half Adder</th>
+<th>Full Adder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inputs</td>
+<td>A, B</td>
+<td>A, B, Cin</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td>S, C</td>
+<td>S, Cout</td>
+</tr>
+<tr>
+<td>Carry in</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Use</td>
+<td>First bit position</td>
+<td>All other positions</td>
+</tr>
+<tr>
+<td>Gates needed</td>
+<td>1 XOR + 1 AND</td>
+<td>2 XOR + 3 AND + 1 OR</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_4">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Half adder has NO carry input — use full adder when chaining.
+🚫 <strong>Mistake 2:</strong> Sum = XOR (not AND). Carry = AND (not OR).
+🚫 <strong>Mistake 3:</strong> Full adder Cout = AB + BCin + ACin — three terms, not two.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_4">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_4" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Half adder: S = A⊕B, C = AB (no carry in)</li>
+<li>Full adder: S = A⊕B⊕Cin, Cout = AB + BCin + ACin</li>
+<li>Full adder = two half adders + OR gate</li>
+<li>Ripple carry adder: chain full adders, carry propagates bit by bit</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_4">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Design a full adder. Draw the truth table, derive Boolean expressions, and draw the circuit.
+<strong>Short note:</strong> How is a full adder constructed from two half adders?
+<strong>Circuit:</strong> Draw a 4-bit ripple carry adder using full adders.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="6-multiplexer--demultiplexer">6. Multiplexer &amp; Demultiplexer<a class="headerlink" href="#6-multiplexer--demultiplexer" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_5">💡 Intuition First<a class="headerlink" href="#-intuition-first_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Multiplexer (MUX):</strong> Like a TV remote — many channels (inputs), one screen (output). You select which channel to display using the channel number (select lines).</p>
+<p><strong>Demultiplexer (DEMUX):</strong> The reverse — one input, many outputs. Like a post office routing one letter to one of many mailboxes.</p>
+</blockquote>
+<hr />
+<h2 id="-multiplexer-mux">📐 Multiplexer (MUX)<a class="headerlink" href="#-multiplexer-mux" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>2ⁿ-to-1 MUX</strong> has 2ⁿ data inputs, n select lines, and 1 output.</p>
+</blockquote>
+<h3 id="2-to-1-mux">2-to-1 MUX<a class="headerlink" href="#2-to-1-mux" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Inputs:  I₀, I₁ (data), S (select)
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>Output:  Y
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>Truth Table:
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>S │ Y
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>──┼───
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>0 │ I₀   (select I₀)
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>1 │ I₁   (select I₁)
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>Boolean: Y = S̄·I₀ + S·I₁
+</span><span id="__span-36-11"><a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>
+</span><span id="__span-36-12"><a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a>Circuit:
+</span><span id="__span-36-13"><a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>  I₀ ──┐
+</span><span id="__span-36-14"><a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a>        ├── AND ──┐
+</span><span id="__span-36-15"><a id="__codelineno-36-15" name="__codelineno-36-15" href="#__codelineno-36-15"></a>  S̄ ──┘          ├── OR ──── Y
+</span><span id="__span-36-16"><a id="__codelineno-36-16" name="__codelineno-36-16" href="#__codelineno-36-16"></a>  I₁ ──┐          │
+</span><span id="__span-36-17"><a id="__codelineno-36-17" name="__codelineno-36-17" href="#__codelineno-36-17"></a>        ├── AND ──┘
+</span><span id="__span-36-18"><a id="__codelineno-36-18" name="__codelineno-36-18" href="#__codelineno-36-18"></a>  S  ──┘
+</span></code></pre></div>
+<h3 id="4-to-1-mux">4-to-1 MUX<a class="headerlink" href="#4-to-1-mux" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Inputs:  I₀, I₁, I₂, I₃ (data), S₁, S₀ (select)
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>Output:  Y
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>S₁│S₀│ Y
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>──┼──┼───
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a> 0│ 0│ I₀
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a> 0│ 1│ I₁
+</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a> 1│ 0│ I₂
+</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a> 1│ 1│ I₃
+</span><span id="__span-37-10"><a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>
+</span><span id="__span-37-11"><a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>Boolean: Y = S̄₁S̄₀·I₀ + S̄₁S₀·I₁ + S₁S̄₀·I₂ + S₁S₀·I₃
+</span><span id="__span-37-12"><a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a>
+</span><span id="__span-37-13"><a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a>Block diagram:
+</span><span id="__span-37-14"><a id="__codelineno-37-14" name="__codelineno-37-14" href="#__codelineno-37-14"></a>  I₀ ──┐
+</span><span id="__span-37-15"><a id="__codelineno-37-15" name="__codelineno-37-15" href="#__codelineno-37-15"></a>  I₁ ──┤  4-to-1
+</span><span id="__span-37-16"><a id="__codelineno-37-16" name="__codelineno-37-16" href="#__codelineno-37-16"></a>  I₂ ──┤   MUX  ──── Y
+</span><span id="__span-37-17"><a id="__codelineno-37-17" name="__codelineno-37-17" href="#__codelineno-37-17"></a>  I₃ ──┘
+</span><span id="__span-37-18"><a id="__codelineno-37-18" name="__codelineno-37-18" href="#__codelineno-37-18"></a>  S₁ S₀ (select)
+</span></code></pre></div>
+<h3 id="mux-as-universal-logic-element">MUX as Universal Logic Element<a class="headerlink" href="#mux-as-universal-logic-element" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>A 2ⁿ-to-1 MUX can implement ANY function of n+1 variables!
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>Example: Implement F(A,B,C) using 4-to-1 MUX
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>  Use A,B as select lines (S₁=A, S₀=B)
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>  Connect C or its complement to data inputs based on truth table:
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>A │ B │ C │ F    Data input
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>──┼───┼───┼───   ──────────
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>0 │ 0 │ 0 │ 0 ┐
+</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>0 │ 0 │ 1 │ 0 ┘  I₀ = 0
+</span><span id="__span-38-11"><a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>0 │ 1 │ 0 │ 1 ┐
+</span><span id="__span-38-12"><a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>0 │ 1 │ 1 │ 0 ┘  I₁ = C̄
+</span><span id="__span-38-13"><a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>1 │ 0 │ 0 │ 0 ┐
+</span><span id="__span-38-14"><a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a>1 │ 0 │ 1 │ 1 ┘  I₂ = C
+</span><span id="__span-38-15"><a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a>1 │ 1 │ 0 │ 1 ┐
+</span><span id="__span-38-16"><a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a>1 │ 1 │ 1 │ 1 ┘  I₃ = 1
+</span></code></pre></div>
+<hr />
+<h2 id="-demultiplexer-demux">📐 Demultiplexer (DEMUX)<a class="headerlink" href="#-demultiplexer-demux" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>1-to-2ⁿ DEMUX</strong> has 1 data input, n select lines, and 2ⁿ outputs.</p>
+</blockquote>
+<h3 id="1-to-4-demux">1-to-4 DEMUX<a class="headerlink" href="#1-to-4-demux" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>Input:   D (data), S₁, S₀ (select)
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>Outputs: Y₀, Y₁, Y₂, Y₃
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>S₁│S₀│ Active Output
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>──┼──┼──────────────
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a> 0│ 0│ Y₀ = D
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a> 0│ 1│ Y₁ = D
+</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a> 1│ 0│ Y₂ = D
+</span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a> 1│ 1│ Y₃ = D
+</span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>
+</span><span id="__span-39-11"><a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a>Boolean:
+</span><span id="__span-39-12"><a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a>  Y₀ = D·S̄₁·S̄₀
+</span><span id="__span-39-13"><a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a>  Y₁ = D·S̄₁·S₀
+</span><span id="__span-39-14"><a id="__codelineno-39-14" name="__codelineno-39-14" href="#__codelineno-39-14"></a>  Y₂ = D·S₁·S̄₀
+</span><span id="__span-39-15"><a id="__codelineno-39-15" name="__codelineno-39-15" href="#__codelineno-39-15"></a>  Y₃ = D·S₁·S₀
+</span></code></pre></div>
+<hr />
+<h2 id="-mux-vs-demux">⚖️ MUX vs DEMUX<a class="headerlink" href="#-mux-vs-demux" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>MUX</th>
+<th>DEMUX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>Many → One</td>
+<td>One → Many</td>
+</tr>
+<tr>
+<td>Data inputs</td>
+<td>2ⁿ</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td>1</td>
+<td>2ⁿ</td>
+</tr>
+<tr>
+<td>Select lines</td>
+<td>n</td>
+<td>n</td>
+</tr>
+<tr>
+<td>Analogy</td>
+<td>TV remote (select channel)</td>
+<td>Post office (route letter)</td>
+</tr>
+<tr>
+<td>Use</td>
+<td>Data selection, function implementation</td>
+<td>Data routing, decoder</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_5">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> A 4-to-1 MUX has 2 select lines (not 4). n select lines → 2ⁿ inputs.
+🚫 <strong>Mistake 2:</strong> In MUX-as-logic, the select lines are the most significant variables.
+🚫 <strong>Mistake 3:</strong> DEMUX routes data to ONE output at a time — all others are 0.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_5">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_5" title="Anchor link">&para;</a></h2>
+<ul>
+<li>MUX: 2ⁿ inputs, n selects, 1 output — selects one input to pass through</li>
+<li>DEMUX: 1 input, n selects, 2ⁿ outputs — routes input to one output</li>
+<li>4-to-1 MUX: 2 select lines | 8-to-1 MUX: 3 select lines</li>
+<li>MUX can implement any Boolean function</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_5">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Design a 4-to-1 multiplexer. Draw the truth table and circuit diagram.
+<strong>5-mark:</strong> Implement <code>F(A,B,C) = Σm(1,3,5,6)</code> using a 4-to-1 MUX.
+<strong>Short note:</strong> What is the difference between a MUX and a DEMUX?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="7-encoder--decoder">7. Encoder &amp; Decoder<a class="headerlink" href="#7-encoder--decoder" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_6">💡 Intuition First<a class="headerlink" href="#-intuition-first_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Encoder:</strong> Converts a human-readable input (like pressing key "5" on a keyboard) into a binary code. Many inputs → fewer outputs.</p>
+<p><strong>Decoder:</strong> Converts a binary code back into a specific output. Fewer inputs → many outputs. Like a 7-segment display driver.</p>
+</blockquote>
+<hr />
+<h2 id="-encoder">📐 Encoder<a class="headerlink" href="#-encoder" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>An <strong>n-to-m encoder</strong> has 2ⁿ inputs and n outputs (m = log₂(2ⁿ) = n bits).</p>
+</blockquote>
+<h3 id="4-to-2-encoder-priority-encoder">4-to-2 Encoder (Priority Encoder)<a class="headerlink" href="#4-to-2-encoder-priority-encoder" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Inputs:  I₀, I₁, I₂, I₃ (only one active at a time)
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>Outputs: A₁, A₀ (binary code)
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>Truth Table:
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>I₃│I₂│I₁│I₀│ A₁│A₀
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>──┼──┼──┼──┼───┼──
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a> 0│ 0│ 0│ 1│  0│ 0   (I₀ active → code 00)
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a> 0│ 0│ 1│ 0│  0│ 1   (I₁ active → code 01)
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a> 0│ 1│ 0│ 0│  1│ 0   (I₂ active → code 10)
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a> 1│ 0│ 0│ 0│  1│ 1   (I₃ active → code 11)
+</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>
+</span><span id="__span-40-12"><a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a>Boolean:
+</span><span id="__span-40-13"><a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a>  A₁ = I₂ + I₃
+</span><span id="__span-40-14"><a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a>  A₀ = I₁ + I₃
+</span></code></pre></div>
+<h3 id="8-to-3-encoder">8-to-3 Encoder<a class="headerlink" href="#8-to-3-encoder" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>8 inputs (I₀–I₇), 3 output bits (A₂, A₁, A₀)
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>A₂ = I₄ + I₅ + I₆ + I₇
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>A₁ = I₂ + I₃ + I₆ + I₇
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>A₀ = I₁ + I₃ + I₅ + I₇
+</span></code></pre></div>
+<hr />
+<h2 id="-decoder">📐 Decoder<a class="headerlink" href="#-decoder" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>An <strong>n-to-2ⁿ decoder</strong> has n inputs and 2ⁿ outputs. Exactly ONE output is active (high) at a time.</p>
+</blockquote>
+<h3 id="2-to-4-decoder">2-to-4 Decoder<a class="headerlink" href="#2-to-4-decoder" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Inputs:  A₁, A₀ (binary code), Enable (E)
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>Outputs: Y₀, Y₁, Y₂, Y₃
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>Truth Table (E=1):
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>A₁│A₀│ Y₃│Y₂│Y₁│Y₀
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>──┼──┼───┼──┼──┼──
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a> 0│ 0│  0│ 0│ 0│ 1   (Y₀ active)
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a> 0│ 1│  0│ 0│ 1│ 0   (Y₁ active)
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a> 1│ 0│  0│ 1│ 0│ 0   (Y₂ active)
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a> 1│ 1│  1│ 0│ 0│ 0   (Y₃ active)
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>Boolean:
+</span><span id="__span-42-13"><a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a>  Y₀ = Ā₁·Ā₀·E
+</span><span id="__span-42-14"><a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>  Y₁ = Ā₁·A₀·E
+</span><span id="__span-42-15"><a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a>  Y₂ = A₁·Ā₀·E
+</span><span id="__span-42-16"><a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a>  Y₃ = A₁·A₀·E
+</span></code></pre></div>
+<h3 id="3-to-8-decoder">3-to-8 Decoder<a class="headerlink" href="#3-to-8-decoder" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>3 inputs (A₂,A₁,A₀), 8 outputs (Y₀–Y₇)
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>Each output = one minterm of the 3 input variables
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>Y₀ = Ā₂Ā₁Ā₀  (minterm 0)
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>Y₁ = Ā₂Ā₁A₀  (minterm 1)
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>Y₂ = Ā₂A₁Ā₀  (minterm 2)
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>...
+</span><span id="__span-43-8"><a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>Y₇ = A₂A₁A₀  (minterm 7)
+</span><span id="__span-43-9"><a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>
+</span><span id="__span-43-10"><a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>Key use: Implement any Boolean function!
+</span><span id="__span-43-11"><a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a>  F = Σm(1,3,5) → F = Y₁ + Y₃ + Y₅
+</span><span id="__span-43-12"><a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a>  (just OR the required decoder outputs)
+</span></code></pre></div>
+<hr />
+<h2 id="-encoder-vs-decoder">⚖️ Encoder vs Decoder<a class="headerlink" href="#-encoder-vs-decoder" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Encoder</th>
+<th>Decoder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>Many → Few</td>
+<td>Few → Many</td>
+</tr>
+<tr>
+<td>Inputs</td>
+<td>2ⁿ (one active)</td>
+<td>n bits</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td>n bits</td>
+<td>2ⁿ (one active)</td>
+</tr>
+<tr>
+<td>Function</td>
+<td>Convert to binary</td>
+<td>Convert from binary</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Keyboard, priority encoder</td>
+<td>7-segment display, memory select</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_6">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> In a basic encoder, only ONE input should be active at a time. Priority encoder handles multiple active inputs.
+🚫 <strong>Mistake 2:</strong> Decoder outputs are minterms — this is the key to using decoders for function implementation.
+🚫 <strong>Mistake 3:</strong> A 3-to-8 decoder has 3 inputs and 8 outputs (not 3 outputs).</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_6">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_6" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Encoder: 2ⁿ inputs → n outputs (binary code)</li>
+<li>Decoder: n inputs → 2ⁿ outputs (one active at a time)</li>
+<li>Decoder outputs = minterms → can implement any function with OR gates</li>
+<li>Priority encoder: handles multiple simultaneous inputs</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_6">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Design a 2-to-4 decoder with enable. Draw truth table and circuit.
+<strong>5-mark:</strong> Implement <code>F(A,B,C) = Σm(0,3,5,6)</code> using a 3-to-8 decoder and OR gates.
+<strong>Short note:</strong> What is a priority encoder? How does it differ from a basic encoder?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="8-flip-flops">8. Flip-Flops<a class="headerlink" href="#8-flip-flops" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_7">💡 Intuition First<a class="headerlink" href="#-intuition-first_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A flip-flop is a <strong>1-bit memory element</strong> — it remembers whether it's storing a 0 or a 1. Unlike combinational circuits (output depends only on current input), flip-flops are <strong>sequential</strong> — output depends on current input AND previous state.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> A light switch with memory — it stays in its last position (on or off) until you explicitly change it.</p>
+<hr />
+<h2 id="-sr-flip-flop-set-reset">📐 SR Flip-Flop (Set-Reset)<a class="headerlink" href="#-sr-flip-flop-set-reset" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>Inputs:  S (Set), R (Reset), Clock
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>Output:  Q (current state), Q̄ (complement)
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>Truth Table (clocked):
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>S │ R │ Q(next) │ Comment
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>──┼───┼─────────┼──────────────
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>0 │ 0 │  Q      │ No change (hold)
+</span><span id="__span-44-8"><a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>0 │ 1 │  0      │ Reset (Q=0)
+</span><span id="__span-44-9"><a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a>1 │ 0 │  1      │ Set (Q=1)
+</span><span id="__span-44-10"><a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a>1 │ 1 │  ?      │ INVALID (forbidden!)
+</span><span id="__span-44-11"><a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a>
+</span><span id="__span-44-12"><a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a>Characteristic equation: Q(next) = S + R̄·Q
+</span><span id="__span-44-13"><a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a>Constraint: S·R = 0 (both cannot be 1 simultaneously)
+</span><span id="__span-44-14"><a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a>
+</span><span id="__span-44-15"><a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a>State diagram:
+</span><span id="__span-44-16"><a id="__codelineno-44-16" name="__codelineno-44-16" href="#__codelineno-44-16"></a>         S=1,R=0
+</span><span id="__span-44-17"><a id="__codelineno-44-17" name="__codelineno-44-17" href="#__codelineno-44-17"></a>    ┌──────────────────┐
+</span><span id="__span-44-18"><a id="__codelineno-44-18" name="__codelineno-44-18" href="#__codelineno-44-18"></a>    │                  ▼
+</span><span id="__span-44-19"><a id="__codelineno-44-19" name="__codelineno-44-19" href="#__codelineno-44-19"></a>  (Q=0)              (Q=1)
+</span><span id="__span-44-20"><a id="__codelineno-44-20" name="__codelineno-44-20" href="#__codelineno-44-20"></a>    ▲                  │
+</span><span id="__span-44-21"><a id="__codelineno-44-21" name="__codelineno-44-21" href="#__codelineno-44-21"></a>    └──────────────────┘
+</span><span id="__span-44-22"><a id="__codelineno-44-22" name="__codelineno-44-22" href="#__codelineno-44-22"></a>         S=0,R=1
+</span><span id="__span-44-23"><a id="__codelineno-44-23" name="__codelineno-44-23" href="#__codelineno-44-23"></a>    (S=0,R=0 → stay in current state)
+</span></code></pre></div>
+<hr />
+<h2 id="-d-flip-flop-datadelay">📐 D Flip-Flop (Data/Delay)<a class="headerlink" href="#-d-flip-flop-datadelay" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>Input:   D (data), Clock
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>Output:  Q
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>Truth Table:
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>D │ Q(next)
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>──┼─────────
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>0 │    0     (Q follows D)
+</span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>1 │    1
+</span><span id="__span-45-9"><a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>
+</span><span id="__span-45-10"><a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a>Characteristic equation: Q(next) = D
+</span><span id="__span-45-11"><a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>
+</span><span id="__span-45-12"><a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>Key property: Output Q = D after clock edge
+</span><span id="__span-45-13"><a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a>              &quot;D flip-flop delays D by one clock cycle&quot;
+</span><span id="__span-45-14"><a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>
+</span><span id="__span-45-15"><a id="__codelineno-45-15" name="__codelineno-45-15" href="#__codelineno-45-15"></a>State diagram:
+</span><span id="__span-45-16"><a id="__codelineno-45-16" name="__codelineno-45-16" href="#__codelineno-45-16"></a>         D=1
+</span><span id="__span-45-17"><a id="__codelineno-45-17" name="__codelineno-45-17" href="#__codelineno-45-17"></a>    ┌──────────────────┐
+</span><span id="__span-45-18"><a id="__codelineno-45-18" name="__codelineno-45-18" href="#__codelineno-45-18"></a>    │                  ▼
+</span><span id="__span-45-19"><a id="__codelineno-45-19" name="__codelineno-45-19" href="#__codelineno-45-19"></a>  (Q=0)              (Q=1)
+</span><span id="__span-45-20"><a id="__codelineno-45-20" name="__codelineno-45-20" href="#__codelineno-45-20"></a>    ▲                  │
+</span><span id="__span-45-21"><a id="__codelineno-45-21" name="__codelineno-45-21" href="#__codelineno-45-21"></a>    └──────────────────┘
+</span><span id="__span-45-22"><a id="__codelineno-45-22" name="__codelineno-45-22" href="#__codelineno-45-22"></a>         D=0
+</span><span id="__span-45-23"><a id="__codelineno-45-23" name="__codelineno-45-23" href="#__codelineno-45-23"></a>    (D=0 → stay 0, D=1 → stay 1)
+</span></code></pre></div>
+<hr />
+<h2 id="-jk-flip-flop">📐 JK Flip-Flop<a class="headerlink" href="#-jk-flip-flop" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>Inputs:  J (like Set), K (like Reset), Clock
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>Output:  Q
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>Truth Table:
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>J │ K │ Q(next) │ Comment
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>──┼───┼─────────┼──────────────
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>0 │ 0 │  Q      │ No change
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>0 │ 1 │  0      │ Reset
+</span><span id="__span-46-9"><a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>1 │ 0 │  1      │ Set
+</span><span id="__span-46-10"><a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>1 │ 1 │  Q̄      │ TOGGLE ← key difference from SR!
+</span><span id="__span-46-11"><a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a>
+</span><span id="__span-46-12"><a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>Characteristic equation: Q(next) = J·Q̄ + K̄·Q
+</span><span id="__span-46-13"><a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a>
+</span><span id="__span-46-14"><a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a>JK flip-flop solves the SR invalid state problem:
+</span><span id="__span-46-15"><a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a>  When J=K=1 → output TOGGLES (not invalid)
+</span></code></pre></div>
+<hr />
+<h2 id="-t-flip-flop-toggle">📐 T Flip-Flop (Toggle)<a class="headerlink" href="#-t-flip-flop-toggle" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>Input:   T (toggle), Clock
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>Output:  Q
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>
+</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>Truth Table:
+</span><span id="__span-47-5"><a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>T │ Q(next) │ Comment
+</span><span id="__span-47-6"><a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>──┼─────────┼──────────────
+</span><span id="__span-47-7"><a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>0 │  Q      │ No change
+</span><span id="__span-47-8"><a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>1 │  Q̄      │ Toggle
+</span><span id="__span-47-9"><a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a>
+</span><span id="__span-47-10"><a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a>Characteristic equation: Q(next) = T⊕Q
+</span><span id="__span-47-11"><a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a>
+</span><span id="__span-47-12"><a id="__codelineno-47-12" name="__codelineno-47-12" href="#__codelineno-47-12"></a>Key use: Counters! Each T=1 toggles the bit.
+</span></code></pre></div>
+<hr />
+<h2 id="-flip-flop-comparison">⚖️ Flip-Flop Comparison<a class="headerlink" href="#-flip-flop-comparison" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>FF Type</th>
+<th>Inputs</th>
+<th>Invalid State</th>
+<th>Key Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SR</strong></td>
+<td>S, R</td>
+<td>S=R=1</td>
+<td>Basic set/reset</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>D</td>
+<td>None</td>
+<td>Stores one bit, delays by 1 clock</td>
+</tr>
+<tr>
+<td><strong>JK</strong></td>
+<td>J, K</td>
+<td>None</td>
+<td>Toggle when J=K=1</td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td>T</td>
+<td>None</td>
+<td>Toggle on T=1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="conversions-between-flip-flops">Conversions Between Flip-Flops<a class="headerlink" href="#conversions-between-flip-flops" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>D from JK:  J=D, K=D̄
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>T from JK:  J=T, K=T
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>JK from D:  D = J·Q̄ + K̄·Q
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>SR from JK: J=S, K=R (with S·R=0 constraint)
+</span></code></pre></div>
+<hr />
+<h2 id="-flip-flop-timing">🔄 Flip-Flop Timing<a class="headerlink" href="#-flip-flop-timing" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>Edge-triggered flip-flop:
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>  Changes state only at clock edge (rising or falling)
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>  Clock: _____|‾‾‾‾‾|_____|‾‾‾‾‾|_____
+</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>                ↑           ↑
+</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>           Rising edge  Rising edge
+</span><span id="__span-49-7"><a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a>           (state changes here)
+</span><span id="__span-49-8"><a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a>
+</span><span id="__span-49-9"><a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a>Setup time:  D must be stable BEFORE clock edge
+</span><span id="__span-49-10"><a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a>Hold time:   D must be stable AFTER clock edge
+</span><span id="__span-49-11"><a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a>Propagation: Delay from clock edge to Q changing
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_7">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> SR flip-flop: S=R=1 is FORBIDDEN. JK flip-flop: J=K=1 is TOGGLE (not forbidden).
+🚫 <strong>Mistake 2:</strong> D flip-flop output = D after clock edge, not immediately.
+🚫 <strong>Mistake 3:</strong> T flip-flop with T=0 holds state; T=1 toggles — it does NOT set to 1.
+🚫 <strong>Mistake 4:</strong> Flip-flops are synchronous (clock-driven), not asynchronous (immediate).</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_2">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Characteristic equations</strong> are frequently asked — memorize all four.
+💡 JK is the most versatile — can act as SR, D, or T flip-flop.
+💡 State diagrams show transitions between Q=0 and Q=1 based on inputs.
+💡 T flip-flop is used in counters — each stage divides frequency by 2.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_7">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_7" title="Anchor link">&para;</a></h2>
+<ul>
+<li>SR: Set/Reset, invalid when S=R=1</li>
+<li>D: Q(next)=D, simple 1-bit memory</li>
+<li>JK: like SR but J=K=1 → toggle (no invalid state)</li>
+<li>T: T=0 hold, T=1 toggle</li>
+<li>All are edge-triggered (change on clock edge)</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_7">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Draw the truth table, characteristic equation, and state diagram for a JK flip-flop.
+<strong>Short note:</strong> How does a JK flip-flop differ from an SR flip-flop?
+<strong>Convert:</strong> Design a D flip-flop using a JK flip-flop.
+<strong>Trace:</strong> Given a sequence of J,K inputs and initial Q=0, trace the output for 5 clock cycles.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="9-counters">9. Counters<a class="headerlink" href="#9-counters" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_8">💡 Intuition First<a class="headerlink" href="#-intuition-first_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A counter is a sequential circuit that counts clock pulses. Like an odometer in a car — each pulse increments the count. Counters are built from flip-flops, where each flip-flop represents one bit.</p>
+</blockquote>
+<hr />
+<h2 id="-asynchronous-ripple-counter">📐 Asynchronous (Ripple) Counter<a class="headerlink" href="#-asynchronous-ripple-counter" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Each flip-flop is triggered by the output of the previous one — the clock "ripples" through. Simple but slow (propagation delay accumulates).</p>
+</blockquote>
+<h3 id="3-bit-ripple-up-counter-using-t-flip-flops-with-t1">3-Bit Ripple Up Counter (using T flip-flops with T=1)<a class="headerlink" href="#3-bit-ripple-up-counter-using-t-flip-flops-with-t1" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>Clock ──► FF₀(T=1) ──Q₀──► FF₁(T=1) ──Q₁──► FF₂(T=1) ──Q₂
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>
+</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>Each FF toggles when its input goes from 1→0 (falling edge)
+</span><span id="__span-50-4"><a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>
+</span><span id="__span-50-5"><a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a>Timing diagram:
+</span><span id="__span-50-6"><a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>Clock: ‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|
+</span><span id="__span-50-7"><a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a>Q₀:    ‾‾|__|‾‾|__|‾‾|__|‾‾|__|  (toggles every clock)
+</span><span id="__span-50-8"><a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a>Q₁:    ‾‾‾‾‾‾|____|‾‾‾‾‾‾|____  (toggles every 2 clocks)
+</span><span id="__span-50-9"><a id="__codelineno-50-9" name="__codelineno-50-9" href="#__codelineno-50-9"></a>Q₂:    ‾‾‾‾‾‾‾‾‾‾‾‾|________|   (toggles every 4 clocks)
+</span><span id="__span-50-10"><a id="__codelineno-50-10" name="__codelineno-50-10" href="#__codelineno-50-10"></a>
+</span><span id="__span-50-11"><a id="__codelineno-50-11" name="__codelineno-50-11" href="#__codelineno-50-11"></a>Count sequence (Q₂Q₁Q₀):
+</span><span id="__span-50-12"><a id="__codelineno-50-12" name="__codelineno-50-12" href="#__codelineno-50-12"></a>000 → 001 → 010 → 011 → 100 → 101 → 110 → 111 → 000
+</span><span id="__span-50-13"><a id="__codelineno-50-13" name="__codelineno-50-13" href="#__codelineno-50-13"></a> 0  →  1  →  2  →  3  →  4  →  5  →  6  →  7  → 0 (wraps)
+</span></code></pre></div>
+<hr />
+<h2 id="-synchronous-counter">📐 Synchronous Counter<a class="headerlink" href="#-synchronous-counter" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>All flip-flops are triggered by the SAME clock simultaneously. Faster than ripple counter (no propagation delay accumulation).</p>
+</blockquote>
+<h3 id="3-bit-synchronous-up-counter">3-Bit Synchronous Up Counter<a class="headerlink" href="#3-bit-synchronous-up-counter" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>Using JK flip-flops:
+</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>
+</span><span id="__span-51-3"><a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>FF₀: J₀=K₀=1 (always toggles)
+</span><span id="__span-51-4"><a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a>FF₁: J₁=K₁=Q₀ (toggles when Q₀=1)
+</span><span id="__span-51-5"><a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a>FF₂: J₂=K₂=Q₀·Q₁ (toggles when Q₀=Q₁=1)
+</span><span id="__span-51-6"><a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a>
+</span><span id="__span-51-7"><a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a>Count sequence: 000→001→010→011→100→101→110→111→000
+</span></code></pre></div>
+<hr />
+<h2 id="-mod-n-counter">📐 MOD-N Counter<a class="headerlink" href="#-mod-n-counter" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A counter that counts from 0 to N-1, then resets to 0.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>MOD-6 counter (counts 0 to 5):
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>  Normal 3-bit counter counts 0-7
+</span><span id="__span-52-3"><a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>  When count reaches 6 (110):
+</span><span id="__span-52-4"><a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a>    Detect 110 using NAND gate: Q₂·Q₁ = 1
+</span><span id="__span-52-5"><a id="__codelineno-52-5" name="__codelineno-52-5" href="#__codelineno-52-5"></a>    Use this to RESET all flip-flops to 0
+</span><span id="__span-52-6"><a id="__codelineno-52-6" name="__codelineno-52-6" href="#__codelineno-52-6"></a>
+</span><span id="__span-52-7"><a id="__codelineno-52-7" name="__codelineno-52-7" href="#__codelineno-52-7"></a>MOD-10 (Decade counter):
+</span><span id="__span-52-8"><a id="__codelineno-52-8" name="__codelineno-52-8" href="#__codelineno-52-8"></a>  Counts 0-9, resets on 10 (1010)
+</span><span id="__span-52-9"><a id="__codelineno-52-9" name="__codelineno-52-9" href="#__codelineno-52-9"></a>  Detect 1010: Q₃·Q₁ = 1 → reset
+</span><span id="__span-52-10"><a id="__codelineno-52-10" name="__codelineno-52-10" href="#__codelineno-52-10"></a>
+</span><span id="__span-52-11"><a id="__codelineno-52-11" name="__codelineno-52-11" href="#__codelineno-52-11"></a>Modulus = number of states in the count sequence
+</span><span id="__span-52-12"><a id="__codelineno-52-12" name="__codelineno-52-12" href="#__codelineno-52-12"></a>  3-bit counter: MOD-8
+</span><span id="__span-52-13"><a id="__codelineno-52-13" name="__codelineno-52-13" href="#__codelineno-52-13"></a>  4-bit counter: MOD-16
+</span><span id="__span-52-14"><a id="__codelineno-52-14" name="__codelineno-52-14" href="#__codelineno-52-14"></a>  n-bit counter: MOD-2ⁿ
+</span></code></pre></div>
+<hr />
+<h2 id="-updown-counter">📐 Up/Down Counter<a class="headerlink" href="#-updown-counter" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>Direction control input: UP/DOWN̄
+</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>
+</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>UP=1:   Count up   (000→001→010→...→111→000)
+</span><span id="__span-53-4"><a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a>UP=0:   Count down (111→110→101→...→000→111)
+</span><span id="__span-53-5"><a id="__codelineno-53-5" name="__codelineno-53-5" href="#__codelineno-53-5"></a>
+</span><span id="__span-53-6"><a id="__codelineno-53-6" name="__codelineno-53-6" href="#__codelineno-53-6"></a>JK equations for up/down counter:
+</span><span id="__span-53-7"><a id="__codelineno-53-7" name="__codelineno-53-7" href="#__codelineno-53-7"></a>  J₀=K₀=1
+</span><span id="__span-53-8"><a id="__codelineno-53-8" name="__codelineno-53-8" href="#__codelineno-53-8"></a>  J₁=K₁= UP·Q₀ + DOWN̄·Q̄₀
+</span><span id="__span-53-9"><a id="__codelineno-53-9" name="__codelineno-53-9" href="#__codelineno-53-9"></a>  J₂=K₂= UP·Q₁·Q₀ + DOWN̄·Q̄₁·Q̄₀
+</span></code></pre></div>
+<hr />
+<h2 id="-ripple-vs-synchronous-counter">⚖️ Ripple vs Synchronous Counter<a class="headerlink" href="#-ripple-vs-synchronous-counter" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Ripple (Async)</th>
+<th>Synchronous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock</td>
+<td>Cascaded (ripples)</td>
+<td>Common clock</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Slow (delay accumulates)</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Complexity</td>
+<td>Simple</td>
+<td>More complex</td>
+</tr>
+<tr>
+<td>Glitches</td>
+<td>Yes (intermediate states)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Use</td>
+<td>Low-speed, simple</td>
+<td>High-speed, reliable</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_8">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Ripple counter: each FF triggered by PREVIOUS FF's output, not the main clock.
+🚫 <strong>Mistake 2:</strong> MOD-N counter: reset happens WHEN count reaches N, not N-1.
+🚫 <strong>Mistake 3:</strong> A 3-bit counter has 8 states (0-7), not 7 states.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_8">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_8" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Ripple counter: cascaded FFs, simple, slow, glitches possible</li>
+<li>Synchronous counter: common clock, fast, no glitches</li>
+<li>MOD-N: counts 0 to N-1, resets on N</li>
+<li>T flip-flop with T=1 divides clock frequency by 2 per stage</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_8">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Design a 3-bit synchronous up counter using JK flip-flops. Show the state table and circuit.
+<strong>Short note:</strong> What is the difference between a ripple counter and a synchronous counter?
+<strong>Design:</strong> Design a MOD-6 counter. Show how the reset is implemented.
+<strong>Trace:</strong> Trace the output of a 3-bit ripple counter for 10 clock pulses starting from 000.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="10-registers">10. Registers<a class="headerlink" href="#10-registers" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_9">💡 Intuition First<a class="headerlink" href="#-intuition-first_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A register is a <strong>group of flip-flops</strong> that stores multiple bits together — like a row of memory cells. A 4-bit register stores a 4-bit binary number. Registers are the fastest storage in a computer (inside the CPU).</p>
+</blockquote>
+<hr />
+<h2 id="-types-of-registers">📐 Types of Registers<a class="headerlink" href="#-types-of-registers" title="Anchor link">&para;</a></h2>
+<h3 id="1-parallel-buffer-register">1. Parallel (Buffer) Register<a class="headerlink" href="#1-parallel-buffer-register" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>Stores n bits simultaneously. All bits loaded at once on clock edge.
+</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>
+</span><span id="__span-54-3"><a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>4-bit parallel register:
+</span><span id="__span-54-4"><a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a>  D₃ D₂ D₁ D₀ (data inputs)
+</span><span id="__span-54-5"><a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a>   │  │  │  │
+</span><span id="__span-54-6"><a id="__codelineno-54-6" name="__codelineno-54-6" href="#__codelineno-54-6"></a>  [D][D][D][D]  ← 4 D flip-flops, common clock
+</span><span id="__span-54-7"><a id="__codelineno-54-7" name="__codelineno-54-7" href="#__codelineno-54-7"></a>   │  │  │  │
+</span><span id="__span-54-8"><a id="__codelineno-54-8" name="__codelineno-54-8" href="#__codelineno-54-8"></a>  Q₃ Q₂ Q₁ Q₀ (stored output)
+</span><span id="__span-54-9"><a id="__codelineno-54-9" name="__codelineno-54-9" href="#__codelineno-54-9"></a>
+</span><span id="__span-54-10"><a id="__codelineno-54-10" name="__codelineno-54-10" href="#__codelineno-54-10"></a>On clock edge: Q₃Q₂Q₁Q₀ = D₃D₂D₁D₀
+</span></code></pre></div>
+<h3 id="2-serial-in-serial-out-siso-shift-register">2. Serial-In Serial-Out (SISO) Shift Register<a class="headerlink" href="#2-serial-in-serial-out-siso-shift-register" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>Data enters one bit at a time, exits one bit at a time.
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>
+</span><span id="__span-55-3"><a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>  Data_in ──► [D₀] ──Q₀──► [D₁] ──Q₁──► [D₂] ──Q₂──► [D₃] ──► Data_out
+</span><span id="__span-55-4"><a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>               ↑             ↑             ↑             ↑
+</span><span id="__span-55-5"><a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a>              CLK           CLK           CLK           CLK
+</span><span id="__span-55-6"><a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a>
+</span><span id="__span-55-7"><a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a>Shift operation: each clock pulse shifts all bits one position right
+</span><span id="__span-55-8"><a id="__codelineno-55-8" name="__codelineno-55-8" href="#__codelineno-55-8"></a>  Initial:  Q₃Q₂Q₁Q₀ = 0000
+</span><span id="__span-55-9"><a id="__codelineno-55-9" name="__codelineno-55-9" href="#__codelineno-55-9"></a>  Input 1:  Q₃Q₂Q₁Q₀ = 0001
+</span><span id="__span-55-10"><a id="__codelineno-55-10" name="__codelineno-55-10" href="#__codelineno-55-10"></a>  Input 0:  Q₃Q₂Q₁Q₀ = 0010
+</span><span id="__span-55-11"><a id="__codelineno-55-11" name="__codelineno-55-11" href="#__codelineno-55-11"></a>  Input 1:  Q₃Q₂Q₁Q₀ = 0101
+</span><span id="__span-55-12"><a id="__codelineno-55-12" name="__codelineno-55-12" href="#__codelineno-55-12"></a>  Input 1:  Q₃Q₂Q₁Q₀ = 1011
+</span></code></pre></div>
+<h3 id="3-serial-in-parallel-out-sipo">3. Serial-In Parallel-Out (SIPO)<a class="headerlink" href="#3-serial-in-parallel-out-sipo" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>Data enters serially, all bits available simultaneously as output.
+</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>Used for: Serial-to-parallel conversion (e.g., receiving serial data)
+</span></code></pre></div>
+<h3 id="4-parallel-in-serial-out-piso">4. Parallel-In Serial-Out (PISO)<a class="headerlink" href="#4-parallel-in-serial-out-piso" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>All bits loaded simultaneously, shifted out one at a time.
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>Used for: Parallel-to-serial conversion (e.g., transmitting data serially)
+</span></code></pre></div>
+<h3 id="5-universal-shift-register">5. Universal Shift Register<a class="headerlink" href="#5-universal-shift-register" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>Can perform all four operations:
+</span><span id="__span-58-2"><a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>  - Parallel load
+</span><span id="__span-58-3"><a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>  - Shift right
+</span><span id="__span-58-4"><a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a>  - Shift left
+</span><span id="__span-58-5"><a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a>  - Hold (no change)
+</span><span id="__span-58-6"><a id="__codelineno-58-6" name="__codelineno-58-6" href="#__codelineno-58-6"></a>
+</span><span id="__span-58-7"><a id="__codelineno-58-7" name="__codelineno-58-7" href="#__codelineno-58-7"></a>Controlled by 2 mode select bits (S₁, S₀):
+</span><span id="__span-58-8"><a id="__codelineno-58-8" name="__codelineno-58-8" href="#__codelineno-58-8"></a>S₁│S₀│ Operation
+</span><span id="__span-58-9"><a id="__codelineno-58-9" name="__codelineno-58-9" href="#__codelineno-58-9"></a>──┼──┼──────────
+</span><span id="__span-58-10"><a id="__codelineno-58-10" name="__codelineno-58-10" href="#__codelineno-58-10"></a> 0│ 0│ Hold
+</span><span id="__span-58-11"><a id="__codelineno-58-11" name="__codelineno-58-11" href="#__codelineno-58-11"></a> 0│ 1│ Shift right
+</span><span id="__span-58-12"><a id="__codelineno-58-12" name="__codelineno-58-12" href="#__codelineno-58-12"></a> 1│ 0│ Shift left
+</span><span id="__span-58-13"><a id="__codelineno-58-13" name="__codelineno-58-13" href="#__codelineno-58-13"></a> 1│ 1│ Parallel load
+</span></code></pre></div>
+<hr />
+<h2 id="-shift-register-applications">📐 Shift Register Applications<a class="headerlink" href="#-shift-register-applications" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Register Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Serial communication</td>
+<td>PISO</td>
+<td>Convert parallel data to serial for transmission</td>
+</tr>
+<tr>
+<td>Data reception</td>
+<td>SIPO</td>
+<td>Convert received serial data to parallel</td>
+</tr>
+<tr>
+<td>Delay line</td>
+<td>SISO</td>
+<td>Delay signal by n clock cycles</td>
+</tr>
+<tr>
+<td>Ring counter</td>
+<td>SISO (circular)</td>
+<td>Circulate a single 1 bit</td>
+</tr>
+<tr>
+<td>Johnson counter</td>
+<td>SISO (feedback)</td>
+<td>Twisted ring counter</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-ring-counter-vs-johnson-counter">🔄 Ring Counter vs Johnson Counter<a class="headerlink" href="#-ring-counter-vs-johnson-counter" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>Ring Counter (4-bit):
+</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>  Initial: 1000
+</span><span id="__span-59-3"><a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>  After 1: 0100
+</span><span id="__span-59-4"><a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>  After 2: 0010
+</span><span id="__span-59-5"><a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>  After 3: 0001
+</span><span id="__span-59-6"><a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>  After 4: 1000 (repeats)
+</span><span id="__span-59-7"><a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a>  MOD-4 counter, only one 1 circulates
+</span><span id="__span-59-8"><a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a>
+</span><span id="__span-59-9"><a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a>Johnson Counter (4-bit):
+</span><span id="__span-59-10"><a id="__codelineno-59-10" name="__codelineno-59-10" href="#__codelineno-59-10"></a>  Initial: 0000
+</span><span id="__span-59-11"><a id="__codelineno-59-11" name="__codelineno-59-11" href="#__codelineno-59-11"></a>  After 1: 1000  (shift in 1 from Q̄₃)
+</span><span id="__span-59-12"><a id="__codelineno-59-12" name="__codelineno-59-12" href="#__codelineno-59-12"></a>  After 2: 1100
+</span><span id="__span-59-13"><a id="__codelineno-59-13" name="__codelineno-59-13" href="#__codelineno-59-13"></a>  After 3: 1110
+</span><span id="__span-59-14"><a id="__codelineno-59-14" name="__codelineno-59-14" href="#__codelineno-59-14"></a>  After 4: 1111
+</span><span id="__span-59-15"><a id="__codelineno-59-15" name="__codelineno-59-15" href="#__codelineno-59-15"></a>  After 5: 0111  (shift in 0 from Q̄₃)
+</span><span id="__span-59-16"><a id="__codelineno-59-16" name="__codelineno-59-16" href="#__codelineno-59-16"></a>  After 6: 0011
+</span><span id="__span-59-17"><a id="__codelineno-59-17" name="__codelineno-59-17" href="#__codelineno-59-17"></a>  After 7: 0001
+</span><span id="__span-59-18"><a id="__codelineno-59-18" name="__codelineno-59-18" href="#__codelineno-59-18"></a>  After 8: 0000 (repeats)
+</span><span id="__span-59-19"><a id="__codelineno-59-19" name="__codelineno-59-19" href="#__codelineno-59-19"></a>  MOD-8 counter (2n states for n flip-flops)
+</span></code></pre></div>
+<hr />
+<h2 id="-register-types-summary">⚖️ Register Types Summary<a class="headerlink" href="#-register-types-summary" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Input</th>
+<th>Output</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parallel</td>
+<td>Parallel</td>
+<td>Parallel</td>
+<td>CPU registers, fast storage</td>
+</tr>
+<tr>
+<td>SISO</td>
+<td>Serial</td>
+<td>Serial</td>
+<td>Delay, pipeline</td>
+</tr>
+<tr>
+<td>SIPO</td>
+<td>Serial</td>
+<td>Parallel</td>
+<td>Serial-to-parallel conversion</td>
+</tr>
+<tr>
+<td>PISO</td>
+<td>Parallel</td>
+<td>Serial</td>
+<td>Parallel-to-serial conversion</td>
+</tr>
+<tr>
+<td>Universal</td>
+<td>Both</td>
+<td>Both</td>
+<td>Flexible, general purpose</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_9">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Shift register shifts data in the direction of the chain — right shift moves data from D₀ toward D₃.
+🚫 <strong>Mistake 2:</strong> Ring counter: MOD-n (n = number of bits). Johnson counter: MOD-2n.
+🚫 <strong>Mistake 3:</strong> A register stores data — it doesn't process it. Processing is done by the ALU.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_9">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_9" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Register: group of flip-flops storing multiple bits</li>
+<li>Parallel: load/read all bits at once</li>
+<li>Shift register: bits move one position per clock</li>
+<li>SISO: serial in/out | SIPO: serial in, parallel out | PISO: parallel in, serial out</li>
+<li>Ring counter: MOD-n | Johnson counter: MOD-2n</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_9">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Explain the operation of a 4-bit SIPO shift register with a timing diagram.
+<strong>Short note:</strong> What is the difference between a ring counter and a Johnson counter?
+<strong>Design:</strong> Design a 4-bit universal shift register. Show the mode control table.
+<strong>Trace:</strong> Trace the output of a 4-bit ring counter for 6 clock pulses starting from 1000.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="-master-quick-revision-sheet--digital-logic-design">🏁 Master Quick Revision Sheet — Digital Logic Design<a class="headerlink" href="#-master-quick-revision-sheet--digital-logic-design" title="Anchor link">&para;</a></h1>
+<h2 id="-boolean-laws-cheat-sheet">⚡ Boolean Laws Cheat Sheet<a class="headerlink" href="#-boolean-laws-cheat-sheet" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>Identity:      A+0=A    A·1=A    A+1=1    A·0=0
+</span><span id="__span-60-2"><a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>Complement:    A+Ā=1    A·Ā=0    Ā̄=A
+</span><span id="__span-60-3"><a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>Idempotent:    A+A=A    A·A=A
+</span><span id="__span-60-4"><a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>Absorption:    A+AB=A   A(A+B)=A
+</span><span id="__span-60-5"><a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>De Morgan&#39;s:   (A+B)̄=Ā·B̄    (A·B)̄=Ā+B̄
+</span><span id="__span-60-6"><a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a>Distributive:  A(B+C)=AB+AC    A+(BC)=(A+B)(A+C)
+</span><span id="__span-60-7"><a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a>XOR:           A⊕A=0    A⊕0=A    A⊕1=Ā    A⊕B=B⊕A
+</span></code></pre></div>
+<h2 id="-key-facts-to-remember">🔑 Key Facts to Remember<a class="headerlink" href="#-key-facts-to-remember" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fact</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K-map order</td>
+<td>Gray code: 00,01,<strong>11</strong>,10 (NOT binary)</td>
+</tr>
+<tr>
+<td>K-map groups</td>
+<td>Powers of 2 only: 1,2,4,8,16</td>
+</tr>
+<tr>
+<td>K-map wrap</td>
+<td>Top↔Bottom, Left↔Right are adjacent</td>
+</tr>
+<tr>
+<td>Universal gates</td>
+<td>NAND and NOR only</td>
+</tr>
+<tr>
+<td>Half adder</td>
+<td>S=A⊕B, C=AB (no carry in)</td>
+</tr>
+<tr>
+<td>Full adder</td>
+<td>S=A⊕B⊕Cin, Cout=AB+BCin+ACin</td>
+</tr>
+<tr>
+<td>SR invalid</td>
+<td>S=R=1 is forbidden</td>
+</tr>
+<tr>
+<td>JK toggle</td>
+<td>J=K=1 → toggle (not invalid)</td>
+</tr>
+<tr>
+<td>D flip-flop</td>
+<td>Q(next)=D (simplest)</td>
+</tr>
+<tr>
+<td>T flip-flop</td>
+<td>Q(next)=T⊕Q (toggle on T=1)</td>
+</tr>
+<tr>
+<td>Ring counter</td>
+<td>MOD-n (n = bits)</td>
+</tr>
+<tr>
+<td>Johnson counter</td>
+<td>MOD-2n (n = bits)</td>
+</tr>
+<tr>
+<td>MUX inputs</td>
+<td>2ⁿ data inputs, n select lines</td>
+</tr>
+<tr>
+<td>Decoder outputs</td>
+<td>Each output = one minterm</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-memory-tricks">🧠 Memory Tricks<a class="headerlink" href="#-memory-tricks" title="Anchor link">&para;</a></h2>
+<ul>
+<li><strong>De Morgan's:</strong> "<strong>Break the bar, change the sign</strong>" → (A+B)̄ = Ā·B̄</li>
+<li><strong>K-map order:</strong> "<strong>Go Gray</strong>" → 00,01,11,10 (adjacent cells differ by 1 bit)</li>
+<li><strong>Flip-flop types:</strong> "<strong>S</strong>et/<strong>R</strong>eset, <strong>D</strong>elay, <strong>J</strong>ump/<strong>K</strong>ill, <strong>T</strong>oggle"</li>
+<li><strong>Full adder from half adders:</strong> "<strong>Two HAs + one OR = FA</strong>"</li>
+<li><strong>Universal gates:</strong> "<strong>NAND and NOR are the universal donors</strong>"</li>
+<li><strong>MUX vs DEMUX:</strong> "<strong>MUX = Many to one</strong> | <strong>DEMUX = one to Many</strong>"</li>
+</ul>
+<h2 id="-top-10-most-probable-exam-questions">🎯 Top 10 Most Probable Exam Questions<a class="headerlink" href="#-top-10-most-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<ol>
+<li>Simplify Boolean expression using Boolean algebra (show each step)</li>
+<li>Minimize function using 3-variable or 4-variable K-map</li>
+<li>Design full adder — truth table, expressions, circuit</li>
+<li>Draw truth table and circuit for 4-to-1 MUX</li>
+<li>Design 2-to-4 decoder with enable</li>
+<li>JK flip-flop — truth table, characteristic equation, state diagram</li>
+<li>Compare SR, D, JK, T flip-flops in a table</li>
+<li>Design 3-bit synchronous counter</li>
+<li>Implement Boolean function using decoder + OR gates</li>
+<li>Trace shift register operation for given input sequence</li>
+</ol>
+<h2 id="-flip-flop-quick-reference">📊 Flip-Flop Quick Reference<a class="headerlink" href="#-flip-flop-quick-reference" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>┌──────┬──────────┬──────────────────────────┬──────────────┐
+</span><span id="__span-61-2"><a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>│  FF  │  Inputs  │  Characteristic Eq.      │  Special     │
+</span><span id="__span-61-3"><a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>├──────┼──────────┼──────────────────────────┼──────────────┤
+</span><span id="__span-61-4"><a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a>│  SR  │  S, R    │  Q+ = S + R̄Q (SR=0)     │  S=R=1 invalid│
+</span><span id="__span-61-5"><a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a>│  D   │  D       │  Q+ = D                  │  Simplest    │
+</span><span id="__span-61-6"><a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a>│  JK  │  J, K    │  Q+ = JQ̄ + K̄Q           │  J=K=1→toggle│
+</span><span id="__span-61-7"><a id="__codelineno-61-7" name="__codelineno-61-7" href="#__codelineno-61-7"></a>│  T   │  T       │  Q+ = T⊕Q               │  T=1→toggle  │
+</span><span id="__span-61-8"><a id="__codelineno-61-8" name="__codelineno-61-8" href="#__codelineno-61-8"></a>└──────┴──────────┴──────────────────────────┴──────────────┘
+</span></code></pre></div>
+<hr />
+<blockquote>
+<p>📌 <strong>End of Subject 05: Digital Logic Design</strong></p>
+<p>Next: <strong>Subject 06 — Software Engineering</strong> →</p>
+</blockquote>
+<hr />
+<p><em>Handbook generated for MSc Admission Preparation | JUST-Style Exam Focus</em>
+<em>Version 1.0 | Digital Logic Design</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../04%20-%20Compiler%20Design%20%26%20Automata/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 04 · Compiler Design &amp; Automata">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                04 · Compiler Design & Automata
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../06%20-%20Software%20Engineering/" class="md-footer__link md-footer__link--next" aria-label="Next: 06 · Software Engineering">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                06 · Software Engineering
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

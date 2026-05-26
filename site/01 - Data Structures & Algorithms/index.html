@@ -1,0 +1,3705 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modern, exam-focused handbook for MSc CSE admission preparation">
+      
+      
+        <meta name="author" content="Nehal">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../02%20-%20Operating%20Systems/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>01 · Data Structures & Algorithms - MSc CSE Admission Prep</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M21%2010V9l-6-6H5c-1.11%200-2%20.89-2%202v14a2%202%200%200%200%202%202h6v-1.87l8.39-8.39c.44-.44%201-.68%201.61-.74m-7-5.5%205.5%205.5H14zm8.85%209.69-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72%200l1.32%201.32c.2.2.2.53%200%20.72m-3.72-.36%202.04%202.04L15.04%2022H13v-2.04z%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7%202v2h1v14a4%204%200%200%200%204%204%204%204%200%200%200%204-4V4h1V2zm4%2014c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m2-4c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m1-5h-4V4h4z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M14%2017h3l2-4V7h-6v6h3M6%2017h3l2-4V7H5v6h3z%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-msc-admission-prep--subject-01-data-structures--algorithms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MSc CSE Admission Prep" class="md-header__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSc CSE Admission Prep
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              01 · Data Structures & Algorithms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier S/A — Must Master
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../11%20-%20Discrete%20Mathematics/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier B — Moderately Important
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier C — Light Revision
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MSc CSE Admission Prep" class="md-nav__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    MSc CSE Admission Prep
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier S/A — Must Master
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier S/A — Must Master
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Data Structures & Algorithms
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Data Structures & Algorithms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20-%20Operating%20Systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Operating Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Computer Networks & Data Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20-%20Compiler%20Design%20%26%20Automata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Compiler Design & Automata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05%20-%20Digital%20Logic%20Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Digital Logic Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06%20-%20Software%20Engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Software Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20Database%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Database Management System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08%20-%20Artificial%20Intelligence%20%26%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Artificial Intelligence & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09%20-%20Object%20Oriented%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Object Oriented Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%20-%20Programming%20Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier B — Moderately Important
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier B — Moderately Important
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11%20-%20Discrete%20Mathematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 · Discrete Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12%20-%20Computer%20Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 · Computer Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13%20-%20Numerical%20Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13 · Numerical Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier C — Light Revision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier C — Light Revision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14–20 · Tier C Subjects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tier S/A — Must Master
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="-msc-admission-prep--subject-01-data-structures--algorithms">📘 MSc Admission Prep — Subject 01: Data Structures &amp; Algorithms<a class="headerlink" href="#-msc-admission-prep--subject-01-data-structures--algorithms" title="Anchor link">&para;</a></h1>
+<h3 id="-just-style-exam-handbook--fast-revision-edition">🎯 JUST-Style Exam Handbook | Fast Revision Edition<a class="headerlink" href="#-just-style-exam-handbook--fast-revision-edition" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p><strong>Who this is for:</strong> BSc graduates who studied DSA but need a fast, deep, visual refresh before the MSc admission exam.
+<strong>How to use:</strong> Read the intuition first. Then the formal definition. Then trace the examples. Finish with exam tips.</p>
+</blockquote>
+<hr />
+<h2 id="-table-of-contents">📋 Table of Contents<a class="headerlink" href="#-table-of-contents" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Topic</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="#1-linked-list">Linked List</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="#2-stack--queue">Stack &amp; Queue</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="#3-trees--bst">Trees &amp; BST</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="#4-hashing">Hashing</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="#5-binary-search">Binary Search</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#6-sorting-algorithms">Sorting Algorithms</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="#7-dynamic-programming">Dynamic Programming</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="#8-greedy-algorithms">Greedy Algorithms</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="#9-graph-algorithms">Graph Algorithms</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="#10-complexity-analysis">Complexity Analysis</a></td>
+<td>🔴 Must Master</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h1 id="1-linked-list">1. Linked List<a class="headerlink" href="#1-linked-list" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first">💡 Intuition First<a class="headerlink" href="#-intuition-first" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Imagine a <strong>treasure hunt</strong> — each clue tells you where the next clue is. You can't jump to clue #5 directly; you must follow the chain from clue #1.</p>
+</blockquote>
+<p>That's a linked list. Each <strong>node</strong> holds data + a pointer to the next node. Unlike arrays, nodes are <strong>not stored contiguously</strong> in memory.</p>
+<p><strong>Real-world analogy:</strong> A train — each coach is connected to the next. You can add/remove coaches anywhere without rebuilding the whole train.</p>
+<p><strong>Why it matters:</strong> Linked lists are the foundation of stacks, queues, hash chaining, and adjacency lists. Exam questions love insertion/deletion and reversal.</p>
+<hr />
+<h2 id="-formal-definition">📐 Formal Definition<a class="headerlink" href="#-formal-definition" title="Anchor link">&para;</a></h2>
+<p>A <strong>Linked List</strong> is a linear data structure where each element (node) contains:
+- <code>data</code> — the value stored
+- <code>next</code> — a pointer/reference to the next node</p>
+<p>The list starts at a <strong>head</strong> pointer. The last node points to <code>NULL</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>HEAD
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> │
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> ▼
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[10 | •]──►[20 | •]──►[30 | •]──►[40 | NULL]
+</span></code></pre></div>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Singly Linked</strong></td>
+<td>Each node points to next only</td>
+</tr>
+<tr>
+<td><strong>Doubly Linked</strong></td>
+<td>Each node points to next AND previous</td>
+</tr>
+<tr>
+<td><strong>Circular</strong></td>
+<td>Last node points back to head</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-core-operations">🔧 Core Operations<a class="headerlink" href="#-core-operations" title="Anchor link">&para;</a></h2>
+<h3 id="-insertion">➕ Insertion<a class="headerlink" href="#-insertion" title="Anchor link">&para;</a></h3>
+<p><strong>Three cases:</strong>
+1. At the <strong>beginning</strong> (before head)
+2. At the <strong>end</strong> (after last node)
+3. At a <strong>specific position</strong></p>
+<h4 id="insert-at-beginning--step-by-step">Insert at Beginning — Step-by-Step<a class="headerlink" href="#insert-at-beginning--step-by-step" title="Anchor link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Before: HEAD → [10]→[20]→[30]→NULL
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Insert 5 at beginning
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Step 1: Create new node [5]
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Step 2: new_node.next = HEAD        → [5]→[10]→[20]→[30]→NULL
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Step 3: HEAD = new_node
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>After:  HEAD → [5]→[10]→[20]→[30]→NULL
+</span></code></pre></div>
+<p><strong>Pseudocode:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>function insertAtBeginning(head, value):
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    new_node = Node(value)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    new_node.next = head
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    head = new_node
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    return head
+</span></code></pre></div></p>
+<h4 id="insert-at-end">Insert at End<a class="headerlink" href="#insert-at-end" title="Anchor link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Before: HEAD → [10]→[20]→[30]→NULL
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Insert 40 at end
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Step 1: Create new node [40], new_node.next = NULL
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Step 2: Traverse to last node (node where next == NULL)
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Step 3: last_node.next = new_node
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>After:  HEAD → [10]→[20]→[30]→[40]→NULL
+</span></code></pre></div>
+<h4 id="sorted-insertion">Sorted Insertion<a class="headerlink" href="#sorted-insertion" title="Anchor link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>List: [10]→[30]→[50]→NULL   Insert: 25
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Step 1: Find position where prev.data &lt; 25 &lt; curr.data
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        prev = [10], curr = [30]
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Step 2: new_node.next = curr   → [25]→[30]
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Step 3: prev.next = new_node   → [10]→[25]→[30]
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>Result: [10]→[25]→[30]→[50]→NULL
+</span></code></pre></div>
+<hr />
+<h3 id="-deletion">➖ Deletion<a class="headerlink" href="#-deletion" title="Anchor link">&para;</a></h3>
+<p><strong>Three cases:</strong> Delete from beginning, end, or by value.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>List: HEAD → [10]→[20]→[30]→[40]→NULL
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Delete node with value 30
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Step 1: Traverse to find node BEFORE 30 → that&#39;s [20]
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Step 2: prev.next = curr.next   → [20].next = [40]
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Step 3: Free/delete curr ([30])
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Result: HEAD → [10]→[20]→[40]→NULL
+</span></code></pre></div>
+<hr />
+<h3 id="-reversal">🔄 Reversal<a class="headerlink" href="#-reversal" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Think of reversing a chain of arrows. Each arrow that pointed forward must now point backward.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Before: [1]→[2]→[3]→[4]→NULL
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Step-by-step pointer manipulation:
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>prev=NULL, curr=HEAD=[1]
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Iteration 1: next=[2], [1].next=NULL, prev=[1], curr=[2]
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Iteration 2: next=[3], [2].next=[1], prev=[2], curr=[3]
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>Iteration 3: next=[4], [3].next=[2], prev=[3], curr=[4]
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Iteration 4: next=NULL,[4].next=[3], prev=[4], curr=NULL
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>HEAD = prev = [4]
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>After: [4]→[3]→[2]→[1]→NULL
+</span></code></pre></div>
+<p><strong>Pseudocode:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>function reverse(head):
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    prev = NULL
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    curr = head
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    while curr != NULL:
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        next = curr.next
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        curr.next = prev
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        prev = curr
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        curr = next
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    return prev   ← new head
+</span></code></pre></div></p>
+<hr />
+<h2 id="-array-vs-linked-list">⚖️ Array vs Linked List<a class="headerlink" href="#-array-vs-linked-list" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Array</th>
+<th>Linked List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory</td>
+<td>Contiguous</td>
+<td>Scattered</td>
+</tr>
+<tr>
+<td>Access</td>
+<td>O(1) random</td>
+<td>O(n) sequential</td>
+</tr>
+<tr>
+<td>Insertion (middle)</td>
+<td>O(n) shift</td>
+<td>O(1) after finding position</td>
+</tr>
+<tr>
+<td>Deletion (middle)</td>
+<td>O(n) shift</td>
+<td>O(1) after finding position</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Fixed (static)</td>
+<td>Dynamic</td>
+</tr>
+<tr>
+<td>Cache performance</td>
+<td>✅ Better</td>
+<td>❌ Worse</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Forgetting to update <code>HEAD</code> when inserting/deleting at the beginning.
+🚫 <strong>Mistake 2:</strong> Not handling the <code>NULL</code> check before accessing <code>node.next</code>.
+🚫 <strong>Mistake 3:</strong> In reversal, losing the <code>next</code> pointer before redirecting it.
+🚫 <strong>Mistake 4:</strong> Confusing "delete node with value X" vs "delete node at position X".</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips">🎯 Exam Tips<a class="headerlink" href="#-exam-tips" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Tip 1:</strong> Exam questions often ask you to <strong>trace</strong> insertion/deletion step by step. Draw boxes and arrows.
+💡 <strong>Tip 2:</strong> Reversal is a <strong>very high-frequency</strong> question. Memorize the 3-pointer technique (prev, curr, next).
+💡 <strong>Tip 3:</strong> Sorted insertion requires finding the <strong>correct position</strong> — always check boundary conditions (insert at head, insert at tail).
+💡 <strong>Tip 4:</strong> Time complexity: All operations are <strong>O(n)</strong> except insert-at-head which is <strong>O(1)</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Node = data + pointer</li>
+<li>Insert at head: O(1) | Insert at end: O(n) | Search: O(n)</li>
+<li>Reversal uses 3 pointers: <code>prev</code>, <code>curr</code>, <code>next</code></li>
+<li>Sorted insertion: traverse until <code>prev.data &lt; val &lt; curr.data</code></li>
+<li>Advantage over array: dynamic size, efficient mid-insertion</li>
+</ul>
+<hr />
+<h2 id="-viva-style-quick-questions">🎓 Viva-Style Quick Questions<a class="headerlink" href="#-viva-style-quick-questions" title="Anchor link">&para;</a></h2>
+<ol>
+<li>What is the time complexity of searching in a linked list?</li>
+<li>How do you detect a cycle in a linked list? <em>(Floyd's algorithm)</em></li>
+<li>What happens if you lose the <code>head</code> pointer?</li>
+<li>How is a doubly linked list different from singly?</li>
+<li>Can you access the 5<sup>th</sup> element in O(1)? Why not?</li>
+</ol>
+<hr />
+<h2 id="-probable-exam-questions">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Write an algorithm to reverse a singly linked list. Trace it with example <code>[1→2→3→4→5]</code>.
+<strong>5-mark:</strong> Write a function to insert a node in a sorted linked list.
+<strong>Short note:</strong> Compare array and linked list with respect to time complexity of operations.
+<strong>Diagram:</strong> Draw the memory representation of a doubly linked list with 3 nodes.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="2-stack--queue">2. Stack &amp; Queue<a class="headerlink" href="#2-stack--queue" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_1">💡 Intuition First<a class="headerlink" href="#-intuition-first_1" title="Anchor link">&para;</a></h2>
+<p><strong>Stack</strong> → Think of a <strong>stack of plates</strong>. You always add/remove from the top. Last plate placed = first plate taken. <strong>LIFO</strong> (Last In, First Out).</p>
+<p><strong>Queue</strong> → Think of a <strong>line at a ticket counter</strong>. First person in line = first person served. <strong>FIFO</strong> (First In, First Out).</p>
+<p><strong>Real-world analogies:</strong>
+- Stack: Browser back button, undo/redo, function call stack
+- Queue: Print queue, CPU scheduling, BFS traversal</p>
+<hr />
+<h2 id="-stack--core-concepts">📐 Stack — Core Concepts<a class="headerlink" href="#-stack--core-concepts" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>PUSH 10, 20, 30:
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>     [30]  ← TOP
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>     [20]
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>     [10]
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    ──────
+</span></code></pre></div>
+<h3 id="operations">Operations<a class="headerlink" href="#operations" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>push(x)</code></td>
+<td>Add x to top</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>pop()</code></td>
+<td>Remove from top</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>peek()/top()</code></td>
+<td>View top without removing</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>isEmpty()</code></td>
+<td>Check if empty</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="array-implementation">Array Implementation<a class="headerlink" href="#array-implementation" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>stack = []
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>top = -1
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>MAX = 5
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>push(x):
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    if top == MAX-1: OVERFLOW
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    top = top + 1
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    stack[top] = x
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>pop():
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    if top == -1: UNDERFLOW
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    x = stack[top]
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    top = top - 1
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    return x
+</span></code></pre></div>
+<h3 id="stack-applications">Stack Applications<a class="headerlink" href="#stack-applications" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>How Stack Helps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Expression evaluation</strong></td>
+<td>Infix → Postfix conversion</td>
+</tr>
+<tr>
+<td><strong>Balanced parentheses</strong></td>
+<td>Push <code>(</code>, pop on <code>)</code></td>
+</tr>
+<tr>
+<td><strong>Function call stack</strong></td>
+<td>Return addresses stored</td>
+</tr>
+<tr>
+<td><strong>DFS traversal</strong></td>
+<td>Explicit stack or recursion</td>
+</tr>
+<tr>
+<td><strong>Undo operation</strong></td>
+<td>Each action pushed, undo pops</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-worked-example-balanced-parentheses">✏️ Worked Example: Balanced Parentheses<a class="headerlink" href="#-worked-example-balanced-parentheses" title="Anchor link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Input: { [ ( ) ] }
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Process:
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  { → push  → stack: [{ ]
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  [ → push  → stack: [{, []
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  ( → push  → stack: [{, [, (]
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  ) → pop   → matches (, stack: [{, []
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  ] → pop   → matches [, stack: [{]
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  } → pop   → matches {, stack: []
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>Stack empty at end → BALANCED ✅
+</span></code></pre></div>
+<hr />
+<h2 id="-queue--core-concepts">📐 Queue — Core Concepts<a class="headerlink" href="#-queue--core-concepts" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ENQUEUE 10, 20, 30:
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>FRONT → [10][20][30] ← REAR
+</span></code></pre></div>
+<h3 id="operations_1">Operations<a class="headerlink" href="#operations_1" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enqueue(x)</code></td>
+<td>Add to rear</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>dequeue()</code></td>
+<td>Remove from front</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>front()</code></td>
+<td>View front element</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>isEmpty()</code></td>
+<td>Check if empty</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="types-of-queue">Types of Queue<a class="headerlink" href="#types-of-queue" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simple Queue</strong></td>
+<td>Basic FIFO</td>
+</tr>
+<tr>
+<td><strong>Circular Queue</strong></td>
+<td>Rear wraps around to front</td>
+</tr>
+<tr>
+<td><strong>Priority Queue</strong></td>
+<td>Highest priority served first</td>
+</tr>
+<tr>
+<td><strong>Deque</strong></td>
+<td>Insert/delete from both ends</td>
+</tr>
+</tbody>
+</table>
+<h3 id="circular-queue--why">Circular Queue — Why?<a class="headerlink" href="#circular-queue--why" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>In a simple array queue, after many enqueue/dequeue operations, the front moves right and space at the beginning is wasted. Circular queue reuses that space.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Circular Queue (size=5):
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>After some operations:
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  front=2, rear=4
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  [_, _, 30, 40, 50]
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>Enqueue 60:
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>  rear = (rear+1) % 5 = 0
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  [60, _, 30, 40, 50]
+</span></code></pre></div>
+<hr />
+<h2 id="-stack-vs-queue">⚖️ Stack vs Queue<a class="headerlink" href="#-stack-vs-queue" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Stack</th>
+<th>Queue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Order</td>
+<td>LIFO</td>
+<td>FIFO</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>Top</td>
+<td>Rear</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Top</td>
+<td>Front</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>DFS, undo, recursion</td>
+<td>BFS, scheduling, buffering</td>
+</tr>
+<tr>
+<td>Analogy</td>
+<td>Plate stack</td>
+<td>Ticket line</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_1">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Confusing LIFO and FIFO — Stack is LIFO, Queue is FIFO.
+🚫 <strong>Mistake 2:</strong> Stack overflow ≠ underflow. Overflow = push on full stack. Underflow = pop on empty stack.
+🚫 <strong>Mistake 3:</strong> In circular queue, full condition: <code>(rear+1) % size == front</code>, NOT <code>rear == size-1</code>.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_1">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 Stack is used in <strong>infix to postfix</strong> conversion — very common exam question.
+💡 Queue is used in <strong>BFS</strong> — always mention this connection.
+💡 Know the <strong>circular queue</strong> full/empty conditions by heart.
+💡 Be ready to <strong>trace</strong> push/pop operations step by step.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_1">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_1" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Stack: LIFO | push/pop from top | used in DFS, recursion, expression eval</li>
+<li>Queue: FIFO | enqueue at rear, dequeue from front | used in BFS, scheduling</li>
+<li>Circular queue solves wasted space problem</li>
+<li>Priority queue: not FIFO — highest priority goes first</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_1">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Convert infix expression <code>A + B * C - D</code> to postfix using a stack. Show all steps.
+<strong>5-mark:</strong> Implement a circular queue with enqueue, dequeue, and isFull operations.
+<strong>Short note:</strong> Differentiate between stack and queue with examples.
+<strong>Trace:</strong> Given a sequence of push/pop operations, show the stack state after each step.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="3-trees--bst">3. Trees &amp; BST<a class="headerlink" href="#3-trees--bst" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_2">💡 Intuition First<a class="headerlink" href="#-intuition-first_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>tree</strong> is like a family tree or a company org chart — one boss (root) at the top, with branches going down. No cycles, no loops.</p>
+</blockquote>
+<p>A <strong>Binary Search Tree (BST)</strong> adds a rule: <strong>left child &lt; parent &lt; right child</strong>. This makes searching super fast — like a phone book where you always know which half to look in.</p>
+<p><strong>Real-world analogy:</strong> File system folders. <code>/home</code> is root, <code>/home/user</code> is a child, <code>/home/user/docs</code> is a grandchild.</p>
+<hr />
+<h2 id="-tree-terminology">📐 Tree Terminology<a class="headerlink" href="#-tree-terminology" title="Anchor link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    A((50)):::root --&gt; B((30))
+    A --&gt; C((70))
+    B --&gt; D((20)):::leaf
+    B --&gt; E((40)):::leaf
+    C --&gt; F((60)):::leaf
+    C --&gt; G((80)):::leaf
+    classDef root fill:#4f46e5,stroke:#312e81,color:#fff
+    classDef leaf fill:#ddd6fe,stroke:#7c3aed,color:#1e1b4b</code></pre>
+<blockquote>
+<p><strong>Root</strong> = <code>50</code> (level 0) · <strong>Internal</strong> = <code>30, 70</code> (level 1) · <strong>Leaves</strong> = <code>20, 40, 60, 80</code> (level 2)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Root</strong></td>
+<td>Topmost node (no parent)</td>
+</tr>
+<tr>
+<td><strong>Leaf</strong></td>
+<td>Node with no children</td>
+</tr>
+<tr>
+<td><strong>Height</strong></td>
+<td>Longest path from root to leaf</td>
+</tr>
+<tr>
+<td><strong>Depth</strong></td>
+<td>Distance from root to a node</td>
+</tr>
+<tr>
+<td><strong>Degree</strong></td>
+<td>Number of children of a node</td>
+</tr>
+<tr>
+<td><strong>Subtree</strong></td>
+<td>A node and all its descendants</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-binary-tree-traversals">🌲 Binary Tree Traversals<a class="headerlink" href="#-binary-tree-traversals" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Memory trick:</strong> Think of when you <strong>visit the root</strong> relative to children.
+- <strong>Pre</strong>order = Root <strong>Pre</strong>cedes children (Root, Left, Right)
+- <strong>In</strong>order = Root <strong>In</strong> between children (Left, Root, Right)
+- <strong>Post</strong>order = Root <strong>Post</strong>pones to after children (Left, Right, Root)</p>
+</blockquote>
+<pre class="mermaid"><code>graph TD
+    A((1)) --&gt; B((2))
+    A --&gt; C((3))
+    B --&gt; D((4))
+    B --&gt; E((5))</code></pre>
+<table>
+<thead>
+<tr>
+<th>Traversal</th>
+<th>Order</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Preorder</strong></td>
+<td>Root → Left → Right</td>
+<td>1, 2, 4, 5, 3</td>
+</tr>
+<tr>
+<td><strong>Inorder</strong></td>
+<td>Left → Root → Right</td>
+<td>4, 2, 5, 1, 3</td>
+</tr>
+<tr>
+<td><strong>Postorder</strong></td>
+<td>Left → Right → Root</td>
+<td>4, 5, 2, 3, 1</td>
+</tr>
+<tr>
+<td><strong>Level-order</strong></td>
+<td>Level by level (BFS)</td>
+<td>1, 2, 3, 4, 5</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Key fact:</strong> Inorder traversal of a BST gives elements in <strong>sorted order</strong>.</p>
+</blockquote>
+<h3 id="pseudocode--inorder">Pseudocode — Inorder<a class="headerlink" href="#pseudocode--inorder" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>function inorder(node):
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    if node == NULL: return
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    inorder(node.left)
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    print(node.data)
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    inorder(node.right)
+</span></code></pre></div>
+<hr />
+<h2 id="-bst--insert-search-delete">🔍 BST — Insert, Search, Delete<a class="headerlink" href="#-bst--insert-search-delete" title="Anchor link">&para;</a></h2>
+<h3 id="bst-property">BST Property<a class="headerlink" href="#bst-property" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>For every node N:
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  All nodes in LEFT subtree &lt; N.data
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  All nodes in RIGHT subtree &gt; N.data
+</span></code></pre></div>
+<h3 id="bst-insertion--trace">BST Insertion — Trace<a class="headerlink" href="#bst-insertion--trace" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Insert: 50, 30, 70, 20, 40, 60, 80
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Start: empty
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Insert 50 → root = [50]
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>Insert 30 → 30 &lt; 50 → go left → [50].left = [30]
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>Insert 70 → 70 &gt; 50 → go right → [50].right = [70]
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>Insert 20 → 20 &lt; 50 → left → 20 &lt; 30 → left → [30].left = [20]
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>Insert 40 → 40 &lt; 50 → left → 40 &gt; 30 → right → [30].right = [40]
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>Insert 60 → 60 &gt; 50 → right → 60 &lt; 70 → left → [70].left = [60]
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>Insert 80 → 80 &gt; 50 → right → 80 &gt; 70 → right → [70].right = [80]
+</span></code></pre></div>
+<p>Final BST:</p>
+<pre class="mermaid"><code>graph TD
+    A((50)) --&gt; B((30))
+    A --&gt; C((70))
+    B --&gt; D((20))
+    B --&gt; E((40))
+    C --&gt; F((60))
+    C --&gt; G((80))</code></pre>
+<h3 id="bst-search--trace">BST Search — Trace<a class="headerlink" href="#bst-search--trace" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Search 40 in above BST:
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>Step 1: 40 &lt; 50 → go left to [30]
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Step 2: 40 &gt; 30 → go right to [40]
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>Step 3: 40 == 40 → FOUND ✅
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>Time: O(h) where h = height of tree
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>Best case (balanced): O(log n)
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>Worst case (skewed): O(n)
+</span></code></pre></div>
+<h3 id="bst-deletion--3-cases">BST Deletion — 3 Cases<a class="headerlink" href="#bst-deletion--3-cases" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Case 1: Delete LEAF node (no children)
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>  Delete 20: Simply remove it. [30].left = NULL
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>Case 2: Delete node with ONE child
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>  Delete 30 (has children 20 and 40... wait, that&#39;s 2)
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>  Delete 60 (has no children — leaf case)
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>  Example: if [30] had only [20]:
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    [50].left = [20]  (bypass [30])
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>Case 3: Delete node with TWO children
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>  Delete 50 (root, has both children):
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>  Step 1: Find INORDER SUCCESSOR (smallest in right subtree) = 60
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>  Step 2: Replace 50&#39;s data with 60
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>  Step 3: Delete 60 from right subtree
+</span></code></pre></div>
+<p>Resulting tree:</p>
+<pre class="mermaid"><code>graph TD
+    A((60)):::moved --&gt; B((30))
+    A --&gt; C((70))
+    B --&gt; D((20))
+    B --&gt; E((40))
+    C --&gt; G((80))
+    classDef moved fill:#fef3c7,stroke:#d97706,color:#78350f</code></pre>
+<blockquote>
+<p>💡 The yellow node (<code>60</code>) replaced the original root via inorder successor.</p>
+</blockquote>
+<h3 id="delete-leafterminal-nodes">Delete Leaf/Terminal Nodes<a class="headerlink" href="#delete-leafterminal-nodes" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>&quot;Delete all leaf nodes&quot; — common exam question
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>Tree:           [1]
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>               /   \
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>             [2]   [3]
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>            /   \
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>          [4]   [5]
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>Leaf nodes: 4, 5, 3
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>After deletion:
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>             [1]
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>            /
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>          [2]
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>Algorithm: Postorder traversal — if node is leaf, delete it
+</span></code></pre></div>
+<hr />
+<h2 id="-bst-vs-binary-tree">⚖️ BST vs Binary Tree<a class="headerlink" href="#-bst-vs-binary-tree" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Binary Tree</th>
+<th>BST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure</td>
+<td>At most 2 children</td>
+<td>At most 2 children</td>
+</tr>
+<tr>
+<td>Ordering</td>
+<td>No rule</td>
+<td>Left &lt; Root &lt; Right</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>O(n)</td>
+<td>O(log n) avg</td>
+</tr>
+<tr>
+<td>Inorder</td>
+<td>Random</td>
+<td>Sorted sequence</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_2">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Confusing inorder (sorted) with preorder (root first).
+🚫 <strong>Mistake 2:</strong> In BST deletion with 2 children, using predecessor instead of successor (both are valid, but be consistent).
+🚫 <strong>Mistake 3:</strong> Forgetting that a skewed BST degrades to O(n) — it becomes a linked list.
+🚫 <strong>Mistake 4:</strong> Level-order traversal uses a <strong>queue</strong>, not recursion.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_2">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Inorder of BST = sorted output</strong> — this is a guaranteed exam fact.
+💡 BST deletion with 2 children: always use <strong>inorder successor</strong> (smallest in right subtree).
+💡 Be ready to <strong>draw the BST</strong> after a sequence of insertions.
+💡 Traversal questions: write the output sequence AND the pseudocode.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_2">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_2" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Tree: hierarchical, no cycles, one root</li>
+<li>BST: left &lt; root &lt; right | search O(log n) avg</li>
+<li>Traversals: Pre(RLR), In(LRR), Post(LRR) — R=Root, L=Left, Ri=Right</li>
+<li>Inorder of BST → sorted order</li>
+<li>Delete with 2 children → replace with inorder successor</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_2">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Insert the following into a BST: <code>15, 10, 20, 8, 12, 17, 25</code>. Draw the tree and write inorder traversal.
+<strong>5-mark:</strong> Write the algorithm for BST deletion. Handle all three cases.
+<strong>Short note:</strong> What is the difference between a binary tree and a BST?
+<strong>Trace:</strong> Delete node 15 from the BST you built above. Show all steps.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="4-hashing">4. Hashing<a class="headerlink" href="#4-hashing" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_3">💡 Intuition First<a class="headerlink" href="#-intuition-first_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Imagine a library with 1000 books. Instead of searching shelf by shelf, you use a <strong>catalog system</strong> — the book's ID maps directly to its shelf number. That's hashing.</p>
+</blockquote>
+<p>A <strong>hash function</strong> converts a key into an index. Ideally, every key maps to a unique index. But sometimes two keys map to the same index — that's a <strong>collision</strong>.</p>
+<p><strong>Real-world analogy:</strong> Phone contacts sorted by first letter. "Alice" → A section. Fast lookup, but two "A" names need a collision strategy.</p>
+<hr />
+<h2 id="-hash-function">📐 Hash Function<a class="headerlink" href="#-hash-function" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>hash(key) = key % table_size
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Example: table_size = 10
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>  hash(23) = 23 % 10 = 3  → store at index 3
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>  hash(45) = 45 % 10 = 5  → store at index 5
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>  hash(33) = 33 % 10 = 3  → COLLISION with 23!
+</span></code></pre></div>
+<hr />
+<h2 id="-collision-resolution">💥 Collision Resolution<a class="headerlink" href="#-collision-resolution" title="Anchor link">&para;</a></h2>
+<h3 id="method-1-chaining-open-hashing">Method 1: Chaining (Open Hashing)<a class="headerlink" href="#method-1-chaining-open-hashing" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Each slot holds a <strong>linked list</strong> of all keys that hash to that index.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Table size = 7, Insert: 10, 20, 15, 7, 17
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>hash(10) = 10%7 = 3
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>hash(20) = 20%7 = 6
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>hash(15) = 15%7 = 1
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>hash(7)  = 7%7  = 0
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>hash(17) = 17%7 = 3  ← collision with 10!
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>Hash Table:
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>Index 0: [7] → NULL
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>Index 1: [15] → NULL
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>Index 2: NULL
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>Index 3: [10] → [17] → NULL   ← chain!
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>Index 4: NULL
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>Index 5: NULL
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>Index 6: [20] → NULL
+</span></code></pre></div>
+<h3 id="method-2-open-addressing-closed-hashing">Method 2: Open Addressing (Closed Hashing)<a class="headerlink" href="#method-2-open-addressing-closed-hashing" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>All elements stored <strong>inside</strong> the table. On collision, probe for next empty slot.</p>
+</blockquote>
+<h4 id="linear-probing">Linear Probing<a class="headerlink" href="#linear-probing" title="Anchor link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>hash(key, i) = (hash(key) + i) % table_size
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Insert 10, 20, 15, 7, 17 into table of size 7:
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>hash(10) = 3 → slot 3 empty → store 10 at 3
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>hash(20) = 6 → slot 6 empty → store 20 at 6
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>hash(15) = 1 → slot 1 empty → store 15 at 1
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>hash(7)  = 0 → slot 0 empty → store 7 at 0
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>hash(17) = 3 → slot 3 FULL → probe slot 4 → empty → store 17 at 4
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>Table: [7, 15, _, 10, 17, _, 20]
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>Index:  0   1  2   3   4  5   6
+</span></code></pre></div>
+<h4 id="quadratic-probing">Quadratic Probing<a class="headerlink" href="#quadratic-probing" title="Anchor link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>hash(key, i) = (hash(key) + i²) % table_size
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>On collision: try i=1 (offset 1), i=2 (offset 4), i=3 (offset 9)...
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>Reduces clustering compared to linear probing.
+</span></code></pre></div>
+<h4 id="double-hashing">Double Hashing<a class="headerlink" href="#double-hashing" title="Anchor link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>hash(key, i) = (h1(key) + i * h2(key)) % table_size
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>h2(key) must never be 0 and should be relatively prime to table_size.
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>Best collision avoidance among open addressing methods.
+</span></code></pre></div>
+<hr />
+<h2 id="-chaining-vs-open-addressing">⚖️ Chaining vs Open Addressing<a class="headerlink" href="#-chaining-vs-open-addressing" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Chaining</th>
+<th>Open Addressing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Storage</td>
+<td>Extra linked list nodes</td>
+<td>Within table only</td>
+</tr>
+<tr>
+<td>Load factor</td>
+<td>Can exceed 1</td>
+<td>Must stay &lt; 1</td>
+</tr>
+<tr>
+<td>Deletion</td>
+<td>Easy (remove from list)</td>
+<td>Complex (mark as deleted)</td>
+</tr>
+<tr>
+<td>Cache performance</td>
+<td>Poor (pointer chasing)</td>
+<td>Better (contiguous)</td>
+</tr>
+<tr>
+<td>Clustering</td>
+<td>No</td>
+<td>Yes (linear probing worst)</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>High load factor</td>
+<td>Low load factor</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-load-factor">📊 Load Factor<a class="headerlink" href="#-load-factor" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Load Factor (α) = n / m
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>  n = number of elements
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>  m = table size
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>α &lt; 0.7 → good performance
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>α &gt; 0.7 → consider resizing (rehashing)
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_3">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Thinking chaining requires load factor &lt; 1. It doesn't — chains can grow.
+🚫 <strong>Mistake 2:</strong> In linear probing, forgetting to wrap around (use modulo).
+🚫 <strong>Mistake 3:</strong> Confusing open hashing (chaining) with open addressing — the names are counterintuitive!
+🚫 <strong>Mistake 4:</strong> Primary clustering is a problem with <strong>linear probing</strong>, not chaining.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_3">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Chaining = linked lists at each slot</strong> | <strong>Open addressing = probe within table</strong>
+💡 Linear probing causes <strong>primary clustering</strong> — keys bunch together.
+💡 Average search time with chaining: O(1 + α) where α = load factor.
+💡 Be ready to <strong>trace</strong> insertions into a hash table showing collision resolution.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_3">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_3" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Hash function maps key → index</li>
+<li>Collision: two keys → same index</li>
+<li>Chaining: linked list at each slot</li>
+<li>Open addressing: probe for next slot (linear, quadratic, double hashing)</li>
+<li>Load factor α = n/m; keep below 0.7 for efficiency</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_3">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Insert keys <code>{27, 43, 3, 16, 69, 58, 72}</code> into a hash table of size 10 using linear probing with <code>h(k) = k % 10</code>. Show the final table.
+<strong>5-mark:</strong> Explain chaining as a collision resolution technique with a diagram.
+<strong>Short note:</strong> Compare chaining and open addressing.
+<strong>Conceptual:</strong> What is primary clustering? How does quadratic probing reduce it?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="5-binary-search">5. Binary Search<a class="headerlink" href="#5-binary-search" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_4">💡 Intuition First<a class="headerlink" href="#-intuition-first_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>You're looking for a word in a dictionary. You don't start from page 1 — you open the middle, check if your word comes before or after, then repeat on the relevant half. That's binary search.</p>
+</blockquote>
+<p><strong>Requirement:</strong> The array must be <strong>sorted</strong>.
+<strong>Key idea:</strong> Each comparison eliminates <strong>half</strong> the remaining elements.</p>
+<hr />
+<h2 id="-algorithm">📐 Algorithm<a class="headerlink" href="#-algorithm" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>function binarySearch(arr, target):
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    low = 0
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    high = len(arr) - 1
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>    while low &lt;= high:
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>        mid = (low + high) / 2
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>        if arr[mid] == target:
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>            return mid          ← FOUND
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>        elif arr[mid] &lt; target:
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>            low = mid + 1       ← search right half
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>        else:
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>            high = mid - 1      ← search left half
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>    return -1                   ← NOT FOUND
+</span></code></pre></div>
+<hr />
+<h2 id="-step-by-step-trace">✏️ Step-by-Step Trace<a class="headerlink" href="#-step-by-step-trace" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>Index:  0  1  2   3   4   5   6   7   8   9
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>Target: 23
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>Step 1: low=0, high=9, mid=4 → arr[4]=16 &lt; 23 → low=5
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>Step 2: low=5, high=9, mid=7 → arr[7]=56 &gt; 23 → high=6
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>Step 3: low=5, high=6, mid=5 → arr[5]=23 == 23 → FOUND at index 5 ✅
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>Total comparisons: 3 (vs 6 for linear search)
+</span></code></pre></div>
+<hr />
+<h2 id="-complexity">📊 Complexity<a class="headerlink" href="#-complexity" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Time</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best</td>
+<td>O(1)</td>
+<td>Target is at mid on first try</td>
+</tr>
+<tr>
+<td>Average</td>
+<td>O(log n)</td>
+<td>Halving each time</td>
+</tr>
+<tr>
+<td>Worst</td>
+<td>O(log n)</td>
+<td>Target not found or at boundary</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>O(1)</td>
+<td>Iterative version</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Why log n?</strong> If n=1024, you need at most log₂(1024) = 10 comparisons.</p>
+</blockquote>
+<hr />
+<h2 id="-binary-search-vs-linear-search">⚖️ Binary Search vs Linear Search<a class="headerlink" href="#-binary-search-vs-linear-search" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Linear Search</th>
+<th>Binary Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requirement</td>
+<td>None</td>
+<td>Sorted array</td>
+</tr>
+<tr>
+<td>Time (worst)</td>
+<td>O(n)</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>Time (best)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Works on</td>
+<td>Any array</td>
+<td>Sorted only</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Simple</td>
+<td>Slightly complex</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_4">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Using binary search on an <strong>unsorted</strong> array — results are wrong.
+🚫 <strong>Mistake 2:</strong> Integer overflow in <code>mid = (low + high) / 2</code> for large arrays. Use <code>mid = low + (high - low) / 2</code>.
+🚫 <strong>Mistake 3:</strong> Off-by-one errors — condition should be <code>low &lt;= high</code>, not <code>low &lt; high</code>.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_4">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_4" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Requires sorted array</li>
+<li>Divide and conquer: check mid, eliminate half</li>
+<li>O(log n) time, O(1) space (iterative)</li>
+<li>3 cases: found at mid, go right (low=mid+1), go left (high=mid-1)</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_4">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Trace binary search for target <code>72</code> in array <code>[5, 12, 23, 38, 56, 72, 91]</code>. Show each step.
+<strong>Short note:</strong> Why is binary search O(log n)?
+<strong>Conceptual:</strong> What are the preconditions for binary search?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="6-sorting-algorithms">6. Sorting Algorithms<a class="headerlink" href="#6-sorting-algorithms" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_5">💡 Intuition First<a class="headerlink" href="#-intuition-first_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Sorting is like organizing a messy bookshelf. Different strategies exist — some are fast but complex, some are simple but slow. Knowing <strong>which to use when</strong> is the real skill.</p>
+</blockquote>
+<hr />
+<h2 id="-complexity-comparison-table">📊 Complexity Comparison Table<a class="headerlink" href="#-complexity-comparison-table" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Best</th>
+<th>Average</th>
+<th>Worst</th>
+<th>Space</th>
+<th>Stable?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bubble Sort</strong></td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><strong>Selection Sort</strong></td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td><strong>Insertion Sort</strong></td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><strong>Merge Sort</strong></td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><strong>Quick Sort</strong></td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n²)</td>
+<td>O(log n)</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td><strong>Heap Sort</strong></td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(1)</td>
+<td>❌ No</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Memory trick for O(n log n) sorts:</strong> "My Queen Has" → <strong>M</strong>erge, <strong>Q</strong>uick, <strong>H</strong>eap</p>
+</blockquote>
+<hr />
+<h2 id="-merge-sort">🔀 Merge Sort<a class="headerlink" href="#-merge-sort" title="Anchor link">&para;</a></h2>
+<h3 id="intuition">Intuition<a class="headerlink" href="#intuition" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Divide the array in half, sort each half, then <strong>merge</strong> the two sorted halves. Like sorting two decks of cards separately, then merging them.</p>
+</blockquote>
+<h3 id="algorithm-divide--conquer">Algorithm (Divide &amp; Conquer)<a class="headerlink" href="#algorithm-divide--conquer" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>function mergeSort(arr):
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    if len(arr) &lt;= 1: return arr
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>    mid = len(arr) / 2
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>    left = mergeSort(arr[0..mid-1])
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>    right = mergeSort(arr[mid..end])
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>    return merge(left, right)
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>function merge(left, right):
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>    result = []
+</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>    i = 0, j = 0
+</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>    while i &lt; len(left) AND j &lt; len(right):
+</span><span id="__span-27-13"><a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>        if left[i] &lt;= right[j]:
+</span><span id="__span-27-14"><a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>            result.append(left[i]); i++
+</span><span id="__span-27-15"><a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>        else:
+</span><span id="__span-27-16"><a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a>            result.append(right[j]); j++
+</span><span id="__span-27-17"><a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a>    append remaining elements
+</span><span id="__span-27-18"><a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>    return result
+</span></code></pre></div>
+<h3 id="trace">Trace<a class="headerlink" href="#trace" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Array: [38, 27, 43, 3, 9, 82, 10]
+</span></code></pre></div>
+<p>DIVIDE:</p>
+<pre class="mermaid"><code>graph TD
+    R["[38,27,43,3,9,82,10]"]
+    R --&gt; L1["[38,27,43]"]
+    R --&gt; R1["[3,9,82,10]"]
+    L1 --&gt; L2["[38]"]
+    L1 --&gt; L3["[27,43]"]
+    R1 --&gt; R2["[3,9]"]
+    R1 --&gt; R3["[82,10]"]
+    L3 --&gt; L4["[27]"]
+    L3 --&gt; L5["[43]"]
+    R2 --&gt; R4["[3]"]
+    R2 --&gt; R5["[9]"]
+    R3 --&gt; R6["[82]"]
+    R3 --&gt; R7["[10]"]</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>MERGE (bottom up):
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>[27,43] ← merge [27],[43]
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>[3,9]   ← merge [3],[9]
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>[10,82] ← merge [82],[10]
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>[27,38,43] ← merge [38],[27,43]
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>[3,9,10,82] ← merge [3,9],[10,82]
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>[3,9,10,27,38,43,82] ← final merge
+</span></code></pre></div>
+<hr />
+<h2 id="-quick-sort">⚡ Quick Sort<a class="headerlink" href="#-quick-sort" title="Anchor link">&para;</a></h2>
+<h3 id="intuition_1">Intuition<a class="headerlink" href="#intuition_1" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Pick a <strong>pivot</strong>. Put all smaller elements to its left, all larger to its right. Recursively sort both sides. The pivot is now in its <strong>final position</strong>.</p>
+</blockquote>
+<h3 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>function quickSort(arr, low, high):
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    if low &lt; high:
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>        pivot_index = partition(arr, low, high)
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>        quickSort(arr, low, pivot_index - 1)
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>        quickSort(arr, pivot_index + 1, high)
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>function partition(arr, low, high):
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>    pivot = arr[high]   ← last element as pivot
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>    i = low - 1
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>    for j = low to high-1:
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>        if arr[j] &lt;= pivot:
+</span><span id="__span-30-13"><a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>            i++
+</span><span id="__span-30-14"><a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>            swap(arr[i], arr[j])
+</span><span id="__span-30-15"><a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>
+</span><span id="__span-30-16"><a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>    swap(arr[i+1], arr[high])
+</span><span id="__span-30-17"><a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a>    return i + 1
+</span></code></pre></div>
+<h3 id="trace_1">Trace<a class="headerlink" href="#trace_1" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Array: [10, 80, 30, 90, 40, 50, 70]
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>Pivot = 70 (last element)
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>i = -1, j scans left to right:
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>j=0: arr[0]=10 ≤ 70 → i=0, swap(arr[0],arr[0]) → [10,80,30,90,40,50,70]
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>j=1: arr[1]=80 &gt; 70 → skip
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>j=2: arr[2]=30 ≤ 70 → i=1, swap(arr[1],arr[2]) → [10,30,80,90,40,50,70]
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>j=3: arr[3]=90 &gt; 70 → skip
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>j=4: arr[4]=40 ≤ 70 → i=2, swap(arr[2],arr[4]) → [10,30,40,90,80,50,70]
+</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>j=5: arr[5]=50 ≤ 70 → i=3, swap(arr[3],arr[5]) → [10,30,40,50,80,90,70]
+</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>
+</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>Final: swap(arr[i+1], arr[high]) = swap(arr[4], arr[6])
+</span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>Result: [10,30,40,50,70,90,80]
+</span><span id="__span-31-14"><a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a>                    ↑
+</span><span id="__span-31-15"><a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a>               pivot 70 in final position!
+</span></code></pre></div>
+<hr />
+<h2 id="-heap-sort">🏔️ Heap Sort<a class="headerlink" href="#-heap-sort" title="Anchor link">&para;</a></h2>
+<h3 id="intuition_2">Intuition<a class="headerlink" href="#intuition_2" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Build a <strong>max-heap</strong> (parent always ≥ children). The root is always the maximum. Extract root, put it at end, re-heapify. Repeat.</p>
+</blockquote>
+<h3 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Max-Heap property: parent ≥ children
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>Array: [4, 10, 3, 5, 1]
+</span></code></pre></div>
+<p>As tree (before heapify):</p>
+<pre class="mermaid"><code>graph TD
+    A((4)) --&gt; B((10))
+    A --&gt; C((3))
+    B --&gt; D((5))
+    B --&gt; E((1))</code></pre>
+<p>After heapify (max-heap):</p>
+<pre class="mermaid"><code>graph TD
+    A((10)):::root --&gt; B((5))
+    A --&gt; C((3))
+    B --&gt; D((4))
+    B --&gt; E((1))
+    classDef root fill:#4f46e5,stroke:#312e81,color:#fff</code></pre>
+<h3 id="algorithm_1">Algorithm<a class="headerlink" href="#algorithm_1" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>function heapSort(arr):
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    n = len(arr)
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>    // Build max-heap
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    for i = n/2 - 1 down to 0:
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>        heapify(arr, n, i)
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>    // Extract elements one by one
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>    for i = n-1 down to 1:
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>        swap(arr[0], arr[i])    ← move max to end
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>        heapify(arr, i, 0)      ← re-heapify reduced heap
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>function heapify(arr, n, i):
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>    largest = i
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>    left = 2*i + 1
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>    right = 2*i + 2
+</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a>
+</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a>    if left &lt; n AND arr[left] &gt; arr[largest]: largest = left
+</span><span id="__span-33-19"><a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a>    if right &lt; n AND arr[right] &gt; arr[largest]: largest = right
+</span><span id="__span-33-20"><a id="__codelineno-33-20" name="__codelineno-33-20" href="#__codelineno-33-20"></a>
+</span><span id="__span-33-21"><a id="__codelineno-33-21" name="__codelineno-33-21" href="#__codelineno-33-21"></a>    if largest != i:
+</span><span id="__span-33-22"><a id="__codelineno-33-22" name="__codelineno-33-22" href="#__codelineno-33-22"></a>        swap(arr[i], arr[largest])
+</span><span id="__span-33-23"><a id="__codelineno-33-23" name="__codelineno-33-23" href="#__codelineno-33-23"></a>        heapify(arr, n, largest)
+</span></code></pre></div>
+<hr />
+<h2 id="-when-to-use-which-sort">⚖️ When to Use Which Sort?<a class="headerlink" href="#-when-to-use-which-sort" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Best Choice</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General purpose</td>
+<td>Quick Sort</td>
+<td>Fast in practice, O(n log n) avg</td>
+</tr>
+<tr>
+<td>Guaranteed O(n log n)</td>
+<td>Merge Sort</td>
+<td>No worst-case degradation</td>
+</tr>
+<tr>
+<td>In-place, no extra memory</td>
+<td>Heap Sort</td>
+<td>O(1) space</td>
+</tr>
+<tr>
+<td>Nearly sorted data</td>
+<td>Insertion Sort</td>
+<td>O(n) best case</td>
+</tr>
+<tr>
+<td>Stability required</td>
+<td>Merge Sort</td>
+<td>Preserves equal element order</td>
+</tr>
+<tr>
+<td>Small arrays</td>
+<td>Insertion Sort</td>
+<td>Low overhead</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_5">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Quick sort worst case is O(n²) when pivot is always min or max (sorted array with last-element pivot).
+🚫 <strong>Mistake 2:</strong> Merge sort requires O(n) extra space — it's NOT in-place.
+🚫 <strong>Mistake 3:</strong> Heap sort is NOT stable — equal elements may change relative order.
+🚫 <strong>Mistake 4:</strong> Confusing heapify (fix one node) with build-heap (fix entire array).</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_4">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Most asked:</strong> Merge sort trace, Quick sort partition trace, complexity comparison table.
+💡 Quick sort pivot selection affects performance — random pivot avoids worst case.
+💡 Merge sort is preferred for <strong>linked lists</strong> (no random access needed).
+💡 Heap sort = build max-heap + repeated extraction.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_5">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_5" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Merge: divide → sort halves → merge | O(n log n) always | O(n) space | stable</li>
+<li>Quick: partition around pivot | O(n log n) avg, O(n²) worst | in-place | not stable</li>
+<li>Heap: build max-heap → extract max | O(n log n) always | O(1) space | not stable</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_5">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Trace merge sort on <code>[38, 27, 43, 3, 9]</code>. Show divide and merge steps.
+<strong>5-mark:</strong> Trace quick sort partition on <code>[10, 80, 30, 90, 40, 50, 70]</code> with last element as pivot.
+<strong>Short note:</strong> Compare merge sort and quick sort.
+<strong>Table:</strong> Fill in the time/space complexity table for all sorting algorithms.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="7-dynamic-programming">7. Dynamic Programming<a class="headerlink" href="#7-dynamic-programming" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_6">💡 Intuition First<a class="headerlink" href="#-intuition-first_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>You're climbing stairs. At each step, you can go 1 or 2 steps. How many ways to reach step n? Instead of recalculating the same subproblems over and over, <strong>store the results</strong> and reuse them. That's DP.</p>
+</blockquote>
+<p><strong>Core idea:</strong> Break a problem into <strong>overlapping subproblems</strong>, solve each once, store results (<strong>memoization</strong> or <strong>tabulation</strong>).</p>
+<p><strong>Real-world analogy:</strong> GPS navigation — it doesn't recalculate the entire route from scratch every second. It stores partial results.</p>
+<p><strong>DP vs Greedy:</strong> DP considers ALL possibilities and picks the best. Greedy picks the locally best option at each step.</p>
+<hr />
+<h2 id="-two-approaches">📐 Two Approaches<a class="headerlink" href="#-two-approaches" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Method</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Top-Down (Memoization)</strong></td>
+<td>Recursion + cache</td>
+<td>Big → Small</td>
+</tr>
+<tr>
+<td><strong>Bottom-Up (Tabulation)</strong></td>
+<td>Iterative table</td>
+<td>Small → Big</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-example-1-fibonacci">🔢 Example 1: Fibonacci<a class="headerlink" href="#-example-1-fibonacci" title="Anchor link">&para;</a></h2>
+<h3 id="naive-recursion--o2ⁿ-">Naive Recursion — O(2ⁿ) ❌<a class="headerlink" href="#naive-recursion--o2ⁿ-" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>fib(5) calls fib(4) and fib(3)
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>fib(4) calls fib(3) and fib(2)
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>fib(3) is computed TWICE — wasteful!
+</span></code></pre></div>
+<h3 id="dp-tabulation--on-">DP Tabulation — O(n) ✅<a class="headerlink" href="#dp-tabulation--on-" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>dp[0] = 0
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>dp[1] = 1
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>dp[i] = dp[i-1] + dp[i-2]
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>i:    0  1  2  3  4  5  6  7
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>dp:   0  1  1  2  3  5  8  13
+</span></code></pre></div>
+<hr />
+<h2 id="-example-2-01-knapsack">🎒 Example 2: 0/1 Knapsack<a class="headerlink" href="#-example-2-01-knapsack" title="Anchor link">&para;</a></h2>
+<h3 id="problem">Problem<a class="headerlink" href="#problem" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Items: weight=[2,3,4,5], value=[3,4,5,6]
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>Capacity W = 5
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>Can we take each item at most once?
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>Maximize total value without exceeding capacity.
+</span></code></pre></div>
+<h3 id="dp-table-construction">DP Table Construction<a class="headerlink" href="#dp-table-construction" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>dp[i][w] = max value using first i items with capacity w
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>Base case: dp[0][w] = 0 for all w (no items)
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>           dp[i][0] = 0 for all i (no capacity)
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>Recurrence:
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>  If weight[i] &gt; w:  dp[i][w] = dp[i-1][w]  (can&#39;t take item i)
+</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>  Else: dp[i][w] = max(dp[i-1][w],           (don&#39;t take item i)
+</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>                       dp[i-1][w-weight[i]] + value[i])  (take item i)
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Items: (w=2,v=3), (w=3,v=4), (w=4,v=5), (w=5,v=6)
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>Capacity = 5
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>     w=0  w=1  w=2  w=3  w=4  w=5
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>i=0:  0    0    0    0    0    0
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>i=1:  0    0    3    3    3    3    ← item1(w=2,v=3)
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>i=2:  0    0    3    4    4    7    ← item2(w=3,v=4)
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>i=3:  0    0    3    4    5    7    ← item3(w=4,v=5)
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>i=4:  0    0    3    4    5    7    ← item4(w=5,v=6)
+</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>
+</span><span id="__span-38-11"><a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>Answer: dp[4][5] = 7
+</span><span id="__span-38-12"><a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>(Take item1 + item2: weight=2+3=5, value=3+4=7)
+</span></code></pre></div>
+<hr />
+<h2 id="-example-3-longest-common-subsequence-lcs">📏 Example 3: Longest Common Subsequence (LCS)<a class="headerlink" href="#-example-3-longest-common-subsequence-lcs" title="Anchor link">&para;</a></h2>
+<h3 id="problem_1">Problem<a class="headerlink" href="#problem_1" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>Find the longest subsequence common to both strings.
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>X = &quot;ABCBDAB&quot;
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>Y = &quot;BDCAB&quot;
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>LCS = &quot;BCAB&quot; or &quot;BDAB&quot; → length = 4
+</span></code></pre></div>
+<h3 id="dp-table">DP Table<a class="headerlink" href="#dp-table" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Recurrence:
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>  If X[i] == Y[j]: dp[i][j] = dp[i-1][j-1] + 1
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>  Else:            dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>     &quot;&quot;  B  D  C  A  B
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>&quot;&quot;    0  0  0  0  0  0
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>A     0  0  0  0  1  1
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>B     0  1  1  1  1  2
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>C     0  1  1  2  2  2
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>B     0  1  1  2  2  3
+</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>D     0  1  2  2  2  3
+</span><span id="__span-40-12"><a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a>A     0  1  2  2  3  3
+</span><span id="__span-40-13"><a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a>B     0  1  2  2  3  4
+</span><span id="__span-40-14"><a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a>
+</span><span id="__span-40-15"><a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a>LCS length = dp[7][5] = 4
+</span></code></pre></div>
+<hr />
+<h2 id="-dp-vs-greedy-vs-divide--conquer">⚖️ DP vs Greedy vs Divide &amp; Conquer<a class="headerlink" href="#-dp-vs-greedy-vs-divide--conquer" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>DP</th>
+<th>Greedy</th>
+<th>Divide &amp; Conquer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subproblems</td>
+<td>Overlapping</td>
+<td>Non-overlapping</td>
+<td>Non-overlapping</td>
+</tr>
+<tr>
+<td>Optimal substructure</td>
+<td>✅ Required</td>
+<td>✅ Required</td>
+<td>✅ Required</td>
+</tr>
+<tr>
+<td>Approach</td>
+<td>All possibilities</td>
+<td>Local best</td>
+<td>Split &amp; combine</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>Knapsack, LCS</td>
+<td>Activity selection, Huffman</td>
+<td>Merge sort, Binary search</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_6">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Using DP when subproblems don't overlap — use D&amp;C instead.
+🚫 <strong>Mistake 2:</strong> In 0/1 knapsack, forgetting the "0/1" constraint — each item used at most once.
+🚫 <strong>Mistake 3:</strong> LCS ≠ LCS substring. Subsequence doesn't need to be contiguous.
+🚫 <strong>Mistake 4:</strong> Not initializing base cases (row 0 and column 0) in DP tables.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_5">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Knapsack:</strong> Always draw the full DP table. Examiners want to see the table, not just the answer.
+💡 <strong>LCS:</strong> Trace the table AND backtrack to find the actual subsequence.
+💡 <strong>Fibonacci:</strong> Show both naive recursion (exponential) and DP (linear) to demonstrate the improvement.
+💡 DP requires: <strong>optimal substructure</strong> + <strong>overlapping subproblems</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_6">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_6" title="Anchor link">&para;</a></h2>
+<ul>
+<li>DP = store subproblem results to avoid recomputation</li>
+<li>Top-down: recursion + memo | Bottom-up: fill table iteratively</li>
+<li>Fibonacci: O(2ⁿ) → O(n) with DP</li>
+<li>Knapsack: dp[i][w] = max value with i items and capacity w</li>
+<li>LCS: dp[i][j] = LCS length of X[1..i] and Y[1..j]</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_6">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Solve 0/1 knapsack: items <code>{(2,3),(3,4),(4,5),(5,6)}</code>, capacity=5. Show DP table.
+<strong>5-mark:</strong> Find LCS of "AGGTAB" and "GXTXAYB". Show the DP table.
+<strong>Short note:</strong> What is memoization? How does it differ from tabulation?
+<strong>Conceptual:</strong> What are the two properties required for DP to be applicable?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="8-greedy-algorithms">8. Greedy Algorithms<a class="headerlink" href="#8-greedy-algorithms" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_7">💡 Intuition First<a class="headerlink" href="#-intuition-first_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>You're at a buffet and can only carry a limited weight. You always pick the <strong>most valuable item per kg</strong> first. That's greedy — make the locally optimal choice at each step, hoping it leads to a globally optimal solution.</p>
+</blockquote>
+<p><strong>Key insight:</strong> Greedy works when the <strong>greedy choice property</strong> holds — a locally optimal choice leads to a globally optimal solution.</p>
+<hr />
+<h2 id="-activity-selection-problem">🗓️ Activity Selection Problem<a class="headerlink" href="#-activity-selection-problem" title="Anchor link">&para;</a></h2>
+<h3 id="problem_2">Problem<a class="headerlink" href="#problem_2" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Given n activities with start and finish times,
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>select the maximum number of non-overlapping activities.
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>Activities: (start, finish)
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>A1=(1,4), A2=(3,5), A3=(0,6), A4=(5,7), A5=(3,9), A6=(5,9), A7=(6,10), A8=(8,11), A9=(8,12), A10=(2,14), A11=(12,16)
+</span></code></pre></div>
+<h3 id="greedy-strategy">Greedy Strategy<a class="headerlink" href="#greedy-strategy" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Sort by <strong>finish time</strong>. Always pick the activity that finishes earliest (leaves most room for future activities).</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Sorted by finish time:
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>A1=(1,4), A2=(3,5), A3=(0,6), A4=(5,7), A5=(3,9), A6=(5,9), A7=(6,10), A8=(8,11), A9=(8,12), A10=(2,14), A11=(12,16)
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>Step 1: Pick A1=(1,4) ← first activity
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>Step 2: A2=(3,5): start=3 &lt; finish=4 → OVERLAP, skip
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>Step 3: A3=(0,6): start=0 &lt; finish=4 → OVERLAP, skip
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>Step 4: A4=(5,7): start=5 ≥ finish=4 → SELECT ✅
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>Step 5: A5=(3,9): start=3 &lt; finish=7 → OVERLAP, skip
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>Step 6: A6=(5,9): start=5 &lt; finish=7 → OVERLAP, skip
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>Step 7: A7=(6,10): start=6 &lt; finish=7 → OVERLAP, skip
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>Step 8: A8=(8,11): start=8 ≥ finish=7 → SELECT ✅
+</span><span id="__span-42-12"><a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>Step 9: A9=(8,12): start=8 &lt; finish=11 → OVERLAP, skip
+</span><span id="__span-42-13"><a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a>Step 10: A10=(2,14): start=2 &lt; finish=11 → OVERLAP, skip
+</span><span id="__span-42-14"><a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>Step 11: A11=(12,16): start=12 ≥ finish=11 → SELECT ✅
+</span><span id="__span-42-15"><a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a>
+</span><span id="__span-42-16"><a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a>Selected: {A1, A4, A8, A11} → 4 activities
+</span></code></pre></div>
+<hr />
+<h2 id="-huffman-coding">🌳 Huffman Coding<a class="headerlink" href="#-huffman-coding" title="Anchor link">&para;</a></h2>
+<h3 id="intuition_3">Intuition<a class="headerlink" href="#intuition_3" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Assign <strong>shorter codes</strong> to more frequent characters. Like Morse code — common letters (E, T) have short codes.</p>
+</blockquote>
+<h3 id="algorithm_2">Algorithm<a class="headerlink" href="#algorithm_2" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>1. Create a leaf node for each character with its frequency
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>2. Build a min-heap (priority queue) of all nodes
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>3. Repeat until one node remains:
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>   a. Extract two nodes with minimum frequency
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>   b. Create new internal node with frequency = sum of two
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>   c. Insert new node back into heap
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>4. The remaining node is the root of the Huffman tree
+</span></code></pre></div>
+<h3 id="trace_2">Trace<a class="headerlink" href="#trace_2" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>Characters: a(5), b(9), c(12), d(13), e(16), f(45)
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>Min-heap: [a:5, b:9, c:12, d:13, e:16, f:45]
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>Step 1: Extract a:5, b:9 → create node:14
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>        Heap: [c:12, d:13, node:14, e:16, f:45]
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>
+</span><span id="__span-44-8"><a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>Step 2: Extract c:12, d:13 → create node:25
+</span><span id="__span-44-9"><a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a>        Heap: [node:14, e:16, node:25, f:45]
+</span><span id="__span-44-10"><a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a>
+</span><span id="__span-44-11"><a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a>Step 3: Extract node:14, e:16 → create node:30
+</span><span id="__span-44-12"><a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a>        Heap: [node:25, node:30, f:45]
+</span><span id="__span-44-13"><a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a>
+</span><span id="__span-44-14"><a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a>Step 4: Extract node:25, node:30 → create node:55
+</span><span id="__span-44-15"><a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a>        Heap: [f:45, node:55]
+</span><span id="__span-44-16"><a id="__codelineno-44-16" name="__codelineno-44-16" href="#__codelineno-44-16"></a>
+</span><span id="__span-44-17"><a id="__codelineno-44-17" name="__codelineno-44-17" href="#__codelineno-44-17"></a>Step 5: Extract f:45, node:55 → create root:100
+</span><span id="__span-44-18"><a id="__codelineno-44-18" name="__codelineno-44-18" href="#__codelineno-44-18"></a>
+</span><span id="__span-44-19"><a id="__codelineno-44-19" name="__codelineno-44-19" href="#__codelineno-44-19"></a>Huffman Tree:
+</span><span id="__span-44-20"><a id="__codelineno-44-20" name="__codelineno-44-20" href="#__codelineno-44-20"></a>              [100]
+</span><span id="__span-44-21"><a id="__codelineno-44-21" name="__codelineno-44-21" href="#__codelineno-44-21"></a>             /     \
+</span><span id="__span-44-22"><a id="__codelineno-44-22" name="__codelineno-44-22" href="#__codelineno-44-22"></a>          [45:f]  [55]
+</span><span id="__span-44-23"><a id="__codelineno-44-23" name="__codelineno-44-23" href="#__codelineno-44-23"></a>                  /   \
+</span><span id="__span-44-24"><a id="__codelineno-44-24" name="__codelineno-44-24" href="#__codelineno-44-24"></a>               [25]   [30]
+</span><span id="__span-44-25"><a id="__codelineno-44-25" name="__codelineno-44-25" href="#__codelineno-44-25"></a>               /  \   /  \
+</span><span id="__span-44-26"><a id="__codelineno-44-26" name="__codelineno-44-26" href="#__codelineno-44-26"></a>            [12:c][13:d][14][16:e]
+</span><span id="__span-44-27"><a id="__codelineno-44-27" name="__codelineno-44-27" href="#__codelineno-44-27"></a>                        /  \
+</span><span id="__span-44-28"><a id="__codelineno-44-28" name="__codelineno-44-28" href="#__codelineno-44-28"></a>                      [5:a][9:b]
+</span><span id="__span-44-29"><a id="__codelineno-44-29" name="__codelineno-44-29" href="#__codelineno-44-29"></a>
+</span><span id="__span-44-30"><a id="__codelineno-44-30" name="__codelineno-44-30" href="#__codelineno-44-30"></a>Codes:
+</span><span id="__span-44-31"><a id="__codelineno-44-31" name="__codelineno-44-31" href="#__codelineno-44-31"></a>f = 0
+</span><span id="__span-44-32"><a id="__codelineno-44-32" name="__codelineno-44-32" href="#__codelineno-44-32"></a>c = 100
+</span><span id="__span-44-33"><a id="__codelineno-44-33" name="__codelineno-44-33" href="#__codelineno-44-33"></a>d = 101
+</span><span id="__span-44-34"><a id="__codelineno-44-34" name="__codelineno-44-34" href="#__codelineno-44-34"></a>a = 1100
+</span><span id="__span-44-35"><a id="__codelineno-44-35" name="__codelineno-44-35" href="#__codelineno-44-35"></a>b = 1101
+</span><span id="__span-44-36"><a id="__codelineno-44-36" name="__codelineno-44-36" href="#__codelineno-44-36"></a>e = 111
+</span></code></pre></div>
+<hr />
+<h2 id="-greedy-vs-dynamic-programming">⚖️ Greedy vs Dynamic Programming<a class="headerlink" href="#-greedy-vs-dynamic-programming" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Greedy</th>
+<th>DP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choice</td>
+<td>Local optimal</td>
+<td>All possibilities</td>
+</tr>
+<tr>
+<td>Subproblems</td>
+<td>Non-overlapping</td>
+<td>Overlapping</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Faster</td>
+<td>Slower</td>
+</tr>
+<tr>
+<td>Correctness</td>
+<td>Not always optimal</td>
+<td>Always optimal</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>Activity selection, Huffman</td>
+<td>Knapsack, LCS</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Key:</strong> Fractional knapsack → Greedy ✅ | 0/1 knapsack → DP ✅</p>
+</blockquote>
+<hr />
+<h2 id="-common-mistakes_7">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Applying greedy to 0/1 knapsack — it doesn't give optimal results.
+🚫 <strong>Mistake 2:</strong> In activity selection, sorting by start time (wrong) instead of finish time (correct).
+🚫 <strong>Mistake 3:</strong> In Huffman, forgetting to re-insert the merged node back into the heap.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_7">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_7" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Greedy: locally optimal choice at each step</li>
+<li>Activity selection: sort by finish time, pick non-overlapping</li>
+<li>Huffman: build tree from bottom up using min-heap, frequent chars get shorter codes</li>
+<li>Greedy works for: activity selection, Huffman, fractional knapsack, Prim's, Kruskal's, Dijkstra's</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_7">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Build a Huffman tree for characters with frequencies: <code>{a:5, b:9, c:12, d:13, e:16, f:45}</code>. Find the code for each character.
+<strong>5-mark:</strong> Apply activity selection algorithm to find maximum non-overlapping activities.
+<strong>Short note:</strong> When does greedy fail? Give an example.
+<strong>Conceptual:</strong> What is the greedy choice property?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="9-graph-algorithms">9. Graph Algorithms<a class="headerlink" href="#9-graph-algorithms" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_8">💡 Intuition First<a class="headerlink" href="#-intuition-first_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>graph</strong> is a network — cities connected by roads, people connected by friendships, web pages connected by links. Graph algorithms help us navigate, find shortest paths, and build minimum-cost networks.</p>
+</blockquote>
+<hr />
+<h2 id="-graph-basics">📐 Graph Basics<a class="headerlink" href="#-graph-basics" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>Directed Graph:          Undirected Graph:
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>  A → B → D               A — B — D
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>  ↓   ↓                   |   |
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>  C → E                   C — E
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vertex/Node</strong></td>
+<td>A point in the graph</td>
+</tr>
+<tr>
+<td><strong>Edge</strong></td>
+<td>Connection between two vertices</td>
+</tr>
+<tr>
+<td><strong>Directed</strong></td>
+<td>Edges have direction (one-way)</td>
+</tr>
+<tr>
+<td><strong>Undirected</strong></td>
+<td>Edges are bidirectional</td>
+</tr>
+<tr>
+<td><strong>Weighted</strong></td>
+<td>Edges have costs/distances</td>
+</tr>
+<tr>
+<td><strong>Adjacent</strong></td>
+<td>Two vertices connected by an edge</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td>Sequence of vertices connected by edges</td>
+</tr>
+<tr>
+<td><strong>Cycle</strong></td>
+<td>Path that starts and ends at same vertex</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-bfs--breadth-first-search">🔍 BFS — Breadth-First Search<a class="headerlink" href="#-bfs--breadth-first-search" title="Anchor link">&para;</a></h2>
+<h3 id="intuition_4">Intuition<a class="headerlink" href="#intuition_4" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Explore all neighbors at current level before going deeper. Like ripples in water — expand outward layer by layer.</p>
+</blockquote>
+<p><strong>Uses a QUEUE.</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>Graph:
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>    1 — 2 — 5
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>    |   |
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>    3 — 4
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>BFS from vertex 1:
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>Queue: [1]
+</span><span id="__span-46-9"><a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>Visit 1 → enqueue neighbors 2, 3 → Queue: [2, 3]
+</span><span id="__span-46-10"><a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>Visit 2 → enqueue neighbors 4, 5 → Queue: [3, 4, 5]
+</span><span id="__span-46-11"><a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a>Visit 3 → enqueue neighbor 4 (already visited) → Queue: [4, 5]
+</span><span id="__span-46-12"><a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>Visit 4 → no new neighbors → Queue: [5]
+</span><span id="__span-46-13"><a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a>Visit 5 → no new neighbors → Queue: []
+</span><span id="__span-46-14"><a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a>
+</span><span id="__span-46-15"><a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a>BFS Order: 1, 2, 3, 4, 5
+</span></code></pre></div>
+<p><strong>Pseudocode:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>function BFS(graph, start):
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>    visited = {start}
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>    queue = [start]
+</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>
+</span><span id="__span-47-5"><a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>    while queue not empty:
+</span><span id="__span-47-6"><a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>        vertex = queue.dequeue()
+</span><span id="__span-47-7"><a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>        print(vertex)
+</span><span id="__span-47-8"><a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>        for neighbor in graph[vertex]:
+</span><span id="__span-47-9"><a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a>            if neighbor not in visited:
+</span><span id="__span-47-10"><a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a>                visited.add(neighbor)
+</span><span id="__span-47-11"><a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a>                queue.enqueue(neighbor)
+</span></code></pre></div></p>
+<p><strong>Applications:</strong> Shortest path (unweighted), level-order traversal, connected components.</p>
+<hr />
+<h2 id="-dfs--depth-first-search">🔍 DFS — Depth-First Search<a class="headerlink" href="#-dfs--depth-first-search" title="Anchor link">&para;</a></h2>
+<h3 id="intuition_5">Intuition<a class="headerlink" href="#intuition_5" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Go as deep as possible before backtracking. Like exploring a maze — go down one path until you hit a dead end, then backtrack.</p>
+</blockquote>
+<p><strong>Uses a STACK (or recursion).</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>Graph (same as above):
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>    1 — 2 — 5
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>    |   |
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>    3 — 4
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>
+</span><span id="__span-48-6"><a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a>DFS from vertex 1 (recursive):
+</span><span id="__span-48-7"><a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a>
+</span><span id="__span-48-8"><a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a>Visit 1 → go to 2
+</span><span id="__span-48-9"><a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a>  Visit 2 → go to 4
+</span><span id="__span-48-10"><a id="__codelineno-48-10" name="__codelineno-48-10" href="#__codelineno-48-10"></a>    Visit 4 → go to 3
+</span><span id="__span-48-11"><a id="__codelineno-48-11" name="__codelineno-48-11" href="#__codelineno-48-11"></a>      Visit 3 → all neighbors visited, backtrack
+</span><span id="__span-48-12"><a id="__codelineno-48-12" name="__codelineno-48-12" href="#__codelineno-48-12"></a>    backtrack to 4 → go to 5
+</span><span id="__span-48-13"><a id="__codelineno-48-13" name="__codelineno-48-13" href="#__codelineno-48-13"></a>      Visit 5 → all neighbors visited, backtrack
+</span><span id="__span-48-14"><a id="__codelineno-48-14" name="__codelineno-48-14" href="#__codelineno-48-14"></a>    backtrack to 2 → backtrack to 1
+</span><span id="__span-48-15"><a id="__codelineno-48-15" name="__codelineno-48-15" href="#__codelineno-48-15"></a>  backtrack to 1 → all neighbors visited
+</span><span id="__span-48-16"><a id="__codelineno-48-16" name="__codelineno-48-16" href="#__codelineno-48-16"></a>
+</span><span id="__span-48-17"><a id="__codelineno-48-17" name="__codelineno-48-17" href="#__codelineno-48-17"></a>DFS Order: 1, 2, 4, 3, 5
+</span></code></pre></div>
+<p><strong>Applications:</strong> Cycle detection, topological sort, connected components, maze solving.</p>
+<hr />
+<h2 id="-bfs-vs-dfs">⚖️ BFS vs DFS<a class="headerlink" href="#-bfs-vs-dfs" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>BFS</th>
+<th>DFS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data structure</td>
+<td>Queue</td>
+<td>Stack / Recursion</td>
+</tr>
+<tr>
+<td>Traversal</td>
+<td>Level by level</td>
+<td>Deep first</td>
+</tr>
+<tr>
+<td>Shortest path</td>
+<td>✅ (unweighted)</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>O(w) — width</td>
+<td>O(h) — height</td>
+</tr>
+<tr>
+<td>Cycle detection</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Topological sort</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-dijkstras-algorithm-shortest-path">🗺️ Dijkstra's Algorithm (Shortest Path)<a class="headerlink" href="#-dijkstras-algorithm-shortest-path" title="Anchor link">&para;</a></h2>
+<h3 id="intuition_6">Intuition<a class="headerlink" href="#intuition_6" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Find the shortest path from a source to all other vertices. Like a GPS — always extend the currently shortest known path.</p>
+</blockquote>
+<p><strong>Works on weighted graphs with NON-NEGATIVE weights.</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>Graph:
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>    A --4-- B
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>    |       |
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>    2       1
+</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>    |       |
+</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>    C --3-- D --5-- E
+</span><span id="__span-49-7"><a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a>
+</span><span id="__span-49-8"><a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a>Find shortest path from A to all vertices.
+</span><span id="__span-49-9"><a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a>
+</span><span id="__span-49-10"><a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a>Initial: dist = {A:0, B:∞, C:∞, D:∞, E:∞}
+</span><span id="__span-49-11"><a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a>Visited = {}
+</span><span id="__span-49-12"><a id="__codelineno-49-12" name="__codelineno-49-12" href="#__codelineno-49-12"></a>
+</span><span id="__span-49-13"><a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a>Step 1: Pick A (dist=0), mark visited
+</span><span id="__span-49-14"><a id="__codelineno-49-14" name="__codelineno-49-14" href="#__codelineno-49-14"></a>  Update: B = min(∞, 0+4) = 4
+</span><span id="__span-49-15"><a id="__codelineno-49-15" name="__codelineno-49-15" href="#__codelineno-49-15"></a>          C = min(∞, 0+2) = 2
+</span><span id="__span-49-16"><a id="__codelineno-49-16" name="__codelineno-49-16" href="#__codelineno-49-16"></a>  dist = {A:0, B:4, C:2, D:∞, E:∞}
+</span><span id="__span-49-17"><a id="__codelineno-49-17" name="__codelineno-49-17" href="#__codelineno-49-17"></a>
+</span><span id="__span-49-18"><a id="__codelineno-49-18" name="__codelineno-49-18" href="#__codelineno-49-18"></a>Step 2: Pick C (dist=2, minimum unvisited), mark visited
+</span><span id="__span-49-19"><a id="__codelineno-49-19" name="__codelineno-49-19" href="#__codelineno-49-19"></a>  Update: D = min(∞, 2+3) = 5
+</span><span id="__span-49-20"><a id="__codelineno-49-20" name="__codelineno-49-20" href="#__codelineno-49-20"></a>  dist = {A:0, B:4, C:2, D:5, E:∞}
+</span><span id="__span-49-21"><a id="__codelineno-49-21" name="__codelineno-49-21" href="#__codelineno-49-21"></a>
+</span><span id="__span-49-22"><a id="__codelineno-49-22" name="__codelineno-49-22" href="#__codelineno-49-22"></a>Step 3: Pick B (dist=4), mark visited
+</span><span id="__span-49-23"><a id="__codelineno-49-23" name="__codelineno-49-23" href="#__codelineno-49-23"></a>  Update: D = min(5, 4+1) = 5 (no change)
+</span><span id="__span-49-24"><a id="__codelineno-49-24" name="__codelineno-49-24" href="#__codelineno-49-24"></a>  dist = {A:0, B:4, C:2, D:5, E:∞}
+</span><span id="__span-49-25"><a id="__codelineno-49-25" name="__codelineno-49-25" href="#__codelineno-49-25"></a>
+</span><span id="__span-49-26"><a id="__codelineno-49-26" name="__codelineno-49-26" href="#__codelineno-49-26"></a>Step 4: Pick D (dist=5), mark visited
+</span><span id="__span-49-27"><a id="__codelineno-49-27" name="__codelineno-49-27" href="#__codelineno-49-27"></a>  Update: E = min(∞, 5+5) = 10
+</span><span id="__span-49-28"><a id="__codelineno-49-28" name="__codelineno-49-28" href="#__codelineno-49-28"></a>  dist = {A:0, B:4, C:2, D:5, E:10}
+</span><span id="__span-49-29"><a id="__codelineno-49-29" name="__codelineno-49-29" href="#__codelineno-49-29"></a>
+</span><span id="__span-49-30"><a id="__codelineno-49-30" name="__codelineno-49-30" href="#__codelineno-49-30"></a>Step 5: Pick E (dist=10), mark visited
+</span><span id="__span-49-31"><a id="__codelineno-49-31" name="__codelineno-49-31" href="#__codelineno-49-31"></a>
+</span><span id="__span-49-32"><a id="__codelineno-49-32" name="__codelineno-49-32" href="#__codelineno-49-32"></a>Final shortest distances from A:
+</span><span id="__span-49-33"><a id="__codelineno-49-33" name="__codelineno-49-33" href="#__codelineno-49-33"></a>  A=0, B=4, C=2, D=5, E=10
+</span></code></pre></div>
+<hr />
+<h2 id="-minimum-spanning-tree">🌲 Minimum Spanning Tree<a class="headerlink" href="#-minimum-spanning-tree" title="Anchor link">&para;</a></h2>
+<h3 id="prims-algorithm">Prim's Algorithm<a class="headerlink" href="#prims-algorithm" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Start from any vertex. Always add the <strong>cheapest edge</strong> connecting the current tree to a new vertex.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>Graph:
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>  A --4-- B
+</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>  |  \    |
+</span><span id="__span-50-4"><a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>  2   3   1
+</span><span id="__span-50-5"><a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a>  |    \  |
+</span><span id="__span-50-6"><a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>  C --5-- D
+</span><span id="__span-50-7"><a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a>
+</span><span id="__span-50-8"><a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a>Start from A:
+</span><span id="__span-50-9"><a id="__codelineno-50-9" name="__codelineno-50-9" href="#__codelineno-50-9"></a>Step 1: Add A. Edges from A: (A-C,2), (A-D,3), (A-B,4)
+</span><span id="__span-50-10"><a id="__codelineno-50-10" name="__codelineno-50-10" href="#__codelineno-50-10"></a>Step 2: Pick cheapest: A-C (cost 2). Add C.
+</span><span id="__span-50-11"><a id="__codelineno-50-11" name="__codelineno-50-11" href="#__codelineno-50-11"></a>        Edges: (A-D,3), (A-B,4), (C-D,5)
+</span><span id="__span-50-12"><a id="__codelineno-50-12" name="__codelineno-50-12" href="#__codelineno-50-12"></a>Step 3: Pick cheapest: A-D (cost 3). Add D.
+</span><span id="__span-50-13"><a id="__codelineno-50-13" name="__codelineno-50-13" href="#__codelineno-50-13"></a>        Edges: (A-B,4), (D-B,1), (C-D,5)
+</span><span id="__span-50-14"><a id="__codelineno-50-14" name="__codelineno-50-14" href="#__codelineno-50-14"></a>Step 4: Pick cheapest: D-B (cost 1). Add B.
+</span><span id="__span-50-15"><a id="__codelineno-50-15" name="__codelineno-50-15" href="#__codelineno-50-15"></a>
+</span><span id="__span-50-16"><a id="__codelineno-50-16" name="__codelineno-50-16" href="#__codelineno-50-16"></a>MST edges: {A-C, A-D, D-B}
+</span><span id="__span-50-17"><a id="__codelineno-50-17" name="__codelineno-50-17" href="#__codelineno-50-17"></a>MST cost: 2+3+1 = 6
+</span></code></pre></div>
+<h3 id="kruskals-algorithm">Kruskal's Algorithm<a class="headerlink" href="#kruskals-algorithm" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Sort ALL edges by weight. Add edges one by one (cheapest first) if they don't create a cycle.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>Edges sorted: (D-B,1), (A-C,2), (A-D,3), (A-B,4), (C-D,5)
+</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>
+</span><span id="__span-51-3"><a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>Step 1: Add D-B (1) → no cycle ✅
+</span><span id="__span-51-4"><a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a>Step 2: Add A-C (2) → no cycle ✅
+</span><span id="__span-51-5"><a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a>Step 3: Add A-D (3) → no cycle ✅
+</span><span id="__span-51-6"><a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a>Step 4: Add A-B (4) → creates cycle A-D-B-A ❌ skip
+</span><span id="__span-51-7"><a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a>Step 5: Add C-D (5) → creates cycle ❌ skip
+</span><span id="__span-51-8"><a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a>
+</span><span id="__span-51-9"><a id="__codelineno-51-9" name="__codelineno-51-9" href="#__codelineno-51-9"></a>MST: {D-B, A-C, A-D}, cost = 6
+</span></code></pre></div>
+<h3 id="prims-vs-kruskals">Prim's vs Kruskal's<a class="headerlink" href="#prims-vs-kruskals" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Prim's</th>
+<th>Kruskal's</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Approach</td>
+<td>Grow from one vertex</td>
+<td>Add cheapest edge globally</td>
+</tr>
+<tr>
+<td>Data structure</td>
+<td>Priority queue</td>
+<td>Union-Find</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Dense graphs</td>
+<td>Sparse graphs</td>
+</tr>
+<tr>
+<td>Complexity</td>
+<td>O(E log V)</td>
+<td>O(E log E)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_8">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Dijkstra fails with <strong>negative weights</strong> — use Bellman-Ford instead.
+🚫 <strong>Mistake 2:</strong> BFS gives shortest path only for <strong>unweighted</strong> graphs.
+🚫 <strong>Mistake 3:</strong> In Kruskal's, forgetting to check for cycles (use Union-Find).
+🚫 <strong>Mistake 4:</strong> Confusing MST (minimum spanning tree) with shortest path — they're different problems.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_6">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>BFS = Queue | DFS = Stack</strong> — always state this.
+💡 Dijkstra: always pick the <strong>minimum distance unvisited</strong> vertex next.
+💡 Kruskal's: sort edges, add if no cycle. Prim's: grow tree greedily.
+💡 Be ready to trace BFS/DFS on a given graph and write the traversal order.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_8">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_8" title="Anchor link">&para;</a></h2>
+<ul>
+<li>BFS: queue, level-by-level, shortest path (unweighted)</li>
+<li>DFS: stack/recursion, deep first, topological sort</li>
+<li>Dijkstra: shortest path, weighted, non-negative edges</li>
+<li>Prim's: MST, grow from one vertex</li>
+<li>Kruskal's: MST, sort edges, add if no cycle</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_8">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Apply Dijkstra's algorithm on a given weighted graph. Show all steps and final distances.
+<strong>5-mark:</strong> Find the MST using Kruskal's algorithm. Show edge selection steps.
+<strong>Short note:</strong> Compare BFS and DFS with examples.
+<strong>Trace:</strong> Perform BFS and DFS on a given graph starting from vertex A. Write traversal order.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="10-complexity-analysis">10. Complexity Analysis<a class="headerlink" href="#10-complexity-analysis" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_9">💡 Intuition First<a class="headerlink" href="#-intuition-first_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>How does your algorithm <strong>scale</strong> as input grows? If n doubles, does your program take 2x longer? 4x? 2ⁿ times? Complexity analysis answers this — without running the code.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Searching a name in a list of 10 vs 10 million people. Linear search: 10x harder. Binary search: barely harder (log₂ of 10M ≈ 23 steps).</p>
+<hr />
+<h2 id="-big-o-notation">📐 Big-O Notation<a class="headerlink" href="#-big-o-notation" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Big-O describes the <strong>upper bound</strong> — worst-case growth rate, ignoring constants and lower-order terms.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>f(n) = 3n² + 5n + 100
+</span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>Big-O: O(n²)   ← dominant term, drop constants
+</span></code></pre></div>
+<h3 id="common-complexities-best-to-worst">Common Complexities (Best to Worst)<a class="headerlink" href="#common-complexities-best-to-worst" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n²) &lt; O(2ⁿ) &lt; O(n!)
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>Constant</td>
+<td>Array access, hash lookup</td>
+</tr>
+<tr>
+<td>O(log n)</td>
+<td>Logarithmic</td>
+<td>Binary search</td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>Linear</td>
+<td>Linear search, traversal</td>
+</tr>
+<tr>
+<td>O(n log n)</td>
+<td>Linearithmic</td>
+<td>Merge sort, heap sort</td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>Quadratic</td>
+<td>Bubble sort, nested loops</td>
+</tr>
+<tr>
+<td>O(2ⁿ)</td>
+<td>Exponential</td>
+<td>Naive Fibonacci, subset generation</td>
+</tr>
+<tr>
+<td>O(n!)</td>
+<td>Factorial</td>
+<td>Permutations, brute-force TSP</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-best--average--worst-case">📊 Best / Average / Worst Case<a class="headerlink" href="#-best--average--worst-case" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>Example: Linear search in array of n elements
+</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>
+</span><span id="__span-54-3"><a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>Best case:    Target is at index 0 → O(1)
+</span><span id="__span-54-4"><a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a>Average case: Target is in the middle → O(n/2) = O(n)
+</span><span id="__span-54-5"><a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a>Worst case:   Target is at last index or not found → O(n)
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>O (Big-O)</strong></td>
+<td>Upper bound (worst case)</td>
+</tr>
+<tr>
+<td><strong>Ω (Omega)</strong></td>
+<td>Lower bound (best case)</td>
+</tr>
+<tr>
+<td><strong>Θ (Theta)</strong></td>
+<td>Tight bound (average case)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-recurrence-relations">🔁 Recurrence Relations<a class="headerlink" href="#-recurrence-relations" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Used to express the time complexity of recursive algorithms.</p>
+</blockquote>
+<h3 id="common-recurrences">Common Recurrences<a class="headerlink" href="#common-recurrences" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Recurrence</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binary Search</td>
+<td>T(n) = T(n/2) + O(1)</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>Merge Sort</td>
+<td>T(n) = 2T(n/2) + O(n)</td>
+<td>O(n log n)</td>
+</tr>
+<tr>
+<td>Quick Sort (avg)</td>
+<td>T(n) = 2T(n/2) + O(n)</td>
+<td>O(n log n)</td>
+</tr>
+<tr>
+<td>Naive Fibonacci</td>
+<td>T(n) = T(n-1) + T(n-2)</td>
+<td>O(2ⁿ)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-master-theorem">🏛️ Master Theorem<a class="headerlink" href="#-master-theorem" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A shortcut for solving recurrences of the form: <strong>T(n) = aT(n/b) + f(n)</strong></p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>Where:
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>  a = number of subproblems
+</span><span id="__span-55-3"><a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>  b = factor by which input is divided
+</span><span id="__span-55-4"><a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>  f(n) = work done outside recursive calls
+</span><span id="__span-55-5"><a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a>
+</span><span id="__span-55-6"><a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a>Compare f(n) with n^(log_b(a)):
+</span><span id="__span-55-7"><a id="__codelineno-55-7" name="__codelineno-55-7" href="#__codelineno-55-7"></a>
+</span><span id="__span-55-8"><a id="__codelineno-55-8" name="__codelineno-55-8" href="#__codelineno-55-8"></a>Case 1: f(n) = O(n^(log_b(a) - ε))  → T(n) = Θ(n^log_b(a))
+</span><span id="__span-55-9"><a id="__codelineno-55-9" name="__codelineno-55-9" href="#__codelineno-55-9"></a>Case 2: f(n) = Θ(n^log_b(a))        → T(n) = Θ(n^log_b(a) · log n)
+</span><span id="__span-55-10"><a id="__codelineno-55-10" name="__codelineno-55-10" href="#__codelineno-55-10"></a>Case 3: f(n) = Ω(n^(log_b(a) + ε))  → T(n) = Θ(f(n))
+</span></code></pre></div>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>Merge Sort: T(n) = 2T(n/2) + n
+</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>  a=2, b=2, f(n)=n
+</span><span id="__span-56-3"><a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>  n^(log_2(2)) = n^1 = n
+</span><span id="__span-56-4"><a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a>  f(n) = n = Θ(n^1) → Case 2
+</span><span id="__span-56-5"><a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a>  T(n) = Θ(n log n) ✅
+</span><span id="__span-56-6"><a id="__codelineno-56-6" name="__codelineno-56-6" href="#__codelineno-56-6"></a>
+</span><span id="__span-56-7"><a id="__codelineno-56-7" name="__codelineno-56-7" href="#__codelineno-56-7"></a>Binary Search: T(n) = T(n/2) + 1
+</span><span id="__span-56-8"><a id="__codelineno-56-8" name="__codelineno-56-8" href="#__codelineno-56-8"></a>  a=1, b=2, f(n)=1
+</span><span id="__span-56-9"><a id="__codelineno-56-9" name="__codelineno-56-9" href="#__codelineno-56-9"></a>  n^(log_2(1)) = n^0 = 1
+</span><span id="__span-56-10"><a id="__codelineno-56-10" name="__codelineno-56-10" href="#__codelineno-56-10"></a>  f(n) = 1 = Θ(1) → Case 2
+</span><span id="__span-56-11"><a id="__codelineno-56-11" name="__codelineno-56-11" href="#__codelineno-56-11"></a>  T(n) = Θ(log n) ✅
+</span></code></pre></div>
+<hr />
+<h2 id="-algorithm-complexity-quick-reference">📊 Algorithm Complexity Quick Reference<a class="headerlink" href="#-algorithm-complexity-quick-reference" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Time (Best)</th>
+<th>Time (Avg)</th>
+<th>Time (Worst)</th>
+<th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear Search</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Binary Search</td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Bubble Sort</td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Merge Sort</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Quick Sort</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n²)</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>Heap Sort</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>BST Search</td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BFS/DFS</td>
+<td>—</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Dijkstra</td>
+<td>—</td>
+<td>O(E log V)</td>
+<td>O(E log V)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Kruskal's</td>
+<td>—</td>
+<td>O(E log E)</td>
+<td>O(E log E)</td>
+<td>O(V)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_9">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Saying O(2n) instead of O(n) — always drop constants.
+🚫 <strong>Mistake 2:</strong> Confusing O (worst) with Ω (best) — Big-O is NOT always worst case by definition, but it's commonly used that way.
+🚫 <strong>Mistake 3:</strong> Nested loops don't always mean O(n²) — check if inner loop depends on outer.
+🚫 <strong>Mistake 4:</strong> Forgetting space complexity — recursive algorithms use O(n) stack space.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_7">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Master Theorem</strong> is a high-frequency exam topic — memorize the 3 cases.
+💡 Always simplify: O(3n² + 5n + 100) = O(n²).
+💡 Quick sort worst case is O(n²) — when pivot is always min or max.
+💡 BST worst case is O(n) — when tree is completely skewed (like a linked list).</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_9">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_9" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Big-O = upper bound, drop constants and lower terms</li>
+<li>O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n²) &lt; O(2ⁿ)</li>
+<li>Master theorem: T(n) = aT(n/b) + f(n) → compare f(n) with n^log_b(a)</li>
+<li>Merge sort: O(n log n) always | Quick sort: O(n²) worst | Binary search: O(log n)</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_9">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Solve the recurrence T(n) = 2T(n/2) + n using the Master Theorem.
+<strong>5-mark:</strong> What is the time complexity of the following code? Justify.
+<strong>Short note:</strong> Explain Big-O, Big-Omega, and Big-Theta with examples.
+<strong>Table:</strong> Fill in best/average/worst case complexities for merge sort, quick sort, and heap sort.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="-master-quick-revision-sheet--dsa">🏁 Master Quick Revision Sheet — DSA<a class="headerlink" href="#-master-quick-revision-sheet--dsa" title="Anchor link">&para;</a></h1>
+<h2 id="-complexity-cheat-sheet">⚡ Complexity Cheat Sheet<a class="headerlink" href="#-complexity-cheat-sheet" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>Data Structure Operations:
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>┌─────────────────┬──────────┬──────────┬──────────┐
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>│ Structure       │ Access   │ Search   │ Insert   │
+</span><span id="__span-57-4"><a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>├─────────────────┼──────────┼──────────┼──────────┤
+</span><span id="__span-57-5"><a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a>│ Array           │ O(1)     │ O(n)     │ O(n)     │
+</span><span id="__span-57-6"><a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a>│ Linked List     │ O(n)     │ O(n)     │ O(1)*    │
+</span><span id="__span-57-7"><a id="__codelineno-57-7" name="__codelineno-57-7" href="#__codelineno-57-7"></a>│ Stack/Queue     │ O(n)     │ O(n)     │ O(1)     │
+</span><span id="__span-57-8"><a id="__codelineno-57-8" name="__codelineno-57-8" href="#__codelineno-57-8"></a>│ BST (balanced)  │ O(log n) │ O(log n) │ O(log n) │
+</span><span id="__span-57-9"><a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a>│ Hash Table      │ O(1)     │ O(1)     │ O(1)     │
+</span><span id="__span-57-10"><a id="__codelineno-57-10" name="__codelineno-57-10" href="#__codelineno-57-10"></a>└─────────────────┴──────────┴──────────┴──────────┘
+</span><span id="__span-57-11"><a id="__codelineno-57-11" name="__codelineno-57-11" href="#__codelineno-57-11"></a>* Insert at head
+</span></code></pre></div>
+<h2 id="-key-facts-to-remember">🔑 Key Facts to Remember<a class="headerlink" href="#-key-facts-to-remember" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fact</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inorder BST</td>
+<td>Gives sorted output</td>
+</tr>
+<tr>
+<td>BFS uses</td>
+<td>Queue</td>
+</tr>
+<tr>
+<td>DFS uses</td>
+<td>Stack / Recursion</td>
+</tr>
+<tr>
+<td>Dijkstra fails</td>
+<td>Negative weights</td>
+</tr>
+<tr>
+<td>Stable sorts</td>
+<td>Merge, Bubble, Insertion</td>
+</tr>
+<tr>
+<td>In-place sorts</td>
+<td>Heap, Quick, Bubble</td>
+</tr>
+<tr>
+<td>DP requires</td>
+<td>Optimal substructure + overlapping subproblems</td>
+</tr>
+<tr>
+<td>Greedy works</td>
+<td>Activity selection, Huffman, fractional knapsack</td>
+</tr>
+<tr>
+<td>Master theorem</td>
+<td>T(n) = aT(n/b) + f(n)</td>
+</tr>
+<tr>
+<td>Quick sort worst</td>
+<td>O(n²) — sorted input with bad pivot</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-memory-tricks">🧠 Memory Tricks<a class="headerlink" href="#-memory-tricks" title="Anchor link">&para;</a></h2>
+<ul>
+<li><strong>Traversals:</strong> "<strong>P</strong>re = <strong>P</strong>arents first | <strong>In</strong> = <strong>In</strong> order (sorted) | <strong>Post</strong> = <strong>P</strong>arents last"</li>
+<li><strong>Sorting O(n log n):</strong> "<strong>M</strong>y <strong>Q</strong>ueen <strong>H</strong>as" → Merge, Quick, Heap</li>
+<li><strong>Greedy vs DP:</strong> "Greedy is <strong>selfish</strong> (local best) | DP is <strong>thorough</strong> (all options)"</li>
+<li><strong>Stack vs Queue:</strong> "Stack = <strong>S</strong>ame end | Queue = <strong>Q</strong>ueue at different ends"</li>
+<li><strong>Chaining vs Open:</strong> "<strong>C</strong>haining = <strong>C</strong>hain (linked list) | <strong>O</strong>pen addressing = <strong>O</strong>pen slots"</li>
+</ul>
+<h2 id="-top-10-most-probable-exam-questions">🎯 Top 10 Most Probable Exam Questions<a class="headerlink" href="#-top-10-most-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<ol>
+<li>Trace binary search on a given array</li>
+<li>Insert elements into BST and write inorder traversal</li>
+<li>Reverse a linked list — algorithm + trace</li>
+<li>Merge sort trace — divide and merge steps</li>
+<li>Quick sort partition trace</li>
+<li>Solve 0/1 knapsack with DP table</li>
+<li>Find LCS of two strings with DP table</li>
+<li>Apply Dijkstra's algorithm on weighted graph</li>
+<li>Find MST using Kruskal's or Prim's</li>
+<li>Solve recurrence using Master Theorem</li>
+</ol>
+<hr />
+<blockquote>
+<p>📌 <strong>End of Subject 01: Data Structures &amp; Algorithms</strong></p>
+<p>Next: <strong>Subject 02 — Operating Systems</strong> →</p>
+</blockquote>
+<hr />
+<p><em>Handbook generated for MSc Admission Preparation | JUST-Style Exam Focus</em>
+<em>Version 1.0 | Data Structures &amp; Algorithms</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02%20-%20Operating%20Systems/" class="md-footer__link md-footer__link--next" aria-label="Next: 02 · Operating Systems">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                02 · Operating Systems
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

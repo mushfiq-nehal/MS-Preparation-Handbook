@@ -1,23 +1,171 @@
 site_name: MSc CSE Admission Prep
+site_description: A modern, exam-focused handbook for MSc CSE admission preparation
+site_author: Nehal
+docs_dir: docs
 
+# ─────────────────────────────────────────────────────────────────
+# Theme
+# ─────────────────────────────────────────────────────────────────
 theme:
   name: material
+  language: en
+  icon:
+    logo: material/school
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    annotation: material/arrow-right-circle
+    admonition:
+      note: material/note-edit
+      tip: material/lightbulb-on
+      warning: material/alert
+      example: material/test-tube
+      quote: material/format-quote-close
+  favicon: assets/favicon.svg
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
   palette:
-    scheme: slate
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
+  features:
+    # Navigation
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - announce.dismiss
+
+# ─────────────────────────────────────────────────────────────────
+# Markdown Extensions
+# ─────────────────────────────────────────────────────────────────
 markdown_extensions:
+  # Standard
+  - abbr
   - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Anchor link
+      toc_depth: 3
+      # GitHub-compatible slugs so existing in-file TOCs (e.g. "#2-stack--queue") work
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.smartsymbols
   - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.highlight
+  - pymdownx.snippets
   - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
+# ─────────────────────────────────────────────────────────────────
+# Plugins
+# ─────────────────────────────────────────────────────────────────
 plugins:
-  - search
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
-extra_javascript:
-  - https://unpkg.com/mermaid/dist/mermaid.min.js
-
+# ─────────────────────────────────────────────────────────────────
+# Extra (CSS / JS)
+# ─────────────────────────────────────────────────────────────────
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+      name: GitHub
+
+# ─────────────────────────────────────────────────────────────────
+# Navigation (explicit ordering for a polished sidebar)
+# ─────────────────────────────────────────────────────────────────
+nav:
+  - Home: index.md
+  - Tier S/A — Must Master:
+    - "01 · Data Structures & Algorithms": "01 - Data Structures & Algorithms.md"
+    - "02 · Operating Systems": "02 - Operating Systems.md"
+    - "03 · Computer Networks & Data Communication": "03 - Computer Networks & Data Communication.md"
+    - "04 · Compiler Design & Automata": "04 - Compiler Design & Automata.md"
+    - "05 · Digital Logic Design": "05 - Digital Logic Design.md"
+    - "06 · Software Engineering": "06 - Software Engineering.md"
+    - "07 · Database Management System": "07 - Database Management System.md"
+    - "08 · Artificial Intelligence & Machine Learning": "08 - Artificial Intelligence & Machine Learning.md"
+    - "09 · Object Oriented Programming": "09 - Object Oriented Programming.md"
+    - "10 · Programming Fundamentals": "10 - Programming Fundamentals.md"
+  - Tier B — Moderately Important:
+    - "11 · Discrete Mathematics": "11 - Discrete Mathematics.md"
+    - "12 · Computer Architecture": "12 - Computer Architecture.md"
+    - "13 · Numerical Analysis": "13 - Numerical Analysis.md"
+  - Tier C — Light Revision:
+    - "14–20 · Tier C Subjects": "14-20 - Tier C Subjects.md"

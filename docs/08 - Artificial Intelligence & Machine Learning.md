@@ -459,17 +459,23 @@ Information Gain for Outlook:
 
 (Similarly compute for Temperature, Humidity, Wind)
 Outlook has highest IG → use as root
+```
 
 Decision Tree:
-              [Outlook?]
-             /     |     \
-          Sunny  Overcast  Rain
-          /         |        \
-    [Humidity?]   Yes    [Wind?]
-    /       \             /    \
-  High     Normal      Strong  Weak
-   /           \         /       \
-  No           Yes      No       Yes
+
+```mermaid
+graph TD
+    A{Outlook?}:::decision
+    A -->|Sunny| B{Humidity?}:::decision
+    A -->|Overcast| C[Yes]:::yes
+    A -->|Rain| D{Wind?}:::decision
+    B -->|High| E[No]:::no
+    B -->|Normal| F[Yes]:::yes
+    D -->|Strong| G[No]:::no
+    D -->|Weak| H[Yes]:::yes
+    classDef decision fill:#ddd6fe,stroke:#7c3aed,color:#1e1b4b
+    classDef yes fill:#bbf7d0,stroke:#16a34a,color:#14532d
+    classDef no fill:#fecaca,stroke:#dc2626,color:#7f1d1d
 ```
 
 ---

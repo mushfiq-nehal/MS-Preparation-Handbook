@@ -1,0 +1,3275 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modern, exam-focused handbook for MSc CSE admission preparation">
+      
+      
+        <meta name="author" content="Nehal">
+      
+      
+      
+        <link rel="prev" href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/">
+      
+      
+        <link rel="next" href="../05%20-%20Digital%20Logic%20Design/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>04 · Compiler Design & Automata - MSc CSE Admission Prep</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M21%2010V9l-6-6H5c-1.11%200-2%20.89-2%202v14a2%202%200%200%200%202%202h6v-1.87l8.39-8.39c.44-.44%201-.68%201.61-.74m-7-5.5%205.5%205.5H14zm8.85%209.69-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72%200l1.32%201.32c.2.2.2.53%200%20.72m-3.72-.36%202.04%202.04L15.04%2022H13v-2.04z%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7%202v2h1v14a4%204%200%200%200%204%204%204%204%200%200%200%204-4V4h1V2zm4%2014c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m2-4c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m1-5h-4V4h4z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M14%2017h3l2-4V7h-6v6h3M6%2017h3l2-4V7H5v6h3z%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-msc-admission-prep--subject-04-compiler-design--automata" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MSc CSE Admission Prep" class="md-header__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSc CSE Admission Prep
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              04 · Compiler Design & Automata
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier S/A — Must Master
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../11%20-%20Discrete%20Mathematics/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier B — Moderately Important
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier C — Light Revision
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MSc CSE Admission Prep" class="md-nav__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    MSc CSE Admission Prep
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier S/A — Must Master
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier S/A — Must Master
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Data Structures & Algorithms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20-%20Operating%20Systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Operating Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Computer Networks & Data Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Compiler Design & Automata
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Compiler Design & Automata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05%20-%20Digital%20Logic%20Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Digital Logic Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06%20-%20Software%20Engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Software Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20Database%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Database Management System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08%20-%20Artificial%20Intelligence%20%26%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Artificial Intelligence & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09%20-%20Object%20Oriented%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Object Oriented Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%20-%20Programming%20Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier B — Moderately Important
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier B — Moderately Important
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11%20-%20Discrete%20Mathematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 · Discrete Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12%20-%20Computer%20Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 · Computer Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13%20-%20Numerical%20Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13 · Numerical Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier C — Light Revision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier C — Light Revision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14–20 · Tier C Subjects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tier S/A — Must Master
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="-msc-admission-prep--subject-04-compiler-design--automata">📘 MSc Admission Prep — Subject 04: Compiler Design &amp; Automata<a class="headerlink" href="#-msc-admission-prep--subject-04-compiler-design--automata" title="Anchor link">&para;</a></h1>
+<h3 id="-just-style-exam-handbook--fast-revision-edition">🎯 JUST-Style Exam Handbook | Fast Revision Edition<a class="headerlink" href="#-just-style-exam-handbook--fast-revision-edition" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p><strong>Goal:</strong> Visual, exam-focused revision of automata theory and compiler design. Every topic includes intuition, state diagrams, derivation traces, and exam tips.</p>
+</blockquote>
+<hr />
+<h2 id="-table-of-contents">📋 Table of Contents<a class="headerlink" href="#-table-of-contents" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Topic</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="#1-dfa-vs-nfa">DFA vs NFA</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="#2-regular-expressions--regex-to-nfa">Regular Expressions &amp; Regex to NFA</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="#3-dfa-minimization">DFA Minimization</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="#4-context-free-grammars-cfg">Context-Free Grammars (CFG)</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="#5-parse-trees--syntax-trees">Parse Trees &amp; Syntax Trees</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#6-first-and-follow-sets">FIRST and FOLLOW Sets</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="#7-left-recursion--left-factoring">Left Recursion &amp; Left Factoring</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="#8-phases-of-a-compiler">Phases of a Compiler</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="#9-lexical-analysis">Lexical Analysis</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="#10-parsing">Parsing</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="#11-code-generation">Code Generation</a></td>
+<td>🔴 Must Master</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h1 id="1-dfa-vs-nfa">1. DFA vs NFA<a class="headerlink" href="#1-dfa-vs-nfa" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first">💡 Intuition First<a class="headerlink" href="#-intuition-first" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>DFA</strong> (Deterministic Finite Automaton) is like a <strong>GPS with one fixed route</strong> — at every intersection, there is exactly one road to take. No ambiguity.</p>
+<p>An <strong>NFA</strong> (Nondeterministic Finite Automaton) is like a <strong>GPS that can magically explore all routes simultaneously</strong> — at each step, it can take multiple paths at once, and if ANY path leads to the destination, it accepts.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong>
+- DFA = A vending machine — each button press leads to exactly one state.
+- NFA = A chess computer — it explores all possible moves simultaneously.</p>
+<p><strong>Why it matters:</strong> DFA/NFA are the foundation of lexical analysis (tokenizers), pattern matching (regex), and formal language theory.</p>
+<hr />
+<h2 id="-formal-definitions">📐 Formal Definitions<a class="headerlink" href="#-formal-definitions" title="Anchor link">&para;</a></h2>
+<h3 id="dfa--deterministic-finite-automaton">DFA — Deterministic Finite Automaton<a class="headerlink" href="#dfa--deterministic-finite-automaton" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>A DFA is a 5-tuple: M = (Q, Σ, δ, q₀, F)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Q  = finite set of states
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Σ  = input alphabet
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>δ  = transition function: Q × Σ → Q  (exactly ONE next state)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>q₀ = start state (q₀ ∈ Q)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>F  = set of accept/final states (F ⊆ Q)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Key property: δ(q, a) gives EXACTLY ONE state
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>              Every state must have a transition for EVERY symbol
+</span></code></pre></div>
+<h3 id="nfa--nondeterministic-finite-automaton">NFA — Nondeterministic Finite Automaton<a class="headerlink" href="#nfa--nondeterministic-finite-automaton" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>An NFA is a 5-tuple: M = (Q, Σ, δ, q₀, F)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Same structure BUT:
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>δ  = transition function: Q × (Σ ∪ {ε}) → 2^Q  (set of states!)
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Key differences from DFA:
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  1. δ can return MULTIPLE states (or empty set)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  2. ε-transitions allowed (move without consuming input)
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  3. Missing transitions are allowed (implicit dead state)
+</span></code></pre></div>
+<hr />
+<h2 id="-dfa-example--strings-ending-in-ab">🔄 DFA Example — Strings ending in "ab"<a class="headerlink" href="#-dfa-example--strings-ending-in-ab" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Language: L = {w ∈ {a,b}* | w ends with &quot;ab&quot;}
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>States: q0 (start), q1 (seen &#39;a&#39;), q2 (seen &#39;ab&#39; = accept)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Transition diagram:
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>         a           b
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    ┌────────────────────────────────┐
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    │                                │
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    ▼    a           b               │
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  →(q0)────►(q1)────►((q2))         │
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    ▲         │                      │
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    │    a    │ a                    │
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    └─────────┘                      │
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>         b                           │
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    (q0)──────────────────────────►(q0)
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>Transition table:
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>State │  a  │  b
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>──────┼─────┼─────
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>→ q0  │ q1  │ q0
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  q1  │ q1  │ q2
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a> *q2  │ q1  │ q0
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>(→ = start state, * = accept state)
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>Trace &quot;aab&quot;:
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>  q0 →(a)→ q1 →(a)→ q1 →(b)→ q2 ✅ ACCEPT
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>Trace &quot;aba&quot;:
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>  q0 →(a)→ q1 →(b)→ q2 →(a)→ q1 ❌ REJECT (not in F)
+</span></code></pre></div>
+<hr />
+<h2 id="-nfa-example--strings-containing-ab">🔄 NFA Example — Strings containing "ab"<a class="headerlink" href="#-nfa-example--strings-containing-ab" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Language: L = {w | w contains &quot;ab&quot; as substring}
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>States: q0 (start), q1 (seen &#39;a&#39;), q2 (seen &#39;ab&#39; = accept)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>NFA transition diagram:
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>         a,b
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    ┌─────────┐
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    │         │
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    ▼    a    │    b
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  →(q0)────►(q1)────►((q2))
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>                        │
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>                       a,b (stay in q2)
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>                        └──────────────┘
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>Transition table:
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>State │  a     │  b
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>──────┼────────┼──────
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>→ q0  │ {q0,q1}│ {q0}
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>  q1  │ {}     │ {q2}
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a> *q2  │ {q2}   │ {q2}
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>Trace &quot;aab&quot; (NFA explores all paths):
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>  Start: {q0}
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>  Read &#39;a&#39;: {q0, q1}  (q0→q0 on a, q0→q1 on a)
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>  Read &#39;a&#39;: {q0, q1}  (q0→q0, q0→q1, q1→{} dead)
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>  Read &#39;b&#39;: {q0, q2}  (q0→q0, q1→q2)
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>  q2 ∈ F → ACCEPT ✅
+</span></code></pre></div>
+<hr />
+<h2 id="-dfa-vs-nfa--master-comparison">⚖️ DFA vs NFA — Master Comparison<a class="headerlink" href="#-dfa-vs-nfa--master-comparison" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>DFA</th>
+<th>NFA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transitions</td>
+<td>Exactly 1 per (state, symbol)</td>
+<td>0, 1, or many</td>
+</tr>
+<tr>
+<td>ε-transitions</td>
+<td>❌ Not allowed</td>
+<td>✅ Allowed</td>
+</tr>
+<tr>
+<td>Dead states</td>
+<td>Must be explicit</td>
+<td>Implicit (missing = dead)</td>
+</tr>
+<tr>
+<td>Computation</td>
+<td>Single path</td>
+<td>Multiple paths simultaneously</td>
+</tr>
+<tr>
+<td>Acceptance</td>
+<td>Reach accept state</td>
+<td>ANY path reaches accept state</td>
+</tr>
+<tr>
+<td>Equivalence</td>
+<td>Same expressive power</td>
+<td>Same expressive power</td>
+</tr>
+<tr>
+<td>Conversion</td>
+<td>—</td>
+<td>NFA → DFA (subset construction)</td>
+</tr>
+<tr>
+<td>States after conversion</td>
+<td>n states</td>
+<td>Up to 2ⁿ states</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Easier</td>
+<td>Harder</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Key theorem:</strong> Every NFA can be converted to an equivalent DFA (subset construction algorithm). They recognize the same class of languages — <strong>Regular Languages</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="-nfa-to-dfa-conversion-subset-construction">🔄 NFA to DFA Conversion (Subset Construction)<a class="headerlink" href="#-nfa-to-dfa-conversion-subset-construction" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>NFA:
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>States: {q0, q1, q2}
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Alphabet: {a, b}
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Start: q0, Accept: {q2}
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>NFA transitions:
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  q0 on a → {q0, q1}
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  q0 on b → {q0}
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  q1 on b → {q2}
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  q2 on a → {q2}
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  q2 on b → {q2}
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>DFA states = subsets of NFA states:
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>DFA State │  a        │  b
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>──────────┼───────────┼──────────
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>→{q0}     │ {q0,q1}   │ {q0}
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a> {q0,q1}  │ {q0,q1}   │ {q0,q2}
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a> {q0,q2}* │ {q0,q1,q2}│ {q0,q2}
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>*{q0,q1,q2}│{q0,q1,q2}│{q0,q2}
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>(* = contains q2, so it&#39;s an accept state)
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> NFA and DFA have the <strong>same expressive power</strong> — both recognize regular languages only.
+🚫 <strong>Mistake 2:</strong> In DFA, every state must have a transition for EVERY symbol. Missing transitions → add dead/trap state.
+🚫 <strong>Mistake 3:</strong> NFA accepts if ANY computation path reaches an accept state — not all paths need to accept.
+🚫 <strong>Mistake 4:</strong> ε-closure must be computed before subset construction.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips">🎯 Exam Tips<a class="headerlink" href="#-exam-tips" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Draw the state diagram</strong> — examiners want to see the visual automaton.
+💡 Always label: → for start state, double circle for accept state.
+💡 For NFA→DFA: start with ε-closure of start state, then compute transitions for each subset.
+💡 DFA has at most 2ⁿ states after conversion from n-state NFA.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap" title="Anchor link">&para;</a></h2>
+<ul>
+<li>DFA: deterministic, exactly 1 transition per (state, symbol), no ε</li>
+<li>NFA: nondeterministic, 0+ transitions, ε allowed</li>
+<li>Both recognize regular languages (same power)</li>
+<li>NFA → DFA via subset construction (up to 2ⁿ states)</li>
+<li>Acceptance: DFA = single path to accept | NFA = any path to accept</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Design a DFA that accepts all strings over {a,b} that end with "ab". Draw the state diagram and transition table.
+<strong>5-mark:</strong> Convert the given NFA to an equivalent DFA using subset construction.
+<strong>Short note:</strong> Compare DFA and NFA. Are they equivalent in power?
+<strong>Trace:</strong> Trace the string "aabb" on the given DFA/NFA. Does it accept?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="2-regular-expressions--regex-to-nfa">2. Regular Expressions &amp; Regex to NFA<a class="headerlink" href="#2-regular-expressions--regex-to-nfa" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_1">💡 Intuition First<a class="headerlink" href="#-intuition-first_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>regular expression</strong> is a compact notation for describing a pattern. Like a search filter — <code>a*b</code> means "zero or more a's followed by one b." Under the hood, every regex compiles to an NFA (Thompson's construction), which can then become a DFA.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Regex is like a recipe description ("one or more eggs, optional cheese") — the NFA is the actual cooking process that follows the recipe.</p>
+<hr />
+<h2 id="-regular-expression-operators">📐 Regular Expression Operators<a class="headerlink" href="#-regular-expression-operators" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Concatenation</strong></td>
+<td>(implicit)</td>
+<td>One after another</td>
+<td><code>ab</code> = a then b</td>
+</tr>
+<tr>
+<td><strong>Union/Alternation</strong></td>
+<td><code>\|</code></td>
+<td>Either one</td>
+<td><code>a\|b</code> = a or b</td>
+</tr>
+<tr>
+<td><strong>Kleene Star</strong></td>
+<td><code>*</code></td>
+<td>Zero or more</td>
+<td><code>a*</code> = ε, a, aa, aaa...</td>
+</tr>
+<tr>
+<td><strong>Plus</strong></td>
+<td><code>+</code></td>
+<td>One or more</td>
+<td><code>a+</code> = a, aa, aaa...</td>
+</tr>
+<tr>
+<td><strong>Optional</strong></td>
+<td><code>?</code></td>
+<td>Zero or one</td>
+<td><code>a?</code> = ε or a</td>
+</tr>
+<tr>
+<td><strong>Grouping</strong></td>
+<td><code>()</code></td>
+<td>Group subexpressions</td>
+<td><code>(ab)*</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="operator-precedence-high-to-low">Operator Precedence (high to low)<a class="headerlink" href="#operator-precedence-high-to-low" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>1. * (Kleene star) — highest
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2. Concatenation
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>3. | (union) — lowest
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>So: a|bc* = a | (b(c*))   NOT (a|b)(c*)
+</span></code></pre></div>
+<hr />
+<h2 id="-regular-expression-examples">📐 Regular Expression Examples<a class="headerlink" href="#-regular-expression-examples" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Language                          Regex
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>─────────────────────────────────────────────────────
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Strings over {a,b}                (a|b)*
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Strings starting with &#39;a&#39;         a(a|b)*
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Strings ending with &#39;b&#39;           (a|b)*b
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Strings containing &quot;ab&quot;           (a|b)*ab(a|b)*
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Strings with even number of a&#39;s   (b*ab*ab*)*b*
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>Binary strings divisible by 2     (0|1)*0
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Identifiers (letter then alnum*)  [a-z][a-z0-9]*
+</span></code></pre></div>
+<hr />
+<h2 id="-thompsons-construction-regex--nfa">🔄 Thompson's Construction: Regex → NFA<a class="headerlink" href="#-thompsons-construction-regex--nfa" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Build NFA from regex using basic building blocks. Each operator has a standard NFA fragment.</p>
+</blockquote>
+<h3 id="base-cases">Base Cases<a class="headerlink" href="#base-cases" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>NFA for single symbol &#39;a&#39;:
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  →(i) ──a──► ((f))
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>NFA for ε:
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  →(i) ──ε──► ((f))
+</span></code></pre></div>
+<h3 id="union-r₁--r₂">Union: r₁ | r₂<a class="headerlink" href="#union-r₁--r₂" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>         ε ──► [NFA for r₁] ──ε──►
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>→(new_i)                            ((new_f))
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>         ε ──► [NFA for r₂] ──ε──►
+</span></code></pre></div>
+<h3 id="concatenation-r₁r₂">Concatenation: r₁r₂<a class="headerlink" href="#concatenation-r₁r₂" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>→[NFA for r₁]──ε──►[NFA for r₂]──►((f))
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  (merge: r₁&#39;s accept becomes r₂&#39;s start via ε)
+</span></code></pre></div>
+<h3 id="kleene-star-r">Kleene Star: r*<a class="headerlink" href="#kleene-star-r" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>         ┌──────────ε──────────┐
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>         │                     │
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>→(new_i)─┤ε──►[NFA for r]──ε──►(new_f)
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>         │                     │
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>         └──────────ε──────────┘
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>         (ε from new_i to new_f for zero repetitions)
+</span></code></pre></div>
+<hr />
+<h2 id="-worked-example-regex-ababb--nfa">✏️ Worked Example: Regex <code>(a|b)*abb</code> → NFA<a class="headerlink" href="#-worked-example-regex-ababb--nfa" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Step 1: Build NFA for (a|b)*
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  - NFA for &#39;a&#39;: q0 →a→ q1
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  - NFA for &#39;b&#39;: q2 →b→ q3
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  - Union a|b: q4 →ε→ q0, q4 →ε→ q2, q1 →ε→ q5, q3 →ε→ q5
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  - Star (a|b)*: q6 →ε→ q4, q5 →ε→ q4, q6 →ε→ q7, q5 →ε→ q7
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>Step 2: Concatenate with &#39;a&#39;: q7 →a→ q8
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>Step 3: Concatenate with &#39;b&#39;: q8 →b→ q9
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>Step 4: Concatenate with &#39;b&#39;: q9 →b→ q10 (accept)
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>Final NFA has ~11 states with ε-transitions.
+</span></code></pre></div>
+<hr />
+<h2 id="-regular-languages--closure-properties">⚖️ Regular Languages — Closure Properties<a class="headerlink" href="#-regular-languages--closure-properties" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Regular?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Union</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Concatenation</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Kleene Star</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Complement</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Intersection</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Reversal</td>
+<td>✅ Yes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Regular languages are closed under all these operations.</strong></p>
+</blockquote>
+<hr />
+<h2 id="-common-mistakes_1">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> <code>a*</code> includes ε (empty string). <code>a+</code> does NOT include ε.
+🚫 <strong>Mistake 2:</strong> Operator precedence: <code>*</code> &gt; concatenation &gt; <code>|</code>. Always parenthesize when unsure.
+🚫 <strong>Mistake 3:</strong> Not all languages are regular. <code>aⁿbⁿ</code> (equal a's and b's) is NOT regular — needs a stack (CFG).</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_1">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_1" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Regex operators: <code>*</code> (zero+), <code>+</code> (one+), <code>?</code> (zero/one), <code>|</code> (union), concat</li>
+<li>Precedence: <code>*</code> &gt; concat &gt; <code>|</code></li>
+<li>Thompson's construction: regex → NFA using ε-transitions</li>
+<li>Every regex → NFA → DFA (all equivalent for regular languages)</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_1">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Write a regular expression for strings over {0,1} that contain at least two consecutive 1s. Build the NFA.
+<strong>Short note:</strong> What is Thompson's construction? Explain with an example.
+<strong>Design:</strong> Write regex for valid identifiers (start with letter, followed by letters/digits).</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="3-dfa-minimization">3. DFA Minimization<a class="headerlink" href="#3-dfa-minimization" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_2">💡 Intuition First<a class="headerlink" href="#-intuition-first_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A DFA might have redundant states that behave identically. Minimization removes these duplicates to get the <strong>smallest possible DFA</strong> for a language — like simplifying a fraction to its lowest terms.</p>
+</blockquote>
+<p><strong>Why it matters:</strong> Minimized DFAs are more efficient for implementation. Exam questions often ask you to minimize a given DFA.</p>
+<hr />
+<h2 id="-minimization-algorithm-table-filling--myhill-nerode">📐 Minimization Algorithm (Table-Filling / Myhill-Nerode)<a class="headerlink" href="#-minimization-algorithm-table-filling--myhill-nerode" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Goal: Find pairs of states that are DISTINGUISHABLE,
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>      then merge all INDISTINGUISHABLE pairs.
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Two states p, q are DISTINGUISHABLE if:
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  ∃ string w such that exactly one of δ(p,w) and δ(q,w) is in F
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>Algorithm:
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>1. Remove unreachable states
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2. Create a table of all pairs (p, q) where p &lt; q
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>3. Mark pairs where one is accept and other is not (base case)
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>4. Repeat: mark (p,q) if ∃ symbol a such that (δ(p,a), δ(q,a)) is marked
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>5. Unmarked pairs = equivalent states → merge them
+</span></code></pre></div>
+<hr />
+<h2 id="-worked-example">✏️ Worked Example<a class="headerlink" href="#-worked-example" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>DFA:
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>States: {A, B, C, D, E, F}
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Alphabet: {0, 1}
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Start: A
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Accept: {C, D, E}
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>Transition table:
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>State │  0  │  1
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>──────┼─────┼─────
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>→ A   │  B  │  C
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>  B   │  A  │  D
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a> *C   │  E  │  F
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a> *D   │  E  │  F
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a> *E   │  E  │  F
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>  F   │  F  │  F
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>Step 1: No unreachable states.
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>Step 2: Create pairs table (upper triangle):
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>        B  C  D  E  F
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>    A   _  _  _  _  _
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    B      _  _  _  _
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>    C         _  _  _
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>    D            _  _
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>    E               _
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>Step 3: Mark pairs where one is accept, other is not:
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>  Accept = {C,D,E}, Non-accept = {A,B,F}
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>  Mark: (A,C),(A,D),(A,E),(B,C),(B,D),(B,E),(C,F),(D,F),(E,F)
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>        B  C  D  E  F
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>    A   _  ✗  ✗  ✗  _
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>    B      ✗  ✗  ✗  _
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>    C         _  _  ✗
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>    D            _  ✗
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>    E               ✗
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>Step 4: Iterate — mark (p,q) if δ(p,a) and δ(q,a) are marked:
+</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>
+</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>Check (A,B): δ(A,0)=B, δ(B,0)=A → (A,B) unmarked
+</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>             δ(A,1)=C, δ(B,1)=D → (C,D) unmarked → don&#39;t mark (A,B)
+</span><span id="__span-13-42"><a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>
+</span><span id="__span-13-43"><a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>Check (C,D): δ(C,0)=E, δ(D,0)=E → (E,E) same → ok
+</span><span id="__span-13-44"><a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>             δ(C,1)=F, δ(D,1)=F → (F,F) same → ok
+</span><span id="__span-13-45"><a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>             → (C,D) UNMARKED → C and D are equivalent!
+</span><span id="__span-13-46"><a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>
+</span><span id="__span-13-47"><a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>Check (C,E): δ(C,0)=E, δ(E,0)=E → same
+</span><span id="__span-13-48"><a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>             δ(C,1)=F, δ(E,1)=F → same
+</span><span id="__span-13-49"><a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a>             → (C,E) UNMARKED → C and E are equivalent!
+</span><span id="__span-13-50"><a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a>
+</span><span id="__span-13-51"><a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a>Check (D,E): Similarly → UNMARKED → D and E equivalent!
+</span><span id="__span-13-52"><a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a>
+</span><span id="__span-13-53"><a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a>Check (A,F): δ(A,0)=B, δ(F,0)=F → (B,F) unmarked?
+</span><span id="__span-13-54"><a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a>             δ(A,1)=C, δ(F,1)=F → (C,F) is MARKED → mark (A,F)!
+</span><span id="__span-13-55"><a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a>
+</span><span id="__span-13-56"><a id="__codelineno-13-56" name="__codelineno-13-56" href="#__codelineno-13-56"></a>Check (B,F): δ(B,0)=A, δ(F,0)=F → (A,F) now marked → mark (B,F)!
+</span><span id="__span-13-57"><a id="__codelineno-13-57" name="__codelineno-13-57" href="#__codelineno-13-57"></a>
+</span><span id="__span-13-58"><a id="__codelineno-13-58" name="__codelineno-13-58" href="#__codelineno-13-58"></a>Final unmarked pairs: (A,B), (C,D), (C,E), (D,E)
+</span><span id="__span-13-59"><a id="__codelineno-13-59" name="__codelineno-13-59" href="#__codelineno-13-59"></a>
+</span><span id="__span-13-60"><a id="__codelineno-13-60" name="__codelineno-13-60" href="#__codelineno-13-60"></a>Equivalence classes:
+</span><span id="__span-13-61"><a id="__codelineno-13-61" name="__codelineno-13-61" href="#__codelineno-13-61"></a>  {A, B} → merge into one state (call it AB)
+</span><span id="__span-13-62"><a id="__codelineno-13-62" name="__codelineno-13-62" href="#__codelineno-13-62"></a>  {C, D, E} → merge into one state (call it CDE)
+</span><span id="__span-13-63"><a id="__codelineno-13-63" name="__codelineno-13-63" href="#__codelineno-13-63"></a>  {F} → stays as F
+</span><span id="__span-13-64"><a id="__codelineno-13-64" name="__codelineno-13-64" href="#__codelineno-13-64"></a>
+</span><span id="__span-13-65"><a id="__codelineno-13-65" name="__codelineno-13-65" href="#__codelineno-13-65"></a>Minimized DFA:
+</span><span id="__span-13-66"><a id="__codelineno-13-66" name="__codelineno-13-66" href="#__codelineno-13-66"></a>State │  0   │  1
+</span><span id="__span-13-67"><a id="__codelineno-13-67" name="__codelineno-13-67" href="#__codelineno-13-67"></a>──────┼──────┼──────
+</span><span id="__span-13-68"><a id="__codelineno-13-68" name="__codelineno-13-68" href="#__codelineno-13-68"></a>→ AB  │  AB  │  CDE
+</span><span id="__span-13-69"><a id="__codelineno-13-69" name="__codelineno-13-69" href="#__codelineno-13-69"></a>*CDE  │  CDE │  F
+</span><span id="__span-13-70"><a id="__codelineno-13-70" name="__codelineno-13-70" href="#__codelineno-13-70"></a>  F   │  F   │  F
+</span><span id="__span-13-71"><a id="__codelineno-13-71" name="__codelineno-13-71" href="#__codelineno-13-71"></a>
+</span><span id="__span-13-72"><a id="__codelineno-13-72" name="__codelineno-13-72" href="#__codelineno-13-72"></a>Only 3 states! (down from 6)
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_2">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Forgetting to remove unreachable states first.
+🚫 <strong>Mistake 2:</strong> The base case marks (accept, non-accept) pairs — not just accept states.
+🚫 <strong>Mistake 3:</strong> Minimization applies to DFAs only — not directly to NFAs.
+🚫 <strong>Mistake 4:</strong> Two states are equivalent only if ALL their transitions lead to equivalent states.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_2">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_2" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Minimization: find and merge indistinguishable states</li>
+<li>Base case: mark (accept, non-accept) pairs</li>
+<li>Iterate: mark (p,q) if any transition leads to a marked pair</li>
+<li>Unmarked pairs → equivalent → merge</li>
+<li>Result: smallest DFA for the language</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_2">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Minimize the given DFA using the table-filling algorithm. Show all steps.
+<strong>Short note:</strong> What are distinguishable states? How are they identified?
+<strong>Conceptual:</strong> Why is DFA minimization useful?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="4-context-free-grammars-cfg">4. Context-Free Grammars (CFG)<a class="headerlink" href="#4-context-free-grammars-cfg" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_3">💡 Intuition First<a class="headerlink" href="#-intuition-first_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>CFG</strong> is a set of rules for generating strings. Like grammar rules in English: "A sentence = noun phrase + verb phrase." You start with a symbol and keep replacing it using rules until you get a string of terminals.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> A recipe book — start with "Meal", expand to "Main + Side + Dessert", keep expanding until you have actual ingredients (terminals).</p>
+<p><strong>Why it matters:</strong> CFGs describe programming language syntax. Parsers use CFGs to check if code is syntactically valid.</p>
+<hr />
+<h2 id="-formal-definition">📐 Formal Definition<a class="headerlink" href="#-formal-definition" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>A CFG is a 4-tuple: G = (V, T, P, S)
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>V = set of variables (non-terminals)    e.g., {S, A, B}
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>T = set of terminals                    e.g., {a, b, (, )}
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>P = set of production rules             e.g., S → aSb | ε
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>S = start symbol                        e.g., S
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>Production rule format: A → α
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  where A ∈ V and α ∈ (V ∪ T)*
+</span></code></pre></div>
+<hr />
+<h2 id="-derivations">🔄 Derivations<a class="headerlink" href="#-derivations" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>derivation</strong> is the process of applying production rules to generate a string.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Grammar: S → aSb | ε
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Derive &quot;aabb&quot;:
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Leftmost derivation (always expand leftmost non-terminal):
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  S ⟹ aSb ⟹ aaSbb ⟹ aaεbb ⟹ aabb ✅
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>Rightmost derivation (always expand rightmost non-terminal):
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  S ⟹ aSb ⟹ aaSbb ⟹ aaεbb ⟹ aabb ✅
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>  (same result here, but order of expansion differs)
+</span></code></pre></div>
+<h3 id="types-of-derivation">Types of Derivation<a class="headerlink" href="#types-of-derivation" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Rule</th>
+<th>Used In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Leftmost</strong></td>
+<td>Expand leftmost non-terminal first</td>
+<td>Top-down parsing</td>
+</tr>
+<tr>
+<td><strong>Rightmost</strong></td>
+<td>Expand rightmost non-terminal first</td>
+<td>Bottom-up parsing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-cfg-examples">📐 CFG Examples<a class="headerlink" href="#-cfg-examples" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>1. Balanced parentheses:
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>   S → (S) | SS | ε
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>   Derive &quot;(())&quot;:
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>   S ⟹ (S) ⟹ ((S)) ⟹ (()) ✅
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2. Arithmetic expressions:
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>   E → E + E | E * E | (E) | id
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>3. Simple programming language:
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>   stmt → if expr then stmt
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>         | if expr then stmt else stmt
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>         | while expr do stmt
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>         | id := expr
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>4. aⁿbⁿ (equal a&#39;s and b&#39;s — NOT regular!):
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>   S → aSb | ε
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>   Generates: ε, ab, aabb, aaabbb, ...
+</span></code></pre></div>
+<hr />
+<h2 id="-ambiguous-grammars">🌳 Ambiguous Grammars<a class="headerlink" href="#-ambiguous-grammars" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A grammar is <strong>ambiguous</strong> if a string has more than one parse tree (or more than one leftmost derivation).</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Grammar: E → E + E | E * E | id
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>String: id + id * id
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Parse tree 1 (+ first):        Parse tree 2 (* first):
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>       E                               E
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>      /|\                             /|\
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>     E + E                           E * E
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>     |   |\ \                       /|   |
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>    id   E * E                     E + E  id
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>         |   |                     |   |
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>        id  id                    id  id
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>Two different trees → AMBIGUOUS!
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>Fix: Use precedence rules in grammar:
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>  E → E + T | T
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>  T → T * F | F
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>  F → (E) | id
+</span></code></pre></div>
+<hr />
+<h2 id="-regular-grammar-vs-cfg-vs-csg">⚖️ Regular Grammar vs CFG vs CSG<a class="headerlink" href="#-regular-grammar-vs-cfg-vs-csg" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Grammar</th>
+<th>Automaton</th>
+<th>Example Language</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regular</td>
+<td>Type 3</td>
+<td>DFA/NFA</td>
+<td>a*b, identifiers</td>
+</tr>
+<tr>
+<td>Context-Free</td>
+<td>Type 2</td>
+<td>PDA</td>
+<td>aⁿbⁿ, balanced parens</td>
+</tr>
+<tr>
+<td>Context-Sensitive</td>
+<td>Type 1</td>
+<td>LBA</td>
+<td>aⁿbⁿcⁿ</td>
+</tr>
+<tr>
+<td>Unrestricted</td>
+<td>Type 0</td>
+<td>Turing Machine</td>
+<td>Any computable</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Chomsky Hierarchy:</strong> Type 3 ⊂ Type 2 ⊂ Type 1 ⊂ Type 0</p>
+</blockquote>
+<hr />
+<h2 id="-common-mistakes_3">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> <code>aⁿbⁿ</code> is NOT regular — it requires a stack (CFG/PDA).
+🚫 <strong>Mistake 2:</strong> Ambiguity is a property of the grammar, not the language. A language can have multiple grammars, some ambiguous, some not.
+🚫 <strong>Mistake 3:</strong> ε (epsilon) is the empty string — it's a valid terminal in derivations.
+🚫 <strong>Mistake 4:</strong> Leftmost and rightmost derivations produce the same string but different derivation sequences.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_3">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_3" title="Anchor link">&para;</a></h2>
+<ul>
+<li>CFG: variables, terminals, productions, start symbol</li>
+<li>Derivation: apply rules to generate strings</li>
+<li>Leftmost: expand leftmost non-terminal | Rightmost: expand rightmost</li>
+<li>Ambiguous: one string → multiple parse trees</li>
+<li>CFG recognizes context-free languages (more powerful than regular)</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_3">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Write a CFG for the language {aⁿbⁿ | n ≥ 1}. Show derivation of "aaabbb".
+<strong>5-mark:</strong> Show that the grammar E → E+E | E<em>E | id is ambiguous for "id+id</em>id".
+<strong>Short note:</strong> What is the Chomsky hierarchy? Where do CFGs fit?
+<strong>Derive:</strong> Using the given grammar, show leftmost and rightmost derivation of a given string.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="5-parse-trees--syntax-trees">5. Parse Trees &amp; Syntax Trees<a class="headerlink" href="#5-parse-trees--syntax-trees" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_4">💡 Intuition First<a class="headerlink" href="#-intuition-first_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>parse tree</strong> is the visual proof that a string belongs to a grammar. It shows exactly which rules were applied and in what order. A <strong>syntax tree</strong> (abstract syntax tree / AST) strips away the grammar details and keeps only the semantic structure.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Parse tree = full sentence diagram in English class (every word labeled). AST = the meaning extracted (subject, verb, object).</p>
+<hr />
+<h2 id="-parse-tree">🌳 Parse Tree<a class="headerlink" href="#-parse-tree" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A parse tree for string w in grammar G is a tree where:
+- Root = start symbol S
+- Internal nodes = non-terminals
+- Leaves = terminals (read left to right = w)
+- Each internal node's children = right side of a production rule</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Grammar:
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>  E → E + T | T
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>  T → T * F | F
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>  F → (E) | id
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>Parse tree for &quot;id + id * id&quot;:
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>              E
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>             /|\
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>            E + T
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>            |   |\
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>            T   T * F
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>            |   |   |
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>            F   F   id
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>            |   |
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>            id  id
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>Reading leaves left to right: id + id * id ✅
+</span></code></pre></div>
+<hr />
+<h2 id="-abstract-syntax-tree-ast">🌲 Abstract Syntax Tree (AST)<a class="headerlink" href="#-abstract-syntax-tree-ast" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>AST removes grammar artifacts (like intermediate non-terminals) and keeps only the essential structure.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Parse tree for &quot;id + id * id&quot;:     AST for &quot;id + id * id&quot;:
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>        E                                  +
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>       /|\                                / \
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>      E + T                             id   *
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>      |   |\                               / \
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>      T   T * F                          id   id
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>      |   |   |
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>      F   F   id
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>      |   |
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>      id  id
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>AST is cleaner — shows operator hierarchy directly.
+</span></code></pre></div>
+<hr />
+<h2 id="-parse-tree-vs-ast">⚖️ Parse Tree vs AST<a class="headerlink" href="#-parse-tree-vs-ast" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Parse Tree</th>
+<th>AST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contains</td>
+<td>All grammar symbols</td>
+<td>Only semantic content</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Larger</td>
+<td>Smaller</td>
+</tr>
+<tr>
+<td>Grammar rules</td>
+<td>Visible</td>
+<td>Hidden</td>
+</tr>
+<tr>
+<td>Use</td>
+<td>Parsing verification</td>
+<td>Code generation, analysis</td>
+</tr>
+<tr>
+<td>Intermediate nodes</td>
+<td>Non-terminals</td>
+<td>Operators/constructs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-worked-example--full-parse-tree">✏️ Worked Example — Full Parse Tree<a class="headerlink" href="#-worked-example--full-parse-tree" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Grammar:
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>  S → if E then S | if E then S else S | id := E
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  E → id | num | E + E
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Input: &quot;if id then id := id + num&quot;
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>Parse tree:
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>              S
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>              |
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>    ┌─────────┼──────────┐
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>    if        E         then  S
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>              |               |
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>              id         ┌────┼────┐
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>                         id  :=    E
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>                                  /|\
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>                                 E + E
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>                                 |   |
+</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>                                 id  num
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_4">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Parse tree leaves must spell out the input string left to right.
+🚫 <strong>Mistake 2:</strong> AST is NOT the same as parse tree — AST is derived from parse tree by pruning.
+🚫 <strong>Mistake 3:</strong> An ambiguous grammar produces multiple parse trees for the same string.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_4">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_4" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Parse tree: full derivation tree, root=S, leaves=terminals</li>
+<li>AST: simplified tree, only semantic structure</li>
+<li>Ambiguous grammar → multiple parse trees for same string</li>
+<li>Parse tree used in parsing | AST used in semantic analysis and code gen</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_4">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Draw the parse tree for "a + b * c" using the given grammar. Also draw the AST.
+<strong>Short note:</strong> What is the difference between a parse tree and an abstract syntax tree?
+<strong>Diagram:</strong> Show two different parse trees for "id + id * id" to prove the grammar is ambiguous.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="6-first-and-follow-sets">6. FIRST and FOLLOW Sets<a class="headerlink" href="#6-first-and-follow-sets" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_5">💡 Intuition First<a class="headerlink" href="#-intuition-first_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>FIRST(A)</strong> answers: "What terminal can appear as the FIRST symbol when A is expanded?"
+<strong>FOLLOW(A)</strong> answers: "What terminal can appear AFTER A in any sentential form?"</p>
+</blockquote>
+<p>These sets are used to build <strong>predictive parsers</strong> (LL(1)) — the parser looks at the next input token and decides which production to use.</p>
+<p><strong>Real-world analogy:</strong> FIRST = "What's the first ingredient in this recipe?" FOLLOW = "What dish comes after this one in the meal?"</p>
+<hr />
+<h2 id="-first-set-rules">📐 FIRST Set Rules<a class="headerlink" href="#-first-set-rules" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>FIRST(X) for terminal X:
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>  FIRST(X) = {X}
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>FIRST(X) for non-terminal X:
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>  For each production X → Y₁Y₂...Yₖ:
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    Add FIRST(Y₁) - {ε} to FIRST(X)
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    If ε ∈ FIRST(Y₁): add FIRST(Y₂) - {ε}
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>    If ε ∈ FIRST(Y₁) and ε ∈ FIRST(Y₂): add FIRST(Y₃) - {ε}
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    ...
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    If ε ∈ FIRST(Yᵢ) for all i: add ε to FIRST(X)
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>FIRST(ε) = {ε}
+</span></code></pre></div>
+<hr />
+<h2 id="-follow-set-rules">📐 FOLLOW Set Rules<a class="headerlink" href="#-follow-set-rules" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>FOLLOW(S) = {$}  ($ = end of input, S = start symbol)
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>For each production A → αBβ:
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>  Add FIRST(β) - {ε} to FOLLOW(B)
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>  If ε ∈ FIRST(β): add FOLLOW(A) to FOLLOW(B)
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>For each production A → αB:
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>  Add FOLLOW(A) to FOLLOW(B)
+</span></code></pre></div>
+<hr />
+<h2 id="-worked-example_1">✏️ Worked Example<a class="headerlink" href="#-worked-example_1" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Grammar:
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>  E  → T E&#39;
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>  E&#39; → + T E&#39; | ε
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>  T  → F T&#39;
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>  T&#39; → * F T&#39; | ε
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>  F  → ( E ) | id
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>Step 1: Compute FIRST sets:
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>FIRST(F):
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>  F → (E): FIRST = {(}
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>  F → id:  FIRST = {id}
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>  FIRST(F) = {(, id}
+</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>
+</span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>FIRST(T&#39;):
+</span><span id="__span-23-16"><a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>  T&#39; → *FT&#39;: FIRST = {*}
+</span><span id="__span-23-17"><a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>  T&#39; → ε:    FIRST = {ε}
+</span><span id="__span-23-18"><a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>  FIRST(T&#39;) = {*, ε}
+</span><span id="__span-23-19"><a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a>
+</span><span id="__span-23-20"><a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>FIRST(T):
+</span><span id="__span-23-21"><a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a>  T → FT&#39;: FIRST(F) = {(, id}
+</span><span id="__span-23-22"><a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a>           ε ∉ FIRST(F), so stop
+</span><span id="__span-23-23"><a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a>  FIRST(T) = {(, id}
+</span><span id="__span-23-24"><a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a>
+</span><span id="__span-23-25"><a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a>FIRST(E&#39;):
+</span><span id="__span-23-26"><a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a>  E&#39; → +TE&#39;: FIRST = {+}
+</span><span id="__span-23-27"><a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a>  E&#39; → ε:    FIRST = {ε}
+</span><span id="__span-23-28"><a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a>  FIRST(E&#39;) = {+, ε}
+</span><span id="__span-23-29"><a id="__codelineno-23-29" name="__codelineno-23-29" href="#__codelineno-23-29"></a>
+</span><span id="__span-23-30"><a id="__codelineno-23-30" name="__codelineno-23-30" href="#__codelineno-23-30"></a>FIRST(E):
+</span><span id="__span-23-31"><a id="__codelineno-23-31" name="__codelineno-23-31" href="#__codelineno-23-31"></a>  E → TE&#39;: FIRST(T) = {(, id}
+</span><span id="__span-23-32"><a id="__codelineno-23-32" name="__codelineno-23-32" href="#__codelineno-23-32"></a>           ε ∉ FIRST(T), so stop
+</span><span id="__span-23-33"><a id="__codelineno-23-33" name="__codelineno-23-33" href="#__codelineno-23-33"></a>  FIRST(E) = {(, id}
+</span><span id="__span-23-34"><a id="__codelineno-23-34" name="__codelineno-23-34" href="#__codelineno-23-34"></a>
+</span><span id="__span-23-35"><a id="__codelineno-23-35" name="__codelineno-23-35" href="#__codelineno-23-35"></a>Step 2: Compute FOLLOW sets:
+</span><span id="__span-23-36"><a id="__codelineno-23-36" name="__codelineno-23-36" href="#__codelineno-23-36"></a>
+</span><span id="__span-23-37"><a id="__codelineno-23-37" name="__codelineno-23-37" href="#__codelineno-23-37"></a>FOLLOW(E):
+</span><span id="__span-23-38"><a id="__codelineno-23-38" name="__codelineno-23-38" href="#__codelineno-23-38"></a>  E is start symbol → FOLLOW(E) = {$}
+</span><span id="__span-23-39"><a id="__codelineno-23-39" name="__codelineno-23-39" href="#__codelineno-23-39"></a>  F → (E): β = &#39;)&#39; → add FIRST(&#39;)&#39;) = {&#39;)&#39;} to FOLLOW(E)
+</span><span id="__span-23-40"><a id="__codelineno-23-40" name="__codelineno-23-40" href="#__codelineno-23-40"></a>  FOLLOW(E) = {$, )}
+</span><span id="__span-23-41"><a id="__codelineno-23-41" name="__codelineno-23-41" href="#__codelineno-23-41"></a>
+</span><span id="__span-23-42"><a id="__codelineno-23-42" name="__codelineno-23-42" href="#__codelineno-23-42"></a>FOLLOW(E&#39;):
+</span><span id="__span-23-43"><a id="__codelineno-23-43" name="__codelineno-23-43" href="#__codelineno-23-43"></a>  E → TE&#39;: E&#39; is at end → add FOLLOW(E) = {$, )} to FOLLOW(E&#39;)
+</span><span id="__span-23-44"><a id="__codelineno-23-44" name="__codelineno-23-44" href="#__codelineno-23-44"></a>  FOLLOW(E&#39;) = {$, )}
+</span><span id="__span-23-45"><a id="__codelineno-23-45" name="__codelineno-23-45" href="#__codelineno-23-45"></a>
+</span><span id="__span-23-46"><a id="__codelineno-23-46" name="__codelineno-23-46" href="#__codelineno-23-46"></a>FOLLOW(T):
+</span><span id="__span-23-47"><a id="__codelineno-23-47" name="__codelineno-23-47" href="#__codelineno-23-47"></a>  E → TE&#39;: β = E&#39; → add FIRST(E&#39;)-{ε} = {+} to FOLLOW(T)
+</span><span id="__span-23-48"><a id="__codelineno-23-48" name="__codelineno-23-48" href="#__codelineno-23-48"></a>           ε ∈ FIRST(E&#39;) → add FOLLOW(E) = {$, )} to FOLLOW(T)
+</span><span id="__span-23-49"><a id="__codelineno-23-49" name="__codelineno-23-49" href="#__codelineno-23-49"></a>  FOLLOW(T) = {+, $, )}
+</span><span id="__span-23-50"><a id="__codelineno-23-50" name="__codelineno-23-50" href="#__codelineno-23-50"></a>
+</span><span id="__span-23-51"><a id="__codelineno-23-51" name="__codelineno-23-51" href="#__codelineno-23-51"></a>FOLLOW(T&#39;):
+</span><span id="__span-23-52"><a id="__codelineno-23-52" name="__codelineno-23-52" href="#__codelineno-23-52"></a>  T → FT&#39;: T&#39; at end → add FOLLOW(T) = {+, $, )} to FOLLOW(T&#39;)
+</span><span id="__span-23-53"><a id="__codelineno-23-53" name="__codelineno-23-53" href="#__codelineno-23-53"></a>  FOLLOW(T&#39;) = {+, $, )}
+</span><span id="__span-23-54"><a id="__codelineno-23-54" name="__codelineno-23-54" href="#__codelineno-23-54"></a>
+</span><span id="__span-23-55"><a id="__codelineno-23-55" name="__codelineno-23-55" href="#__codelineno-23-55"></a>FOLLOW(F):
+</span><span id="__span-23-56"><a id="__codelineno-23-56" name="__codelineno-23-56" href="#__codelineno-23-56"></a>  T → FT&#39;: β = T&#39; → add FIRST(T&#39;)-{ε} = {*} to FOLLOW(F)
+</span><span id="__span-23-57"><a id="__codelineno-23-57" name="__codelineno-23-57" href="#__codelineno-23-57"></a>           ε ∈ FIRST(T&#39;) → add FOLLOW(T) = {+, $, )} to FOLLOW(F)
+</span><span id="__span-23-58"><a id="__codelineno-23-58" name="__codelineno-23-58" href="#__codelineno-23-58"></a>  FOLLOW(F) = {*, +, $, )}
+</span><span id="__span-23-59"><a id="__codelineno-23-59" name="__codelineno-23-59" href="#__codelineno-23-59"></a>
+</span><span id="__span-23-60"><a id="__codelineno-23-60" name="__codelineno-23-60" href="#__codelineno-23-60"></a>Summary:
+</span><span id="__span-23-61"><a id="__codelineno-23-61" name="__codelineno-23-61" href="#__codelineno-23-61"></a>  FIRST(E)  = {(, id}
+</span><span id="__span-23-62"><a id="__codelineno-23-62" name="__codelineno-23-62" href="#__codelineno-23-62"></a>  FIRST(E&#39;) = {+, ε}
+</span><span id="__span-23-63"><a id="__codelineno-23-63" name="__codelineno-23-63" href="#__codelineno-23-63"></a>  FIRST(T)  = {(, id}
+</span><span id="__span-23-64"><a id="__codelineno-23-64" name="__codelineno-23-64" href="#__codelineno-23-64"></a>  FIRST(T&#39;) = {*, ε}
+</span><span id="__span-23-65"><a id="__codelineno-23-65" name="__codelineno-23-65" href="#__codelineno-23-65"></a>  FIRST(F)  = {(, id}
+</span><span id="__span-23-66"><a id="__codelineno-23-66" name="__codelineno-23-66" href="#__codelineno-23-66"></a>
+</span><span id="__span-23-67"><a id="__codelineno-23-67" name="__codelineno-23-67" href="#__codelineno-23-67"></a>  FOLLOW(E)  = {$, )}
+</span><span id="__span-23-68"><a id="__codelineno-23-68" name="__codelineno-23-68" href="#__codelineno-23-68"></a>  FOLLOW(E&#39;) = {$, )}
+</span><span id="__span-23-69"><a id="__codelineno-23-69" name="__codelineno-23-69" href="#__codelineno-23-69"></a>  FOLLOW(T)  = {+, $, )}
+</span><span id="__span-23-70"><a id="__codelineno-23-70" name="__codelineno-23-70" href="#__codelineno-23-70"></a>  FOLLOW(T&#39;) = {+, $, )}
+</span><span id="__span-23-71"><a id="__codelineno-23-71" name="__codelineno-23-71" href="#__codelineno-23-71"></a>  FOLLOW(F)  = {*, +, $, )}
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_5">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> FIRST sets contain terminals only (and possibly ε). FOLLOW sets contain terminals and $ only — never ε.
+🚫 <strong>Mistake 2:</strong> FOLLOW of start symbol always includes $ (end marker).
+🚫 <strong>Mistake 3:</strong> When computing FOLLOW(B) from A → αBβ, if ε ∈ FIRST(β), you MUST add FOLLOW(A).
+🚫 <strong>Mistake 4:</strong> FIRST of a string αβ: if ε ∈ FIRST(α), include FIRST(β) too.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_1">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 Always compute FIRST before FOLLOW — FOLLOW depends on FIRST.
+💡 FOLLOW never contains ε — if you're adding ε, add FOLLOW of the enclosing non-terminal instead.
+💡 These sets are used to build the LL(1) parsing table — know the connection.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_5">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_5" title="Anchor link">&para;</a></h2>
+<ul>
+<li>FIRST(A): terminals that can start strings derived from A</li>
+<li>FOLLOW(A): terminals that can follow A in any derivation</li>
+<li>FIRST rules: look at right side of productions</li>
+<li>FOLLOW rules: look at where A appears on right side of productions</li>
+<li>FOLLOW(start) always contains $</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_5">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Compute FIRST and FOLLOW sets for all non-terminals in the given grammar.
+<strong>Short note:</strong> What are FIRST and FOLLOW sets? Why are they needed?
+<strong>Apply:</strong> Use FIRST/FOLLOW to construct the LL(1) parsing table.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="7-left-recursion--left-factoring">7. Left Recursion &amp; Left Factoring<a class="headerlink" href="#7-left-recursion--left-factoring" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_6">💡 Intuition First<a class="headerlink" href="#-intuition-first_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Left recursion</strong> is a grammar rule that calls itself on the left — like a function that calls itself before doing anything else. Top-down parsers loop forever on this.</p>
+<p><strong>Left factoring</strong> is needed when two productions start with the same symbol — the parser can't decide which rule to use without looking ahead.</p>
+</blockquote>
+<hr />
+<h2 id="-left-recursion">🔄 Left Recursion<a class="headerlink" href="#-left-recursion" title="Anchor link">&para;</a></h2>
+<h3 id="direct-left-recursion">Direct Left Recursion<a class="headerlink" href="#direct-left-recursion" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Problem: A → Aα | β
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>  Parser tries to expand A → Aα → AAα → AAAα → ... (infinite loop!)
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Example:
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>  E → E + T | T   ← left recursive!
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>Fix — Eliminate left recursion:
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>  A → Aα | β
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>  becomes:
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>  A  → β A&#39;
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>  A&#39; → α A&#39; | ε
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>Applied to E → E + T | T:
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>  E  → T E&#39;
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>  E&#39; → + T E&#39; | ε
+</span></code></pre></div>
+<h3 id="indirect-left-recursion">Indirect Left Recursion<a class="headerlink" href="#indirect-left-recursion" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Problem:
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>  A → Bα | ...
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>  B → Aβ | ...
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>  (A → Bα → Aβα → ... infinite!)
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>Fix: Substitute to make direct, then eliminate.
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>  Step 1: Substitute B&#39;s production into A:
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>    A → Aβα | ...
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>  Step 2: Eliminate direct left recursion.
+</span></code></pre></div>
+<h3 id="general-algorithm">General Algorithm<a class="headerlink" href="#general-algorithm" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>For each non-terminal Aᵢ (in order i = 1 to n):
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>  1. Substitute all Aⱼ (j &lt; i) in Aᵢ&#39;s productions
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>  2. Eliminate direct left recursion in Aᵢ
+</span></code></pre></div>
+<hr />
+<h2 id="-left-factoring">🔀 Left Factoring<a class="headerlink" href="#-left-factoring" title="Anchor link">&para;</a></h2>
+<h3 id="problem">Problem<a class="headerlink" href="#problem" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Grammar:
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>  A → αβ₁ | αβ₂
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>Parser sees &#39;α&#39; but can&#39;t decide: use αβ₁ or αβ₂?
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>Need to look further ahead (not LL(1) compatible).
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>Example:
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>  stmt → if expr then stmt else stmt
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>        | if expr then stmt
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>  Both start with &quot;if expr then stmt&quot; — ambiguous choice!
+</span></code></pre></div>
+<h3 id="fix--left-factoring">Fix — Left Factoring<a class="headerlink" href="#fix--left-factoring" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>A → αβ₁ | αβ₂
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>becomes:
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>A  → α A&#39;
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>A&#39; → β₁ | β₂
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>Example:
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>  stmt → if expr then stmt else stmt
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>        | if expr then stmt
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>After left factoring:
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>  stmt  → if expr then stmt stmt&#39;
+</span><span id="__span-28-12"><a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>  stmt&#39; → else stmt | ε
+</span></code></pre></div>
+<h3 id="another-example">Another Example<a class="headerlink" href="#another-example" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Before:
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>  A → abcD | abcE | xyz
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>After (factor out &quot;abc&quot;):
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>  A  → abc A&#39; | xyz
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>  A&#39; → D | E
+</span></code></pre></div>
+<hr />
+<h2 id="-full-worked-example">✏️ Full Worked Example<a class="headerlink" href="#-full-worked-example" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Grammar:
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>  S → iEtS | iEtSeS | a
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>  E → b
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>Step 1: Left factor S:
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>  S → iEtS S&#39; | a
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>  S&#39; → eS | ε
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>Step 2: Check for left recursion → none.
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>Final grammar:
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>  S  → iEtS S&#39; | a
+</span><span id="__span-30-13"><a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>  S&#39; → eS | ε
+</span><span id="__span-30-14"><a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>  E  → b
+</span><span id="__span-30-15"><a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>
+</span><span id="__span-30-16"><a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>This is the classic &quot;dangling else&quot; problem!
+</span></code></pre></div>
+<hr />
+<h2 id="-left-recursion-vs-left-factoring">⚖️ Left Recursion vs Left Factoring<a class="headerlink" href="#-left-recursion-vs-left-factoring" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Left Recursion</strong></td>
+<td>A → Aα causes infinite loop in top-down parsing</td>
+<td>Replace with right recursion using A'</td>
+</tr>
+<tr>
+<td><strong>Left Factoring</strong></td>
+<td>A → αβ₁ | αβ₂ causes ambiguity in choice</td>
+<td>Factor out common prefix α</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_6">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> After eliminating left recursion, the new A' production must end with <code>A' | ε</code>.
+🚫 <strong>Mistake 2:</strong> Left factoring doesn't eliminate ambiguity — it just makes the grammar LL(1) parseable.
+🚫 <strong>Mistake 3:</strong> Not all left-recursive grammars can be made LL(1) — some are inherently ambiguous.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_6">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_6" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Left recursion: A → Aα | β → fix: A → βA', A' → αA' | ε</li>
+<li>Left factoring: A → αβ₁ | αβ₂ → fix: A → αA', A' → β₁ | β₂</li>
+<li>Both transformations needed for LL(1) parsing</li>
+<li>Indirect left recursion: substitute then eliminate</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_6">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Eliminate left recursion from: <code>E → E + T | E - T | T</code> and <code>T → T * F | F</code>.
+<strong>5-mark:</strong> Apply left factoring to: <code>A → aAB | aB | b</code>.
+<strong>Short note:</strong> Why must left recursion be eliminated for top-down parsing?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="8-phases-of-a-compiler">8. Phases of a Compiler<a class="headerlink" href="#8-phases-of-a-compiler" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_7">💡 Intuition First<a class="headerlink" href="#-intuition-first_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A compiler is like a <strong>translation pipeline</strong> — your source code (English) goes through multiple stages before becoming machine code (binary). Each stage transforms the representation, checking and optimizing along the way.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Translating a novel from Bengali to English — first understand the words (lexical), then grammar (syntax), then meaning (semantic), then write the translation (code generation).</p>
+<hr />
+<h2 id="-compiler-phases--full-pipeline">🔄 Compiler Phases — Full Pipeline<a class="headerlink" href="#-compiler-phases--full-pipeline" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Source Code
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    │
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>    ▼
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>┌─────────────────────────────────────────────────────┐
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>│  Phase 1: LEXICAL ANALYSIS (Scanner)                │
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>│  Input:  Source code characters                     │
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>│  Output: Stream of tokens                           │
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>│  Tool:   DFA / Regular expressions                  │
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>│  Errors: Illegal characters                         │
+</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>└─────────────────────────────────────────────────────┘
+</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>    │  Token stream
+</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>    ▼
+</span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>┌─────────────────────────────────────────────────────┐
+</span><span id="__span-31-14"><a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a>│  Phase 2: SYNTAX ANALYSIS (Parser)                  │
+</span><span id="__span-31-15"><a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a>│  Input:  Token stream                               │
+</span><span id="__span-31-16"><a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a>│  Output: Parse tree / AST                           │
+</span><span id="__span-31-17"><a id="__codelineno-31-17" name="__codelineno-31-17" href="#__codelineno-31-17"></a>│  Tool:   CFG / LL(1), LR parsers                   │
+</span><span id="__span-31-18"><a id="__codelineno-31-18" name="__codelineno-31-18" href="#__codelineno-31-18"></a>│  Errors: Syntax errors (missing ;, unmatched {})    │
+</span><span id="__span-31-19"><a id="__codelineno-31-19" name="__codelineno-31-19" href="#__codelineno-31-19"></a>└─────────────────────────────────────────────────────┘
+</span><span id="__span-31-20"><a id="__codelineno-31-20" name="__codelineno-31-20" href="#__codelineno-31-20"></a>    │  Parse tree / AST
+</span><span id="__span-31-21"><a id="__codelineno-31-21" name="__codelineno-31-21" href="#__codelineno-31-21"></a>    ▼
+</span><span id="__span-31-22"><a id="__codelineno-31-22" name="__codelineno-31-22" href="#__codelineno-31-22"></a>┌─────────────────────────────────────────────────────┐
+</span><span id="__span-31-23"><a id="__codelineno-31-23" name="__codelineno-31-23" href="#__codelineno-31-23"></a>│  Phase 3: SEMANTIC ANALYSIS                         │
+</span><span id="__span-31-24"><a id="__codelineno-31-24" name="__codelineno-31-24" href="#__codelineno-31-24"></a>│  Input:  AST                                        │
+</span><span id="__span-31-25"><a id="__codelineno-31-25" name="__codelineno-31-25" href="#__codelineno-31-25"></a>│  Output: Annotated AST                              │
+</span><span id="__span-31-26"><a id="__codelineno-31-26" name="__codelineno-31-26" href="#__codelineno-31-26"></a>│  Tool:   Symbol table, type checking                │
+</span><span id="__span-31-27"><a id="__codelineno-31-27" name="__codelineno-31-27" href="#__codelineno-31-27"></a>│  Errors: Type mismatch, undeclared variables        │
+</span><span id="__span-31-28"><a id="__codelineno-31-28" name="__codelineno-31-28" href="#__codelineno-31-28"></a>└─────────────────────────────────────────────────────┘
+</span><span id="__span-31-29"><a id="__codelineno-31-29" name="__codelineno-31-29" href="#__codelineno-31-29"></a>    │  Annotated AST
+</span><span id="__span-31-30"><a id="__codelineno-31-30" name="__codelineno-31-30" href="#__codelineno-31-30"></a>    ▼
+</span><span id="__span-31-31"><a id="__codelineno-31-31" name="__codelineno-31-31" href="#__codelineno-31-31"></a>┌─────────────────────────────────────────────────────┐
+</span><span id="__span-31-32"><a id="__codelineno-31-32" name="__codelineno-31-32" href="#__codelineno-31-32"></a>│  Phase 4: INTERMEDIATE CODE GENERATION              │
+</span><span id="__span-31-33"><a id="__codelineno-31-33" name="__codelineno-31-33" href="#__codelineno-31-33"></a>│  Input:  Annotated AST                              │
+</span><span id="__span-31-34"><a id="__codelineno-31-34" name="__codelineno-31-34" href="#__codelineno-31-34"></a>│  Output: Three-address code / TAC                   │
+</span><span id="__span-31-35"><a id="__codelineno-31-35" name="__codelineno-31-35" href="#__codelineno-31-35"></a>│  Purpose: Machine-independent representation        │
+</span><span id="__span-31-36"><a id="__codelineno-31-36" name="__codelineno-31-36" href="#__codelineno-31-36"></a>└─────────────────────────────────────────────────────┘
+</span><span id="__span-31-37"><a id="__codelineno-31-37" name="__codelineno-31-37" href="#__codelineno-31-37"></a>    │  Intermediate code
+</span><span id="__span-31-38"><a id="__codelineno-31-38" name="__codelineno-31-38" href="#__codelineno-31-38"></a>    ▼
+</span><span id="__span-31-39"><a id="__codelineno-31-39" name="__codelineno-31-39" href="#__codelineno-31-39"></a>┌─────────────────────────────────────────────────────┐
+</span><span id="__span-31-40"><a id="__codelineno-31-40" name="__codelineno-31-40" href="#__codelineno-31-40"></a>│  Phase 5: CODE OPTIMIZATION                         │
+</span><span id="__span-31-41"><a id="__codelineno-31-41" name="__codelineno-31-41" href="#__codelineno-31-41"></a>│  Input:  Intermediate code                          │
+</span><span id="__span-31-42"><a id="__codelineno-31-42" name="__codelineno-31-42" href="#__codelineno-31-42"></a>│  Output: Optimized intermediate code                │
+</span><span id="__span-31-43"><a id="__codelineno-31-43" name="__codelineno-31-43" href="#__codelineno-31-43"></a>│  Techniques: Dead code elimination, loop unrolling  │
+</span><span id="__span-31-44"><a id="__codelineno-31-44" name="__codelineno-31-44" href="#__codelineno-31-44"></a>└─────────────────────────────────────────────────────┘
+</span><span id="__span-31-45"><a id="__codelineno-31-45" name="__codelineno-31-45" href="#__codelineno-31-45"></a>    │  Optimized code
+</span><span id="__span-31-46"><a id="__codelineno-31-46" name="__codelineno-31-46" href="#__codelineno-31-46"></a>    ▼
+</span><span id="__span-31-47"><a id="__codelineno-31-47" name="__codelineno-31-47" href="#__codelineno-31-47"></a>┌─────────────────────────────────────────────────────┐
+</span><span id="__span-31-48"><a id="__codelineno-31-48" name="__codelineno-31-48" href="#__codelineno-31-48"></a>│  Phase 6: CODE GENERATION                           │
+</span><span id="__span-31-49"><a id="__codelineno-31-49" name="__codelineno-31-49" href="#__codelineno-31-49"></a>│  Input:  Optimized intermediate code                │
+</span><span id="__span-31-50"><a id="__codelineno-31-50" name="__codelineno-31-50" href="#__codelineno-31-50"></a>│  Output: Target machine code / assembly             │
+</span><span id="__span-31-51"><a id="__codelineno-31-51" name="__codelineno-31-51" href="#__codelineno-31-51"></a>│  Tasks:  Register allocation, instruction selection │
+</span><span id="__span-31-52"><a id="__codelineno-31-52" name="__codelineno-31-52" href="#__codelineno-31-52"></a>└─────────────────────────────────────────────────────┘
+</span><span id="__span-31-53"><a id="__codelineno-31-53" name="__codelineno-31-53" href="#__codelineno-31-53"></a>    │
+</span><span id="__span-31-54"><a id="__codelineno-31-54" name="__codelineno-31-54" href="#__codelineno-31-54"></a>    ▼
+</span><span id="__span-31-55"><a id="__codelineno-31-55" name="__codelineno-31-55" href="#__codelineno-31-55"></a>Target Code (Assembly / Machine Code)
+</span></code></pre></div>
+<h3 id="supporting-components-run-throughout">Supporting Components (run throughout)<a class="headerlink" href="#supporting-components-run-throughout" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>┌──────────────────┐    ┌──────────────────────┐
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>│   Symbol Table   │    │   Error Handler      │
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>│                  │    │                      │
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>│ Stores: names,   │    │ Detects, reports,    │
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>│ types, scope,    │    │ and recovers from    │
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>│ memory location  │    │ errors at each phase │
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>└──────────────────┘    └──────────────────────┘
+</span></code></pre></div>
+<hr />
+<h2 id="-phase-summary-table">📊 Phase Summary Table<a class="headerlink" href="#-phase-summary-table" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Input</th>
+<th>Output</th>
+<th>Errors Caught</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lexical Analysis</td>
+<td>Characters</td>
+<td>Tokens</td>
+<td>Illegal chars, invalid tokens</td>
+</tr>
+<tr>
+<td>Syntax Analysis</td>
+<td>Tokens</td>
+<td>Parse tree</td>
+<td>Grammar violations</td>
+</tr>
+<tr>
+<td>Semantic Analysis</td>
+<td>Parse tree</td>
+<td>Annotated AST</td>
+<td>Type errors, scope errors</td>
+</tr>
+<tr>
+<td>IR Generation</td>
+<td>Annotated AST</td>
+<td>TAC/IR</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>IR</td>
+<td>Optimized IR</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Code Generation</td>
+<td>Optimized IR</td>
+<td>Machine code</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-example-compiling-a--b--c--2">🔄 Example: Compiling <code>a = b + c * 2</code><a class="headerlink" href="#-example-compiling-a--b--c--2" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Source: a = b + c * 2
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>Phase 1 — Lexical Analysis:
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>  Tokens: [id:a] [=] [id:b] [+] [id:c] [*] [num:2]
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>Phase 2 — Syntax Analysis:
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>  Parse tree:
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>       assign
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>      /      \
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>    id:a      +
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>             / \
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>           id:b  *
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>                / \
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>              id:c num:2
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>Phase 3 — Semantic Analysis:
+</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a>  Check: a, b, c declared? Types compatible?
+</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a>  Annotate types: b:int, c:int, 2:int → result:int
+</span><span id="__span-33-19"><a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a>
+</span><span id="__span-33-20"><a id="__codelineno-33-20" name="__codelineno-33-20" href="#__codelineno-33-20"></a>Phase 4 — IR Generation (Three-Address Code):
+</span><span id="__span-33-21"><a id="__codelineno-33-21" name="__codelineno-33-21" href="#__codelineno-33-21"></a>  t1 = c * 2
+</span><span id="__span-33-22"><a id="__codelineno-33-22" name="__codelineno-33-22" href="#__codelineno-33-22"></a>  t2 = b + t1
+</span><span id="__span-33-23"><a id="__codelineno-33-23" name="__codelineno-33-23" href="#__codelineno-33-23"></a>  a  = t2
+</span><span id="__span-33-24"><a id="__codelineno-33-24" name="__codelineno-33-24" href="#__codelineno-33-24"></a>
+</span><span id="__span-33-25"><a id="__codelineno-33-25" name="__codelineno-33-25" href="#__codelineno-33-25"></a>Phase 5 — Optimization:
+</span><span id="__span-33-26"><a id="__codelineno-33-26" name="__codelineno-33-26" href="#__codelineno-33-26"></a>  (if 2 is constant, fold: t1 = c * 2 stays, or inline)
+</span><span id="__span-33-27"><a id="__codelineno-33-27" name="__codelineno-33-27" href="#__codelineno-33-27"></a>
+</span><span id="__span-33-28"><a id="__codelineno-33-28" name="__codelineno-33-28" href="#__codelineno-33-28"></a>Phase 6 — Code Generation (x86-like):
+</span><span id="__span-33-29"><a id="__codelineno-33-29" name="__codelineno-33-29" href="#__codelineno-33-29"></a>  MOV R1, c
+</span><span id="__span-33-30"><a id="__codelineno-33-30" name="__codelineno-33-30" href="#__codelineno-33-30"></a>  MUL R1, 2
+</span><span id="__span-33-31"><a id="__codelineno-33-31" name="__codelineno-33-31" href="#__codelineno-33-31"></a>  MOV R2, b
+</span><span id="__span-33-32"><a id="__codelineno-33-32" name="__codelineno-33-32" href="#__codelineno-33-32"></a>  ADD R2, R1
+</span><span id="__span-33-33"><a id="__codelineno-33-33" name="__codelineno-33-33" href="#__codelineno-33-33"></a>  MOV a, R2
+</span></code></pre></div>
+<hr />
+<h2 id="-compiler-vs-interpreter">⚖️ Compiler vs Interpreter<a class="headerlink" href="#-compiler-vs-interpreter" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Compiler</th>
+<th>Interpreter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Translation</td>
+<td>Entire program at once</td>
+<td>Line by line</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Faster execution</td>
+<td>Slower execution</td>
+</tr>
+<tr>
+<td>Error detection</td>
+<td>Before execution</td>
+<td>During execution</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Machine code</td>
+<td>Direct execution</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>C, C++, Java (bytecode)</td>
+<td>Python, JavaScript</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_7">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Lexical analysis uses DFA/regex — NOT CFG. CFG is for syntax analysis.
+🚫 <strong>Mistake 2:</strong> Semantic analysis catches type errors — NOT syntax errors.
+🚫 <strong>Mistake 3:</strong> Symbol table is used across multiple phases, not just one.
+🚫 <strong>Mistake 4:</strong> Code optimization is optional — a compiler can skip it.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_7">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_7" title="Anchor link">&para;</a></h2>
+<ul>
+<li>6 phases: Lexical → Syntax → Semantic → IR Gen → Optimization → Code Gen</li>
+<li>Lexical: chars → tokens (DFA/regex)</li>
+<li>Syntax: tokens → parse tree (CFG/parser)</li>
+<li>Semantic: type checking, symbol table</li>
+<li>IR: machine-independent intermediate form</li>
+<li>Code gen: machine-specific assembly/binary</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_7">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Draw and explain all phases of a compiler with input/output of each phase.
+<strong>Short note:</strong> What is the role of the symbol table in a compiler?
+<strong>Trace:</strong> Show the output of each compiler phase for the expression <code>x = y + z * 3</code>.
+<strong>Compare:</strong> Compiler vs Interpreter.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="9-lexical-analysis">9. Lexical Analysis<a class="headerlink" href="#9-lexical-analysis" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_8">💡 Intuition First<a class="headerlink" href="#-intuition-first_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Lexical analysis is like <strong>reading a sentence word by word</strong>. The scanner reads characters and groups them into meaningful units called <strong>tokens</strong> — just like recognizing "hello" as a word, not individual letters h-e-l-l-o.</p>
+</blockquote>
+<hr />
+<h2 id="-key-concepts">📐 Key Concepts<a class="headerlink" href="#-key-concepts" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Token:    A meaningful unit — (token_type, attribute_value)
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>          Examples: &lt;id, &quot;x&quot;&gt;, &lt;num, 42&gt;, &lt;+, &gt;, &lt;if, &gt;
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>Lexeme:   The actual character sequence matched
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>          e.g., &quot;position&quot;, &quot;=&quot;, &quot;initial&quot;, &quot;+&quot;, &quot;rate&quot;, &quot;*&quot;, &quot;60&quot;
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>Pattern:  The rule describing what lexemes match a token
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>          e.g., letter(letter|digit)* matches identifiers
+</span></code></pre></div>
+<h3 id="token-categories">Token Categories<a class="headerlink" href="#token-categories" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Token Type</th>
+<th>Examples</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Keywords</strong></td>
+<td>if, while, for, int</td>
+<td>Fixed strings</td>
+</tr>
+<tr>
+<td><strong>Identifiers</strong></td>
+<td>x, myVar, count</td>
+<td>letter(letter|digit)*</td>
+</tr>
+<tr>
+<td><strong>Numbers</strong></td>
+<td>42, 3.14</td>
+<td>digit+ or digit+.digit+</td>
+</tr>
+<tr>
+<td><strong>Operators</strong></td>
+<td>+, -, *, /, =, ==</td>
+<td>Fixed symbols</td>
+</tr>
+<tr>
+<td><strong>Delimiters</strong></td>
+<td>(, ), {, }, ;</td>
+<td>Fixed symbols</td>
+</tr>
+<tr>
+<td><strong>Strings</strong></td>
+<td>"hello"</td>
+<td>"any chars"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-lexical-analysis-process">🔄 Lexical Analysis Process<a class="headerlink" href="#-lexical-analysis-process" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Source: position = initial + rate * 60
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>Lexer output (token stream):
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>  &lt;id, &quot;position&quot;&gt;
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>  &lt;=, &gt;
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>  &lt;id, &quot;initial&quot;&gt;
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>  &lt;+, &gt;
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>  &lt;id, &quot;rate&quot;&gt;
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>  &lt;*, &gt;
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>  &lt;num, 60&gt;
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a>
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a>Symbol table after lexical analysis:
+</span><span id="__span-35-13"><a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a>  position → entry 1
+</span><span id="__span-35-14"><a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a>  initial  → entry 2
+</span><span id="__span-35-15"><a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a>  rate     → entry 3
+</span></code></pre></div>
+<hr />
+<h2 id="-dfa-for-identifiers">🔄 DFA for Identifiers<a class="headerlink" href="#-dfa-for-identifiers" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Identifier pattern: letter (letter | digit)*
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>DFA:
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>         letter          letter | digit
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>  →(q0) ──────────► (q1) ──────────────► (q1)
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>                    (accept)
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>State q0: start
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>State q1: accept (identifier recognized)
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>
+</span><span id="__span-36-11"><a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>Trace &quot;rate&quot;:
+</span><span id="__span-36-12"><a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a>  q0 →(r)→ q1 →(a)→ q1 →(t)→ q1 →(e)→ q1
+</span><span id="__span-36-13"><a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>  End of token → ACCEPT, lexeme = &quot;rate&quot;
+</span></code></pre></div>
+<hr />
+<h2 id="-dfa-for-numbers">🔄 DFA for Numbers<a class="headerlink" href="#-dfa-for-numbers" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Integer: digit+
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>Float:   digit+ . digit+
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>DFA:
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>         digit           digit
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>  →(q0) ──────► (q1) ──────────► (q1)  [integer accept]
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>                  │
+</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>                  . (dot)
+</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>                  │
+</span><span id="__span-37-10"><a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>                 (q2) ──digit──► (q3)   [float accept]
+</span><span id="__span-37-11"><a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>                                  │
+</span><span id="__span-37-12"><a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a>                                 digit
+</span><span id="__span-37-13"><a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a>                                  └──────────────┘
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_8">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Keywords are recognized as identifiers first, then checked against a keyword table.
+🚫 <strong>Mistake 2:</strong> Whitespace and comments are consumed (skipped) by the lexer — not passed to parser.
+🚫 <strong>Mistake 3:</strong> Lexical errors (illegal character like @) are caught here, not in syntax analysis.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_8">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_8" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Lexer: source chars → token stream</li>
+<li>Token = (type, value) | Lexeme = actual string | Pattern = regex rule</li>
+<li>Implemented using DFA (one DFA per token type, combined)</li>
+<li>Skips whitespace and comments</li>
+<li>Builds/updates symbol table</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_8">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_8" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Short note:</strong> What is a token? Give examples of different token types.
+<strong>Design:</strong> Draw a DFA to recognize floating-point numbers.
+<strong>Trace:</strong> Tokenize the expression <code>if (x &gt;= 10) y = x + 1;</code></p>
+</blockquote>
+<hr />
+<h1 id="10-parsing">10. Parsing<a class="headerlink" href="#10-parsing" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_9">💡 Intuition First<a class="headerlink" href="#-intuition-first_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Parsing is like <strong>checking grammar in a sentence</strong>. The parser takes the token stream and verifies it follows the language's grammar rules, building a parse tree in the process.</p>
+</blockquote>
+<hr />
+<h2 id="-types-of-parsers">📐 Types of Parsers<a class="headerlink" href="#-types-of-parsers" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Parsing
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>├── Top-Down (builds tree from root to leaves)
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>│   ├── Recursive Descent (manual, one function per non-terminal)
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>│   └── LL(1) (table-driven, Left-to-right, Leftmost derivation, 1 lookahead)
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>│
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>└── Bottom-Up (builds tree from leaves to root)
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>    ├── LR(0)
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>    ├── SLR(1) (Simple LR)
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>    ├── LALR(1) (Lookahead LR) ← most common (used in yacc/bison)
+</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>    └── LR(1) (Canonical LR)
+</span></code></pre></div>
+<hr />
+<h2 id="-ll1-parsing">🔼 LL(1) Parsing<a class="headerlink" href="#-ll1-parsing" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>L</strong>eft-to-right scan, <strong>L</strong>eftmost derivation, <strong>1</strong> token lookahead.</p>
+</blockquote>
+<h3 id="ll1-parsing-table-construction">LL(1) Parsing Table Construction<a class="headerlink" href="#ll1-parsing-table-construction" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>For each production A → α:
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>  For each terminal a in FIRST(α):
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>    Add A → α to M[A, a]
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>  If ε ∈ FIRST(α):
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>    For each terminal b in FOLLOW(A):
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>      Add A → α to M[A, b]
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>    If $ ∈ FOLLOW(A):
+</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>      Add A → α to M[A, $]
+</span></code></pre></div>
+<h3 id="ll1-table-example">LL(1) Table Example<a class="headerlink" href="#ll1-table-example" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Grammar (after left recursion elimination):
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>  E  → T E&#39;
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>  E&#39; → + T E&#39; | ε
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>  T  → F T&#39;
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>  T&#39; → * F T&#39; | ε
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>  F  → ( E ) | id
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>Using FIRST/FOLLOW computed earlier:
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>LL(1) Parsing Table:
+</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>        id      +       *       (       )       $
+</span><span id="__span-40-12"><a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a>E    E→TE&#39;              E→TE&#39;
+</span><span id="__span-40-13"><a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a>E&#39;          E&#39;→+TE&#39;             E&#39;→ε    E&#39;→ε
+</span><span id="__span-40-14"><a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a>T    T→FT&#39;              T→FT&#39;
+</span><span id="__span-40-15"><a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a>T&#39;          T&#39;→ε    T&#39;→*FT&#39;             T&#39;→ε    T&#39;→ε
+</span><span id="__span-40-16"><a id="__codelineno-40-16" name="__codelineno-40-16" href="#__codelineno-40-16"></a>F    F→id               F→(E)
+</span></code></pre></div>
+<h3 id="ll1-parse-trace">LL(1) Parse Trace<a class="headerlink" href="#ll1-parse-trace" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Input: id + id * id $
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>Stack (top→bottom)  │ Input          │ Action
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>────────────────────┼────────────────┼──────────────────
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>$ E                 │ id+id*id$      │ M[E,id] = E→TE&#39;
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>$ E&#39; T              │ id+id*id$      │ M[T,id] = T→FT&#39;
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>$ E&#39; T&#39; F           │ id+id*id$      │ M[F,id] = F→id
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>$ E&#39; T&#39; id          │ id+id*id$      │ Match id, pop
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>$ E&#39; T&#39;             │ +id*id$        │ M[T&#39;,+] = T&#39;→ε
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>$ E&#39;                │ +id*id$        │ M[E&#39;,+] = E&#39;→+TE&#39;
+</span><span id="__span-41-11"><a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>$ E&#39; T +            │ +id*id$        │ Match +, pop
+</span><span id="__span-41-12"><a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a>$ E&#39; T              │ id*id$         │ M[T,id] = T→FT&#39;
+</span><span id="__span-41-13"><a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a>$ E&#39; T&#39; F           │ id*id$         │ M[F,id] = F→id
+</span><span id="__span-41-14"><a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a>$ E&#39; T&#39; id          │ id*id$         │ Match id, pop
+</span><span id="__span-41-15"><a id="__codelineno-41-15" name="__codelineno-41-15" href="#__codelineno-41-15"></a>$ E&#39; T&#39;             │ *id$           │ M[T&#39;,*] = T&#39;→*FT&#39;
+</span><span id="__span-41-16"><a id="__codelineno-41-16" name="__codelineno-41-16" href="#__codelineno-41-16"></a>$ E&#39; T&#39; F *         │ *id$           │ Match *, pop
+</span><span id="__span-41-17"><a id="__codelineno-41-17" name="__codelineno-41-17" href="#__codelineno-41-17"></a>$ E&#39; T&#39; F           │ id$            │ M[F,id] = F→id
+</span><span id="__span-41-18"><a id="__codelineno-41-18" name="__codelineno-41-18" href="#__codelineno-41-18"></a>$ E&#39; T&#39; id          │ id$            │ Match id, pop
+</span><span id="__span-41-19"><a id="__codelineno-41-19" name="__codelineno-41-19" href="#__codelineno-41-19"></a>$ E&#39; T&#39;             │ $              │ M[T&#39;,$] = T&#39;→ε
+</span><span id="__span-41-20"><a id="__codelineno-41-20" name="__codelineno-41-20" href="#__codelineno-41-20"></a>$ E&#39;                │ $              │ M[E&#39;,$] = E&#39;→ε
+</span><span id="__span-41-21"><a id="__codelineno-41-21" name="__codelineno-41-21" href="#__codelineno-41-21"></a>$                   │ $              │ ACCEPT ✅
+</span></code></pre></div>
+<hr />
+<h2 id="-lr-parsing-bottom-up">🔽 LR Parsing (Bottom-Up)<a class="headerlink" href="#-lr-parsing-bottom-up" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Reads input left to right, builds parse tree bottom-up. Uses a <strong>stack</strong> and <strong>action/goto tables</strong>.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Two actions:
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>  SHIFT:  Push next input token onto stack
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>  REDUCE: Pop symbols matching right side of production,
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>          push left side (non-terminal)
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>Accept when: Stack = [S] and input = [$]
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>LR &gt; LL in power:
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>  LR can handle more grammars (left-recursive, etc.)
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>  LL(1) ⊂ LR(1) in terms of grammars handled
+</span></code></pre></div>
+<hr />
+<h2 id="-ll-vs-lr-parsing">⚖️ LL vs LR Parsing<a class="headerlink" href="#-ll-vs-lr-parsing" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>LL(1)</th>
+<th>LR(1)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>Top-down</td>
+<td>Bottom-up</td>
+</tr>
+<tr>
+<td>Derivation</td>
+<td>Leftmost</td>
+<td>Rightmost (reversed)</td>
+</tr>
+<tr>
+<td>Stack content</td>
+<td>Non-terminals</td>
+<td>States + symbols</td>
+</tr>
+<tr>
+<td>Grammar power</td>
+<td>Less powerful</td>
+<td>More powerful</td>
+</tr>
+<tr>
+<td>Left recursion</td>
+<td>❌ Cannot handle</td>
+<td>✅ Can handle</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Simpler</td>
+<td>Complex</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Recursive descent</td>
+<td>yacc, bison</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_9">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> LL(1) cannot handle left-recursive grammars — must eliminate first.
+🚫 <strong>Mistake 2:</strong> A grammar is LL(1) only if the parsing table has NO conflicts (no cell with 2+ entries).
+🚫 <strong>Mistake 3:</strong> LR parsers are more powerful — they can handle a superset of LL(1) grammars.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_9">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_9" title="Anchor link">&para;</a></h2>
+<ul>
+<li>LL(1): top-down, leftmost, 1 lookahead, uses FIRST/FOLLOW for table</li>
+<li>LR: bottom-up, shift-reduce, more powerful</li>
+<li>LL(1) table: M[A, a] = production to use</li>
+<li>Conflict in LL(1) table → grammar is not LL(1)</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_9">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_9" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Construct the LL(1) parsing table for the given grammar. Trace parsing of a given string.
+<strong>Short note:</strong> What is a shift-reduce conflict in LR parsing?
+<strong>Compare:</strong> LL(1) vs LR(1) parsing.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="11-code-generation">11. Code Generation<a class="headerlink" href="#11-code-generation" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_10">💡 Intuition First<a class="headerlink" href="#-intuition-first_10" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Code generation is the final translation step — converting the optimized intermediate representation into actual machine instructions. Like translating a mathematical formula into assembly language step by step.</p>
+</blockquote>
+<hr />
+<h2 id="-three-address-code-tac--ir">📐 Three-Address Code (TAC / IR)<a class="headerlink" href="#-three-address-code-tac--ir" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>The most common intermediate representation. Each instruction has at most 3 operands.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>TAC instruction forms:
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>  x = y op z      (binary operation)
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>  x = op y        (unary operation)
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>  x = y           (copy)
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>  goto L          (unconditional jump)
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>  if x goto L     (conditional jump)
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>  param x         (function parameter)
+</span><span id="__span-43-8"><a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>  call f, n       (function call)
+</span><span id="__span-43-9"><a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>  return x        (return value)
+</span><span id="__span-43-10"><a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>
+</span><span id="__span-43-11"><a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a>Example: a = b + c * d - e
+</span><span id="__span-43-12"><a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a>
+</span><span id="__span-43-13"><a id="__codelineno-43-13" name="__codelineno-43-13" href="#__codelineno-43-13"></a>TAC:
+</span><span id="__span-43-14"><a id="__codelineno-43-14" name="__codelineno-43-14" href="#__codelineno-43-14"></a>  t1 = c * d
+</span><span id="__span-43-15"><a id="__codelineno-43-15" name="__codelineno-43-15" href="#__codelineno-43-15"></a>  t2 = b + t1
+</span><span id="__span-43-16"><a id="__codelineno-43-16" name="__codelineno-43-16" href="#__codelineno-43-16"></a>  t3 = t2 - e
+</span><span id="__span-43-17"><a id="__codelineno-43-17" name="__codelineno-43-17" href="#__codelineno-43-17"></a>  a  = t3
+</span></code></pre></div>
+<hr />
+<h2 id="-code-generation-example">🔄 Code Generation Example<a class="headerlink" href="#-code-generation-example" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>Source: x = a + b * c
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>TAC:
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>  t1 = b * c
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>  t2 = a + t1
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>  x  = t2
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>
+</span><span id="__span-44-8"><a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>Assembly (x86-like):
+</span><span id="__span-44-9"><a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a>  MOV R1, b      ; R1 = b
+</span><span id="__span-44-10"><a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a>  MUL R1, c      ; R1 = b * c  (t1)
+</span><span id="__span-44-11"><a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a>  MOV R2, a      ; R2 = a
+</span><span id="__span-44-12"><a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a>  ADD R2, R1     ; R2 = a + t1 (t2)
+</span><span id="__span-44-13"><a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a>  MOV x, R2      ; x = t2
+</span></code></pre></div>
+<hr />
+<h2 id="-code-optimization-techniques">🔧 Code Optimization Techniques<a class="headerlink" href="#-code-optimization-techniques" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Constant folding</strong></td>
+<td>Evaluate constant expressions at compile time</td>
+<td><code>2 * 3</code> → <code>6</code></td>
+</tr>
+<tr>
+<td><strong>Dead code elimination</strong></td>
+<td>Remove unreachable code</td>
+<td>Code after <code>return</code></td>
+</tr>
+<tr>
+<td><strong>Common subexpression</strong></td>
+<td>Reuse already-computed values</td>
+<td><code>a+b</code> computed twice → compute once</td>
+</tr>
+<tr>
+<td><strong>Loop invariant</strong></td>
+<td>Move constant computations out of loops</td>
+<td><code>x = a*b</code> inside loop → move outside</td>
+</tr>
+<tr>
+<td><strong>Strength reduction</strong></td>
+<td>Replace expensive ops with cheaper ones</td>
+<td><code>x*2</code> → <code>x+x</code> or <code>x&lt;&lt;1</code></td>
+</tr>
+<tr>
+<td><strong>Register allocation</strong></td>
+<td>Keep frequently used values in registers</td>
+<td>Minimize memory accesses</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-compiler-tools">📊 Compiler Tools<a class="headerlink" href="#-compiler-tools" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>lex / flex</strong></td>
+<td>Lexical analyzer generator</td>
+<td>Generates scanner from regex</td>
+</tr>
+<tr>
+<td><strong>yacc / bison</strong></td>
+<td>Parser generator</td>
+<td>Generates parser from CFG</td>
+</tr>
+<tr>
+<td><strong>LLVM</strong></td>
+<td>Compiler infrastructure</td>
+<td>Used by Clang, Rust</td>
+</tr>
+<tr>
+<td><strong>GCC</strong></td>
+<td>GNU Compiler Collection</td>
+<td>C, C++, Fortran</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_10">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_10" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> TAC is machine-independent — it's not assembly code.
+🚫 <strong>Mistake 2:</strong> Optimization is optional — correctness must be preserved.
+🚫 <strong>Mistake 3:</strong> Register allocation is NP-complete in general — compilers use heuristics.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_10">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_10" title="Anchor link">&para;</a></h2>
+<ul>
+<li>TAC: intermediate code, at most 3 operands per instruction</li>
+<li>Code gen: TAC → machine-specific assembly</li>
+<li>Optimization: constant folding, dead code elimination, loop invariant</li>
+<li>Tools: lex (lexer), yacc (parser), LLVM (IR + backend)</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_10">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_10" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Generate three-address code for the expression <code>a = b * c + d / e - f</code>.
+<strong>Short note:</strong> What is constant folding? Give an example.
+<strong>Trace:</strong> Show the TAC and assembly code for <code>if (x &gt; 0) y = x + 1; else y = -x;</code></p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="-master-quick-revision-sheet--compiler-design--automata">🏁 Master Quick Revision Sheet — Compiler Design &amp; Automata<a class="headerlink" href="#-master-quick-revision-sheet--compiler-design--automata" title="Anchor link">&para;</a></h1>
+<h2 id="-automata-hierarchy">⚡ Automata Hierarchy<a class="headerlink" href="#-automata-hierarchy" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>Regular Languages (DFA/NFA/Regex)
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>    ⊂
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>Context-Free Languages (CFG/PDA)
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>    ⊂
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>Context-Sensitive Languages (CSG/LBA)
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>    ⊂
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>Recursively Enumerable (Turing Machine)
+</span><span id="__span-45-8"><a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>
+</span><span id="__span-45-9"><a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>Examples:
+</span><span id="__span-45-10"><a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a>  Regular:        a*b, identifiers, keywords
+</span><span id="__span-45-11"><a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>  Context-Free:   aⁿbⁿ, balanced parentheses, arithmetic expressions
+</span><span id="__span-45-12"><a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>  NOT Regular:    aⁿbⁿ (needs counting → stack)
+</span><span id="__span-45-13"><a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a>  NOT CF:         aⁿbⁿcⁿ (needs 2 stacks → Turing machine)
+</span></code></pre></div>
+<h2 id="-key-facts-to-remember">🔑 Key Facts to Remember<a class="headerlink" href="#-key-facts-to-remember" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fact</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DFA vs NFA</td>
+<td>Same power (regular languages), NFA → DFA via subset construction</td>
+</tr>
+<tr>
+<td>NFA states after conversion</td>
+<td>Up to 2ⁿ DFA states from n NFA states</td>
+</tr>
+<tr>
+<td>ε-closure</td>
+<td>Set of states reachable via ε-transitions only</td>
+</tr>
+<tr>
+<td>Left recursion fix</td>
+<td>A → Aα|β becomes A → βA', A' → αA'|ε</td>
+</tr>
+<tr>
+<td>Left factoring fix</td>
+<td>A → αβ₁|αβ₂ becomes A → αA', A' → β₁|β₂</td>
+</tr>
+<tr>
+<td>FIRST never contains</td>
+<td>— (can contain ε)</td>
+</tr>
+<tr>
+<td>FOLLOW never contains</td>
+<td>ε (only terminals and $)</td>
+</tr>
+<tr>
+<td>LL(1) conflict</td>
+<td>Two entries in same cell → not LL(1)</td>
+</tr>
+<tr>
+<td>LR &gt; LL</td>
+<td>LR handles left-recursive grammars</td>
+</tr>
+<tr>
+<td>Compiler phases</td>
+<td>6: Lex → Syn → Sem → IR → Opt → CodeGen</td>
+</tr>
+<tr>
+<td>Lexical tool</td>
+<td>DFA / regex (lex/flex)</td>
+</tr>
+<tr>
+<td>Syntax tool</td>
+<td>CFG / LL or LR parser (yacc/bison)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-memory-tricks">🧠 Memory Tricks<a class="headerlink" href="#-memory-tricks" title="Anchor link">&para;</a></h2>
+<ul>
+<li><strong>Compiler phases:</strong> "<strong>L</strong>azy <strong>S</strong>tudents <strong>S</strong>ometimes <strong>I</strong>gnore <strong>O</strong>ld <strong>C</strong>oncepts" → Lexical, Syntax, Semantic, IR, Optimization, Code gen</li>
+<li><strong>DFA vs NFA:</strong> "<strong>D</strong>efinite <strong>D</strong>irection" vs "<strong>N</strong>umerous <strong>N</strong>ondeterministic paths"</li>
+<li><strong>FIRST/FOLLOW:</strong> "FIRST = what comes <strong>first</strong> | FOLLOW = what comes <strong>after</strong>"</li>
+<li><strong>LL vs LR:</strong> "<strong>LL</strong> = <strong>L</strong>ook ahead <strong>L</strong>eft | <strong>LR</strong> = <strong>L</strong>ook at <strong>R</strong>ight side"</li>
+<li><strong>Chomsky types:</strong> "<strong>T</strong>uring <strong>C</strong>an <strong>C</strong>reate <strong>R</strong>egular" → Type 0,1,2,3 (reversed)</li>
+</ul>
+<h2 id="-top-10-most-probable-exam-questions">🎯 Top 10 Most Probable Exam Questions<a class="headerlink" href="#-top-10-most-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<ol>
+<li>Design DFA for a given language — draw state diagram + transition table</li>
+<li>Convert NFA to DFA using subset construction</li>
+<li>Eliminate left recursion from a given grammar</li>
+<li>Apply left factoring to a given grammar</li>
+<li>Compute FIRST and FOLLOW sets for all non-terminals</li>
+<li>Construct LL(1) parsing table and trace a string</li>
+<li>Draw parse tree and AST for a given expression</li>
+<li>Show all phases of compiler with example</li>
+<li>Generate three-address code for an expression</li>
+<li>Prove a grammar is ambiguous (show two parse trees)</li>
+</ol>
+<h2 id="-automata-quick-reference">📊 Automata Quick Reference<a class="headerlink" href="#-automata-quick-reference" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>┌──────────────┬──────────────┬──────────────┬──────────────┐
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>│ Automaton    │ Memory       │ Language     │ Example      │
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>├──────────────┼──────────────┼──────────────┼──────────────┤
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>│ DFA/NFA      │ States only  │ Regular      │ a*b          │
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>│ PDA          │ Stack        │ Context-Free │ aⁿbⁿ         │
+</span><span id="__span-46-6"><a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>│ LBA          │ Bounded tape │ Context-Sens │ aⁿbⁿcⁿ       │
+</span><span id="__span-46-7"><a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>│ Turing Mach  │ Infinite tape│ RE           │ Halting prob │
+</span><span id="__span-46-8"><a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>└──────────────┴──────────────┴──────────────┴──────────────┘
+</span></code></pre></div>
+<hr />
+<blockquote>
+<p>📌 <strong>End of Subject 04: Compiler Design &amp; Automata</strong></p>
+<p>Next: <strong>Subject 05 — Digital Logic Design</strong> →</p>
+</blockquote>
+<hr />
+<p><em>Handbook generated for MSc Admission Preparation | JUST-Style Exam Focus</em>
+<em>Version 1.0 | Compiler Design &amp; Automata</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 03 · Computer Networks &amp; Data Communication">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                03 · Computer Networks & Data Communication
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05%20-%20Digital%20Logic%20Design/" class="md-footer__link md-footer__link--next" aria-label="Next: 05 · Digital Logic Design">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                05 · Digital Logic Design
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

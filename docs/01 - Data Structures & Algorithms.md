@@ -423,13 +423,19 @@ A **Binary Search Tree (BST)** adds a rule: **left child < parent < right child*
 
 ## 📐 Tree Terminology
 
+```mermaid
+graph TD
+    A((50)):::root --> B((30))
+    A --> C((70))
+    B --> D((20)):::leaf
+    B --> E((40)):::leaf
+    C --> F((60)):::leaf
+    C --> G((80)):::leaf
+    classDef root fill:#4f46e5,stroke:#312e81,color:#fff
+    classDef leaf fill:#ddd6fe,stroke:#7c3aed,color:#1e1b4b
 ```
-           [50]          ← Root
-          /    \
-       [30]    [70]      ← Level 1
-       /  \    /  \
-     [20][40][60][80]    ← Level 2 (Leaf nodes)
-```
+
+> **Root** = `50` (level 0) · **Internal** = `30, 70` (level 1) · **Leaves** = `20, 40, 60, 80` (level 2)
 
 | Term | Meaning |
 |------|---------|
@@ -449,13 +455,12 @@ A **Binary Search Tree (BST)** adds a rule: **left child < parent < right child*
 > - **In**order = Root **In** between children (Left, Root, Right)
 > - **Post**order = Root **Post**pones to after children (Left, Right, Root)
 
-```
-Tree:
-        [1]
-       /   \
-     [2]   [3]
-    /   \
-  [4]   [5]
+```mermaid
+graph TD
+    A((1)) --> B((2))
+    A --> C((3))
+    B --> D((4))
+    B --> E((5))
 ```
 
 | Traversal | Order | Result |
@@ -503,13 +508,18 @@ Insert 20 → 20 < 50 → left → 20 < 30 → left → [30].left = [20]
 Insert 40 → 40 < 50 → left → 40 > 30 → right → [30].right = [40]
 Insert 60 → 60 > 50 → right → 60 < 70 → left → [70].left = [60]
 Insert 80 → 80 > 50 → right → 80 > 70 → right → [70].right = [80]
+```
 
 Final BST:
-           [50]
-          /    \
-       [30]    [70]
-       /  \    /  \
-     [20][40][60][80]
+
+```mermaid
+graph TD
+    A((50)) --> B((30))
+    A --> C((70))
+    B --> D((20))
+    B --> E((40))
+    C --> F((60))
+    C --> G((80))
 ```
 
 ### BST Search — Trace
@@ -543,14 +553,21 @@ Case 3: Delete node with TWO children
   Step 1: Find INORDER SUCCESSOR (smallest in right subtree) = 60
   Step 2: Replace 50's data with 60
   Step 3: Delete 60 from right subtree
-
-  Result:
-           [60]
-          /    \
-       [30]    [70]
-       /  \       \
-     [20][40]    [80]
 ```
+
+Resulting tree:
+
+```mermaid
+graph TD
+    A((60)):::moved --> B((30))
+    A --> C((70))
+    B --> D((20))
+    B --> E((40))
+    C --> G((80))
+    classDef moved fill:#fef3c7,stroke:#d97706,color:#78350f
+```
+
+> 💡 The yellow node (`60`) replaced the original root via inorder successor.
 
 ### Delete Leaf/Terminal Nodes
 
@@ -937,16 +954,28 @@ function merge(left, right):
 
 ```
 Array: [38, 27, 43, 3, 9, 82, 10]
+```
 
 DIVIDE:
-[38,27,43,3,9,82,10]
-    /              \
-[38,27,43]      [3,9,82,10]
-  /    \           /      \
-[38] [27,43]    [3,9]   [82,10]
-      / \        / \      / \
-    [27][43]   [3] [9] [82][10]
 
+```mermaid
+graph TD
+    R["[38,27,43,3,9,82,10]"]
+    R --> L1["[38,27,43]"]
+    R --> R1["[3,9,82,10]"]
+    L1 --> L2["[38]"]
+    L1 --> L3["[27,43]"]
+    R1 --> R2["[3,9]"]
+    R1 --> R3["[82,10]"]
+    L3 --> L4["[27]"]
+    L3 --> L5["[43]"]
+    R2 --> R4["[3]"]
+    R2 --> R5["[9]"]
+    R3 --> R6["[82]"]
+    R3 --> R7["[10]"]
+```
+
+```
 MERGE (bottom up):
 [27,43] ← merge [27],[43]
 [3,9]   ← merge [3],[9]
@@ -1018,19 +1047,27 @@ Result: [10,30,40,50,70,90,80]
 Max-Heap property: parent ≥ children
 
 Array: [4, 10, 3, 5, 1]
-As tree:
-        [4]
-       /   \
-     [10]  [3]
-     /  \
-   [5]  [1]
+```
 
-After heapify:
-        [10]
-       /    \
-     [5]    [3]
-     /  \
-   [4]  [1]
+As tree (before heapify):
+
+```mermaid
+graph TD
+    A((4)) --> B((10))
+    A --> C((3))
+    B --> D((5))
+    B --> E((1))
+```
+
+After heapify (max-heap):
+
+```mermaid
+graph TD
+    A((10)):::root --> B((5))
+    A --> C((3))
+    B --> D((4))
+    B --> E((1))
+    classDef root fill:#4f46e5,stroke:#312e81,color:#fff
 ```
 
 ### Algorithm

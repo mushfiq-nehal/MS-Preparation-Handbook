@@ -25,15 +25,15 @@
 
 ## 📐 Instruction Cycle Steps
 
+```mermaid
+graph LR
+    F[FETCH<br/>PC→MAR<br/>Memory→MBR<br/>MBR→IR]:::stage --> D[DECODE<br/>IR decode<br/>operands<br/>identified]:::stage
+    D --> E[EXECUTE<br/>ALU / logic<br/>operation<br/>performed]:::stage
+    E --> S[STORE<br/>Result →<br/>register or<br/>memory]:::stage
+    classDef stage fill:#ddd6fe,stroke:#7c3aed,color:#1e1b4b,font-weight:bold
 ```
-┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐
-│  FETCH  │───►│ DECODE  │───►│ EXECUTE │───►│  STORE  │
-└─────────┘    └─────────┘    └─────────┘    └─────────┘
-     │               │               │               │
-  PC→MAR         IR decode       ALU/logic       Result→
-  Memory→MBR     operands        operation       register/
-  MBR→IR         identified      performed       memory
 
+```
 Registers involved:
   PC  = Program Counter (address of next instruction)
   MAR = Memory Address Register

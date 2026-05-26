@@ -1,0 +1,3020 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A modern, exam-focused handbook for MSc CSE admission preparation">
+      
+      
+        <meta name="author" content="Nehal">
+      
+      
+      
+        <link rel="prev" href="../01%20-%20Data%20Structures%20%26%20Algorithms/">
+      
+      
+        <link rel="next" href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>02 · Operating Systems - MSc CSE Admission Prep</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M21%2010V9l-6-6H5c-1.11%200-2%20.89-2%202v14a2%202%200%200%200%202%202h6v-1.87l8.39-8.39c.44-.44%201-.68%201.61-.74m-7-5.5%205.5%205.5H14zm8.85%209.69-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72%200l1.32%201.32c.2.2.2.53%200%20.72m-3.72-.36%202.04%202.04L15.04%2022H13v-2.04z%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%206a6%206%200%200%201%206%206c0%202.22-1.21%204.16-3%205.2V19a1%201%200%200%201-1%201h-4a1%201%200%200%201-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6%206%200%200%201%206-6m2%2015v1a1%201%200%200%201-1%201h-2a1%201%200%200%201-1-1v-1zm6-10h3v2h-3zM1%2011h3v2H1zM13%201v3h-2V1zM4.92%203.5l2.13%202.14-1.42%201.41L3.5%204.93zm12.03%202.13%202.12-2.13%201.43%201.43-2.13%202.12z%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%2014h-2V9h2m0%209h-2v-2h2M1%2021h22L12%202z%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7%202v2h1v14a4%204%200%200%200%204%204%204%204%200%200%200%204-4V4h1V2zm4%2014c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m2-4c-.6%200-1-.4-1-1s.4-1%201-1%201%20.4%201%201-.4%201-1%201m1-5h-4V4h4z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M14%2017h3l2-4V7h-6v6h3M6%2017h3l2-4V7H5v6h3z%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-msc-admission-prep--subject-02-operating-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MSc CSE Admission Prep" class="md-header__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSc CSE Admission Prep
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              02 · Operating Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier S/A — Must Master
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../11%20-%20Discrete%20Mathematics/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier B — Moderately Important
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tier C — Light Revision
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MSc CSE Admission Prep" class="md-nav__button md-logo" aria-label="MSc CSE Admission Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    MSc CSE Admission Prep
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier S/A — Must Master
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier S/A — Must Master
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Data Structures & Algorithms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Operating Systems
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Operating Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Computer Networks & Data Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20-%20Compiler%20Design%20%26%20Automata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Compiler Design & Automata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05%20-%20Digital%20Logic%20Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Digital Logic Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06%20-%20Software%20Engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Software Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20Database%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Database Management System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08%20-%20Artificial%20Intelligence%20%26%20Machine%20Learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Artificial Intelligence & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09%20-%20Object%20Oriented%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Object Oriented Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%20-%20Programming%20Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier B — Moderately Important
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier B — Moderately Important
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11%20-%20Discrete%20Mathematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 · Discrete Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12%20-%20Computer%20Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 · Computer Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13%20-%20Numerical%20Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13 · Numerical Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier C — Light Revision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier C — Light Revision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-20%20-%20Tier%20C%20Subjects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14–20 · Tier C Subjects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-just-style-exam-handbook--fast-revision-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 JUST-Style Exam Handbook | Fast Revision Edition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tier S/A — Must Master
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="-msc-admission-prep--subject-02-operating-systems">📘 MSc Admission Prep — Subject 02: Operating Systems<a class="headerlink" href="#-msc-admission-prep--subject-02-operating-systems" title="Anchor link">&para;</a></h1>
+<h3 id="-just-style-exam-handbook--fast-revision-edition">🎯 JUST-Style Exam Handbook | Fast Revision Edition<a class="headerlink" href="#-just-style-exam-handbook--fast-revision-edition" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p><strong>Goal:</strong> Deep, visual, exam-focused revision of OS concepts. Every topic includes intuition, diagrams, traces, and exam tips.</p>
+</blockquote>
+<hr />
+<h2 id="-table-of-contents">📋 Table of Contents<a class="headerlink" href="#-table-of-contents" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Topic</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="#1-process-states--diagram">Process States &amp; Diagram</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="#2-cpu-scheduling">CPU Scheduling</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="#3-process-synchronization">Process Synchronization</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="#4-deadlock">Deadlock</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="#5-memory-management--paging">Memory Management &amp; Paging</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="#6-page-replacement-algorithms">Page Replacement Algorithms</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="#7-virtual-memory">Virtual Memory</a></td>
+<td>🔴 Must Master</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="#8-file-system">File System</a></td>
+<td>🔴 Must Master</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h1 id="1-process-states--diagram">1. Process States &amp; Diagram<a class="headerlink" href="#1-process-states--diagram" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first">💡 Intuition First<a class="headerlink" href="#-intuition-first" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Think of a <strong>job application process</strong>. You submit (new), get called for interview (ready), go into the interview room (running), wait for results (waiting/blocked), and finally get hired or rejected (terminated). A process goes through similar stages in an OS.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> A customer at a bank — arrives (new), waits in queue (ready), gets served at counter (running), waits for document verification (waiting), leaves (terminated).</p>
+<p><strong>Why it matters:</strong> Process state transitions are the foundation of scheduling, synchronization, and OS design. Diagram questions appear in almost every exam.</p>
+<hr />
+<h2 id="-process-states">📐 Process States<a class="headerlink" href="#-process-states" title="Anchor link">&para;</a></h2>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; New : Process created
+    New --&gt; Ready : Admitted to ready queue
+    Ready --&gt; Running : Scheduler dispatches
+    Running --&gt; Ready : Preempted (time quantum expires)
+    Running --&gt; Waiting : I/O request / event wait
+    Waiting --&gt; Ready : I/O complete / event occurs
+    Running --&gt; Terminated : Exit / error
+    Terminated --&gt; [*]</code></pre>
+<h3 id="state-descriptions">State Descriptions<a class="headerlink" href="#state-descriptions" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>New</strong></td>
+<td>Process being created</td>
+<td><code>fork()</code> called</td>
+</tr>
+<tr>
+<td><strong>Ready</strong></td>
+<td>Waiting for CPU</td>
+<td>In ready queue</td>
+</tr>
+<tr>
+<td><strong>Running</strong></td>
+<td>Currently executing on CPU</td>
+<td>On CPU right now</td>
+</tr>
+<tr>
+<td><strong>Waiting/Blocked</strong></td>
+<td>Waiting for I/O or event</td>
+<td>Reading from disk</td>
+</tr>
+<tr>
+<td><strong>Terminated</strong></td>
+<td>Finished execution</td>
+<td><code>exit()</code> called</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-key-transitions">🔄 Key Transitions<a class="headerlink" href="#-key-transitions" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Transition</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New → Ready</td>
+<td>OS admits process</td>
+</tr>
+<tr>
+<td>Ready → Running</td>
+<td>Scheduler picks this process</td>
+</tr>
+<tr>
+<td>Running → Ready</td>
+<td>Time quantum expires (preemption)</td>
+</tr>
+<tr>
+<td>Running → Waiting</td>
+<td>Process requests I/O</td>
+</tr>
+<tr>
+<td>Waiting → Ready</td>
+<td>I/O completes</td>
+</tr>
+<tr>
+<td>Running → Terminated</td>
+<td>Process finishes or crashes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Key fact:</strong> A process can go from Running → Ready (preemption) but <strong>NOT</strong> from Waiting → Running directly. It must go through Ready first.</p>
+</blockquote>
+<hr />
+<h2 id="-process-control-block-pcb">📦 Process Control Block (PCB)<a class="headerlink" href="#-process-control-block-pcb" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>The OS stores all information about a process in a <strong>PCB</strong> — like a student's file in a university.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────┐
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│   Process Control Block │
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├─────────────────────────┤
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│ Process ID (PID)        │
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│ Process State           │
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│ Program Counter         │
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│ CPU Registers           │
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│ Memory Limits           │
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│ Open File List          │
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│ I/O Status              │
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│ Priority                │
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>└─────────────────────────┘
+</span></code></pre></div>
+<hr />
+<h2 id="-process-vs-thread">⚖️ Process vs Thread<a class="headerlink" href="#-process-vs-thread" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Process</th>
+<th>Thread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definition</td>
+<td>Program in execution</td>
+<td>Lightweight unit within process</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Own address space</td>
+<td>Shares process memory</td>
+</tr>
+<tr>
+<td>Creation overhead</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>IPC (complex)</td>
+<td>Shared memory (easy)</td>
+</tr>
+<tr>
+<td>Crash impact</td>
+<td>Isolated</td>
+<td>Can crash whole process</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Chrome browser</td>
+<td>Each tab as a thread</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Saying a process goes directly from Waiting → Running. It must go Waiting → Ready → Running.
+🚫 <strong>Mistake 2:</strong> Confusing "blocked" and "waiting" — they mean the same thing.
+🚫 <strong>Mistake 3:</strong> Forgetting that preemption moves a process from Running → Ready (not Terminated).</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap" title="Anchor link">&para;</a></h2>
+<ul>
+<li>5 states: New → Ready → Running → Waiting → Terminated</li>
+<li>Waiting → Ready (not Running) after I/O completes</li>
+<li>PCB stores all process metadata</li>
+<li>Process = heavy, own memory | Thread = light, shared memory</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Draw and explain the process state transition diagram with all states and transitions.
+<strong>Short note:</strong> What is a PCB? What information does it contain?
+<strong>Conceptual:</strong> What is the difference between a process and a thread?
+<strong>Diagram:</strong> Show what happens when a running process requests I/O.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="2-cpu-scheduling">2. CPU Scheduling<a class="headerlink" href="#2-cpu-scheduling" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_1">💡 Intuition First<a class="headerlink" href="#-intuition-first_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>The CPU is a single worker. Multiple processes want to use it. The <strong>scheduler</strong> decides who gets the CPU and for how long — like a manager assigning tasks to one employee.</p>
+</blockquote>
+<p><strong>Why it matters:</strong> Scheduling directly affects system performance. Exam questions always include Gantt charts and metric calculations.</p>
+<hr />
+<h2 id="-key-metrics">📐 Key Metrics<a class="headerlink" href="#-key-metrics" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Arrival Time (AT)    = when process enters ready queue
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Burst Time (BT)      = CPU time needed
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Completion Time (CT) = when process finishes
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Turnaround Time (TAT) = CT - AT
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Waiting Time (WT)    = TAT - BT
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Response Time (RT)   = time from arrival to first CPU access
+</span></code></pre></div>
+<hr />
+<h2 id="-algorithm-1-fcfs-first-come-first-served">📊 Algorithm 1: FCFS (First Come First Served)<a class="headerlink" href="#-algorithm-1-fcfs-first-come-first-served" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Non-preemptive.</strong> Processes served in order of arrival. Simple but can cause <strong>convoy effect</strong>.</p>
+</blockquote>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Process  AT  BT
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>P1        0   4
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>P2        1   3
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>P3        2   1
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>P4        3   2
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Gantt Chart:
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>|  P1  |  P2  | P3 | P4 |
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>0      4      7    8   10
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Calculations:
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>P1: CT=4,  TAT=4-0=4,  WT=4-4=0
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>P2: CT=7,  TAT=7-1=6,  WT=6-3=3
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>P3: CT=8,  TAT=8-2=6,  WT=6-1=5
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>P4: CT=10, TAT=10-3=7, WT=7-2=5
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>Avg TAT = (4+6+6+7)/4 = 5.75
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>Avg WT  = (0+3+5+5)/4 = 3.25
+</span></code></pre></div>
+<blockquote>
+<p>⚠️ <strong>Convoy Effect:</strong> A long process holds the CPU while short processes wait — like a slow truck blocking a highway.</p>
+</blockquote>
+<hr />
+<h2 id="-algorithm-2-sjf-shortest-job-first">📊 Algorithm 2: SJF (Shortest Job First)<a class="headerlink" href="#-algorithm-2-sjf-shortest-job-first" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Non-preemptive.</strong> Pick the process with the shortest burst time. Optimal average waiting time but requires knowing burst time in advance.</p>
+</blockquote>
+<h3 id="example-non-preemptive-sjf">Example (Non-preemptive SJF)<a class="headerlink" href="#example-non-preemptive-sjf" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Process  AT  BT
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>P1        0   6
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>P2        1   8
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>P3        2   7
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>P4        3   3
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>At t=0: Only P1 available → run P1 (BT=6)
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>At t=6: P2(8), P3(7), P4(3) available → pick P4 (shortest BT=3)
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>At t=9: P2(8), P3(7) available → pick P3 (BT=7)
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>At t=16: Only P2 → run P2
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>Gantt Chart:
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>|    P1    | P4 |    P3    |    P2    |
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>0          6    9         16         24
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>P1: CT=6,  TAT=6-0=6,   WT=0
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>P4: CT=9,  TAT=9-3=6,   WT=3
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>P3: CT=16, TAT=16-2=14, WT=7
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>P2: CT=24, TAT=24-1=23, WT=15
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>Avg WT = (0+3+7+15)/4 = 6.25
+</span></code></pre></div>
+<h3 id="srtf-shortest-remaining-time-first--preemptive-sjf">SRTF (Shortest Remaining Time First) — Preemptive SJF<a class="headerlink" href="#srtf-shortest-remaining-time-first--preemptive-sjf" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>At each moment, if a new process arrives with shorter remaining time than current, preempt.</p>
+</blockquote>
+<hr />
+<h2 id="-algorithm-3-round-robin-rr">📊 Algorithm 3: Round Robin (RR)<a class="headerlink" href="#-algorithm-3-round-robin-rr" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Preemptive.</strong> Each process gets a fixed <strong>time quantum (q)</strong>. After q expires, process goes back to ready queue. Fair but has context switch overhead.</p>
+</blockquote>
+<h3 id="example-q--2">Example (q = 2)<a class="headerlink" href="#example-q--2" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Process  AT  BT
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>P1        0   5
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>P2        1   3
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>P3        2   1
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>P4        3   2
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Ready Queue evolution:
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>t=0: P1 arrives → run P1 for 2 → P1 remaining=3
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>t=2: P2,P3,P4 check arrivals → P2(AT=1)✓, P3(AT=2)✓ → Queue:[P2,P3,P1]
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>     Run P2 for 2 → P2 remaining=1
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>t=4: P4(AT=3)✓ → Queue:[P3,P1,P4,P2]
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>     Run P3 for 1 (only 1 left) → P3 done
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>t=5: Queue:[P1,P4,P2]
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>     Run P1 for 2 → P1 remaining=1
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>t=7: Queue:[P4,P2,P1]
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>     Run P4 for 2 → P4 done
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>t=9: Queue:[P2,P1]
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>     Run P2 for 1 → P2 done
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>t=10: Queue:[P1]
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>      Run P1 for 1 → P1 done
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>Gantt Chart:
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>|P1|P2|P3|P1|P4|P2|P1|
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>0  2  4  5  7  9 10 11
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>P1: CT=11, TAT=11, WT=6
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>P2: CT=10, TAT=9,  WT=6
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>P3: CT=5,  TAT=3,  WT=2
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>P4: CT=9,  TAT=6,  WT=4
+</span></code></pre></div>
+<blockquote>
+<p>🔑 <strong>Key:</strong> Smaller time quantum → more responsive but more context switches. Larger quantum → approaches FCFS.</p>
+</blockquote>
+<hr />
+<h2 id="-scheduling-algorithm-comparison">⚖️ Scheduling Algorithm Comparison<a class="headerlink" href="#-scheduling-algorithm-comparison" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Preemptive?</th>
+<th>Starvation?</th>
+<th>Overhead</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FCFS</td>
+<td>No</td>
+<td>No</td>
+<td>Low</td>
+<td>Batch systems</td>
+</tr>
+<tr>
+<td>SJF</td>
+<td>No</td>
+<td>Yes (long jobs)</td>
+<td>Medium</td>
+<td>Minimize avg wait</td>
+</tr>
+<tr>
+<td>SRTF</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>High</td>
+<td>Minimize avg wait</td>
+</tr>
+<tr>
+<td>Round Robin</td>
+<td>Yes</td>
+<td>No</td>
+<td>Medium</td>
+<td>Time-sharing</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Both</td>
+<td>Yes (low priority)</td>
+<td>Medium</td>
+<td>Real-time</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-metric-formulas--quick-reference">🧮 Metric Formulas — Quick Reference<a class="headerlink" href="#-metric-formulas--quick-reference" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>TAT = CT - AT
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>WT  = TAT - BT
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>RT  = First CPU time - AT
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>CPU Utilization = (Total CPU busy time / Total time) × 100%
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Throughput = Number of processes / Total time
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_1">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> In RR, forgetting to add newly arrived processes to the queue before the preempted process.
+🚫 <strong>Mistake 2:</strong> Calculating WT as CT - BT instead of TAT - BT.
+🚫 <strong>Mistake 3:</strong> In SJF, not checking which processes have arrived before picking the shortest.
+🚫 <strong>Mistake 4:</strong> Confusing Response Time with Waiting Time — RT is first CPU access, WT is total wait.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips">🎯 Exam Tips<a class="headerlink" href="#-exam-tips" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Always draw the Gantt chart first</strong>, then calculate metrics from it.
+💡 In RR, track the ready queue carefully — arrival order matters when quantum expires.
+💡 SJF minimizes <strong>average waiting time</strong> — this is a provable theorem.
+💡 FCFS suffers from <strong>convoy effect</strong> — mention this in any comparison question.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_1">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_1" title="Anchor link">&para;</a></h2>
+<ul>
+<li>FCFS: arrival order, non-preemptive, convoy effect</li>
+<li>SJF: shortest burst first, optimal avg WT, starvation possible</li>
+<li>RR: time quantum, fair, preemptive, no starvation</li>
+<li>TAT = CT - AT | WT = TAT - BT</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_1">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Given processes with AT and BT, draw Gantt chart for FCFS and RR (q=2). Calculate avg WT and TAT.
+<strong>5-mark:</strong> Apply SJF (non-preemptive) on given processes. Show Gantt chart and metrics.
+<strong>Short note:</strong> What is the convoy effect in FCFS? How does RR solve it?
+<strong>Compare:</strong> Compare FCFS, SJF, and Round Robin scheduling algorithms.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="3-process-synchronization">3. Process Synchronization<a class="headerlink" href="#3-process-synchronization" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_2">💡 Intuition First<a class="headerlink" href="#-intuition-first_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Two people editing the same Google Doc simultaneously — if both save at the same time, one person's changes might overwrite the other's. That's a <strong>race condition</strong>. Synchronization prevents this.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> A shared bank account. If two people withdraw simultaneously, the balance check and deduction must happen atomically — no interruption allowed.</p>
+<hr />
+<h2 id="-the-critical-section-problem">🏁 The Critical Section Problem<a class="headerlink" href="#-the-critical-section-problem" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>critical section</strong> is a code segment that accesses shared resources. Only <strong>one process</strong> should execute it at a time.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Process structure:
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>┌─────────────────────┐
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>│   Entry Section     │  ← Request permission to enter
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>├─────────────────────┤
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   Critical Section  │  ← Access shared resource
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>├─────────────────────┤
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>│   Exit Section      │  ← Release permission
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>├─────────────────────┤
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>│   Remainder Section │  ← Rest of the code
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>└─────────────────────┘
+</span></code></pre></div>
+<h3 id="three-requirements">Three Requirements<a class="headerlink" href="#three-requirements" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mutual Exclusion</strong></td>
+<td>Only one process in CS at a time</td>
+</tr>
+<tr>
+<td><strong>Progress</strong></td>
+<td>If no process is in CS, one waiting process must enter</td>
+</tr>
+<tr>
+<td><strong>Bounded Waiting</strong></td>
+<td>A process must not wait forever (no starvation)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-race-condition">⚡ Race Condition<a class="headerlink" href="#-race-condition" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Shared variable: counter = 5
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Process P1: counter++   →  reads 5, adds 1, writes 6
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Process P2: counter++   →  reads 5, adds 1, writes 6
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Expected: counter = 7
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Actual:   counter = 6  ← RACE CONDITION!
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Why? P2 read the old value before P1 wrote back.
+</span></code></pre></div>
+<hr />
+<h2 id="-petersons-solution-software">🔐 Peterson's Solution (Software)<a class="headerlink" href="#-petersons-solution-software" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A classic software solution for <strong>2 processes</strong> using two shared variables: <code>flag[]</code> and <code>turn</code>.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Shared: flag[2] = {false, false}
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>        turn = 0
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Process Pi (i=0 or 1, j=1-i):
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>do {
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    flag[i] = true;        // I want to enter
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    turn = j;              // Give turn to other
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    while (flag[j] &amp;&amp; turn == j);  // Wait if other wants AND it&#39;s their turn
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    // CRITICAL SECTION
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    flag[i] = false;       // I&#39;m done
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    // REMAINDER SECTION
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>} while (true);
+</span></code></pre></div>
+<blockquote>
+<p>✅ Satisfies all 3 requirements: mutual exclusion, progress, bounded waiting.
+❌ Only works for <strong>2 processes</strong>. Busy waiting wastes CPU.</p>
+</blockquote>
+<hr />
+<h2 id="-semaphores">🔒 Semaphores<a class="headerlink" href="#-semaphores" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>semaphore</strong> is an integer variable accessed only through two atomic operations: <code>wait()</code> and <code>signal()</code>.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>wait(S):              signal(S):
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  while S &lt;= 0:         S = S + 1
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    ; // busy wait
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  S = S - 1
+</span></code></pre></div>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Initial Value</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Binary Semaphore (Mutex)</strong></td>
+<td>1</td>
+<td>Mutual exclusion</td>
+</tr>
+<tr>
+<td><strong>Counting Semaphore</strong></td>
+<td>n</td>
+<td>Resource counting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mutex-example">Mutex Example<a class="headerlink" href="#mutex-example" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Semaphore mutex = 1
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Process P1:          Process P2:
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>wait(mutex)          wait(mutex)
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  // Critical          // Critical
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  // Section           // Section
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>signal(mutex)        signal(mutex)
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>If P1 enters first: mutex becomes 0
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>P2 calls wait(mutex): 0 ≤ 0 → P2 BLOCKS
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>P1 exits: signal(mutex) → mutex=1 → P2 unblocks
+</span></code></pre></div>
+<hr />
+<h2 id="-classic-synchronization-problems">🍽️ Classic Synchronization Problems<a class="headerlink" href="#-classic-synchronization-problems" title="Anchor link">&para;</a></h2>
+<h3 id="1-producer-consumer-problem">1. Producer-Consumer Problem<a class="headerlink" href="#1-producer-consumer-problem" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Shared buffer of size N
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Producer: adds items to buffer
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Consumer: removes items from buffer
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>Semaphores:
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  mutex = 1      (mutual exclusion for buffer access)
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>  empty = N      (count of empty slots)
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  full  = 0      (count of filled slots)
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>Producer:                    Consumer:
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>while(true) {                while(true) {
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>  produce item                 wait(full)
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>  wait(empty)                  wait(mutex)
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>  wait(mutex)                  remove item from buffer
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>  add item to buffer           signal(mutex)
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>  signal(mutex)                signal(empty)
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>  signal(full)                 consume item
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>}                            }
+</span></code></pre></div>
+<h3 id="2-readers-writers-problem">2. Readers-Writers Problem<a class="headerlink" href="#2-readers-writers-problem" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Multiple readers can read simultaneously.
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Only one writer at a time (exclusive access).
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Semaphores:
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  mutex = 1      (protect readcount)
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>  wrt   = 1      (exclusive write access)
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>  readcount = 0
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>Reader:                      Writer:
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>wait(mutex)                  wait(wrt)
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  readcount++                  // WRITE
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>  if readcount==1:           signal(wrt)
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    wait(wrt)
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>signal(mutex)
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>  // READ
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>wait(mutex)
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>  readcount--
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>  if readcount==0:
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    signal(wrt)
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>signal(mutex)
+</span></code></pre></div>
+<h3 id="3-dining-philosophers-problem">3. Dining Philosophers Problem<a class="headerlink" href="#3-dining-philosophers-problem" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>5 philosophers sit at a round table.
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>5 forks between them (one between each pair).
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>To eat: philosopher needs BOTH left and right fork.
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Problem: If all pick up left fork simultaneously → DEADLOCK
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>Solution (Semaphore approach):
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>  fork[5] = {1,1,1,1,1}  // each fork is a semaphore
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>Philosopher i:
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>  wait(fork[i])           // pick left fork
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>  wait(fork[(i+1)%5])     // pick right fork
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>  // EAT
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>  signal(fork[i])
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>  signal(fork[(i+1)%5])
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>Deadlock prevention: Make one philosopher pick RIGHT fork first.
+</span></code></pre></div>
+<hr />
+<h2 id="-mutex-vs-semaphore-vs-monitor">⚖️ Mutex vs Semaphore vs Monitor<a class="headerlink" href="#-mutex-vs-semaphore-vs-monitor" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mutex</th>
+<th>Semaphore</th>
+<th>Monitor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td>0 or 1</td>
+<td>0 to N</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Ownership</td>
+<td>Yes (only locker can unlock)</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Use</td>
+<td>Mutual exclusion</td>
+<td>Counting + sync</td>
+<td>High-level sync</td>
+</tr>
+<tr>
+<td>Language support</td>
+<td>OS/library</td>
+<td>OS primitive</td>
+<td>Java <code>synchronized</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_2">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Forgetting that <code>wait()</code> and <code>signal()</code> must be <strong>atomic</strong> — otherwise they themselves have race conditions.
+🚫 <strong>Mistake 2:</strong> In producer-consumer, swapping <code>wait(mutex)</code> and <code>wait(empty)</code> → causes deadlock.
+🚫 <strong>Mistake 3:</strong> Peterson's solution only works for <strong>2 processes</strong>.
+🚫 <strong>Mistake 4:</strong> Busy waiting in semaphores wastes CPU — blocking semaphores use sleep/wakeup instead.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_1">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_1" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Critical section requirements</strong> (mutual exclusion, progress, bounded waiting) are always asked.
+💡 Peterson's solution: memorize the <code>flag</code> and <code>turn</code> logic — it's a favorite.
+💡 Producer-consumer: always write the semaphore order correctly (empty/full before mutex).
+💡 Dining philosophers: explain the deadlock scenario AND the solution.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_2">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_2" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Critical section: only one process at a time</li>
+<li>Race condition: concurrent access to shared data → wrong result</li>
+<li>Semaphore: wait() decrements, signal() increments</li>
+<li>Binary semaphore = mutex | Counting semaphore = resource pool</li>
+<li>Producer-consumer: mutex + empty + full semaphores</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_2">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Explain Peterson's solution. Does it satisfy all three requirements of the critical section problem?
+<strong>5-mark:</strong> Write the producer-consumer solution using semaphores.
+<strong>Short note:</strong> What is a race condition? Give an example.
+<strong>Diagram:</strong> Explain the dining philosophers problem and its deadlock scenario.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="4-deadlock">4. Deadlock<a class="headerlink" href="#4-deadlock" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_3">💡 Intuition First<a class="headerlink" href="#-intuition-first_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Four cars at a 4-way intersection, each waiting for the car ahead to move. Nobody moves. That's a <strong>deadlock</strong> — a circular wait where everyone is blocked waiting for someone else.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> Two people each holding one chopstick, each waiting for the other to give theirs up. Neither can eat.</p>
+<hr />
+<h2 id="-four-necessary-conditions-coffman-conditions">📐 Four Necessary Conditions (Coffman Conditions)<a class="headerlink" href="#-four-necessary-conditions-coffman-conditions" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>ALL FOUR must hold simultaneously for deadlock to occur.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mutual Exclusion</strong></td>
+<td>Resource can't be shared</td>
+<td>Printer used by one process</td>
+</tr>
+<tr>
+<td><strong>Hold and Wait</strong></td>
+<td>Process holds resource while waiting for another</td>
+<td>P1 holds R1, waits for R2</td>
+</tr>
+<tr>
+<td><strong>No Preemption</strong></td>
+<td>Resource can't be forcibly taken</td>
+<td>Can't snatch printer mid-job</td>
+</tr>
+<tr>
+<td><strong>Circular Wait</strong></td>
+<td>P1 waits for P2, P2 waits for P1</td>
+<td>Circular dependency chain</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Memory trick:</strong> "<strong>M</strong>y <strong>H</strong>ouse <strong>N</strong>eeds <strong>C</strong>leaning" → Mutual exclusion, Hold &amp; wait, No preemption, Circular wait</p>
+</blockquote>
+<hr />
+<h2 id="-resource-allocation-graph-rag">🔄 Resource Allocation Graph (RAG)<a class="headerlink" href="#-resource-allocation-graph-rag" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Notation:
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  Process: circle  ○
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  Resource: rectangle  □
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  Request edge: ○ ──► □  (process requests resource)
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>  Assignment edge: □ ──► ○  (resource assigned to process)
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>Deadlock example:
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  P1 ──► R1 ──► P2 ──► R2 ──► P1
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  (P1 holds R2, wants R1)
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>  (P2 holds R1, wants R2)
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>  → CYCLE = DEADLOCK
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>No deadlock:
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>  P1 ──► R1 ──► P2
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>  (P1 wants R1, R1 assigned to P2, P2 will release it)
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>  → No cycle = No deadlock (for single-instance resources)
+</span></code></pre></div>
+<hr />
+<h2 id="-deadlock-prevention">🛡️ Deadlock Prevention<a class="headerlink" href="#-deadlock-prevention" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Eliminate at least one of the four necessary conditions.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Condition to Break</th>
+<th>Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mutual Exclusion</td>
+<td>Make resources sharable (not always possible)</td>
+</tr>
+<tr>
+<td>Hold and Wait</td>
+<td>Request ALL resources at once before starting</td>
+</tr>
+<tr>
+<td>No Preemption</td>
+<td>Allow OS to forcibly take resources</td>
+</tr>
+<tr>
+<td>Circular Wait</td>
+<td>Impose ordering on resource requests (R1 before R2)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-bankers-algorithm-deadlock-avoidance">🏦 Banker's Algorithm (Deadlock Avoidance)<a class="headerlink" href="#-bankers-algorithm-deadlock-avoidance" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>The OS acts like a <strong>banker</strong> — only grants a loan (resource) if it can still satisfy all future requests. If granting would lead to an unsafe state, it waits.</p>
+</blockquote>
+<h3 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>n = number of processes
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>m = number of resource types
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Data structures:
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>  Available[m]       = currently available instances of each resource
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  Max[n][m]          = maximum demand of each process
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>  Allocation[n][m]   = currently allocated resources
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  Need[n][m]         = Max - Allocation (remaining need)
+</span></code></pre></div>
+<h3 id="safety-algorithm">Safety Algorithm<a class="headerlink" href="#safety-algorithm" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>function isSafe(Available, Allocation, Need):
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    Work = Available.copy()
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    Finish = [false] * n
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    while True:
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>        found = False
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>        for each process i where Finish[i] == false:
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>            if Need[i] &lt;= Work:          // can satisfy i&#39;s need?
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>                Work = Work + Allocation[i]  // simulate release
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>                Finish[i] = true
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>                found = True
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>        if not found: break
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>    return all(Finish)   // True = safe state
+</span></code></pre></div>
+<h3 id="worked-example">Worked Example<a class="headerlink" href="#worked-example" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>5 processes (P0-P4), 3 resource types (A, B, C)
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Total resources: A=10, B=5, C=7
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>         Allocation    Max        Need        Available
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>         A  B  C      A  B  C    A  B  C     A  B  C
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>P0       0  1  0      7  5  3    7  4  3     3  3  2
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>P1       2  0  0      3  2  2    1  2  2
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>P2       3  0  2      9  0  2    6  0  0
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>P3       2  1  1      2  2  2    0  1  1
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>P4       0  0  2      4  3  3    4  3  1
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>Safety check:
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>Work = [3,3,2], Finish = [F,F,F,F,F]
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>Step 1: Check P1: Need=[1,2,2] ≤ Work=[3,3,2]? YES
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>        Work = [3,3,2]+[2,0,0] = [5,3,2], Finish[1]=T
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>Step 2: Check P3: Need=[0,1,1] ≤ Work=[5,3,2]? YES
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>        Work = [5,3,2]+[2,1,1] = [7,4,3], Finish[3]=T
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>Step 3: Check P4: Need=[4,3,1] ≤ Work=[7,4,3]? YES
+</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>        Work = [7,4,3]+[0,0,2] = [7,4,5], Finish[4]=T
+</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>
+</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>Step 4: Check P0: Need=[7,4,3] ≤ Work=[7,4,5]? YES
+</span><span id="__span-17-25"><a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>        Work = [7,4,5]+[0,1,0] = [7,5,5], Finish[0]=T
+</span><span id="__span-17-26"><a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>
+</span><span id="__span-17-27"><a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>Step 5: Check P2: Need=[6,0,0] ≤ Work=[7,5,5]? YES
+</span><span id="__span-17-28"><a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>        Work = [7,5,5]+[3,0,2] = [10,5,7], Finish[2]=T
+</span><span id="__span-17-29"><a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>
+</span><span id="__span-17-30"><a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>All Finish = True → SAFE STATE ✅
+</span><span id="__span-17-31"><a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>Safe sequence: P1 → P3 → P4 → P0 → P2
+</span></code></pre></div>
+<hr />
+<h2 id="-deadlock-detection--recovery">🔍 Deadlock Detection &amp; Recovery<a class="headerlink" href="#-deadlock-detection--recovery" title="Anchor link">&para;</a></h2>
+<h3 id="detection">Detection<a class="headerlink" href="#detection" title="Anchor link">&para;</a></h3>
+<ul>
+<li>Maintain RAG; check for cycles</li>
+<li>For multiple instances: use a variant of Banker's algorithm</li>
+</ul>
+<h3 id="recovery-options">Recovery Options<a class="headerlink" href="#recovery-options" title="Anchor link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Drawback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Process termination</strong></td>
+<td>Kill one or all deadlocked processes</td>
+<td>Lose work</td>
+</tr>
+<tr>
+<td><strong>Resource preemption</strong></td>
+<td>Take resources from a process</td>
+<td>May cause starvation</td>
+</tr>
+<tr>
+<td><strong>Rollback</strong></td>
+<td>Roll process back to safe checkpoint</td>
+<td>Overhead</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-prevention-vs-avoidance-vs-detection">⚖️ Prevention vs Avoidance vs Detection<a class="headerlink" href="#-prevention-vs-avoidance-vs-detection" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When</th>
+<th>How</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prevention</strong></td>
+<td>Before deadlock</td>
+<td>Break one condition</td>
+<td>Low utilization</td>
+</tr>
+<tr>
+<td><strong>Avoidance</strong></td>
+<td>Before allocation</td>
+<td>Banker's algorithm</td>
+<td>Needs max info</td>
+</tr>
+<tr>
+<td><strong>Detection</strong></td>
+<td>After deadlock</td>
+<td>RAG cycle check</td>
+<td>Recovery needed</td>
+</tr>
+<tr>
+<td><strong>Ignorance</strong></td>
+<td>Never</td>
+<td>Ostrich algorithm</td>
+<td>Risk of deadlock</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_3">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Saying "two conditions are enough for deadlock" — ALL FOUR must hold.
+🚫 <strong>Mistake 2:</strong> Confusing prevention (break conditions) with avoidance (Banker's).
+🚫 <strong>Mistake 3:</strong> In Banker's, forgetting Need = Max - Allocation.
+🚫 <strong>Mistake 4:</strong> A cycle in RAG means deadlock ONLY for single-instance resources. For multi-instance, need further analysis.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_2">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_2" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Coffman conditions</strong> — memorize all four with examples. Very high frequency.
+💡 Banker's algorithm: always show the full table and the safe sequence.
+💡 RAG: draw the graph, identify cycles, conclude deadlock or not.
+💡 "Ostrich algorithm" = ignore deadlock (used in most OS like Windows/Linux for rare cases).</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_3">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_3" title="Anchor link">&para;</a></h2>
+<ul>
+<li>4 conditions: Mutual exclusion, Hold &amp; wait, No preemption, Circular wait</li>
+<li>Prevention: break one condition | Avoidance: Banker's algorithm</li>
+<li>Banker's: grant only if safe state remains</li>
+<li>Safe sequence = order in which all processes can complete</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_3">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Apply Banker's algorithm to determine if the system is in a safe state. Find the safe sequence.
+<strong>5-mark:</strong> What are the four necessary conditions for deadlock? How can each be prevented?
+<strong>Short note:</strong> Differentiate between deadlock prevention and deadlock avoidance.
+<strong>Diagram:</strong> Draw a Resource Allocation Graph showing a deadlock situation.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="5-memory-management--paging">5. Memory Management &amp; Paging<a class="headerlink" href="#5-memory-management--paging" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_4">💡 Intuition First<a class="headerlink" href="#-intuition-first_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>RAM is like a <strong>hotel</strong> with limited rooms. Multiple programs (guests) need rooms. The OS (hotel manager) decides how to allocate rooms, handle overbooking, and swap guests in/out when the hotel is full.</p>
+</blockquote>
+<p><strong>Paging</strong> is like dividing the hotel into equal-sized rooms (pages) and giving each guest a room map (page table) so they don't need contiguous rooms.</p>
+<hr />
+<h2 id="-memory-management-goals">📐 Memory Management Goals<a class="headerlink" href="#-memory-management-goals" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>1. Relocation    — process can be loaded anywhere in memory
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2. Protection    — processes can&#39;t access each other&#39;s memory
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>3. Sharing       — allow controlled sharing of memory
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>4. Logical org   — separate code, data, stack segments
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>5. Physical org  — manage RAM and disk efficiently
+</span></code></pre></div>
+<hr />
+<h2 id="-paging">🗂️ Paging<a class="headerlink" href="#-paging" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Divide <strong>physical memory</strong> into fixed-size <strong>frames</strong>.
+Divide <strong>logical memory</strong> (process) into same-size <strong>pages</strong>.
+Map pages to frames using a <strong>page table</strong>.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Logical Address Space:          Physical Memory (Frames):
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>┌──────────┐                    ┌──────────┐
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>│  Page 0  │ ──────────────────►│ Frame 3  │
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>├──────────┤                    ├──────────┤
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>│  Page 1  │ ──────────────────►│ Frame 7  │
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>├──────────┤                    ├──────────┤
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>│  Page 2  │ ──────────────────►│ Frame 1  │
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>└──────────┘                    └──────────┘
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>Page Table:
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>Page 0 → Frame 3
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>Page 1 → Frame 7
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>Page 2 → Frame 1
+</span></code></pre></div>
+<h3 id="address-translation">Address Translation<a class="headerlink" href="#address-translation" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Logical Address = (Page Number, Offset)
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Physical Address = (Frame Number, Offset)
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>Given:
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>  Page size = 4 KB = 2^12 bytes
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>  Logical address = 13000
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>Page number  = 13000 / 4096 = 3  (integer division)
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>Offset       = 13000 % 4096 = 712
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>Look up page table: Page 3 → Frame 6
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>Physical address = 6 × 4096 + 712 = 25288
+</span></code></pre></div>
+<h3 id="page-table-entry">Page Table Entry<a class="headerlink" href="#page-table-entry" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>┌──────────┬───┬───┬───┬───┐
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>│ Frame No │ V │ R │ M │ P │
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>└──────────┴───┴───┴───┴───┘
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>V = Valid bit (page in memory?)
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>R = Referenced bit
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>M = Modified/Dirty bit
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>P = Protection bits
+</span></code></pre></div>
+<hr />
+<h2 id="-tlb-translation-lookaside-buffer">🔄 TLB (Translation Lookaside Buffer)<a class="headerlink" href="#-tlb-translation-lookaside-buffer" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A <strong>hardware cache</strong> for page table entries. Speeds up address translation.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>CPU generates logical address
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>        │
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>        ▼
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>   Check TLB ──── HIT ────► Get frame number → physical address
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>        │
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>       MISS
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>        │
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>        ▼
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>   Access Page Table → Get frame number
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>        │
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>        ▼
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>   Update TLB → physical address
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>TLB Hit ratio = h
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>Effective Access Time = h × (TLB time + Memory time)
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>                      + (1-h) × (TLB time + 2 × Memory time)
+</span></code></pre></div>
+<hr />
+<h2 id="-paging-vs-segmentation">⚖️ Paging vs Segmentation<a class="headerlink" href="#-paging-vs-segmentation" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Paging</th>
+<th>Segmentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Division</td>
+<td>Fixed-size pages</td>
+<td>Variable-size segments</td>
+</tr>
+<tr>
+<td>Fragmentation</td>
+<td>Internal</td>
+<td>External</td>
+</tr>
+<tr>
+<td>User view</td>
+<td>Invisible</td>
+<td>Visible (code, data, stack)</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>Page# + offset</td>
+<td>Segment# + offset</td>
+</tr>
+<tr>
+<td>Protection</td>
+<td>Per page</td>
+<td>Per segment</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-fragmentation">🧩 Fragmentation<a class="headerlink" href="#-fragmentation" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Cause</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Internal</strong></td>
+<td>Allocated block larger than needed</td>
+<td>Smaller page size</td>
+</tr>
+<tr>
+<td><strong>External</strong></td>
+<td>Free memory scattered in small chunks</td>
+<td>Compaction, paging</td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Internal fragmentation example:
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>  Page size = 4 KB
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>  Process needs 9 KB
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>  Gets 3 pages = 12 KB
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>  Wasted = 12 - 9 = 3 KB (internal fragmentation)
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_4">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Paging eliminates <strong>external</strong> fragmentation but causes <strong>internal</strong> fragmentation.
+🚫 <strong>Mistake 2:</strong> Confusing page (logical) with frame (physical) — pages map TO frames.
+🚫 <strong>Mistake 3:</strong> Forgetting that page size must be a power of 2 for efficient bit manipulation.
+🚫 <strong>Mistake 4:</strong> TLB miss requires TWO memory accesses (page table + actual data).</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_4">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_4" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Paging: divide logical into pages, physical into frames, map via page table</li>
+<li>Address = page# + offset → frame# + offset</li>
+<li>TLB: hardware cache for page table → faster translation</li>
+<li>Internal fragmentation: wasted space within allocated page</li>
+<li>Paging eliminates external fragmentation</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_4">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Given page size = 1 KB and page table, translate logical address 3000 to physical address.
+<strong>Short note:</strong> What is a TLB? How does it improve memory access time?
+<strong>Compare:</strong> Paging vs Segmentation — advantages and disadvantages.
+<strong>Conceptual:</strong> What is internal fragmentation? How does paging cause it?</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="6-page-replacement-algorithms">6. Page Replacement Algorithms<a class="headerlink" href="#6-page-replacement-algorithms" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_5">💡 Intuition First<a class="headerlink" href="#-intuition-first_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Your desk has only 3 slots for books. You need a 4<sup>th</sup> book but the desk is full. Which book do you remove? That's page replacement — when RAM is full and a new page is needed, which existing page gets evicted?</p>
+</blockquote>
+<p><strong>Page fault</strong> = requested page is NOT in memory → must load from disk.</p>
+<hr />
+<h2 id="-reference-string-concept">📊 Reference String Concept<a class="headerlink" href="#-reference-string-concept" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Reference string: sequence of page numbers accessed
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>Frame count: number of physical frames available
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Goal: Minimize page faults
+</span></code></pre></div>
+<hr />
+<h2 id="-algorithm-1-fifo-first-in-first-out">🔄 Algorithm 1: FIFO (First In, First Out)<a class="headerlink" href="#-algorithm-1-fifo-first-in-first-out" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Evict the page that has been in memory the <strong>longest</strong>.</p>
+</blockquote>
+<h3 id="trace-3-frames">Trace (3 frames)<a class="headerlink" href="#trace-3-frames" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Frames: 3
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>Ref  Frames          Fault?
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>7    [7, -, -]        ✅ YES
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>0    [7, 0, -]        ✅ YES
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>1    [7, 0, 1]        ✅ YES
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>2    [2, 0, 1]        ✅ YES (evict 7, oldest)
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>0    [2, 0, 1]        ❌ NO  (0 already in)
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>3    [2, 3, 1]        ✅ YES (evict 0, oldest)
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>0    [2, 3, 0]        ✅ YES (evict 1, oldest)
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>4    [4, 3, 0]        ✅ YES (evict 2, oldest)
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>2    [4, 2, 0]        ✅ YES (evict 3, oldest)
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>3    [4, 2, 3]        ✅ YES (evict 0, oldest)
+</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>...
+</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>
+</span><span id="__span-25-18"><a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>Total page faults: 15
+</span></code></pre></div>
+<blockquote>
+<p>⚠️ <strong>Belady's Anomaly:</strong> With FIFO, adding MORE frames can sometimes cause MORE page faults!</p>
+</blockquote>
+<hr />
+<h2 id="-algorithm-2-lru-least-recently-used">🔄 Algorithm 2: LRU (Least Recently Used)<a class="headerlink" href="#-algorithm-2-lru-least-recently-used" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Evict the page that was <strong>least recently used</strong> (not accessed for the longest time).</p>
+</blockquote>
+<h3 id="trace-3-frames_1">Trace (3 frames)<a class="headerlink" href="#trace-3-frames_1" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>Ref  Frames (most recent → least recent)   Fault?
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>7    [7]                                    ✅ YES
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>0    [0, 7]                                 ✅ YES
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>1    [1, 0, 7]                              ✅ YES
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>2    [2, 1, 0]  evict 7 (LRU)              ✅ YES
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>0    [0, 2, 1]  0 used, move to front      ❌ NO
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>3    [3, 0, 2]  evict 1 (LRU)              ✅ YES
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>0    [0, 3, 2]  0 used, move to front      ❌ NO
+</span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>4    [4, 0, 3]  evict 2 (LRU)              ✅ YES
+</span><span id="__span-26-12"><a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>2    [2, 4, 0]  evict 3 (LRU)              ✅ YES
+</span><span id="__span-26-13"><a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>3    [3, 2, 4]  evict 0 (LRU)              ✅ YES
+</span><span id="__span-26-14"><a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a>...
+</span><span id="__span-26-15"><a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a>
+</span><span id="__span-26-16"><a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a>Total page faults: 12 (better than FIFO&#39;s 15)
+</span></code></pre></div>
+<hr />
+<h2 id="-algorithm-3-optimal-opt--beladys-optimal">🔄 Algorithm 3: Optimal (OPT / Belady's Optimal)<a class="headerlink" href="#-algorithm-3-optimal-opt--beladys-optimal" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Evict the page that will <strong>not be used for the longest time in the future</strong>. Theoretical — requires future knowledge.</p>
+</blockquote>
+<h3 id="trace-3-frames_2">Trace (3 frames)<a class="headerlink" href="#trace-3-frames_2" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Ref  Frames          Fault?  Evict?
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>7    [7, -, -]        ✅ YES
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>0    [7, 0, -]        ✅ YES
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>1    [7, 0, 1]        ✅ YES
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>2    [2, 0, 1]        ✅ YES  evict 7 (next use of 7 is farthest)
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>0    [2, 0, 1]        ❌ NO
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>3    [2, 0, 3]        ✅ YES  evict 1 (next use of 1 is farthest)
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>0    [2, 0, 3]        ❌ NO
+</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>4    [4, 0, 3]        ✅ YES  evict 2 (next use of 2 is at pos 8)
+</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>...
+</span><span id="__span-27-13"><a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>
+</span><span id="__span-27-14"><a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>Total page faults: 9 (minimum possible — benchmark)
+</span></code></pre></div>
+<hr />
+<h2 id="-comparison-table">📊 Comparison Table<a class="headerlink" href="#-comparison-table" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Page Faults (example)</th>
+<th>Belady's Anomaly</th>
+<th>Practical?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FIFO</strong></td>
+<td>15</td>
+<td>✅ Yes (suffers)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><strong>LRU</strong></td>
+<td>12</td>
+<td>❌ No</td>
+<td>✅ Yes (approx)</td>
+</tr>
+<tr>
+<td><strong>Optimal</strong></td>
+<td>9</td>
+<td>❌ No</td>
+<td>❌ No (needs future)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔑 <strong>Optimal = best possible = benchmark</strong> | LRU ≈ Optimal in practice</p>
+</blockquote>
+<hr />
+<h2 id="-page-fault-rate-calculation">🧮 Page Fault Rate Calculation<a class="headerlink" href="#-page-fault-rate-calculation" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Page fault rate = (number of page faults) / (total references)
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>Example: 20 references, 12 page faults
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>Page fault rate = 12/20 = 0.6 = 60%
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>Effective Access Time (EAT):
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>EAT = (1 - p) × memory_access_time + p × page_fault_time
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>where p = page fault rate
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_5">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> In LRU, evicting the page not used for longest time in the <strong>past</strong> (not future — that's Optimal).
+🚫 <strong>Mistake 2:</strong> Forgetting Belady's anomaly applies to FIFO but NOT to LRU or Optimal.
+🚫 <strong>Mistake 3:</strong> Counting a hit (page already in frame) as a page fault.
+🚫 <strong>Mistake 4:</strong> In Optimal, when two pages have equal future distance, either can be evicted.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_3">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_3" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Always draw a table</strong> with columns: Reference | Frame contents | Fault? | Evicted page.
+💡 Optimal gives the <strong>minimum</strong> page faults — use it as a benchmark comparison.
+💡 Belady's anomaly: FIFO with 4 frames can have MORE faults than with 3 frames.
+💡 LRU is the most practical and most exam-asked algorithm.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_5">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_5" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Page fault: page not in memory → load from disk</li>
+<li>FIFO: evict oldest page | suffers Belady's anomaly</li>
+<li>LRU: evict least recently used | no Belady's anomaly</li>
+<li>Optimal: evict page used farthest in future | theoretical benchmark</li>
+<li>More frames → fewer page faults (usually, except FIFO)</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_5">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_5" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Apply FIFO, LRU, and Optimal page replacement on reference string <code>1,2,3,4,1,2,5,1,2,3,4,5</code> with 3 frames. Count page faults for each.
+<strong>Short note:</strong> What is Belady's anomaly? Which algorithm suffers from it?
+<strong>Compare:</strong> Compare FIFO, LRU, and Optimal page replacement algorithms.
+<strong>Calculate:</strong> Given page fault rate and access times, calculate effective access time.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="7-virtual-memory">7. Virtual Memory<a class="headerlink" href="#7-virtual-memory" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_6">💡 Intuition First<a class="headerlink" href="#-intuition-first_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>Your laptop has 8 GB RAM but you're running programs that together need 20 GB. How? The OS uses the <strong>hard disk as an extension of RAM</strong>. Pages not currently needed are stored on disk and swapped in when required. This illusion of unlimited memory is <strong>virtual memory</strong>.</p>
+</blockquote>
+<p><strong>Real-world analogy:</strong> A student with a small desk — keeps only current books on desk, stores others in a shelf. When needed, swaps books between desk and shelf.</p>
+<hr />
+<h2 id="-core-concepts">📐 Core Concepts<a class="headerlink" href="#-core-concepts" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Virtual Address Space:
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>┌─────────────────────────────────┐
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>│         Stack (grows ↓)         │
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>│                                 │
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>│         (free space)            │
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>│                                 │
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>│         Heap (grows ↑)          │
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>│         Data (BSS, initialized) │
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>│         Code (Text)             │
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>└─────────────────────────────────┘
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>
+</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>Physical Memory (RAM):
+</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>Only SOME pages of the virtual space are loaded at any time.
+</span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>Rest are on disk (swap space).
+</span></code></pre></div>
+<h3 id="demand-paging">Demand Paging<a class="headerlink" href="#demand-paging" title="Anchor link">&para;</a></h3>
+<blockquote>
+<p>Pages are loaded into memory <strong>only when demanded</strong> (accessed), not all at once.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Process starts → only load essential pages
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>When page accessed:
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>  → Check page table
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>  → Valid bit = 1? → Page in memory → access directly
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>  → Valid bit = 0? → PAGE FAULT → load from disk
+</span></code></pre></div>
+<h3 id="page-fault-handling-steps">Page Fault Handling Steps<a class="headerlink" href="#page-fault-handling-steps" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>1. CPU generates logical address
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>2. MMU checks page table → valid bit = 0 → PAGE FAULT
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>3. OS traps (interrupt)
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>4. OS finds free frame (or evicts a page)
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>5. OS loads required page from disk into frame
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>6. Update page table (set valid bit = 1, set frame number)
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>7. Restart the faulting instruction
+</span></code></pre></div>
+<hr />
+<h2 id="-thrashing">🌊 Thrashing<a class="headerlink" href="#-thrashing" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>If a process doesn't have enough frames, it constantly page faults — spending more time swapping than executing. This is <strong>thrashing</strong>.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Thrashing scenario:
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>  Process needs 5 pages to run efficiently
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>  OS gives it only 2 frames
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>  → Page fault → load page → evict another needed page
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>  → Page fault again → load that page → evict another
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>  → Infinite cycle of page faults!
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>CPU utilization drops to near 0 while disk is 100% busy.
+</span></code></pre></div>
+<p><strong>Solution:</strong> Working Set Model — give each process enough frames for its <strong>working set</strong> (pages actively used in a time window).</p>
+<hr />
+<h2 id="-virtual-memory-benefits--costs">⚖️ Virtual Memory Benefits &amp; Costs<a class="headerlink" href="#-virtual-memory-benefits--costs" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run programs larger than RAM</td>
+<td>Page fault overhead</td>
+</tr>
+<tr>
+<td>More processes in memory</td>
+<td>Disk I/O is slow</td>
+</tr>
+<tr>
+<td>Memory isolation between processes</td>
+<td>Thrashing risk</td>
+</tr>
+<tr>
+<td>Efficient memory use</td>
+<td>TLB miss overhead</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-common-mistakes_6">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Virtual memory ≠ RAM. Virtual memory uses disk as extension.
+🚫 <strong>Mistake 2:</strong> Demand paging ≠ swapping. Swapping moves entire process; demand paging moves individual pages.
+🚫 <strong>Mistake 3:</strong> More virtual memory doesn't mean faster — disk access is 1000x slower than RAM.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_6">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_6" title="Anchor link">&para;</a></h2>
+<ul>
+<li>Virtual memory: illusion of large memory using disk</li>
+<li>Demand paging: load pages only when needed</li>
+<li>Page fault: page not in RAM → load from disk</li>
+<li>Thrashing: too few frames → constant page faults → CPU idle</li>
+<li>Working set: set of pages actively used → allocate enough frames</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_6">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_6" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>Short note:</strong> What is virtual memory? How does demand paging work?
+<strong>Conceptual:</strong> What is thrashing? How can it be prevented?
+<strong>5-mark:</strong> Explain the steps taken by the OS when a page fault occurs.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="8-file-system">8. File System<a class="headerlink" href="#8-file-system" title="Anchor link">&para;</a></h1>
+<h2 id="-intuition-first_7">💡 Intuition First<a class="headerlink" href="#-intuition-first_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A file system is like a <strong>library catalog system</strong> — it organizes files (books), tracks where they're stored (shelf locations), and provides a way to find them quickly (index cards / inodes).</p>
+</blockquote>
+<hr />
+<h2 id="-directory-structure">📁 Directory Structure<a class="headerlink" href="#-directory-structure" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Types of directory structures:
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>1. Single-level:  All files in one directory
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>   /file1, /file2, /file3 ...
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>   Problem: Name conflicts, no organization
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>2. Two-level:     Separate directory per user
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>   /user1/file1, /user2/file1 (same name, different users)
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>   Problem: No sharing between users
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>3. Tree-structured: Hierarchical (used in Unix/Windows)
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>   /home/user/docs/report.txt
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>   ✅ Most common, supports subdirectories
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>4. Acyclic graph:  Allows sharing (hard/soft links)
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>   /user1/shared → /user2/shared (same file, two paths)
+</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a>
+</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a>5. General graph:  Allows cycles (rare, needs garbage collection)
+</span></code></pre></div>
+<hr />
+<h2 id="-fat-file-allocation-table">🗂️ FAT (File Allocation Table)<a class="headerlink" href="#-fat-file-allocation-table" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>A table stored at the beginning of the disk. Each entry corresponds to a disk cluster and points to the next cluster of the file (or marks end-of-file).</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>FAT Table:
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Index:  0    1    2    3    4    5    6    7
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>Value: [sys][sys][EOF][ 5 ][ 6 ][EOF][ 7 ][EOF]
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>File A starts at cluster 2: 2 → EOF (single cluster)
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>File B starts at cluster 3: 3 → 5 → 6 → 7 → EOF
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>Disk clusters:
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>[0:sys][1:sys][2:FileA][3:FileB_part1][4:free][5:FileB_part2][6:FileB_part3][7:FileB_part4]
+</span></code></pre></div>
+<p><strong>Advantages:</strong> Simple, widely supported (USB drives, SD cards)
+<strong>Disadvantages:</strong> FAT table can be large, fragmentation, no permissions</p>
+<hr />
+<h2 id="-inode-index-node--unixlinux">📋 Inode (Index Node) — Unix/Linux<a class="headerlink" href="#-inode-index-node--unixlinux" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>An <strong>inode</strong> stores all metadata about a file EXCEPT its name. The directory maps filename → inode number.</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Inode structure:
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>┌─────────────────────────────────┐
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>│ File type (regular, dir, link)  │
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>│ Permissions (rwxrwxrwx)         │
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>│ Owner (UID, GID)                │
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>│ File size                       │
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>│ Timestamps (created, modified)  │
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>│ Link count                      │
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>│ Direct block pointers [0..11]   │
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>│ Single indirect pointer         │
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a>│ Double indirect pointer         │
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a>│ Triple indirect pointer         │
+</span><span id="__span-35-13"><a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a>└─────────────────────────────────┘
+</span></code></pre></div>
+<h3 id="block-addressing">Block Addressing<a class="headerlink" href="#block-addressing" title="Anchor link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Block size = 4 KB
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>Pointer size = 4 bytes → each block holds 4096/4 = 1024 pointers
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>Direct blocks:      12 × 4 KB = 48 KB
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>Single indirect:    1024 × 4 KB = 4 MB
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>Double indirect:    1024 × 1024 × 4 KB = 4 GB
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>Triple indirect:    1024³ × 4 KB = 4 TB
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>Max file size ≈ 4 TB (with triple indirect)
+</span></code></pre></div>
+<hr />
+<h2 id="-fat-vs-inode">⚖️ FAT vs Inode<a class="headerlink" href="#-fat-vs-inode" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>FAT</th>
+<th>Inode (Unix)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metadata location</td>
+<td>FAT table</td>
+<td>Inode structure</td>
+</tr>
+<tr>
+<td>File permissions</td>
+<td>❌ No</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Hard links</td>
+<td>❌ No</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Max file size</td>
+<td>Limited</td>
+<td>Very large</td>
+</tr>
+<tr>
+<td>Fragmentation</td>
+<td>High</td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>Used in</td>
+<td>USB, SD cards</td>
+<td>Linux, macOS</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-hard-link-vs-soft-link">🔗 Hard Link vs Soft Link<a class="headerlink" href="#-hard-link-vs-soft-link" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Hard Link:
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>  Two directory entries pointing to the SAME inode
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>  file.txt ──► inode 42 ◄── hardlink.txt
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>  Deleting one doesn&#39;t affect the other
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>  Cannot cross file systems
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>Soft Link (Symbolic Link):
+</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>  A file that contains the PATH to another file
+</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>  softlink.txt → &quot;/home/user/file.txt&quot;
+</span><span id="__span-37-10"><a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>  If original deleted → broken link
+</span><span id="__span-37-11"><a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>  Can cross file systems
+</span></code></pre></div>
+<hr />
+<h2 id="-common-mistakes_7">⚠️ Common Mistakes<a class="headerlink" href="#-common-mistakes_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>🚫 <strong>Mistake 1:</strong> Inode stores file metadata but NOT the filename — the directory does.
+🚫 <strong>Mistake 2:</strong> Hard links share the same inode; soft links are separate files with a path.
+🚫 <strong>Mistake 3:</strong> FAT is NOT the same as NTFS — FAT has no permissions, NTFS does.
+🚫 <strong>Mistake 4:</strong> Deleting a hard link doesn't delete the file until link count = 0.</p>
+</blockquote>
+<hr />
+<h2 id="-exam-tips_4">🎯 Exam Tips<a class="headerlink" href="#-exam-tips_4" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p>💡 <strong>Inode structure</strong> is a very common exam question — know direct, single, double, triple indirect blocks.
+💡 Calculate max file size using block size and pointer count.
+💡 FAT vs inode comparison is a classic short note question.
+💡 Know the difference between hard link and soft link clearly.</p>
+</blockquote>
+<hr />
+<h2 id="-one-minute-recap_7">⚡ One-Minute Recap<a class="headerlink" href="#-one-minute-recap_7" title="Anchor link">&para;</a></h2>
+<ul>
+<li>FAT: table of cluster chains, simple, no permissions</li>
+<li>Inode: metadata + block pointers, Unix/Linux, supports permissions</li>
+<li>Directory: maps filename → inode number</li>
+<li>Hard link: same inode, multiple names | Soft link: path pointer</li>
+<li>Inode block addressing: direct(12) + single + double + triple indirect</li>
+</ul>
+<hr />
+<h2 id="-probable-exam-questions_7">📝 Probable Exam Questions<a class="headerlink" href="#-probable-exam-questions_7" title="Anchor link">&para;</a></h2>
+<blockquote>
+<p><strong>5-mark:</strong> Explain the inode structure. How does it support large files using indirect pointers?
+<strong>Short note:</strong> Compare FAT and inode-based file systems.
+<strong>Conceptual:</strong> What is the difference between a hard link and a symbolic link?
+<strong>Calculate:</strong> Given block size = 1 KB and pointer size = 4 bytes, calculate the maximum file size using inode with triple indirect addressing.</p>
+</blockquote>
+<hr />
+<hr />
+<h1 id="-master-quick-revision-sheet--operating-systems">🏁 Master Quick Revision Sheet — Operating Systems<a class="headerlink" href="#-master-quick-revision-sheet--operating-systems" title="Anchor link">&para;</a></h1>
+<h2 id="-process-scheduling-formulas">⚡ Process Scheduling Formulas<a class="headerlink" href="#-process-scheduling-formulas" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>TAT = CT - AT
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>WT  = TAT - BT  =  CT - AT - BT
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>RT  = First CPU time - AT
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>Avg WT  = Sum of all WT / n
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>Avg TAT = Sum of all TAT / n
+</span></code></pre></div>
+<h2 id="-key-facts-to-remember">🔑 Key Facts to Remember<a class="headerlink" href="#-key-facts-to-remember" title="Anchor link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fact</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process states</td>
+<td>New → Ready → Running → Waiting → Terminated</td>
+</tr>
+<tr>
+<td>Waiting → Running</td>
+<td>❌ IMPOSSIBLE — must go through Ready</td>
+</tr>
+<tr>
+<td>FCFS problem</td>
+<td>Convoy effect</td>
+</tr>
+<tr>
+<td>SJF advantage</td>
+<td>Minimum average waiting time</td>
+</tr>
+<tr>
+<td>RR advantage</td>
+<td>No starvation, fair</td>
+</tr>
+<tr>
+<td>Deadlock conditions</td>
+<td>Mutual exclusion, Hold &amp; wait, No preemption, Circular wait</td>
+</tr>
+<tr>
+<td>Banker's algorithm</td>
+<td>Deadlock avoidance (needs max demand info)</td>
+</tr>
+<tr>
+<td>Paging fragmentation</td>
+<td>Internal (not external)</td>
+</tr>
+<tr>
+<td>Belady's anomaly</td>
+<td>FIFO only — more frames → more faults</td>
+</tr>
+<tr>
+<td>LRU vs Optimal</td>
+<td>LRU ≈ Optimal in practice</td>
+</tr>
+<tr>
+<td>Thrashing cause</td>
+<td>Too few frames per process</td>
+</tr>
+<tr>
+<td>Inode stores</td>
+<td>Metadata + block pointers (NOT filename)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-memory-tricks">🧠 Memory Tricks<a class="headerlink" href="#-memory-tricks" title="Anchor link">&para;</a></h2>
+<ul>
+<li><strong>Coffman conditions:</strong> "<strong>M</strong>y <strong>H</strong>ouse <strong>N</strong>eeds <strong>C</strong>leaning" → Mutual exclusion, Hold &amp; wait, No preemption, Circular wait</li>
+<li><strong>Scheduling order (best avg WT):</strong> Optimal &gt; SJF &gt; RR &gt; FCFS</li>
+<li><strong>Page replacement (best):</strong> Optimal &gt; LRU &gt; FIFO</li>
+<li><strong>Semaphore operations:</strong> "<strong>W</strong>ait = <strong>W</strong>aste (decrement)" | "<strong>S</strong>ignal = <strong>S</strong>end (increment)"</li>
+<li><strong>Inode pointers:</strong> "<strong>D</strong>irect <strong>S</strong>ingle <strong>D</strong>ouble <strong>T</strong>riple" → 12 + 1 + 1 + 1</li>
+</ul>
+<h2 id="-top-10-most-probable-exam-questions">🎯 Top 10 Most Probable Exam Questions<a class="headerlink" href="#-top-10-most-probable-exam-questions" title="Anchor link">&para;</a></h2>
+<ol>
+<li>Draw process state transition diagram with all transitions</li>
+<li>Gantt chart + metrics for FCFS, SJF, Round Robin</li>
+<li>Banker's algorithm — safe state check + safe sequence</li>
+<li>Four necessary conditions for deadlock + prevention strategies</li>
+<li>Producer-consumer problem using semaphores</li>
+<li>FIFO, LRU, Optimal page replacement — trace + fault count</li>
+<li>Paging — logical to physical address translation</li>
+<li>Inode structure — explain indirect block addressing</li>
+<li>Peterson's solution — explain and verify correctness</li>
+<li>Compare paging vs segmentation</li>
+</ol>
+<h2 id="-algorithm-summary">📊 Algorithm Summary<a class="headerlink" href="#-algorithm-summary" title="Anchor link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>Scheduling:
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>┌──────────────┬─────────────┬───────────┬──────────────┐
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>│ Algorithm    │ Preemptive? │ Starvation│ Best For     │
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>├──────────────┼─────────────┼───────────┼──────────────┤
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>│ FCFS         │ No          │ No        │ Batch        │
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>│ SJF          │ No          │ Yes       │ Min avg WT   │
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>│ SRTF         │ Yes         │ Yes       │ Min avg WT   │
+</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>│ Round Robin  │ Yes         │ No        │ Time-sharing │
+</span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>│ Priority     │ Both        │ Yes       │ Real-time    │
+</span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>└──────────────┴─────────────┴───────────┴──────────────┘
+</span><span id="__span-39-11"><a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a>
+</span><span id="__span-39-12"><a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a>Page Replacement:
+</span><span id="__span-39-13"><a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a>┌───────────┬──────────────┬──────────────┬────────────┐
+</span><span id="__span-39-14"><a id="__codelineno-39-14" name="__codelineno-39-14" href="#__codelineno-39-14"></a>│ Algorithm │ Evict        │ Belady&#39;s?    │ Practical? │
+</span><span id="__span-39-15"><a id="__codelineno-39-15" name="__codelineno-39-15" href="#__codelineno-39-15"></a>├───────────┼──────────────┼──────────────┼────────────┤
+</span><span id="__span-39-16"><a id="__codelineno-39-16" name="__codelineno-39-16" href="#__codelineno-39-16"></a>│ FIFO      │ Oldest page  │ Yes (suffers)│ Yes        │
+</span><span id="__span-39-17"><a id="__codelineno-39-17" name="__codelineno-39-17" href="#__codelineno-39-17"></a>│ LRU       │ Least recent │ No           │ Yes (approx│
+</span><span id="__span-39-18"><a id="__codelineno-39-18" name="__codelineno-39-18" href="#__codelineno-39-18"></a>│ Optimal   │ Farthest use │ No           │ No         │
+</span><span id="__span-39-19"><a id="__codelineno-39-19" name="__codelineno-39-19" href="#__codelineno-39-19"></a>└───────────┴──────────────┴──────────────┴────────────┘
+</span></code></pre></div>
+<hr />
+<blockquote>
+<p>📌 <strong>End of Subject 02: Operating Systems</strong></p>
+<p>Next: <strong>Subject 03 — Computer Networks &amp; Data Communication</strong> →</p>
+</blockquote>
+<hr />
+<p><em>Handbook generated for MSc Admission Preparation | JUST-Style Exam Focus</em>
+<em>Version 1.0 | Operating Systems</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01%20-%20Data%20Structures%20%26%20Algorithms/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 01 · Data Structures &amp; Algorithms">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                01 · Data Structures & Algorithms
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03%20-%20Computer%20Networks%20%26%20Data%20Communication/" class="md-footer__link md-footer__link--next" aria-label="Next: 03 · Computer Networks &amp; Data Communication">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                03 · Computer Networks & Data Communication
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

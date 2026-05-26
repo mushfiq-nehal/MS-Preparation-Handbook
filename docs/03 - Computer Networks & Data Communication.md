@@ -289,19 +289,22 @@ Use TCP when:                    Use UDP when:
 
 ## 🤝 Three-Way Handshake — Step by Step
 
-```
-CLIENT                              SERVER
-  │                                   │
-  │──── SYN (seq=x) ─────────────────►│  Step 1: Client says "I want to connect"
-  │                                   │          seq=x (random initial seq number)
-  │                                   │
-  │◄─── SYN-ACK (seq=y, ack=x+1) ────│  Step 2: Server says "OK, I'm ready too"
-  │                                   │          seq=y (server's seq number)
-  │                                   │          ack=x+1 (confirms client's seq)
-  │                                   │
-  │──── ACK (ack=y+1) ───────────────►│  Step 3: Client confirms server's seq
-  │                                   │
-  │◄══════════ DATA TRANSFER ════════►│  Connection established!
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as Client
+    participant S as Server
+    C->>S: SYN (seq=x)
+    Note right of S: "I want to connect"<br/>seq=x is random
+    S->>C: SYN-ACK (seq=y, ack=x+1)
+    Note left of C: "OK, I'm ready too"<br/>ack=x+1 confirms client's seq
+    C->>S: ACK (ack=y+1)
+    Note left of C: Confirms server's seq
+    rect rgb(221, 214, 254)
+    C-->>S: DATA TRANSFER
+    S-->>C: DATA TRANSFER
+    Note over C,S: Connection established
+    end
 ```
 
 ### What Each Flag Means
@@ -317,16 +320,19 @@ CLIENT                              SERVER
 
 ## 🔌 TCP Connection Termination (4-Way)
 
-```
-CLIENT                              SERVER
-  │                                   │
-  │──── FIN ─────────────────────────►│  Client: "I'm done sending"
-  │◄─── ACK ──────────────────────────│  Server: "Got it"
-  │                                   │  (Server may still send data)
-  │◄─── FIN ──────────────────────────│  Server: "I'm done too"
-  │──── ACK ─────────────────────────►│  Client: "Got it"
-  │                                   │
-  │    [TIME_WAIT state]              │  Client waits 2×MSL before closing
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as Client
+    participant S as Server
+    C->>S: FIN
+    Note right of S: "I'm done sending"
+    S->>C: ACK
+    Note right of S: Server may still send data
+    S->>C: FIN
+    Note left of C: "I'm done too"
+    C->>S: ACK
+    Note over C: TIME_WAIT<br/>(waits 2×MSL before closing)
 ```
 
 > 🔑 **Why 4-way for close?** Because TCP is full-duplex — each direction closes independently.
@@ -524,13 +530,19 @@ cwnd
 
 > Send one frame, wait for ACK, then send next. Simple but inefficient.
 
+```mermaid
+sequenceDiagram
+    participant Sender
+    participant Receiver
+    Sender->>Receiver: Frame 0
+    Receiver->>Sender: ACK 0
+    Sender->>Receiver: Frame 1
+    Receiver->>Sender: ACK 1
+    Sender->>Receiver: Frame 2
+    Note over Sender,Receiver: ... and so on (one frame at a time)
 ```
-Sender          Receiver
-  │──── Frame 0 ────►│
-  │◄─── ACK 0 ───────│
-  │──── Frame 1 ────►│
-  │◄─── ACK 1 ───────│
-  │──── Frame 2 ────►│
+
+```
   ...
 
 Efficiency = Tt / (Tt + 2×Tp)
@@ -1011,15 +1023,22 @@ DNS uses TCP port 53 (zone transfers)
 
 > Automatically assigns IP addresses to devices. Like a hotel receptionist assigning room numbers.
 
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as Client
+    participant S as DHCP Server
+    C->>S: DISCOVER (broadcast)
+    Note right of S: "Anyone have an IP for me?"
+    S->>C: OFFER (IP: 192.168.1.10)
+    Note left of C: "I offer you this IP"
+    C->>S: REQUEST (I want 192.168.1.10)
+    Note right of S: "I'll take that IP"
+    S->>C: ACK (confirmed)
+    Note left of C: "It's yours for 24 hours"
 ```
-DHCP Process (DORA):
 
-Client                          DHCP Server
-  │──── DISCOVER (broadcast) ──────────────►│  "Anyone have an IP for me?"
-  │◄─── OFFER (IP: 192.168.1.10) ───────────│  "I offer you this IP"
-  │──── REQUEST (I want 192.168.1.10) ──────►│  "I'll take that IP"
-  │◄─── ACK (confirmed) ────────────────────│  "It's yours for 24 hours"
-
+```
 DORA = Discover, Offer, Request, Acknowledge
 DHCP uses UDP: Client port 68, Server port 67
 ```
